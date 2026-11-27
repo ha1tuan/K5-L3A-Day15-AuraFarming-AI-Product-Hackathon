@@ -1,0 +1,21 @@
+/* Tailwind v4. Màu / chữ lấy từ CSS variables do styles/_tokens.scss sinh — component không viết mã hex. */
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --color-primary: var(--c-primary);
+  --color-accent: var(--c-accent);
+  --color-accent-dark: var(--c-accent-dark);
+  --color-accent-soft: var(--c-accent-soft);
+  --color-bg: var(--c-bg);
+  --color-card: var(--c-card);
+  --color-muted: var(--c-muted);
+  --color-line: var(--c-line);
+  --color-soft: var(--c-soft);
+  --color-ok: var(--c-ok);
+  --color-ok-bg: var(--c-ok-bg);
+  --color-over: var(--c-over);
+  --color-over-bg: var(--c-over-bg);
+  --color-est: var(--c-est);
+  --color-est-bg: var(--c-est-bg);
+}

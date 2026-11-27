@@ -123,6 +123,9 @@ Khi tổng > ngân sách: (1) số vượt và %, (2) 2–3 khoản đóng góp 
 - Ngày 1 bắt đầu từ giờ xuất phát (mặc định 06:30 với xe khách, theo giờ bay với máy bay); ngày cuối kết thúc khi về tới nơi xuất phát.
 - Mỗi ngày: di chuyển · bữa sáng (tại chỗ ở, nếu có đêm trước) · trưa 11:30–13:30 · tối 18:00–20:00 · hoạt động · nghỉ ngơi. Gắn kết: ≥ 1 khối team building, gala tối (gói có). Nghỉ dưỡng: ≥ 1 khối tự do mỗi ngày, hoạt động nhẹ.
 - Quán ăn cho đoàn: ưu tiên nguồn ghi phục vụ đoàn / sức chứa; không rõ thì ghi "cần xác nhận sức chứa".
+- **Chi tiết nội dung (yêu cầu người dùng):** mỗi bữa ăn có **thực đơn** (danh sách món, giá / suất, quy cách bàn, đồ uống gồm / không gồm); **gala** có **chương trình theo mốc giờ** (đón khách, khai mạc, tiệc, văn nghệ, trao giải, bốc thăm, bế mạc) + thực đơn + những gì gói gồm / công ty tự lo; mỗi **hoạt động** (team building, tham quan) có **kịch bản**: chủ đề, chia đội, từng trò / điểm dừng theo mốc giờ, đơn vị tổ chức gồm gì, phương án mưa.
+  - Nguồn: thực đơn lấy từ trang / bài viết của nhà hàng nếu có (kèm link); không có thì **thực đơn mẫu theo mức gói** trong `data/menus.json` (nhãn "ước tính, cần chốt với nhà hàng"). Chương trình gala và kịch bản hoạt động do **model soạn theo mẫu** (`data/programs.json`: khung mốc giờ theo mục đích và độ dài) — chỉ chữ, không số tiền; giờ các mốc do code chia trong khung thời gian của khối đó.
+  - Bảng chi phí tách **từng bữa** (không gộp "ăn uống"), dòng gala tách tiệc / MC-âm thanh, dòng hoạt động ghi gồm những gì; bữa đã gồm trong giá phòng ghi 0đ kèm chú thích.
 - Bộ kiểm: `CHONG_GIO`, `DONG_CUA`, `QUA_GIO_KET_THUC` (> 22:00), `ID_KHONG_TON_TAI`, `TRUNG_DIEM`, `THIEU_SUC_CHUA`, `THIEU_PHONG` (chỉ khi nguồn ghi sức chứa < số người). Vượt ngân sách **không** là lỗi chặn — bắt buộc có giải thích §6.3.
 
 ### 6.5 Hai lối vào
@@ -132,7 +135,7 @@ Khi tổng > ngân sách: (1) số vượt và %, (2) 2–3 khoản đóng góp 
   - `POST /api/trips` (form) → `TripView` (status `choose_destination` | `choose_package` | `ok` | `ask_back` | `refused` | `error`)
   - `POST /api/trips/{id}/approve {destination?, package, headcount?, remove_items?}` → tính lại nếu có sửa → `TripView` (`ok` + kế hoạch)
   - `GET /api/trips/{id}` · `GET /api/health`
-- **Màn hình (React):** form → (A) thẻ địa điểm, mỗi thẻ 3 cột gói + lý do + link / (B) bảng so 3 gói → nút duyệt (có chỉnh số người, bỏ hạng mục) → kế hoạch từng ngày + bảng chi phí + khối "Vì sao vượt ngân sách" khi có. (C) hiện 3 kế hoạch dạng tab.
+- **Màn hình (React):** chi tiết ở [thiết kế web](2026-11-27-web-ui-design.md). form → (A) thẻ địa điểm, mỗi thẻ 3 cột gói + lý do + link / (B) bảng so 3 gói → nút duyệt (có chỉnh số người, bỏ hạng mục) → kế hoạch từng ngày + bảng chi phí + khối "Vì sao vượt ngân sách" khi có. (C) hiện 3 kế hoạch dạng tab.
 
 ### 6.6 Dữ liệu
 

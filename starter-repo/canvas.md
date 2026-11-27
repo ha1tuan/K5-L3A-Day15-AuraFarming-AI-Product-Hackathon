@@ -1,4 +1,4 @@
-# Canvas — [tên nhóm] · Track [A–F]
+# Canvas — AuraFarming · Track C
 
 > Điền ở guide bước 1.4. CP1 17:00 Thứ Sáu 27/11: nộp bản đầu, đủ 7 dòng (dòng 4 được ghi giả thuyết + nguồn sẽ kiểm).
 > CP2 19:30 Thứ Sáu 27/11: cập nhật (số bằng chứng đầu, lát cắt đã chốt) và điền dòng "Đã đổi gì so với CP1".
@@ -6,11 +6,11 @@
 
 | # | Dòng | Nhóm điền |
 |---|---|---|
-| 1 | Track + lát cắt dự kiến | |
-| 2 | Người dùng chính (một vai cụ thể — không phải "học viên nói chung") | |
-| 3 | Pain một câu: ai — đang làm gì — vướng đâu — hậu quả | |
-| 4 | Bằng chứng đầu — CP1: giả thuyết + nguồn sẽ kiểm · CP2: số đầu tiên + 1 trích dẫn | |
-| 5 | **Lát cắt MỘT CÂU** (1 người dùng · 1 việc · 1 quyết định AI · 1 kết quả) | |
-| 6 | AI tự làm đến đâu + 1 dòng lý do: sai thì ai chịu gì | |
-| 7 | Phân công có tên | |
-| — | *(CP2)* Đã đổi gì so với CP1 | |
+| 1 | Track + lát cắt dự kiến | Track C (Du lịch) — lập kế hoạch du lịch cho cả công ty theo ngân sách: gợi ý địa điểm / dự trù 3 gói (tiết kiệm · cân bằng · cao cấp), giám đốc duyệt, rồi ra kế hoạch chi tiết từng giờ kèm bảng chi phí. |
+| 2 | Người dùng chính (một vai cụ thể — không phải "học viên nói chung") | Giám đốc (hoặc người được giám đốc giao) công ty khoảng 30–200 người, cần chốt chuyến đi nghỉ dưỡng / gắn kết trong nước cho cả công ty với một khoản kinh phí cho trước. |
+| 3 | Pain một câu: ai — đang làm gì — vướng đâu — hậu quả | Giám đốc đang lên chuyến đi cho cả công ty — phải tự tìm địa điểm, hỏi giá chỗ ở / xe / ăn cho cả đoàn và cộng tay xem có vừa ngân sách không — vướng ở chỗ giá trên mạng là giá lẻ, không tính được cơ cấu phòng, số xe, suất ăn cho vài chục người — hậu quả là mất nhiều ngày so sánh, dự trù lệch, chi vượt ngân sách hoặc cả đoàn thiếu phòng khi đã đi. |
+| 4 | Bằng chứng đầu — CP1: giả thuyết + nguồn sẽ kiểm · CP2: số đầu tiên + 1 trích dẫn | **Giả thuyết:** người lo chuyến đi công ty mất nhiều buổi để có được một bản dự trù cho cả đoàn, và bản dự trù thường lệch so với chi thực tế. **Nguồn sẽ kiểm:** phỏng vấn ≥3 người từng tổ chức chuyến đi công ty (giám đốc / HR / admin) — hỏi lần gần nhất mất bao lâu, lệch ngân sách bao nhiêu, đang dùng gì (Excel, báo giá công ty tour) · đối chiếu với các dịch vụ tương tự (công ty tour báo giá đoàn, Vntrip, NextRetreat). **CP2:** chưa có số — sẽ ghi vào `evidence/summary.md` và cập nhật dòng này khi có phỏng vấn đầu tiên. |
+| 5 | **Lát cắt MỘT CÂU** (1 người dùng · 1 việc · 1 quyết định AI · 1 kết quả) | Một giám đốc cần tổ chức chuyến đi cho công ty · nhập số người, mục đích, số ngày, nơi xuất phát cùng kinh phí và/hoặc địa điểm · AI tìm địa điểm, chỗ ở, ăn uống, hoạt động có nguồn và code dự trù 3 gói theo ngân sách · giám đốc nhận kế hoạch từng giờ kèm bảng chi phí và lời giải thích khi vượt ngân sách. |
+| 6 | AI tự làm đến đâu + 1 dòng lý do: sai thì ai chịu gì | AI gợi ý, người quyết: AI tìm địa điểm / cơ sở có link nguồn và đề xuất 3 gói; tiền, số phòng, số xe, giờ do code tính; giám đốc duyệt địa điểm + gói trước khi ra kế hoạch chi tiết, mọi việc đặt chỗ / thanh toán do công ty tự làm. Lý do: sai thì công ty chi vượt ngân sách hoặc cả đoàn thiếu phòng, thiếu chỗ ăn khi đã đi — sửa rất đắt. |
+| 7 | Phân công có tên | Phan Văn Diện (đội trưởng) · Vũ Hải Tuấn · Đoàn Viết Huy · Nguyễn Văn Vinh — phần việc từng người: __ (nhóm chốt, khớp cột "Phần việc chính" trong `TEAMS.md` và §10 `spec.md`) |
+| — | *(CP2)* Đã đổi gì so với CP1 | 

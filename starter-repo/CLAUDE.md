@@ -15,7 +15,7 @@ Repo nộp bài hackathon AI20K, Track C: agent lập lịch trình du lịch Đ
 ```bash
 .venv/bin/pytest tests -q -W ignore::DeprecationWarning
 .venv/bin/python run.py eval --try        # chạy answer() trên 3 câu đầu
-cd codebase/web && npm run build         # sau mỗi lần sửa giao diện; commit cả dist/
+cd codebase/web && npm run dev && npm test   # web chạy riêng, gọi backend qua API; không commit dist/
 ```
 
 ## Cách làm

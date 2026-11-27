@@ -1,0 +1,29 @@
+// Nguồn duy nhất của màu, chữ, khoảng cách. index.css (@theme inline) đọc các biến này cho Tailwind.
+$colors: (
+  primary: #0f172a,
+  accent: #0369a1,
+  accent-dark: #075985,
+  accent-soft: #f0f9ff,
+  bg: #f8fafc,
+  card: #ffffff,
+  muted: #475569,
+  line: #e2e8f0,
+  soft: #f1f5f9,
+  ok: #15803d,
+  ok-bg: #f0fdf4,
+  over: #b91c1c,
+  over-bg: #fef2f2,
+  est: #b45309,
+  est-bg: #fffbeb,
+);
+
+$radius: 12px;
+$timeline-dot: 1.25rem;
+
+:root {
+  @each $name, $value in $colors {
+    --c-#{$name}: #{$value};
+  }
+  --font-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --radius: #{$radius};
+}

@@ -1,0 +1,52 @@
+@use '../styles/tokens' as *;
+
+.list { display: grid; gap: 1.25rem; margin: 0; padding: 1.25rem; list-style: none; }
+
+.item {
+  position: relative;
+  padding-left: 2rem;
+
+  // đường nối giữa các mốc
+  &::before {
+    content: '';
+    position: absolute;
+    left: calc(#{$timeline-dot} / 2 - 1px);
+    top: calc(#{$timeline-dot} + .35rem);
+    bottom: -1.25rem;
+    width: 2px;
+    background: var(--c-line);
+  }
+  &:last-child::before { display: none; }
+}
+
+.dot {
+  position: absolute; left: 0; top: .15rem;
+  width: $timeline-dot; height: $timeline-dot;
+  display: grid; place-items: center;
+  border-radius: 999px;
+  background: var(--c-accent-soft);
+  color: var(--c-accent);
+
+  &[data-kind='meal'] { background: var(--c-est-bg); color: var(--c-est); }
+  &[data-kind='gala'], &[data-kind='activity'] { background: var(--c-ok-bg); color: var(--c-ok); }
+  &[data-kind='rest'] { background: var(--c-soft); color: var(--c-muted); }
+}
+
+.detail {
+  margin-top: .5rem;
+  border: 1px solid var(--c-line);
+  border-radius: 8px;
+  background: var(--c-bg);
+  padding: .75rem;
+}
+
+.program {
+  display: grid; gap: .25rem; margin: 0; padding: 0; list-style: none;
+  li { display: flex; gap: .75rem; }
+  time { width: 6.5rem; flex-shrink: 0; font-weight: 500; }
+}
+
+@media print {
+  .item::before { background: #999; }
+  details[data-print-open] > :not(summary) { display: block !important; }
+}

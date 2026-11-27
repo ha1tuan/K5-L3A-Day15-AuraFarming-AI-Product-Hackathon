@@ -1,0 +1,40 @@
+@use 'tokens';
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--c-bg);
+  color: var(--c-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 3px solid var(--c-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+// Số không có nguồn: gạch chấm màu hổ phách (ngoài nhãn chữ "ước tính").
+.est-value {
+  text-decoration: underline dotted var(--c-est);
+  text-underline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  &:focus { left: 1rem; top: 1rem; z-index: 50; background: var(--c-card); padding: .5rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .print-open { display: block !important; }
+  body { background: #fff; }
+  main { padding: 0 !important; }
+}

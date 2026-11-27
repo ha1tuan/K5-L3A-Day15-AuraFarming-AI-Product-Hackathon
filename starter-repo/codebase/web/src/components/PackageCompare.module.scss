@@ -1,0 +1,24 @@
+@use '../styles/tokens' as *;
+
+// Cột gói đang chọn: viền accent liền mạch từ tiêu đề tới dòng chọn gói.
+.table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: .875rem;
+
+  th, td { padding: 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--c-line); }
+  tr:last-child td { border-bottom: 0; }
+  th[scope='row'] { width: 9rem; color: var(--c-muted); font-weight: 500; }
+}
+
+.selected {
+  background: var(--c-accent-soft);
+  border-left: 2px solid var(--c-accent);
+  border-right: 2px solid var(--c-accent);
+}
+.selectedTop { border-top: 2px solid var(--c-accent); border-top-left-radius: $radius; border-top-right-radius: $radius; }
+.selectedBottom { border-bottom: 2px solid var(--c-accent) !important; border-bottom-left-radius: $radius; border-bottom-right-radius: $radius; }
+
+.total { font-size: 1rem; }

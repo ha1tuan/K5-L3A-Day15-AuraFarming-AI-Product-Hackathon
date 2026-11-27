@@ -30,7 +30,7 @@ Nguyên tắc chi phối mọi quyết định: **model chọn *cái gì*, code 
 ```
 
 - **Lối chấm** (`answer()`): bộ chấm của BTC gọi; phải chạy không cần server, database hay mạng ngoài lời gọi model.
-- **Lối web**: một tiến trình FastAPI phục vụ cả API lẫn web React đã build. Không đăng nhập, không Postgres, không Redis.
+- **Lối web**: web React (`codebase/web`, Vite) chạy riêng, gọi FastAPI **chỉ qua API** (`/api/trips`, CORS theo `WEB_ORIGINS`). Không commit `dist/`. Không đăng nhập, không Postgres, không Redis.
 
 ## 3. Luồng graph
 
@@ -72,9 +72,9 @@ Trạng thái: ✅ có · 🟡 khung (docstring, chưa code) · ⬜ chưa tạo.
 | `codebase/backend/src/core/planning/` | lõi code thuần: `types`, `data`, `request`, `travel`, `scheduler`, `validator`, `feasibility`, `render` | 🟡 Task 1–7 |
 | `codebase/backend/src/core/orchestration/` | LangGraph: `state/`, `prompts/`, `nodes/`, `graphs/`, `utils/utils.py` (bóc JSON) | 🟡 Task 7 |
 | `codebase/backend/src/api/` | `routes/trips.py` → `services/trip_service.py` → graph; `schemas.py` | 🟡 Task 9′ |
-| `codebase/backend/src/main.py` | app FastAPI, `/api/health`, mount web | ✅ health · Task 9′, 11 |
+| `codebase/backend/src/main.py` | app FastAPI, `/api/health`, CORS cho web | ✅ health + CORS · Task 9′ |
 | `codebase/backend/var/trips.sqlite` | checkpoint graph của web (gitignore, env `TRIPS_DB`) | ⬜ tạo khi chạy |
-| `codebase/web/` | Vite + React + TS; `dist/` đã build được commit | ⬜ Task 11 |
+| `codebase/web/` | Vite + React + TS + Tailwind + SCSS; gọi backend qua `VITE_API_URL` / proxy `/api`; `?demo=1` chạy không cần backend | ✅ giao diện + demo · nối API thật sau Task 9′ |
 | `codebase/backend/src/core/sources/` | gọi Tavily / Nominatim qua cache ghi-lại-phát-lại (`SEARCH_MODE`) | ⬜ Task 1 |
 | `data/estimates.json`, `data/cache/` | bảng số ước tính khi bài viết không có; cache tìm kiếm của bộ câu thử (commit) | ⬜ Task 1, 7 |
 | `eval/benchmark.csv`, `eval/metric_spec.yaml` | bộ câu thử + chuẩn "đạt" (khoá sau CP2) | ⬜ Task 2 |
@@ -106,8 +106,8 @@ cd starter-repo
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/pytest tests -q                 # test
 .venv/bin/python run.py eval --try        # chấm thử 3 câu qua answer()
-.venv/bin/python run.py                   # web: http://localhost:8000  (sau Task 11)
-cd codebase/web && npm run dev            # sửa giao diện, proxy /api → :8000 (sau Task 11)
+.venv/bin/python run.py                   # API: http://localhost:8000
+cd codebase/web && npm install && npm run dev   # web: http://localhost:5173 (proxy /api → :8000) · ?demo=1 không cần backend
 ```
 
 Model: `starter-repo/.env` — `MODEL_PROVIDER=gemini`, `MODEL_NAME`, `API_KEY` (không commit). Để trống = chế độ giả.
