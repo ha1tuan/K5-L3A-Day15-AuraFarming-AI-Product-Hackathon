@@ -1,0 +1,51 @@
+{
+  "tong_review_tai_ve": 7130,
+  "ngay_cu_nhat": "2016-12-31",
+  "ngay_moi_nhat": "2026-11-26",
+  "review_co_noi_dung": 3312,
+  "review_1_2_sao": 1880,
+  "P_gia_phi_lech_trong_1_2_sao": 104,
+  "G_doan_nhom_trong_1_2_sao": 19,
+  "R_khong_co_phong_trong_1_2_sao": 115,
+  "G_doan_nhom_moi_so_sao": 21,
+  "G_va_P_hoac_R_trong_1_2_sao": 5,
+  "P_hoac_R_trong_1_2_sao": 202,
+  "theo_app": {
+    "Traveloka": {
+      "review_1_2_sao": 750,
+      "P": 40,
+      "G": 11,
+      "R": 15
+    },
+    "Agoda": {
+      "review_1_2_sao": 783,
+      "P": 43,
+      "G": 7,
+      "R": 54
+    },
+    "Booking.com": {
+      "review_1_2_sao": 151,
+      "P": 10,
+      "G": 1,
+      "R": 19
+    },
+    "Mytour": {
+      "review_1_2_sao": 122,
+      "P": 10,
+      "G": 0,
+      "R": 25
+    },
+    "Klook": {
+      "review_1_2_sao": 74,
+      "P": 1,
+      "G": 0,
+      "R": 2
+    }
+  },
+  "do_chinh_xac_P": "41/50",
+  "uoc_tinh_dung_P": 85,
+  "do_chinh_xac_G": "15/19",
+  "uoc_tinh_dung_G": 15,
+  "do_chinh_xac_R": "27/30",
+  "uoc_tinh_dung_R": 104
+}
