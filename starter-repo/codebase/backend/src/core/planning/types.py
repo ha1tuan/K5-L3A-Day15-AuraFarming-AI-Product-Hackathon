@@ -183,6 +183,15 @@ class Plan:
 
 
 @dataclass
+class TierPick:
+    """Lựa chọn của model cho một gói: id khách sạn, id quán theo thứ tự bữa, id hoạt động, lý do theo id."""
+    hotel: Optional[str] = None
+    restaurants: list[str] = field(default_factory=list)
+    activities: list[str] = field(default_factory=list)
+    reasons: dict[str, str] = field(default_factory=dict)
+
+
+@dataclass
 class Violation:
     code: str
     message: str

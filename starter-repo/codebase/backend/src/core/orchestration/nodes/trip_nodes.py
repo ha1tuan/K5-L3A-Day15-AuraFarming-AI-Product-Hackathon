@@ -9,16 +9,22 @@ from typing import Optional
 from ai import call_model
 from tools import dinh_vi, tim_kiem_web  # noqa: F401  (dinh_vi dùng ở các node sau)
 
-from src.core.orchestration.prompts.trip_prompts import EXTRACT_SYSTEM, QUERY_SYSTEM
+from src.core.orchestration.prompts.trip_prompts import EXTRACT_SYSTEM, QUERY_SYSTEM, SELECT_SYSTEM
 from src.core.orchestration.utils.utils import _parse_json
+from src.core.planning.estimates import Estimates, load_estimates
+from src.core.planning.pricing import TIERS, price_packages
 from src.core.planning.request import parse_vnd
-from src.core.planning.types import Candidate, RoomType, TripRequest
+from src.core.planning.scheduler import load_menus, load_programs, schedule
+from src.core.planning.types import Candidate, RoomType, TierPick, TripRequest, Violation
+from src.core.planning.validator import validate
 
 GROUPS = ("luu_tru", "an_uong", "hoat_dong")
 MAX_QUERIES_PER_GROUP = 3
 MAX_HITS_PER_GROUP = 12
 LODGING_PER_STAR = 3
 LIMITS = {"luu_tru": 9, "an_uong": 8, "hoat_dong": 6}
+MAX_REPAIR = 2
+REASON_MAX = 200
 
 
 def _fold(s: str) -> str:
@@ -213,3 +219,118 @@ def research(state: dict) -> dict:
         return {"ranked": {}, "estimate_only": True}
     ranked = ground_and_rank(extract_candidates(req, hits_by_group))
     return {"ranked": ranked, "estimate_only": not ranked}
+
+
+def _select_prompt(req: TripRequest, ranked: dict, violations: Optional[list]) -> str:
+    lines = ["Địa điểm: %s" % _safe(req.destination), "Số người: %d" % req.headcount,
+             "Số ngày: %d, số đêm: %d" % (req.days, req.nights), "Mục đích: %s" % req.purpose,
+             "Số bữa cần chọn quán: %d" % max(1, 2 * req.days - 1), "<du_lieu>"]
+    for g in GROUPS:
+        for c in ranked.get(g, []):
+            star = " | %d sao" % c.stars if c.stars else ""
+            lines.append("%s | nhóm: %s | %s%s | nguồn: %d trang | %s" % (
+                c.id, g, _safe(c.name), star, c.mentions, _safe(c.reason)))
+    lines.append("</du_lieu>")
+    if violations:
+        lines.append("vi_pham (lần chọn trước):")
+        lines += ["- %s: %s" % (v.code, _safe(v.message)) for v in violations]
+    return "\n".join(lines)
+
+
+def _empty_picks() -> dict[str, TierPick]:
+    return {t: TierPick() for t in TIERS}
+
+
+def select_for_tiers(req: TripRequest, ranked: dict, violations: Optional[list] = None,
+                     est: Optional[Estimates] = None, sink: Optional[list] = None) -> dict[str, TierPick]:
+    """Một lần gọi model chọn cơ sở cho 3 gói. Code bỏ id không có trong ranked (ghi ID_KHONG_TON_TAI vào sink)
+    và hạ khách sạn sai hạng sao của gói về None (mức chung). Không có ứng viên -> không gọi model."""
+    if not any(ranked.get(g) for g in GROUPS):
+        return _empty_picks()
+    est = est or load_estimates()
+    known = {g: {c.id: c for c in ranked.get(g, [])} for g in GROUPS}
+    data = _parse_json(call_model(SELECT_SYSTEM, _select_prompt(req, ranked, violations))["text"])
+    data = data if isinstance(data, dict) else {}
+    picks = {}
+    for tier in TIERS:
+        raw = data.get(tier) if isinstance(data.get(tier), dict) else {}
+
+        def keep(ids, group) -> list[str]:
+            out = []
+            for i in ids if isinstance(ids, list) else []:
+                if i in known[group]:
+                    out.append(i)
+                elif isinstance(i, str) and sink is not None:
+                    sink.append(Violation("ID_KHONG_TON_TAI", "Id %s không có trong danh sách ứng viên" % i, i))
+            return out
+
+        hotel = raw.get("hotel")
+        if isinstance(hotel, str) and hotel not in known["luu_tru"]:
+            if sink is not None:
+                sink.append(Violation("ID_KHONG_TON_TAI", "Id %s không có trong danh sách ứng viên" % hotel, hotel))
+            hotel = None
+        if isinstance(hotel, str) and known["luu_tru"][hotel].stars != est.tier_stars[tier]:
+            hotel = None
+        restaurants, activities = keep(raw.get("restaurants"), "an_uong"), keep(raw.get("activities"), "hoat_dong")
+        chosen = set(restaurants + activities + ([hotel] if isinstance(hotel, str) else []))
+        reasons = raw.get("reasons") if isinstance(raw.get("reasons"), dict) else {}
+        picks[tier] = TierPick(hotel=hotel if isinstance(hotel, str) else None, restaurants=restaurants,
+                               activities=activities,
+                               reasons={k: v[:REASON_MAX] for k, v in reasons.items()
+                                        if k in chosen and isinstance(v, str)})
+    return picks
+
+
+def select(state: dict) -> dict:
+    """Node select: {"picks", "pick_violations"}; ranked rỗng / estimate_only -> không gọi model."""
+    ranked = {} if state.get("estimate_only") else state.get("ranked") or {}
+    sink: list = []
+    picks = select_for_tiers(state["request"], ranked, state.get("violations"), state.get("est"), sink)
+    return {"picks": picks, "pick_violations": sink}
+
+
+def _by_id(ranked: dict) -> dict:
+    return {c.id: c for items in (ranked or {}).values() for c in items}
+
+
+def price(state: dict) -> dict:
+    """Node price: khách sạn theo pick -> Candidate, rồi price_packages."""
+    by_id = _by_id(state.get("ranked"))
+    hotels = {t: by_id.get(p.hotel) for t, p in state["picks"].items()}
+    est = state.get("est") or load_estimates()
+    return {"packages": price_packages(state["request"], state.get("origin_pt"), state.get("dest_pt"), hotels, est)}
+
+
+def schedule_node(state: dict) -> dict:
+    """Node schedule: một Plan cho mỗi gói; menus/programs lấy từ state nếu có, không thì từ data/."""
+    est = state.get("est") or load_estimates()
+    menus = state.get("menus") or load_menus()
+    programs = state.get("programs") or load_programs()
+    ranked = state.get("ranked") or {}
+    return {"plans": [schedule(state["request"], pkg, state["picks"].get(pkg.tier) or TierPick(), ranked, est,
+                               menus, programs) for pkg in state["packages"]]}
+
+
+def validate_node(state: dict) -> dict:
+    """Node validate: vi phạm của từng gói + id lạ của bước chọn. repair_round = số lần sửa đã chạy
+    (lần kiểm đầu giữ 0; mỗi lần kiểm sau một lượt sửa tăng 1)."""
+    req = state["request"]
+    found = list(state.get("pick_violations") or [])
+    for plan, pkg in zip(state["plans"], state["packages"]):
+        found += validate(req, plan, pkg)
+    rounds = state.get("repair_round", 0) + (1 if "violations" in state else 0)
+    return {"violations": found, "repair_round": rounds}
+
+
+def route_after_validate(state: dict) -> str:
+    """"repair" nếu còn vi phạm và chưa đủ MAX_REPAIR lần sửa; hết lần thì giữ kế hoạch và ghi cảnh báo."""
+    violations = state.get("violations") or []
+    if violations and state.get("repair_round", 0) < MAX_REPAIR:
+        return "repair"
+    if violations:
+        warning = "Kế hoạch còn %d điểm chưa đạt sau %d lần sửa, cần kiểm tra lại: %s" % (
+            len(violations), state.get("repair_round", 0), "; ".join(v.message for v in violations[:5]))
+        warnings = state.setdefault("warnings", [])
+        if warning not in warnings:
+            warnings.append(warning)
+    return "explain"
