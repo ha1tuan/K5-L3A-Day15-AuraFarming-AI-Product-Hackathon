@@ -7,7 +7,8 @@ describe('Landing', () => {
   it('render được hero, số liệu và thẻ điểm đến có ảnh video', () => {
     const html = renderToString(<Landing onStart={() => {}} onQuote={() => {}} />);
     expect(html).toContain('đúng tiền, đủ hoá đơn');
-    expect(html).toContain('83%');
+    expect(html).toContain('wikimedia.org');
+    expect(html).toContain('AuraFarming');
     expect(html).toContain('Hạ Long');
     expect(html).toContain('i.ytimg.com/vi/');
   });

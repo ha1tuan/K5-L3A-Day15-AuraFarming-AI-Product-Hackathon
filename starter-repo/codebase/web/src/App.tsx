@@ -3,6 +3,7 @@ import { CalendarRange, FileSearch, Home } from 'lucide-react';
 import { Landing } from './components/Landing';
 import { ChatWidget } from './components/ChatWidget';
 import { Logo } from './components/Brand';
+import { useScroll } from './components/motion';
 import { QuoteAudit } from './components/QuoteAudit';
 import type { ApproveInput, Field, TripView } from './api/types';
 import { approveTrip, createTrip, DEMO, getTrip } from './api/client';
@@ -35,6 +36,7 @@ type Tab = 'home' | 'plan' | 'quote';
 const TAB_PARAM: Record<Tab, string | null> = { home: null, plan: 'lap-ke-hoach', quote: 'bao-gia' };
 
 export default function App() {
+  const sc = useScroll();
   const [tab, setTab] = useState<Tab>(() => {
     const q = new URLSearchParams(window.location.search);
     return q.get('tab') === 'bao-gia' ? 'quote' : (q.get('tab') === 'lap-ke-hoach' || q.get('trip')) ? 'plan' : 'home';
@@ -140,8 +142,11 @@ export default function App() {
   return (
     <>
       <a href="#main" className="skip-link">Bỏ qua tới nội dung</a>
-      <header className={`no-print z-40 text-white ${tab === 'home' ? 'absolute inset-x-0 top-0' : 'sticky top-0 bg-ocean/95 shadow-lg backdrop-blur'}`}>
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
+      <div className="no-print fixed inset-x-0 top-0 z-50 h-0.5 origin-left bg-gradient-to-r from-orange-300 via-sun to-sun-dark" style={{ transform: `scaleX(${sc.p})` }} aria-hidden />
+      <header className={`no-print z-40 text-white transition-all duration-500 ${tab === 'home'
+        ? `fixed inset-x-0 top-0 ${sc.y > 60 ? 'bg-ocean/90 shadow-lg backdrop-blur-md' : 'bg-transparent'}`
+        : 'sticky top-0 bg-ocean/95 shadow-lg backdrop-blur'}`}>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3 sm:px-6">
           <button type="button" onClick={() => switchTab('home')} className="cursor-pointer" aria-label="AuraFarming — trang chủ"><Logo /></button>
           {DEMO && <span className="rounded bg-est-bg px-2 py-0.5 text-xs font-medium text-est">Chế độ demo — dữ liệu mẫu</span>}
           <nav className="ml-auto flex gap-1 rounded-full p-1 glass" aria-label="Chức năng">

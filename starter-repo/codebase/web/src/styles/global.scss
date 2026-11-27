@@ -1,6 +1,6 @@
 @use 'tokens';
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--c-bg);
@@ -50,6 +50,32 @@ body {
 .card-lift { transition: transform .25s ease, box-shadow .25s ease; }
 .card-lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -18px rgba(6, 38, 58, .45); }
 .app-hero { background: linear-gradient(120deg, var(--c-ocean) 0%, #0b4a63 55%, #0e7490 100%); }
+
+// --- Hiện dần khi cuộn ---------------------------------------------------------------------------
+.reveal { opacity: 0; transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1); will-change: opacity, transform; }
+.reveal-up { transform: translateY(32px); }
+.reveal-left { transform: translateX(-40px); }
+.reveal-right { transform: translateX(40px); }
+.reveal-zoom { transform: scale(.94); }
+.reveal.in { opacity: 1; transform: none; }
+
+// --- Hero trình chiếu 4K ---------------------------------------------------------------------------
+.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.8s ease; }
+.slide.active { opacity: 1; }
+.slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); }
+.slide.active img { animation: slide-zoom 9s ease-out both; }
+@keyframes slide-zoom { from { transform: scale(1.16); } to { transform: scale(1.04); } }
+@keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.slide-progress { transform-origin: left; animation: progress 7s linear both; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee { animation: marquee 40s linear infinite; }
+@keyframes scroll-cue { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(14px); opacity: 0; } }
+.scroll-cue { animation: scroll-cue 1.8s ease-in-out infinite; }
+// nền cố định khi cuộn (parallax nhẹ) — chỉ màn lớn, điện thoại dùng nền thường
+.parallax { background-size: cover; background-position: center; }
+@media (min-width: 1024px) and (hover: hover) { .parallax { background-attachment: fixed; } }
+.img-zoom img { transition: transform 1.2s cubic-bezier(.2, .7, .2, 1); }
+.img-zoom:hover img { transform: scale(1.08); }
 
 // --- Robot Aura ---------------------------------------------------------------------------------
 @keyframes robot-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
