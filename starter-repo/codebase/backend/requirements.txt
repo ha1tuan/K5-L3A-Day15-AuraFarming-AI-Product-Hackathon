@@ -1,7 +1,8 @@
-# Backend web (cách A): một tiến trình FastAPI, trạng thái graph lưu SQLite.
+# Backend web (cách C): FastAPI + LangGraph (checkpoint SQLite cho web), Gemini, httpx cho Tavily / Nominatim.
 fastapi
 uvicorn
 pydantic
 langgraph
 langgraph-checkpoint-sqlite
 google-genai
+httpx

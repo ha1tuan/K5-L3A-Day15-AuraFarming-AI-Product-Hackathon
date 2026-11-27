@@ -38,3 +38,4 @@ data-btc/
 # Trạng thái chuyến đi của web (SQLite) và thư viện Node
 codebase/backend/var/
 codebase/web/node_modules/
+codebase/web/*.tsbuildinfo
