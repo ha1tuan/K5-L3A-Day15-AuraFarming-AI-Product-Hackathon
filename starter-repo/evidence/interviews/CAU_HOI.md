@@ -41,6 +41,12 @@ Nguồn tìm người: bố mẹ / người quen đi làm, anh chị khoá trên
 10. Có lần nào **đến nơi bị thiếu phòng / thiếu chỗ / giá khác lúc báo** không? Lúc đó xử lý thế nào, tốn thêm gì?
 11. Mục đích chuyến đi là **nghỉ dưỡng, gắn kết (team building) hay cả hai**? Mục đích đó ảnh hưởng thế nào đến chọn nơi và chọn hoạt động?
 
+**Báo giá & hoá đơn — kiểm hướng mới (spec §1 bản 27/11 tối) (3 phút)**
+
+16. Lần gần nhất anh/chị **tự lo** hay **thuê công ty tour**? Xin mấy báo giá? Lúc nhận, anh/chị có biết giá đó **đắt hay rẻ**, đã gồm những gì không — so bằng cách nào?
+17. Sau chuyến đi, **tổng chi thật** so với giá trong báo giá chênh bao nhiêu? Khoản nào phát sinh (VAT, vé, tip, phụ thu…)?
+18. Kế toán có từng **trả lại / không thanh toán** khoản nào vì thiếu hoá đơn, hoá đơn sai tên, hay trả tiền mặt không? Chuyện đó xử lý ra sao?
+
 **Cách đang xoay xở + con số cho §2 (2 phút)**
 
 12. Hiện anh/chị **xoay xở** bằng cách nào để đỡ vướng? Vì sao vẫn dùng cách đó / chưa đổi?
