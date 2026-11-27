@@ -10,7 +10,7 @@ Nơi đi / điểm đến ngoài dữ liệu → trả None để trip_service d
 import copy
 import os
 import sys
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from typing import Optional
 
 _CODEBASE = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
@@ -46,16 +46,45 @@ def missing(req) -> list:
     return m
 
 
-def start_date(req) -> date:
-    if req.get("start_date"):
+def now_vn() -> datetime:
+    """Giờ thực Việt Nam (UTC+7). TRAVEL_TODAY=YYYY-MM-DD (test / bộ chấm) cố định ngày, giờ = 00:00."""
+    t = os.environ.get("TRAVEL_TODAY")
+    if t:
         try:
-            return date.fromisoformat(req["start_date"])
+            return datetime.combine(date.fromisoformat(t), datetime.min.time())
         except ValueError:
             pass
+    return datetime.now(timezone(timedelta(hours=7))).replace(tzinfo=None)
+
+
+def start_range() -> tuple:
+    """Ngày đi hợp lệ: từ hôm nay (nếu chưa quá 6:00 — kịp xuất phát 7:00) hoặc ngày mai, tới 1 năm sau."""
+    n = now_vn()
+    lo = n.date() + timedelta(days=0 if n.hour < 6 else 1)
+    return lo, n.date() + timedelta(days=366)
+
+
+def check_start(req) -> Optional[str]:
+    """Thông báo lỗi nếu ngày đi người dùng chọn đã qua / quá xa / sai định dạng; None nếu hợp lệ hoặc để trống."""
+    if not req.get("start_date"):
+        return None
     try:
-        today = date.fromisoformat(os.environ.get("TRAVEL_TODAY") or "")
+        d = date.fromisoformat(req["start_date"])
     except ValueError:
-        today = date.today()
+        return "Ngày đi không đúng định dạng — chọn lại trên lịch."
+    lo, hi = start_range()
+    if d < lo:
+        return ("Ngày đi %s đã qua hoặc quá sát giờ xuất phát (hôm nay %s) — chọn ngày từ %s trở đi."
+                % (d.strftime("%d/%m/%Y"), now_vn().strftime("%d/%m/%Y"), lo.strftime("%d/%m/%Y")))
+    if d > hi:
+        return "Ngày đi %s xa hơn 1 năm — giá tham khảo không còn sát; chọn ngày trước %s." % (d.strftime("%d/%m/%Y"), hi.strftime("%d/%m/%Y"))
+    return None
+
+
+def start_date(req) -> date:
+    if req.get("start_date") and not check_start(req):
+        return date.fromisoformat(req["start_date"])
+    today = now_vn().date()
     return today + timedelta(days=(4 - today.weekday()) % 7 or 7)       # thứ Sáu gần nhất sau hôm nay
 
 
@@ -176,7 +205,7 @@ def extra(req, dest, lv) -> dict:
     di = (c["mo_ta"][0].upper() + c["mo_ta"][1:]).replace(" đường bộ ", " · đường bộ ").replace(" + ", " · ")
     if c["gio"]:
         di += " · khoảng %s giờ mỗi chiều%s" % (_gio(c["gio"]), " (đã gồm thủ tục bay, đưa đón sân bay)" if c["kieu"] == "ve" else "")
-    thang = du_lieu.thang_hien_tai()
+    thang = start_date(req).month                         # mùa đẹp so theo THÁNG ĐI, không phải tháng hiện tại
     trong_mua = du_lieu._trong_mua(den["mua_dep_thang"], thang)
     sights = [h["ten"] for h in raw["hoat_dong"] if h["ten"] not in du_lieu.TEN_DICH_VU.values() and not h["ten"].startswith("Vé phà")]
     sights += list(raw.get("_mien_phi") or [])

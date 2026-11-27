@@ -4,7 +4,7 @@
 export type Tier = 'tiet_kiem' | 'can_bang' | 'cao_cap';
 export type Purpose = 'gan_ket' | 'nghi_duong' | 'ca_hai';
 export type Status = 'choose_destination' | 'choose_package' | 'ok' | 'ask_back' | 'refused' | 'error';
-export type Field = 'headcount' | 'days' | 'origin' | 'purpose' | 'budget_or_destination';
+export type Field = 'headcount' | 'days' | 'start_date' | 'origin' | 'purpose' | 'budget_or_destination';
 
 export interface TripInput {
   headcount: number | null;

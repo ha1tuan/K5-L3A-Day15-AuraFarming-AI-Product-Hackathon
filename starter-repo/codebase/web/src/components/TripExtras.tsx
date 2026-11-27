@@ -41,7 +41,7 @@ export function TripExtras({ plan }: { plan: Plan }) {
               Tháng {x.season.months}
               {!x.season.in_season && (
                 <p className="mt-1 rounded-lg bg-est-bg px-2.5 py-1.5 text-xs text-est">
-                  Tháng {x.season.month_now} không nằm trong mùa đẹp — nên xem dự báo thời tiết hoặc cân nhắc dời ngày.
+                  Ngày đi rơi vào tháng {x.season.month_now} — ngoài mùa đẹp, nên xem dự báo thời tiết hoặc cân nhắc dời ngày.
                 </p>
               )}
             </Row>

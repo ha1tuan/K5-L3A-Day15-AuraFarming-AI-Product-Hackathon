@@ -19,4 +19,5 @@ describe('validate', () => {
     expect(validate({ ...base, headcount: '4', budget: '1' })).toContain('headcount');
   });
   it('passes a full form', () => expect(validate({ ...base, budget: '150.000.000' })).toEqual([]));
+  it('rejects a start date in the past', () => expect(validate({ ...base, budget: '1', start_date: '2020-01-01' })).toContain('start_date'));
 });

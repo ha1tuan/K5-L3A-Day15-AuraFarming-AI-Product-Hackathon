@@ -56,3 +56,19 @@ def test_soat_bao_gia_api(c):
     assert r["status"] == "ok" and r["tong"] == sum(d["thanh_tien"] for d in r["dong"]) and r["vuot"] == r["tong"] - 45000000
     assert r["chung_tu"] and r["cau_hoi"] and r["to_trinh"]
     assert c.post("/api/quote-audit", json={"text": "xin chào"}).json()["status"] == "ask_back"
+
+
+def test_ngay_di_phai_tu_hom_nay(c):
+    past = c.post("/api/trips", json=dict(BASE, start_date="2026-11-04")).json()          # TRAVEL_TODAY=2026-11-27
+    assert past["status"] == "ask_back" and past["missing_fields"] == ["start_date"] and "đã qua" in past["message"]
+    far = c.post("/api/trips", json=dict(BASE, start_date="2028-01-01")).json()
+    assert far["status"] == "ask_back" and "1 năm" in far["message"]
+    ok = c.post("/api/trips", json=dict(BASE, destination="Hội An", start_date="2026-12-04")).json()
+    assert ok["request"]["start_date"] == "2026-12-04"
+    d = c.post("/api/trips", json=dict(BASE, destination="Hội An")).json()
+    assert d["request"]["start_date"] > "2026-11-27"                                         # mặc định: thứ Sáu sau hôm nay
+
+
+def test_mua_dep_theo_thang_di(c):
+    v = c.post("/api/trips", json=dict(BASE, origin="Hà Nội", destination="Hạ Long", budget=200000000, start_date="2027-06-04")).json()
+    assert v["plans"][0]["extra"]["season"] == {"months": "4–10", "in_season": True, "month_now": 6}

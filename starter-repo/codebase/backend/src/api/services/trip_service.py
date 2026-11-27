@@ -41,7 +41,7 @@ def _save(view: dict) -> dict:
     return view
 
 
-FIELD_VI = {"headcount": "số người đi", "days": "số ngày", "origin": "nơi xuất phát", "purpose": "mục đích",
+FIELD_VI = {"headcount": "số người đi", "days": "số ngày", "start_date": "ngày đi", "origin": "nơi xuất phát", "purpose": "mục đích",
             "budget_or_destination": "kinh phí hoặc địa điểm"}
 
 
@@ -52,6 +52,9 @@ def create_trip(inp: TripInput) -> dict:
     if miss:
         return _save({"trip_id": uuid.uuid4().hex, "status": "ask_back", "missing_fields": miss,
                       "message": "Cần thêm: " + ", ".join(FIELD_VI[m] for m in miss) + "."})
+    bad_date = du_lieu_service.check_start(req)
+    if bad_date:
+        return _save({"trip_id": uuid.uuid4().hex, "status": "ask_back", "missing_fields": ["start_date"], "message": bad_date})
     if not 5 <= req["so_nguoi"] <= 500 or not 1 <= req["so_ngay"] <= 7:
         return _save({"trip_id": uuid.uuid4().hex, "status": "refused",
                       "message": "Hệ thống hỗ trợ đoàn 5–500 người, chuyến 1–7 ngày. Đoàn lớn hơn: chia đợt và lập kế hoạch từng đợt."})

@@ -2,7 +2,7 @@ import { DESTINATIONS, ORIGINS } from '../lib/places';
 import { useId } from 'react';
 import { ArrowRight, Users, Palmtree, Sparkles, Route } from 'lucide-react';
 import type { Field, Purpose } from '../api/types';
-import { groupDigits } from '../lib/format';
+import { groupDigits, startDateRange, viDate } from '../lib/format';
 import { btnPrimary, inputCls, Notice } from './ui';
 
 export interface FormState {
@@ -35,6 +35,10 @@ export function validate(f: FormState): Field[] {
   const out: Field[] = [];
   const n = Number(f.headcount);
   if (!f.headcount || !Number.isInteger(n) || n < 5 || n > 500) out.push('headcount');
+  if (f.start_date) {
+    const { min, max } = startDateRange();
+    if (f.start_date < min || f.start_date > max) out.push('start_date');
+  }
   if (!f.origin.trim()) out.push('origin');
   if (!f.purpose) out.push('purpose');
   if (!f.budget.trim() && !f.destination.trim()) out.push('budget_or_destination');
@@ -44,6 +48,7 @@ export function validate(f: FormState): Field[] {
 const ERR: Record<Field, string> = {
   headcount: 'Nhập số người từ 5 đến 500',
   days: 'Chọn số ngày',
+  start_date: 'Ngày đi phải từ hôm nay trở đi (tối đa 1 năm tới)',
   origin: 'Nhập nơi xuất phát',
   purpose: 'Chọn mục đích chuyến đi',
   budget_or_destination: 'Nhập kinh phí hoặc địa điểm',
@@ -60,6 +65,7 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
   const set = <K extends keyof FormState>(k: K, v: FormState[K]) => onChange({ ...value, [k]: v });
   const has = (f: Field) => errors.includes(f);
   const hint = entryHint(value);
+  const range = startDateRange();
   const err = (f: Field) => has(f) && <p id={`${id}-${f}-err`} className="mt-1 text-xs text-over">{ERR[f]}</p>;
   const label = 'mb-1 block text-sm font-medium';
 
@@ -95,8 +101,9 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
           </div>
           <div>
             <label htmlFor={`${id}-date`} className={label}>Ngày đi</label>
-            <input id={`${id}-date`} type="date" className={inputCls} value={value.start_date} onChange={e => set('start_date', e.target.value)} />
-            <p className="mt-1 text-xs text-muted">Để trống: thứ Sáu gần nhất</p>
+            <input id={`${id}-date`} type="date" className={inputCls} value={value.start_date} min={range.min} max={range.max}
+              onChange={e => set('start_date', e.target.value)} aria-invalid={has('start_date')} aria-describedby={has('start_date') ? `${id}-start_date-err` : undefined} />
+            {has('start_date') ? err('start_date') : <p className="mt-1 text-xs text-muted">Từ {viDate(range.min)} · để trống: thứ Sáu gần nhất</p>}
           </div>
         </div>
 

@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { viDate } from '../lib/format';
+const THU = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
+const weekday = (iso: string) => { const d = new Date(iso + 'T00:00:00'); return isNaN(d.getTime()) ? '' : THU[d.getDay()]; };
 import { Bus, BedDouble, Utensils, Users, Sparkles, Camera, Moon, ExternalLink } from 'lucide-react';
 import type { Day, Menu, Slot, SlotKind } from '../api/types';
 import { formatVnd } from '../lib/format';
@@ -62,13 +65,13 @@ export function DayTimeline({ days }: { days: Day[] }) {
           <button key={d.label} role="tab" type="button" aria-selected={i === active} aria-controls={`day-${i}`}
             className={`h-10 cursor-pointer rounded-lg border px-3 text-sm transition ${i === active ? 'border-primary bg-primary text-white' : 'border-line bg-card hover:bg-soft'}`}
             onClick={() => setActive(i)}>
-            {d.label} · {d.date}
+            {d.label} · {weekday(d.date)} {viDate(d.date)}
           </button>
         ))}
       </div>
       {days.map((d, i) => (
         <div key={d.label} id={`day-${i}`} role="tabpanel" className={`rounded-xl border border-line bg-card ${i === active ? '' : 'hidden print-open'}`}>
-          <h3 className="hidden px-5 pt-4 font-semibold print:block">{d.label} · {d.date}</h3>
+          <h3 className="hidden px-5 pt-4 font-semibold print:block">{d.label} · {weekday(d.date)} {viDate(d.date)}</h3>
           <ol className={s.list}>
             {d.slots.map((slot, k) => {
               const Icon = ICON[slot.kind];
