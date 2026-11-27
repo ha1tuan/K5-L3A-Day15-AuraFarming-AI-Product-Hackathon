@@ -17,7 +17,10 @@ Chế độ giả (mặc định khi .env chưa có MODEL_PROVIDER, hoặc MODEL
 Nối model thật: điền .env (chép từ .env.example), rồi viết nhánh gọi API ở dưới theo docs/connect-model.md
 (có ví dụ OpenAI, Claude, model chạy trên máy, và cách nối nhà cung cấp khác). Không dán API key vào file này.
 """
+import json
 import os
+import urllib.error
+import urllib.request
 
 from tracing import model_call
 
@@ -42,6 +45,51 @@ MODEL_PROVIDER = (os.environ.get("MODEL_PROVIDER") or "fake").strip().lower()
 MODEL_NAME = (os.environ.get("MODEL_NAME") or "").strip()
 API_KEY = (os.environ.get("API_KEY") or "").strip()
 
+SHOW_RAW = False   # đổi thành True để in nguyên phản hồi của API khi cần tìm tên trường
+URL_OPENAI = "https://api.openai.com/v1/chat/completions"
+
+
+def post_json(url, headers, body, timeout=60):
+    """Gửi POST JSON, trả về JSON phản hồi. Chỉ dùng thư viện chuẩn (urllib)."""
+    req = urllib.request.Request(
+        url, data=json.dumps(body).encode("utf-8"), method="POST",
+        headers=dict({"Content-Type": "application/json"}, **headers))
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            data = json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        raise RuntimeError("HTTP %d: %s" % (e.code, e.read().decode("utf-8", "replace")[:300]))
+    if SHOW_RAW:
+        print(json.dumps(data, ensure_ascii=False, indent=2)[:3000])
+    return data
+
+
+def call_openai(system, user):
+    """Gọi Chat Completions một lần. completion_tokens của OpenAI đã gồm cả token suy luận."""
+    if not API_KEY:
+        raise RuntimeError("Thiếu API_KEY trong .env")
+    if not MODEL_NAME:
+        raise RuntimeError("Thiếu MODEL_NAME trong .env")
+    messages = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": user}]
+    data = post_json(URL_OPENAI, {"Authorization": "Bearer " + API_KEY},
+                     {"model": MODEL_NAME, "messages": messages})
+    u = data["usage"]
+    return {"text": data["choices"][0]["message"]["content"] or "",
+            "tokens_in": u["prompt_tokens"], "tokens_out": u["completion_tokens"]}
+
+
+_client = None
+
+
+def _gemini_client():
+    """Client google-genai dùng chung (tạo lần đầu gọi)."""
+    global _client
+    if _client is None:
+        from google import genai
+
+        _client = genai.Client(api_key=API_KEY)
+    return _client
+
 
 @model_call
 def call_model(system: str, user: str) -> dict:
@@ -49,8 +97,17 @@ def call_model(system: str, user: str) -> dict:
         last = (user.strip().splitlines() or [""])[-1]
         return {"text": "[câu trả lời giả — chưa nối model] " + last[:60], "model": "fake", "tokens_in": 0, "tokens_out": 0}
 
-    # NHÓM VIẾT: gọi model thật ở đây (theo MODEL_PROVIDER, MODEL_NAME, API_KEY) rồi trả đúng 4 khoá.
-    # Ví dụ chép được cho từng nhà cung cấp: docs/connect-model.md mục 2.
+    if MODEL_PROVIDER == "openai":
+        r = call_openai(system, user)
+        return {"text": r["text"], "model": MODEL_NAME,
+                "tokens_in": int(r["tokens_in"]), "tokens_out": int(r["tokens_out"])}
     raise NotImplementedError(
         "chưa viết phần gọi model thật cho MODEL_PROVIDER=%s trong codebase/ai.py — xem docs/connect-model.md"
         % MODEL_PROVIDER)
+
+
+
+
+
+
+

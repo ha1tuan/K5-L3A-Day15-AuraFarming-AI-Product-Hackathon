@@ -1,9 +1,9 @@
-"""Sinh eval/benchmark.csv + eval/dap_an_tham_chieu.json từ MỘT danh sách câu thử. Chỉ thư viện chuẩn.
+"""Sinh bộ câu thử PHỤ eval/benchmark_du_lieu.csv + eval/dap_an_tham_chieu.json (bộ chấm chính eval/benchmark.csv do nhóm viết tay) từ MỘT danh sách câu thử. Chỉ thư viện chuẩn.
 
     python eval/tao_bo_cau_thu.py
 
 - Câu có kế hoạch: số tham chiếu (tổng mỗi gói, trong/vượt ngân sách, địa điểm gợi ý, cảnh báo) do
-  data/tinh_thu.py TÍNH BẰNG CODE trên data/*.json, không nhẩm tay. Chấm theo eval/metric_spec.yaml.
+  data/tinh_thu.py TÍNH BẰNG CODE trên data/*.json, không nhẩm tay. Chấm theo eval/metric_spec_du_lieu.yaml.
 - Số tham chiếu dùng để kiểm "hợp lý" (±25%), KHÔNG bắt agent ra đúng từng đồng: agent có thể chọn
   khách sạn / quán khác cùng mức, miễn mọi ràng buộc cứng đạt.
 - Sau khi chạy lượt 1: KHÔNG sửa câu, expected, pass_criterion (03-rubric, trừ điểm). Chỉ thêm câu mới.
@@ -193,7 +193,7 @@ def main():
         dieu_kien = (CHUNG + ("; " + rieng if rieng else "")) if (p and loai != "tu_choi") else rieng
         dong.append({"id": i, "input": inp, "expected": mong + tom_tat(ref), "pass_criterion": dieu_kien,
                      "type": loai, "source": nguon})
-    with open(GOC / "eval" / "benchmark.csv", "w", newline="", encoding="utf-8-sig") as f:
+    with open(GOC / "eval" / "benchmark_du_lieu.csv", "w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, fieldnames=["id", "input", "expected", "pass_criterion", "type", "source"])
         w.writeheader()
         w.writerows(dong)

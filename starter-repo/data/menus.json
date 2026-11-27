@@ -1,0 +1,169 @@
+{
+  "_note": "Thực đơn mẫu cho đoàn, không phải thực đơn của một nhà hàng cụ thể.",
+  "tiet_kiem": [
+    {
+      "role": "bua_trua",
+      "name": "Cơm đoàn bình dân",
+      "price_per_pax": 150000,
+      "table_size": 10,
+      "dishes": [
+        "Gỏi ngó sen tôm thịt",
+        "Gà rang muối",
+        "Cá kho tộ",
+        "Rau xào theo mùa",
+        "Canh chua",
+        "Cơm trắng",
+        "Trái cây theo mùa"
+      ],
+      "drinks_note": "Trà đá, nước suối",
+      "_source": "tự ước tính"
+    },
+    {
+      "role": "bua_toi",
+      "name": "Set menu đoàn 6 món",
+      "price_per_pax": 150000,
+      "table_size": 10,
+      "dishes": [
+        "Súp gà nấm",
+        "Heo quay",
+        "Cá chiên sốt chua ngọt",
+        "Rau luộc chấm kho quẹt",
+        "Canh rau củ",
+        "Cơm trắng",
+        "Chè tráng miệng"
+      ],
+      "drinks_note": "Trà đá, nước suối",
+      "_source": "tự ước tính"
+    },
+    {
+      "role": "gala",
+      "name": "Tiệc đứng gala cơ bản",
+      "price_per_pax": 400000,
+      "table_size": null,
+      "dishes": [
+        "Salad trộn",
+        "Gà nướng",
+        "Bò xào",
+        "Mì xào hải sản",
+        "Cơm chiên",
+        "Bánh ngọt, trái cây"
+      ],
+      "drinks_note": "1 nước ngọt hoặc bia mỗi người",
+      "_source": "tự ước tính"
+    }
+  ],
+  "can_bang": [
+    {
+      "role": "bua_trua",
+      "name": "Set menu đoàn 7 món",
+      "price_per_pax": 250000,
+      "table_size": 10,
+      "dishes": [
+        "Gỏi cuốn tôm thịt",
+        "Súp cua",
+        "Gà hấp lá chanh",
+        "Bò lúc lắc",
+        "Cá nướng muối ớt",
+        "Rau xào tỏi",
+        "Cơm, trái cây"
+      ],
+      "drinks_note": "Nước suối, trà đá, 1 nước ngọt",
+      "_source": "tự ước tính"
+    },
+    {
+      "role": "bua_toi",
+      "name": "Set menu đoàn 8 món",
+      "price_per_pax": 250000,
+      "table_size": 10,
+      "dishes": [
+        "Gỏi ngó sen tôm thịt",
+        "Súp hải sản",
+        "Heo rừng xào lăn",
+        "Gà ta luộc lá chanh",
+        "Cá hấp xì dầu",
+        "Rau củ xào",
+        "Lẩu thập cẩm",
+        "Chè tráng miệng"
+      ],
+      "drinks_note": "Nước suối, trà đá, 1 nước ngọt",
+      "_source": "tự ước tính"
+    },
+    {
+      "role": "gala",
+      "name": "Tiệc gala set menu 8 món",
+      "price_per_pax": 600000,
+      "table_size": 10,
+      "dishes": [
+        "Khai vị tổng hợp",
+        "Súp hải sản",
+        "Bò sốt tiêu đen",
+        "Tôm nướng bơ tỏi",
+        "Gà quay",
+        "Rau củ xào",
+        "Cơm chiên dương châu",
+        "Bánh và trái cây tráng miệng"
+      ],
+      "drinks_note": "Nước ngọt, bia không giới hạn trong 2 giờ",
+      "_source": "tự ước tính"
+    }
+  ],
+  "cao_cap": [
+    {
+      "role": "bua_trua",
+      "name": "Set menu cao cấp 8 món",
+      "price_per_pax": 450000,
+      "table_size": 8,
+      "dishes": [
+        "Salad hải sản",
+        "Súp bào ngư vi cá giả",
+        "Bò Wagyu áp chảo",
+        "Cá tầm hấp",
+        "Tôm hùm nướng phô mai",
+        "Rau củ hữu cơ",
+        "Cơm chiên hải sản",
+        "Tráng miệng kem và trái cây"
+      ],
+      "drinks_note": "Nước suối, nước ép, 1 ly vang hoặc bia",
+      "_source": "tự ước tính"
+    },
+    {
+      "role": "bua_toi",
+      "name": "Set menu cao cấp 9 món",
+      "price_per_pax": 450000,
+      "table_size": 8,
+      "dishes": [
+        "Khai vị Á Âu",
+        "Súp nấm truffle",
+        "Cá hồi nướng",
+        "Bò bít tết thượng hạng",
+        "Tôm sú sốt me",
+        "Rau củ nướng",
+        "Lẩu hải sản",
+        "Cơm hoặc mì",
+        "Bánh ngọt"
+      ],
+      "drinks_note": "Nước suối, nước ép, 1 ly vang hoặc bia",
+      "_source": "tự ước tính"
+    },
+    {
+      "role": "gala",
+      "name": "Tiệc gala cao cấp 10 món",
+      "price_per_pax": 1000000,
+      "table_size": 8,
+      "dishes": [
+        "Khai vị lạnh",
+        "Súp hải sản cao cấp",
+        "Tôm hùm nướng bơ",
+        "Bò Wagyu sốt rượu vang",
+        "Cá tuyết áp chảo",
+        "Rau củ nướng",
+        "Cơm chiên cua",
+        "Lẩu hải sản",
+        "Bánh ngọt Âu",
+        "Trái cây theo mùa"
+      ],
+      "drinks_note": "Rượu vang, bia, nước ngọt không giới hạn trong 3 giờ",
+      "_source": "tự ước tính"
+    }
+  ]
+}

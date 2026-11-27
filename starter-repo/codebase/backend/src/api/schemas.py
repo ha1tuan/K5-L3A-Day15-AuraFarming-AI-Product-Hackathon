@@ -1,5 +1,15 @@
-"""Schema Pydantic của API (Task 9′): StartTripRequest{message}, ChooseHotelRequest{hotel_id|None},
-HotelOption, TripView{trip_id, status, message, hotel_options?, chosen_hotel?, itinerary?}.
+"""Schema Pydantic của API, khớp codebase/web/src/api/types.ts (TripInput)."""
+from typing import Optional
 
-Chưa triển khai — xem docs/superpowers/plans/2026-11-27-travel-planner.md.
-"""
+from pydantic import BaseModel
+
+
+class TripInput(BaseModel):
+    headcount: Optional[int] = None
+    days: Optional[int] = None
+    start_date: Optional[str] = None
+    origin: str = ""
+    purpose: Optional[str] = None
+    budget: Optional[int] = None
+    budget_per_person: bool = False
+    destination: str = ""

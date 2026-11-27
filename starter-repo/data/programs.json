@@ -1,0 +1,156 @@
+{
+  "gala": {
+    "title": "Chương trình gala dinner",
+    "steps": [
+      {
+        "offset": 0,
+        "minutes": 30,
+        "text": "Đón khách, check-in, chụp ảnh sảnh"
+      },
+      {
+        "offset": 30,
+        "minutes": 15,
+        "text": "Khai mạc, phát biểu lãnh đạo"
+      },
+      {
+        "offset": 45,
+        "minutes": 45,
+        "text": "Dùng tiệc kết hợp văn nghệ nhẹ"
+      },
+      {
+        "offset": 90,
+        "minutes": 30,
+        "text": "Trao giải, vinh danh cá nhân và tập thể"
+      },
+      {
+        "offset": 120,
+        "minutes": 45,
+        "text": "Văn nghệ, game tương tác giữa các đội"
+      },
+      {
+        "offset": 165,
+        "minutes": 15,
+        "text": "Bế mạc, chụp ảnh lưu niệm"
+      }
+    ],
+    "_source": "tự ước tính"
+  },
+  "team_building": {
+    "tiet_kiem": {
+      "title": "Team building cơ bản",
+      "steps": [
+        {
+          "offset": 0,
+          "minutes": 20,
+          "text": "Tập hợp, chia đội, phổ biến luật"
+        },
+        {
+          "offset": 20,
+          "minutes": 40,
+          "text": "Trò chơi vận động đồng đội"
+        },
+        {
+          "offset": 60,
+          "minutes": 50,
+          "text": "Kéo co, chuyền nước, giải đố"
+        },
+        {
+          "offset": 110,
+          "minutes": 40,
+          "text": "Thử thách chung kết"
+        },
+        {
+          "offset": 150,
+          "minutes": 30,
+          "text": "Tổng kết, trao quà, giải khát"
+        }
+      ],
+      "includes": "Trò chơi tại bãi cỏ, MC của đơn vị tổ chức, dụng cụ cơ bản, nước uống",
+      "fallback": "Nếu mưa: chuyển các trò chơi vào hội trường hoặc sảnh có mái che, giữ nguyên thời lượng.",
+      "_source": "tự ước tính"
+    },
+    "can_bang": {
+      "title": "Team building có huấn luyện viên",
+      "steps": [
+        {
+          "offset": 0,
+          "minutes": 20,
+          "text": "Khởi động, chia đội, phổ biến luật"
+        },
+        {
+          "offset": 20,
+          "minutes": 50,
+          "text": "Thử thách đồng đội theo trạm"
+        },
+        {
+          "offset": 70,
+          "minutes": 50,
+          "text": "Trò chơi chiến lược giữa các đội"
+        },
+        {
+          "offset": 120,
+          "minutes": 40,
+          "text": "Chung kết, tính điểm"
+        },
+        {
+          "offset": 160,
+          "minutes": 20,
+          "text": "Tổng kết, trao giải"
+        }
+      ],
+      "includes": "MC và huấn luyện viên, dụng cụ theo trạm, áo đồng phục đội, nước uống, bảo hiểm",
+      "fallback": "Nếu mưa: chuyển sang bộ trò chơi trong nhà (xếp hình, giải mật thư, thuyết trình đội).",
+      "_source": "tự ước tính"
+    },
+    "cao_cap": {
+      "title": "Team building chuyên nghiệp",
+      "steps": [
+        {
+          "offset": 0,
+          "minutes": 15,
+          "text": "Đón đoàn, chia đội, giới thiệu chương trình"
+        },
+        {
+          "offset": 15,
+          "minutes": 55,
+          "text": "Hành trình khám phá theo trạm có huấn luyện viên"
+        },
+        {
+          "offset": 70,
+          "minutes": 50,
+          "text": "Thử thách chiến lược và hợp tác"
+        },
+        {
+          "offset": 120,
+          "minutes": 40,
+          "text": "Chung kết, tính điểm trực tiếp"
+        },
+        {
+          "offset": 160,
+          "minutes": 20,
+          "text": "Tổng kết, trao giải, chụp ảnh"
+        }
+      ],
+      "includes": "Đội huấn luyện viên và MC, thiết bị chuyên dụng, áo đội, tiệc trà nhẹ, bảo hiểm, ảnh và video lưu niệm",
+      "fallback": "Nếu mưa: chuyển sang chương trình trong nhà có mái che với bộ thử thách thay thế, giữ nguyên thời lượng.",
+      "_source": "tự ước tính"
+    }
+  },
+  "nghi_duong": {
+    "rest": [
+      {
+        "title": "Thư giãn tự do",
+        "details": "Nghỉ ngơi tại khách sạn, bơi, đọc sách hoặc đi dạo."
+      },
+      {
+        "title": "Spa và chăm sóc sức khoẻ",
+        "details": "Xông hơi, massage hoặc yoga nhẹ (chi phí cá nhân nếu không nằm trong gói)."
+      },
+      {
+        "title": "Cà phê và thư giãn",
+        "details": "Ngắm cảnh, uống cà phê tại quán gần khách sạn."
+      }
+    ],
+    "_source": "tự ước tính"
+  }
+}

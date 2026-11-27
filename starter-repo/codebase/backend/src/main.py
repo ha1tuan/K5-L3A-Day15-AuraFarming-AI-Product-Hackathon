@@ -1,12 +1,14 @@
 """App FastAPI: chỉ phục vụ API dưới /api. Web React (codebase/web) chạy riêng và gọi API này.
 
 Chạy: python run.py  (codebase/app.py gọi uvicorn)  ·  hoặc trong codebase/backend: uvicorn src.main:app --reload
-Router /api/trips: thêm ở Task 9′.
+Router /api/trips: src/api/routes/trips.py.
 """
 import os
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+from src.api.routes import trips
 
 app = FastAPI(title="Travel Planner API", version="0.1.0", description="AI lập lịch trình du lịch")
 
@@ -18,6 +20,9 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
 )
+
+
+app.include_router(trips.router)
 
 
 @app.get("/api/health", tags=["System"])
