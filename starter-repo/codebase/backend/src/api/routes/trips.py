@@ -1,4 +1,4 @@
-"""Router /api/trips: POST tạo chuyến (cách C), GET đọc lại chuyến đã lưu."""
+"""Router /api/trips: POST tạo chuyến (cách C), GET đọc lại chuyến đã lưu, POST /{id}/approve (cách A/B — chưa hỗ trợ)."""
 from fastapi import APIRouter, HTTPException
 
 from src.api.schemas import TripInput
@@ -15,6 +15,18 @@ def create_trip(body: TripInput) -> dict:
 @router.get("/{trip_id}")
 def get_trip(trip_id: str) -> dict:
     view = trip_service.get_trip(trip_id)
+    if view is None:
+        raise HTTPException(status_code=404, detail="Không tìm thấy chuyến đi")
+    return view
+
+
+
+
+
+
+@router.post("/{trip_id}/approve")
+def approve_trip(trip_id: str) -> dict:
+    view = trip_service.approve_trip(trip_id)
     if view is None:
         raise HTTPException(status_code=404, detail="Không tìm thấy chuyến đi")
     return view

@@ -60,3 +60,19 @@ def test_cors_allows_vite_origin():
                                               "Access-Control-Request-Method": "POST",
                                               "Access-Control-Request-Headers": "content-type"})
     assert r.headers["access-control-allow-origin"] == "http://localhost:5173"
+
+
+def test_graph_failure_returns_error_view_not_500(world, monkeypatch):
+    class Boom:
+        def invoke(self, _):
+            raise RuntimeError("model down")
+    monkeypatch.setattr(trip_service, "_form_graph", lambda: Boom())
+    r = client.post("/api/trips", json=BODY)
+    assert r.status_code == 200 and r.json()["status"] == "error" and r.json()["trip_id"]
+
+
+def test_approve_not_supported_yet(world):
+    tid = client.post("/api/trips", json=BODY).json()["trip_id"]
+    r = client.post(f"/api/trips/{tid}/approve", json={"package": "can_bang"})
+    assert r.status_code == 200 and r.json()["status"] == "error" and r.json()["trip_id"] == tid
+    assert client.post("/api/trips/khong-co/approve", json={"package": "can_bang"}).status_code == 404
