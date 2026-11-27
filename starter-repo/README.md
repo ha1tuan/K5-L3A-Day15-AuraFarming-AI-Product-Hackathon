@@ -108,7 +108,7 @@ Nhóm dùng stack khác (Node, Streamlit, notebook…): sửa hàm `run_app()` t
 
 | Thành phần | Thật / Giả | Ghi chú |
 |---|---|---|
-| Lời gọi AI ở quyết định trung tâm | **Thật** (bắt buộc từ CP3) | Model: ____ |
+| Lời gọi AI ở quyết định trung tâm | **Thật** (bắt buộc từ CP3) | Model: `qwen2.5:7b` chạy trên máy qua Ollama (`MODEL_PROVIDER=ollama` trong `.env`); nhánh OpenAI (`MODEL_PROVIDER=openai`) vẫn dùng được |
 |  |  |  |
 
 ## Dùng AI vào việc gì

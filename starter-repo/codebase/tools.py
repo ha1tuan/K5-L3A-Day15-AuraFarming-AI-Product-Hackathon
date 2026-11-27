@@ -8,6 +8,7 @@ from dataclasses import asdict
 from datetime import date
 from types import SimpleNamespace
 
+import _paths  # noqa: F401  (thêm codebase/backend vào sys.path để import src.* khi chạy run.py eval / app)
 from tracing import tool, note, TOOLS  # noqa: F401  (TOOLS: danh sách công cụ đã đăng ký, dùng khi viết vòng lặp agent)
 
 from src.core.planning.estimates import load_estimates
