@@ -1,0 +1,63 @@
+{
+ "_mo_ta": "Quy tắc 3 gói. Cùng khung lịch (số ngày, giờ đi/về, bữa ăn); khác nhau ở MỨC của từng hạng mục.",
+ "goi": {
+  "tiet_kiem": {
+   "ten": "Tiết kiệm",
+   "hang_sao": [
+    2,
+    3
+   ],
+   "xe": "xe_45_cho",
+   "muc_an": "tiet_kiem",
+   "team_building": false,
+   "gala": false,
+   "may_bay_khi_duong_bo_tren_gio": 12
+  },
+  "can_bang": {
+   "ten": "Cân bằng",
+   "hang_sao": [
+    4
+   ],
+   "xe": "xe_29_cho",
+   "muc_an": "can_bang",
+   "team_building": true,
+   "gala": true,
+   "may_bay_khi_duong_bo_tren_gio": 10
+  },
+  "day_du": {
+   "ten": "Đầy đủ",
+   "hang_sao": [
+    5
+   ],
+   "xe": "limousine_18_cho",
+   "muc_an": "day_du",
+   "team_building": true,
+   "gala": true,
+   "may_bay_khi_duong_bo_tren_gio": 8
+  }
+ },
+ "phat_sinh_ty_le": 0.05,
+ "khung_gio": {
+  "bat_dau_ngay": "07:00",
+  "an_trua": [
+   "11:30",
+   "13:30"
+  ],
+  "an_toi": [
+   "18:00",
+   "20:00"
+  ],
+  "ket_thuc_muon_nhat": "22:00",
+  "thoi_luong_bua_phut": 75
+ },
+ "gioi_han": {
+  "so_nguoi": [
+   5,
+   500
+  ],
+  "so_ngay": [
+   1,
+   7
+  ]
+ }
+}

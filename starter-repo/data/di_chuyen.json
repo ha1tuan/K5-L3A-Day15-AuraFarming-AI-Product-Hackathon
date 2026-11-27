@@ -1,0 +1,292 @@
+{
+ "_mo_ta": "Di chuyển chặng đi/về. Đường bộ = chim bay × 1,3; xe 50 km/h + 30 phút nghỉ mỗi 3 giờ. Đường bay: 700 km/h + 0,3 giờ cất hạ cánh; thủ tục + đưa đón 2,5 giờ.",
+ "xe": [
+  {
+   "loai": "xe_16_cho",
+   "so_cho": 15,
+   "don_gia_km": 9000,
+   "uoc_tinh": true
+  },
+  {
+   "loai": "xe_29_cho",
+   "so_cho": 28,
+   "don_gia_km": 10000,
+   "uoc_tinh": true
+  },
+  {
+   "loai": "xe_45_cho",
+   "so_cho": 44,
+   "don_gia_km": 11500,
+   "uoc_tinh": true
+  },
+  {
+   "loai": "limousine_18_cho",
+   "so_cho": 17,
+   "don_gia_km": 13000,
+   "uoc_tinh": true
+  }
+ ],
+ "phi_luu_dem_tai_xe": 500000,
+ "km_toi_thieu_moi_ngay": 100,
+ "km_noi_vung_moi_ngay": 60,
+ "toc_do_xe_kmh": 50,
+ "he_so_duong_bo": 1.3,
+ "tuyen": [
+  {
+   "tu": "HAN",
+   "den": "halong",
+   "duong_bo_km": 166,
+   "duong_bo_gio": 3.8,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "samson",
+   "duong_bo_km": 187,
+   "duong_bo_gio": 4.2,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "danang",
+   "duong_bo_km": 789,
+   "duong_bo_gio": 18.3,
+   "duong_bay": {
+    "chang": "HAN-DAD",
+    "km": 628,
+    "gio_bay": 1.2,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "nhatrang",
+   "duong_bo_km": 1352,
+   "duong_bo_gio": 31.5,
+   "duong_bay": {
+    "chang": "HAN-CXR",
+    "km": 1088,
+    "gio_bay": 1.9,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1400000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "dalat",
+   "duong_bo_km": 1362,
+   "duong_bo_gio": 31.7,
+   "duong_bay": {
+    "chang": "HAN-DLI",
+    "km": 1088,
+    "gio_bay": 1.9,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1580000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "phuquoc",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "duong_bay": {
+    "chang": "HAN-PQC",
+    "km": 1244,
+    "gio_bay": 2.1,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1600000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "DAD",
+   "den": "halong",
+   "duong_bo_km": 724,
+   "duong_bo_gio": 16.5,
+   "duong_bay": {
+    "chang": "DAD-VDO",
+    "km": 570,
+    "gio_bay": 1.1,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1110000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "samson",
+   "duong_bo_km": 619,
+   "duong_bo_gio": 14.4,
+   "duong_bay": {
+    "chang": "DAD-THD",
+    "km": 517,
+    "gio_bay": 1.0,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1070000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "danang",
+   "duong_bo_km": 0,
+   "duong_bo_gio": 0.0,
+   "duong_bay": null,
+   "ghi_chu": "cùng nơi: chỉ di chuyển nội vùng"
+  },
+  {
+   "tu": "DAD",
+   "den": "nhatrang",
+   "duong_bo_km": 569,
+   "duong_bo_gio": 12.9,
+   "duong_bay": {
+    "chang": "DAD-CXR",
+    "km": 463,
+    "gio_bay": 1.0,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1020000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "dalat",
+   "duong_bo_km": 596,
+   "duong_bo_gio": 13.4,
+   "duong_bay": {
+    "chang": "DAD-DLI",
+    "km": 478,
+    "gio_bay": 1.0,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1030000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "phuquoc",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "duong_bay": {
+    "chang": "DAD-PQC",
+    "km": 796,
+    "gio_bay": 1.4,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1320000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "SGN",
+   "den": "halong",
+   "duong_bo_km": 1472,
+   "duong_bo_gio": 33.9,
+   "duong_bay": {
+    "chang": "SGN-VDO",
+    "km": 1148,
+    "gio_bay": 1.9,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1630000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "samson",
+   "duong_bo_km": 1300,
+   "duong_bo_gio": 30.0,
+   "duong_bay": {
+    "chang": "SGN-THD",
+    "km": 1018,
+    "gio_bay": 1.8,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1520000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "danang",
+   "duong_bo_km": 791,
+   "duong_bo_gio": 18.3,
+   "duong_bay": {
+    "chang": "SGN-DAD",
+    "km": 605,
+    "gio_bay": 1.2,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 1140000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "nhatrang",
+   "duong_bo_km": 412,
+   "duong_bo_gio": 9.2,
+   "duong_bay": {
+    "chang": "SGN-CXR",
+    "km": 309,
+    "gio_bay": 0.7,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 880000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "dalat",
+   "duong_bo_km": 301,
+   "duong_bo_gio": 7.0,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "phuquoc",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "duong_bay": {
+    "chang": "SGN-PQC",
+    "km": 300,
+    "gio_bay": 0.7,
+    "gio_thu_tuc_dua_don": 2.5,
+    "gia_ve_mot_chieu": 870000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  }
+ ]
+}

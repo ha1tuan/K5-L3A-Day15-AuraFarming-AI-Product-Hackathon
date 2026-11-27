@@ -38,3 +38,6 @@ data-btc/
 # Trạng thái chuyến đi của web (SQLite) và thư viện Node
 codebase/backend/var/
 codebase/web/node_modules/
+
+# Data tải về để tham khảo (lịch trình thật của người thật, bộ ngoài): chỉ giữ ở máy, mô tả ở data/DATA_CARD.md
+data/raw/

@@ -1,0 +1,1478 @@
+[
+ {
+  "id": "KS001",
+  "ten": "Khách sạn Hướng Dương Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "tiet_kiem",
+  "hang_sao": 2,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 480000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 650000,
+    "so_luong": 80
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 770000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 120,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS002",
+  "ten": "Khách sạn Tân Cảng Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 610000,
+    "so_luong": 20
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 820000,
+    "so_luong": 80
+   }
+  ],
+  "tong_phong": 100,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS003",
+  "ten": "Khách sạn Hoàng Gia Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 710000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 960000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1140000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 23,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS004",
+  "ten": "Khách sạn Vạn Xuân Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1200000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1620000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1920000,
+    "so_luong": 20
+   }
+  ],
+  "tong_phong": 40,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS005",
+  "ten": "Khách sạn Phương Nam Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1120000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1510000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 70,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS006",
+  "ten": "Khách sạn Lan Anh Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1100000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1480000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1760000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 36,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS007",
+  "ten": "Khách sạn Sao Biển Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2590000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3500000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 4140000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 130,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS008",
+  "ten": "Khách sạn Đông Á Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2950000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3980000,
+    "so_luong": 20
+   }
+  ],
+  "tong_phong": 30,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS009",
+  "ten": "Khách sạn Hồng Hạc Hạ Long (tên dựng)",
+  "diem_den": "halong",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2590000,
+    "so_luong": 5
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3500000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 4140000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 11,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS010",
+  "ten": "Khách sạn Thiên Hà Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "tiet_kiem",
+  "hang_sao": 2,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 410000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 550000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 660000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 50,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS011",
+  "ten": "Khách sạn An Bình Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 540000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 730000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 60,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS012",
+  "ten": "Khách sạn Bình Minh Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 520000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 700000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 830000,
+    "so_luong": 6
+   }
+  ],
+  "tong_phong": 22,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS013",
+  "ten": "Khách sạn Trường Sơn Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1040000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1400000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1660000,
+    "so_luong": 60
+   }
+  ],
+  "tong_phong": 110,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS014",
+  "ten": "Khách sạn Ngọc Lan Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 950000,
+    "so_luong": 80
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1280000,
+    "so_luong": 60
+   }
+  ],
+  "tong_phong": 140,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS015",
+  "ten": "Khách sạn Mai Vàng Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1050000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1420000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1680000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 19,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS016",
+  "ten": "Khách sạn Hải Âu Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2380000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3210000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 3810000,
+    "so_luong": 20
+   }
+  ],
+  "tong_phong": 60,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS017",
+  "ten": "Khách sạn Hướng Dương Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "day_du",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1150000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1550000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 70,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS018",
+  "ten": "Khách sạn Tân Cảng Sầm Sơn (tên dựng)",
+  "diem_den": "samson",
+  "muc": "day_du",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1070000,
+    "so_luong": 5
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1440000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1710000,
+    "so_luong": 5
+   }
+  ],
+  "tong_phong": 13,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS019",
+  "ten": "Khách sạn Hoàng Gia Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "tiet_kiem",
+  "hang_sao": 2,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 390000,
+    "so_luong": 80
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 530000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 620000,
+    "so_luong": 80
+   }
+  ],
+  "tong_phong": 190,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS020",
+  "ten": "Khách sạn Vạn Xuân Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 710000,
+    "so_luong": 80
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 960000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 90,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS021",
+  "ten": "Khách sạn Phương Nam Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 640000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 860000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1020000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 26,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS022",
+  "ten": "Khách sạn Lan Anh Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1180000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1590000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1890000,
+    "so_luong": 80
+   }
+  ],
+  "tong_phong": 150,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS023",
+  "ten": "Khách sạn Sao Biển Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1420000,
+    "so_luong": 20
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1920000,
+    "so_luong": 80
+   }
+  ],
+  "tong_phong": 100,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS024",
+  "ten": "Khách sạn Đông Á Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1490000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 2010000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 2380000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 9,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS025",
+  "ten": "Resort Hồng Hạc Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 3400000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 4590000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 5440000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 80,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS026",
+  "ten": "Resort Thiên Hà Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2770000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3740000,
+    "so_luong": 80
+   }
+  ],
+  "tong_phong": 140,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS027",
+  "ten": "Resort An Bình Đà Nẵng - Hội An (tên dựng)",
+  "diem_den": "danang",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2770000,
+    "so_luong": 6
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3740000,
+    "so_luong": 6
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 4430000,
+    "so_luong": 13
+   }
+  ],
+  "tong_phong": 25,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS028",
+  "ten": "Khách sạn Bình Minh Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "tiet_kiem",
+  "hang_sao": 2,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 400000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 540000,
+    "so_luong": 20
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 640000,
+    "so_luong": 20
+   }
+  ],
+  "tong_phong": 70,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS029",
+  "ten": "Khách sạn Trường Sơn Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 670000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 900000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 90,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS030",
+  "ten": "Khách sạn Ngọc Lan Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 630000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 850000,
+    "so_luong": 6
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1010000,
+    "so_luong": 5
+   }
+  ],
+  "tong_phong": 21,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS031",
+  "ten": "Khách sạn Mai Vàng Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1110000,
+    "so_luong": 20
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1500000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1780000,
+    "so_luong": 40
+   }
+  ],
+  "tong_phong": 120,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS032",
+  "ten": "Khách sạn Hải Âu Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1060000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1430000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 20,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS033",
+  "ten": "Khách sạn Hướng Dương Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1280000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1730000,
+    "so_luong": 6
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 2050000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 29,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS034",
+  "ten": "Resort Tân Cảng Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2440000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3290000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 3900000,
+    "so_luong": 40
+   }
+  ],
+  "tong_phong": 140,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS035",
+  "ten": "Resort Hoàng Gia Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2900000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3920000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 70,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS036",
+  "ten": "Resort Vạn Xuân Nha Trang (tên dựng)",
+  "diem_den": "nhatrang",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 3090000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 4170000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 4940000,
+    "so_luong": 5
+   }
+  ],
+  "tong_phong": 28,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS037",
+  "ten": "Khách sạn Phương Nam Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "tiet_kiem",
+  "hang_sao": 2,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 340000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 460000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 540000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 70,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS038",
+  "ten": "Khách sạn Lan Anh Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 500000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 680000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 50,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS039",
+  "ten": "Khách sạn Sao Biển Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 580000,
+    "so_luong": 5
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 780000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 930000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 18,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS040",
+  "ten": "Khách sạn Đông Á Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1030000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1390000,
+    "so_luong": 80
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1650000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 120,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS041",
+  "ten": "Khách sạn Hồng Hạc Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1140000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1540000,
+    "so_luong": 60
+   }
+  ],
+  "tong_phong": 120,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS042",
+  "ten": "Khách sạn Thiên Hà Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 900000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1220000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1440000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 23,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS043",
+  "ten": "Khách sạn An Bình Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2810000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 3790000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 4500000,
+    "so_luong": 40
+   }
+  ],
+  "tong_phong": 130,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS044",
+  "ten": "Khách sạn Bình Minh Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2060000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 2780000,
+    "so_luong": 30
+   }
+  ],
+  "tong_phong": 60,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS045",
+  "ten": "Khách sạn Trường Sơn Đà Lạt (tên dựng)",
+  "diem_den": "dalat",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2090000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 2820000,
+    "so_luong": 3
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 3340000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 16,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS046",
+  "ten": "Khách sạn Ngọc Lan Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "tiet_kiem",
+  "hang_sao": 2,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 500000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 680000,
+    "so_luong": 60
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 800000,
+    "so_luong": 20
+   }
+  ],
+  "tong_phong": 90,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS047",
+  "ten": "Khách sạn Mai Vàng Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 630000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 850000,
+    "so_luong": 60
+   }
+  ],
+  "tong_phong": 100,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS048",
+  "ten": "Khách sạn Hải Âu Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "tiet_kiem",
+  "hang_sao": 3,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 660000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 890000,
+    "so_luong": 6
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 1060000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 19,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS049",
+  "ten": "Khách sạn Hướng Dương Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1760000,
+    "so_luong": 80
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 2380000,
+    "so_luong": 80
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 2820000,
+    "so_luong": 20
+   }
+  ],
+  "tong_phong": 180,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS050",
+  "ten": "Khách sạn Tân Cảng Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1650000,
+    "so_luong": 40
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 2230000,
+    "so_luong": 80
+   }
+  ],
+  "tong_phong": 120,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS051",
+  "ten": "Khách sạn Hoàng Gia Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "can_bang",
+  "hang_sao": 4,
+  "loai": "khach_san",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 1470000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 1980000,
+    "so_luong": 6
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 2350000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 19,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS052",
+  "ten": "Resort Vạn Xuân Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 3280000,
+    "so_luong": 10
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 4430000,
+    "so_luong": 30
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 5250000,
+    "so_luong": 10
+   }
+  ],
+  "tong_phong": 50,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS053",
+  "ten": "Resort Phương Nam Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 3700000,
+    "so_luong": 20
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 5000000,
+    "so_luong": 60
+   }
+  ],
+  "tong_phong": 80,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "KS054",
+  "ten": "Resort Lan Anh Phú Quốc (tên dựng)",
+  "diem_den": "phuquoc",
+  "muc": "day_du",
+  "hang_sao": 5,
+  "loai": "resort",
+  "loai_phong": [
+   {
+    "suc_chua": 2,
+    "gia_dem": 2980000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 3,
+    "gia_dem": 4020000,
+    "so_luong": 13
+   },
+   {
+    "suc_chua": 4,
+    "gia_dem": 4770000,
+    "so_luong": 3
+   }
+  ],
+  "tong_phong": 29,
+  "gom_bua_sang": true,
+  "uoc_tinh": true,
+  "ten_dung": true
+ }
+]

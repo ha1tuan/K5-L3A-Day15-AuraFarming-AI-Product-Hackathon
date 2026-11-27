@@ -1,0 +1,94 @@
+{
+ "seed": 42,
+ "diem_di": [
+  {
+   "id": "HAN",
+   "ten": "Hà Nội",
+   "lat": 21.0285,
+   "lon": 105.8542,
+   "san_bay": "HAN"
+  },
+  {
+   "id": "DAD",
+   "ten": "Đà Nẵng",
+   "lat": 16.0544,
+   "lon": 108.2022,
+   "san_bay": "DAD"
+  },
+  {
+   "id": "SGN",
+   "ten": "TP.HCM",
+   "lat": 10.7769,
+   "lon": 106.7009,
+   "san_bay": "SGN"
+  }
+ ],
+ "diem_den": [
+  {
+   "id": "halong",
+   "ten": "Hạ Long",
+   "tinh": "Quảng Ninh",
+   "lat": 20.9517,
+   "lon": 107.08,
+   "san_bay": "VDO",
+   "dao": false,
+   "mua_dep": "4–10",
+   "mo_ta": "vịnh di sản, du thuyền, khu vui chơi; gần Hà Nội"
+  },
+  {
+   "id": "samson",
+   "ten": "Sầm Sơn",
+   "tinh": "Thanh Hoá",
+   "lat": 19.735,
+   "lon": 105.905,
+   "san_bay": "THD",
+   "dao": false,
+   "mua_dep": "5–8",
+   "mo_ta": "biển giá mềm, nhiều nhà hàng hải sản nhận đoàn đông; ít khách sạn 5 sao"
+  },
+  {
+   "id": "danang",
+   "ten": "Đà Nẵng - Hội An",
+   "tinh": "Đà Nẵng, Quảng Nam",
+   "lat": 16.0471,
+   "lon": 108.2062,
+   "san_bay": "DAD",
+   "dao": false,
+   "mua_dep": "2–8",
+   "mo_ta": "biển, Bà Nà, phố cổ Hội An; nhiều resort nhận đoàn"
+  },
+  {
+   "id": "nhatrang",
+   "ten": "Nha Trang",
+   "tinh": "Khánh Hoà",
+   "lat": 12.2388,
+   "lon": 109.1967,
+   "san_bay": "CXR",
+   "dao": false,
+   "mua_dep": "1–8",
+   "mo_ta": "biển, tour đảo, khu vui chơi"
+  },
+  {
+   "id": "dalat",
+   "ten": "Đà Lạt",
+   "tinh": "Lâm Đồng",
+   "lat": 11.9404,
+   "lon": 108.4583,
+   "san_bay": "DLI",
+   "dao": false,
+   "mua_dep": "11–4",
+   "mo_ta": "cao nguyên mát, cảnh đồi thông; không có biển; đường đèo"
+  },
+  {
+   "id": "phuquoc",
+   "ten": "Phú Quốc",
+   "tinh": "Kiên Giang",
+   "lat": 10.227,
+   "lon": 103.967,
+   "san_bay": "PQC",
+   "dao": true,
+   "mua_dep": "11–4",
+   "mo_ta": "đảo; chỉ tính đường bay (không tính phà cho đoàn)"
+  }
+ ]
+}

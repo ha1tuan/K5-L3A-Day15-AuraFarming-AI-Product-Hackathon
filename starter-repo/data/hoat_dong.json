@@ -1,0 +1,929 @@
+[
+ {
+  "id": "HD001",
+  "ten": "Du thuyền vịnh Hạ Long (tuyến hang Sửng Sốt, Ti Tốp)",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD002",
+  "ten": "Sun World Hạ Long (cáp treo Nữ Hoàng)",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "09:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD003",
+  "ten": "Bãi Cháy và công viên ven biển",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD004",
+  "ten": "Bảo tàng Quảng Ninh",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "gia_nguoi": 40000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [
+   0
+  ],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD005",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Hạ Long (gói cơ bản)",
+  "diem_den": "halong",
+  "loai": "team_building",
+  "gia_nguoi": 315000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD006",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Hạ Long (gói trọn)",
+  "diem_den": "halong",
+  "loai": "team_building",
+  "gia_nguoi": 580000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD007",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Hạ Long (gói cơ bản)",
+  "diem_den": "halong",
+  "loai": "gala_dinner",
+  "gia_nguoi": 470000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD008",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Hạ Long (gói trọn)",
+  "diem_den": "halong",
+  "loai": "gala_dinner",
+  "gia_nguoi": 890000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD009",
+  "ten": "Bãi biển Sầm Sơn (tắm biển tự do)",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 150,
+  "gio_mo": "05:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD010",
+  "ten": "Đền Độc Cước và Hòn Trống Mái",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD011",
+  "ten": "Khu du lịch sinh thái Sun World Sầm Sơn",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "gia_nguoi": 200000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "15:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [
+   0
+  ],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD012",
+  "ten": "Chợ hải sản Sầm Sơn",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 60,
+  "gio_mo": "05:00",
+  "gio_dong": "11:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD013",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Sầm Sơn (gói cơ bản)",
+  "diem_den": "samson",
+  "loai": "team_building",
+  "gia_nguoi": 270000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD014",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Sầm Sơn (gói trọn)",
+  "diem_den": "samson",
+  "loai": "team_building",
+  "gia_nguoi": 495000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD015",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Sầm Sơn (gói cơ bản)",
+  "diem_den": "samson",
+  "loai": "gala_dinner",
+  "gia_nguoi": 405000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD016",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Sầm Sơn (gói trọn)",
+  "diem_den": "samson",
+  "loai": "gala_dinner",
+  "gia_nguoi": 765000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD017",
+  "ten": "Sun World Bà Nà Hills",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "gia_nguoi": 950000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD018",
+  "ten": "Phố cổ Hội An (vé tham quan)",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "gia_nguoi": 120000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "08:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD019",
+  "ten": "Ngũ Hành Sơn",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "gia_nguoi": 40000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD020",
+  "ten": "Bán đảo Sơn Trà và chùa Linh Ứng",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD021",
+  "ten": "Bảo tàng Điêu khắc Chăm",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "gia_nguoi": 60000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [
+   0
+  ],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD022",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Đà Nẵng - Hội An (gói cơ bản)",
+  "diem_den": "danang",
+  "loai": "team_building",
+  "gia_nguoi": 315000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD023",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Đà Nẵng - Hội An (gói trọn)",
+  "diem_den": "danang",
+  "loai": "team_building",
+  "gia_nguoi": 580000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD024",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Đà Nẵng - Hội An (gói cơ bản)",
+  "diem_den": "danang",
+  "loai": "gala_dinner",
+  "gia_nguoi": 470000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD025",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Đà Nẵng - Hội An (gói trọn)",
+  "diem_den": "danang",
+  "loai": "gala_dinner",
+  "gia_nguoi": 890000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD026",
+  "ten": "VinWonders Nha Trang",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "gia_nguoi": 880000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "08:30",
+  "gio_dong": "20:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD027",
+  "ten": "Tour 3 đảo bằng ca nô (Hòn Mun, Hòn Tằm)",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "08:00",
+  "gio_dong": "15:30",
+  "ngay_dong_cua": [],
+  "suc_chua": 120,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD028",
+  "ten": "Tháp Bà Ponagar",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "gia_nguoi": 30000,
+  "thoi_luong_phut": 60,
+  "gio_mo": "06:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD029",
+  "ten": "Tắm bùn khoáng (khu du lịch)",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 150,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD030",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Nha Trang (gói cơ bản)",
+  "diem_den": "nhatrang",
+  "loai": "team_building",
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD031",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Nha Trang (gói trọn)",
+  "diem_den": "nhatrang",
+  "loai": "team_building",
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD032",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Nha Trang (gói cơ bản)",
+  "diem_den": "nhatrang",
+  "loai": "gala_dinner",
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD033",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Nha Trang (gói trọn)",
+  "diem_den": "nhatrang",
+  "loai": "gala_dinner",
+  "gia_nguoi": 850000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD034",
+  "ten": "Hồ Xuân Hương và chợ Đà Lạt",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "05:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD035",
+  "ten": "Khu du lịch Langbiang (xe jeep lên đỉnh)",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD036",
+  "ten": "Thung lũng Tình Yêu",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD037",
+  "ten": "Đồi chè Cầu Đất",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD038",
+  "ten": "Ga Đà Lạt (tàu cổ đi Trại Mát)",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:45",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 80,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD039",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Đà Lạt (gói cơ bản)",
+  "diem_den": "dalat",
+  "loai": "team_building",
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD040",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Đà Lạt (gói trọn)",
+  "diem_den": "dalat",
+  "loai": "team_building",
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD041",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Đà Lạt (gói cơ bản)",
+  "diem_den": "dalat",
+  "loai": "gala_dinner",
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD042",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Đà Lạt (gói trọn)",
+  "diem_den": "dalat",
+  "loai": "gala_dinner",
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD043",
+  "ten": "VinWonders Phú Quốc",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "gia_nguoi": 950000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "09:00",
+  "gio_dong": "19:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD044",
+  "ten": "Cáp treo Hòn Thơm và công viên nước",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "gia_nguoi": 650000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "09:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD045",
+  "ten": "Tour 4 đảo Nam Phú Quốc (cano)",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "gia_nguoi": 650000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "08:00",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 100,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD046",
+  "ten": "Chợ đêm Dinh Cậu",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "17:00",
+  "gio_dong": "23:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD047",
+  "ten": "Grand World Phú Quốc",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "09:00",
+  "gio_dong": "23:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD048",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Phú Quốc (gói cơ bản)",
+  "diem_den": "phuquoc",
+  "loai": "team_building",
+  "gia_nguoi": 345000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD049",
+  "ten": "Team building bãi biển / sân cỏ (đơn vị tổ chức) — Phú Quốc (gói trọn)",
+  "diem_den": "phuquoc",
+  "loai": "team_building",
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD050",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Phú Quốc (gói cơ bản)",
+  "diem_den": "phuquoc",
+  "loai": "gala_dinner",
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "can_bang"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD051",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC — Phú Quốc (gói trọn)",
+  "diem_den": "phuquoc",
+  "loai": "gala_dinner",
+  "gia_nguoi": 975000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "muc": [
+   "day_du"
+  ],
+  "uoc_tinh": true,
+  "ten_dung": true
+ }
+]
