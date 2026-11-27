@@ -1,0 +1,615 @@
+{
+ "seed": 42,
+ "diem_di": [
+  {
+   "id": "HAN",
+   "ten": "Hà Nội",
+   "lat": 21.0285,
+   "lon": 105.8542,
+   "san_bay": "HAN"
+  },
+  {
+   "id": "HPH",
+   "ten": "Hải Phòng",
+   "lat": 20.8449,
+   "lon": 106.6881,
+   "san_bay": "HPH"
+  },
+  {
+   "id": "DAD",
+   "ten": "Đà Nẵng",
+   "lat": 16.0544,
+   "lon": 108.2022,
+   "san_bay": "DAD"
+  },
+  {
+   "id": "SGN",
+   "ten": "TP.HCM",
+   "lat": 10.7769,
+   "lon": 106.7009,
+   "san_bay": "SGN"
+  },
+  {
+   "id": "VCA",
+   "ten": "Cần Thơ",
+   "lat": 10.0452,
+   "lon": 105.7469,
+   "san_bay": "VCA"
+  }
+ ],
+ "diem_den": [
+  {
+   "id": "halong",
+   "ten": "Hạ Long",
+   "tinh": "Quảng Ninh",
+   "mien": "Bắc",
+   "lat": 20.9517,
+   "lon": 107.08,
+   "san_bay": "VDO",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "vinh"
+   ],
+   "nhom_gia": "bien_trung",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "4–10",
+   "mo_ta": "vịnh di sản, du thuyền, khu vui chơi, resort nhận đoàn lớn"
+  },
+  {
+   "id": "catba",
+   "ten": "Cát Bà",
+   "tinh": "Hải Phòng",
+   "mien": "Bắc",
+   "lat": 20.727,
+   "lon": 107.048,
+   "san_bay": "HPH",
+   "dao_chi_duong_bay": false,
+   "co_pha": true,
+   "loai_canh": [
+    "bien",
+    "dao",
+    "rung"
+   ],
+   "nhom_gia": "bien_trung",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "5–9",
+   "mo_ta": "đảo có phà, vịnh Lan Hạ, kayak, rừng quốc gia"
+  },
+  {
+   "id": "samson",
+   "ten": "Sầm Sơn",
+   "tinh": "Thanh Hoá",
+   "mien": "Bắc",
+   "lat": 19.735,
+   "lon": 105.905,
+   "san_bay": "THD",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien"
+   ],
+   "nhom_gia": "bien_binh_dan",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "5–8",
+   "mo_ta": "biển giá mềm, hải sản, nhiều nhà hàng nhận đoàn đông"
+  },
+  {
+   "id": "cualo",
+   "ten": "Cửa Lò",
+   "tinh": "Nghệ An",
+   "mien": "Bắc",
+   "lat": 18.816,
+   "lon": 105.72,
+   "san_bay": "VII",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien"
+   ],
+   "nhom_gia": "bien_binh_dan",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "5–8",
+   "mo_ta": "biển bình dân, gần quê Bác, đảo Ngư"
+  },
+  {
+   "id": "ninhbinh",
+   "ten": "Ninh Bình",
+   "tinh": "Ninh Bình",
+   "mien": "Bắc",
+   "lat": 20.2506,
+   "lon": 105.9745,
+   "san_bay": "HAN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "di_san",
+    "nui"
+   ],
+   "nhom_gia": "di_san_thanh_pho",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "1–6",
+   "mo_ta": "Tràng An, Tam Cốc, Bái Đính; gần Hà Nội, hợp đi 1–2 ngày"
+  },
+  {
+   "id": "sapa",
+   "ten": "Sa Pa",
+   "tinh": "Lào Cai",
+   "mien": "Bắc",
+   "lat": 22.3364,
+   "lon": 103.8438,
+   "san_bay": "HAN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "nui"
+   ],
+   "nhom_gia": "nui_cao_nguyen",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "9–5",
+   "mo_ta": "núi, Fansipan, bản làng; đường cao tốc từ Hà Nội"
+  },
+  {
+   "id": "mocchau",
+   "ten": "Mộc Châu",
+   "tinh": "Sơn La",
+   "mien": "Bắc",
+   "lat": 20.848,
+   "lon": 104.63,
+   "san_bay": "HAN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "nui",
+    "dong_co"
+   ],
+   "nhom_gia": "nui_cao_nguyen",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "11–4",
+   "mo_ta": "cao nguyên, đồi chè, mùa hoa, cắm trại"
+  },
+  {
+   "id": "tamdao",
+   "ten": "Tam Đảo",
+   "tinh": "Vĩnh Phúc",
+   "mien": "Bắc",
+   "lat": 21.456,
+   "lon": 105.645,
+   "san_bay": "HAN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "nui"
+   ],
+   "nhom_gia": "nui_cao_nguyen",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 1
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "5–9",
+   "mo_ta": "thị trấn trên núi gần Hà Nội, mát mùa hè, ít khách sạn lớn"
+  },
+  {
+   "id": "bavi",
+   "ten": "Ba Vì",
+   "tinh": "Hà Nội",
+   "mien": "Bắc",
+   "lat": 21.075,
+   "lon": 105.37,
+   "san_bay": "HAN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "nui",
+    "rung"
+   ],
+   "nhom_gia": "nui_cao_nguyen",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "quanh năm",
+   "mo_ta": "resort sinh thái, sân team building lớn, đi về trong ngày"
+  },
+  {
+   "id": "phongnha",
+   "ten": "Quảng Bình (Phong Nha)",
+   "tinh": "Quảng Bình",
+   "mien": "Trung",
+   "lat": 17.59,
+   "lon": 106.283,
+   "san_bay": "VDH",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "hang_dong",
+    "bien"
+   ],
+   "nhom_gia": "di_san_thanh_pho",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 1,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "3–8",
+   "mo_ta": "hang động, zipline, mạo hiểm; biển Nhật Lệ"
+  },
+  {
+   "id": "hue",
+   "ten": "Huế",
+   "tinh": "Thừa Thiên Huế",
+   "mien": "Trung",
+   "lat": 16.4637,
+   "lon": 107.5909,
+   "san_bay": "HUI",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "di_san",
+    "thanh_pho"
+   ],
+   "nhom_gia": "di_san_thanh_pho",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "1–8",
+   "mo_ta": "cố đô, lăng tẩm, ca Huế trên sông Hương"
+  },
+  {
+   "id": "danang",
+   "ten": "Đà Nẵng",
+   "tinh": "Đà Nẵng",
+   "mien": "Trung",
+   "lat": 16.0471,
+   "lon": 108.2062,
+   "san_bay": "DAD",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "thanh_pho",
+    "nui"
+   ],
+   "nhom_gia": "bien_cao_cap",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "2–8",
+   "mo_ta": "biển, Bà Nà, nhiều resort và hội trường cho đoàn lớn"
+  },
+  {
+   "id": "hoian",
+   "ten": "Hội An",
+   "tinh": "Quảng Nam",
+   "mien": "Trung",
+   "lat": 15.8801,
+   "lon": 108.338,
+   "san_bay": "DAD",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "di_san",
+    "bien"
+   ],
+   "nhom_gia": "bien_cao_cap",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "2–8",
+   "mo_ta": "phố cổ, rừng dừa, Cù Lao Chàm, resort ven biển"
+  },
+  {
+   "id": "quynhon",
+   "ten": "Quy Nhơn",
+   "tinh": "Bình Định",
+   "mien": "Trung",
+   "lat": 13.7765,
+   "lon": 109.2237,
+   "san_bay": "UIH",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien"
+   ],
+   "nhom_gia": "bien_trung",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "3–9",
+   "mo_ta": "biển, Kỳ Co - Eo Gió, resort mới"
+  },
+  {
+   "id": "phuyen",
+   "ten": "Phú Yên (Tuy Hoà)",
+   "tinh": "Phú Yên",
+   "mien": "Trung",
+   "lat": 13.0882,
+   "lon": 109.3149,
+   "san_bay": "TBB",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien"
+   ],
+   "nhom_gia": "bien_trung",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "3–8",
+   "mo_ta": "biển hoang sơ, Gành Đá Đĩa, ít đông khách"
+  },
+  {
+   "id": "nhatrang",
+   "ten": "Nha Trang",
+   "tinh": "Khánh Hoà",
+   "mien": "Trung",
+   "lat": 12.2388,
+   "lon": 109.1967,
+   "san_bay": "CXR",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "dao"
+   ],
+   "nhom_gia": "bien_cao_cap",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "1–8",
+   "mo_ta": "biển, tour đảo, khu vui chơi, nhiều resort lớn"
+  },
+  {
+   "id": "dalat",
+   "ten": "Đà Lạt",
+   "tinh": "Lâm Đồng",
+   "mien": "Trung",
+   "lat": 11.9404,
+   "lon": 108.4583,
+   "san_bay": "DLI",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "nui",
+    "thanh_pho"
+   ],
+   "nhom_gia": "nui_cao_nguyen",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "11–4",
+   "mo_ta": "cao nguyên mát, đồi thông, không có biển; đường đèo"
+  },
+  {
+   "id": "muine",
+   "ten": "Phan Thiết - Mũi Né",
+   "tinh": "Bình Thuận",
+   "mien": "Nam",
+   "lat": 10.9333,
+   "lon": 108.287,
+   "san_bay": "SGN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "doi_cat"
+   ],
+   "nhom_gia": "bien_trung",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "11–4",
+   "mo_ta": "đồi cát, resort biển, cao tốc từ TP.HCM"
+  },
+  {
+   "id": "vungtau",
+   "ten": "Vũng Tàu",
+   "tinh": "Bà Rịa - Vũng Tàu",
+   "mien": "Nam",
+   "lat": 10.346,
+   "lon": 107.0843,
+   "san_bay": "SGN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "thanh_pho"
+   ],
+   "nhom_gia": "bien_trung",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 2,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "11–4",
+   "mo_ta": "biển gần TP.HCM, đi 2 ngày 1 đêm phổ biến"
+  },
+  {
+   "id": "hotram",
+   "ten": "Hồ Tràm - Long Hải",
+   "tinh": "Bà Rịa - Vũng Tàu",
+   "mien": "Nam",
+   "lat": 10.48,
+   "lon": 107.4,
+   "san_bay": "SGN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "rung"
+   ],
+   "nhom_gia": "bien_cao_cap",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "11–4",
+   "mo_ta": "resort biển cao cấp, sân team building trên cát"
+  },
+  {
+   "id": "phuquoc",
+   "ten": "Phú Quốc",
+   "tinh": "Kiên Giang",
+   "mien": "Nam",
+   "lat": 10.227,
+   "lon": 103.967,
+   "san_bay": "PQC",
+   "dao_chi_duong_bay": true,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "dao"
+   ],
+   "nhom_gia": "bien_cao_cap",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 3
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "11–4",
+   "mo_ta": "đảo; chỉ tính đường bay cho đoàn"
+  },
+  {
+   "id": "condao",
+   "ten": "Côn Đảo",
+   "tinh": "Bà Rịa - Vũng Tàu",
+   "mien": "Nam",
+   "lat": 8.683,
+   "lon": 106.609,
+   "san_bay": "VCS",
+   "dao_chi_duong_bay": true,
+   "co_pha": false,
+   "loai_canh": [
+    "bien",
+    "dao",
+    "di_tich"
+   ],
+   "nhom_gia": "bien_cao_cap",
+   "co_khach_san_5_sao": true,
+   "phu_hop": {
+    "nghi_duong": 3,
+    "gan_ket": 1
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "3–9",
+   "mo_ta": "đảo, di tích nhà tù, lặn biển; chuyến bay ít ghế, khó cho đoàn lớn"
+  },
+  {
+   "id": "cantho",
+   "ten": "Cần Thơ",
+   "tinh": "Cần Thơ",
+   "mien": "Nam",
+   "lat": 10.0452,
+   "lon": 105.7469,
+   "san_bay": "VCA",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "song_nuoc",
+    "thanh_pho"
+   ],
+   "nhom_gia": "di_san_thanh_pho",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 1,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "quanh năm",
+   "mo_ta": "chợ nổi, vườn trái cây, sông nước miền Tây"
+  },
+  {
+   "id": "tayninh",
+   "ten": "Tây Ninh (Núi Bà Đen)",
+   "tinh": "Tây Ninh",
+   "mien": "Nam",
+   "lat": 11.38,
+   "lon": 106.17,
+   "san_bay": "SGN",
+   "dao_chi_duong_bay": false,
+   "co_pha": false,
+   "loai_canh": [
+    "nui",
+    "tam_linh"
+   ],
+   "nhom_gia": "di_san_thanh_pho",
+   "co_khach_san_5_sao": false,
+   "phu_hop": {
+    "nghi_duong": 1,
+    "gan_ket": 2
+   },
+   "phu_hop_uoc_tinh": true,
+   "mua_dep_thang": "quanh năm",
+   "mo_ta": "núi Bà Đen cáp treo, tâm linh; đi về trong ngày từ TP.HCM"
+  }
+ ]
+}
