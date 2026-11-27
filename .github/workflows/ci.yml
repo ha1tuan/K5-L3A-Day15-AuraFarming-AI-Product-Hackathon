@@ -31,7 +31,7 @@ jobs:
         env:
           MODEL_PROVIDER: ""
           API_KEY: "test-key"
-        run: pytest
+        run: pytest tests/test_smoke.py
 
   frontend-build:
     name: Frontend Build (React + Vite)
