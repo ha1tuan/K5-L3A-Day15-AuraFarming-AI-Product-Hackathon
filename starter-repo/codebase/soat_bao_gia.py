@@ -119,13 +119,15 @@ def phan_loai(item):
     return "can_hoi", None
 
 
-def soat(text):
+def soat(text, ket_qua=False):
+    """ket_qua=True: trả dict có cấu trúc cho web (/api/quote-audit) thay vì markdown."""
     b = boc(text)
     n, gia = b["so_nguoi"], b["gia_moi_khach"]
     if not n or not gia:
         thieu = [x for x, ok in (("số người đi", n), ("giá / khách trong báo giá (vd 1.590.000đ/khách)", gia)) if not ok]
-        return ("Để soát báo giá và tính tổng chi thật, mình cần thêm: " + "; ".join(thieu) + ". "
-                "Mình không tự đoán vì sai số người / giá thì cả tổng chi sai.")
+        msg = ("Để soát báo giá và tính tổng chi thật, mình cần thêm: " + "; ".join(thieu) + ". "
+               "Mình không tự đoán vì sai số người / giá thì cả tổng chi sai.")
+        return {"status": "ask_back", "message": msg} if ket_qua else msg
     quy = {q["id"]: q for q in json.load(open(os.path.join(DATA, "quy_tac_chung_tu.json"), encoding="utf-8"))["quy_tac"]}
     lines, hoi, ca_nhan, kho_hd = [("Giá tour theo báo giá", n, "khách", gia)], [], [], []
     vat_pct = None
@@ -232,6 +234,14 @@ def soat(text):
                                       planner.fmt_vnd(tong), (", %s ngân sách %s" % ("trong" if tong <= ns else "vượt",
                                                                                      planner.fmt_vnd(ns))) if ns else ""))
     out.append("Hệ thống chỉ soát và dự trù, không đặt tour, không thanh toán; số \"ước tính\" cần công ty tour xác nhận.")
+    if ket_qua:
+        return {"status": "ok", "so_nguoi": n, "dia_diem": b["dia_diem"], "gia_moi_khach": gia, "gia_bao": bao, "tong": tong,
+                "moi_nguoi": planner.round_k(tong / n), "ngan_sach": ns, "vuot": (tong - ns) if ns and tong > ns else None,
+                "chenh_pct": round(100.0 * (tong - bao) / bao, 1),
+                "dong": [{"ten": t, "so_luong": sl, "don_vi": dv, "don_gia": dg, "thanh_tien": tt} for t, sl, dv, dg, tt in rows],
+                "vi_sao_vuot": [g[2:] for g in goi_y] if ns and tong > ns else [], "tham_chieu": ref,
+                "chung_tu": [c[2:] for c in ct[1:]], "ca_nhan": ca_nhan, "cau_hoi": hoi, "to_trinh": out[-2][len("**Tờ trình (nháp):** "):],
+                "markdown": "\n\n".join(out)}
     return "\n\n".join(out)
 
 

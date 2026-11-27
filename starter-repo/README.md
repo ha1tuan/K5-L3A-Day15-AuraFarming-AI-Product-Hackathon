@@ -72,6 +72,18 @@ Gõ `dir` (Windows) hoặc `ls` (macOS / Linux): thấy `run.py` và `README.md`
 
 Trong README này lệnh viết là `python …`; máy nhóm cần `python3` hay `py` thì gõ thay.
 
+## Giao diện web (lập kế hoạch + soát báo giá)
+
+```bash
+cd codebase/web && npm install && npm run build && cd ../backend
+SERVE_WEB=1 ../../.venv/bin/python -m uvicorn src.main:app --port 8010   # mở http://localhost:8010
+```
+
+- **Lập kế hoạch & dự trù:** nhập số người, số ngày, nơi xuất phát, mục đích + kinh phí **và / hoặc** địa điểm. Chỉ kinh phí → gợi ý ≤ 3 điểm đến (mỗi nơi 3 gói) → chọn nơi, chọn gói, bỏ gala / team building → kế hoạch từng giờ. Chỉ địa điểm → so 3 gói → duyệt. Có cả hai → 3 kế hoạch ngay. Tiền, phòng, xe, lịch do code tính từ `data/*.json` (`codebase/du_lieu.py`); kèm cách đi, nơi ở, mùa đẹp, video review đã kiểm link.
+- **Soát báo giá tour:** dán báo giá công ty tour (có nút "Dán báo giá mẫu" — báo giá công khai thật) → tổng chi thật (VAT, vé, tip, vé máy bay ngoài giá), so ngân sách, soát hoá đơn / chuyển khoản / trần phúc lợi, câu cần hỏi lại, tờ trình nháp (`codebase/soat_bao_gia.py`).
+- API: `POST /api/trips`, `POST /api/trips/{id}/approve`, `GET /api/trips/{id}`, `POST /api/quote-audit`. Dev: `npm run dev` (:5173, proxy `/api` → `BACKEND_URL`).
+- Nơi đi / đến ngoài 29 nơi trong dữ liệu → web dùng graph cũ (chỉ cách C).
+
 ## Lệnh
 
 | Lệnh | Làm gì |

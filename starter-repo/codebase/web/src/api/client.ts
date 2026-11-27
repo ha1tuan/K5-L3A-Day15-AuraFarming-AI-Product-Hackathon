@@ -1,4 +1,4 @@
-import type { ApproveInput, TripInput, TripView } from './types';
+import type { ApproveInput, QuoteResult, TripInput, TripView } from './types';
 import * as demo from './demo';
 
 /** Địa chỉ backend FastAPI. Trống = cùng origin (dev dùng proxy /api của Vite). vd: VITE_API_URL=http://localhost:8000 */
@@ -32,4 +32,9 @@ export async function getTrip(id: string): Promise<TripView> {
   const res = await fetch(`${API}/api/trips/${id}`);
   if (!res.ok) throw new Error(`Máy chủ trả lỗi ${res.status}`);
   return res.json() as Promise<TripView>;
+}
+
+export function auditQuote(text: string, signal?: AbortSignal): Promise<QuoteResult> {
+  if (DEMO) return Promise.reject(new Error('Soát báo giá cần máy chủ (chế độ demo không có).'));
+  return post(`${API}/api/quote-audit`, { text }, signal);
 }

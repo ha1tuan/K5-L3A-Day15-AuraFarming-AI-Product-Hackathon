@@ -120,6 +120,10 @@ export interface Plan {
   over_budget: number | null;
   explanation?: Explanation;
   days: Day[];
+  /** Cảnh báo (về muộn, bỏ việc không đủ giờ…), thông tin thêm (cách đi, nơi ở, mùa đẹp) và video review đã kiểm link. */
+  notes?: string[];
+  info?: string[];
+  videos?: { title: string; url: string; channel: string }[];
 }
 
 export interface TripView {
@@ -139,4 +143,28 @@ export interface ApproveInput {
   package: Tier;
   headcount?: number;
   remove_items?: ('gala' | 'team_building')[];
+}
+
+/** Soát báo giá tour đoàn (POST /api/quote-audit) — mọi số do máy chủ tính. */
+export interface QuoteLine { ten: string; so_luong: number; don_vi: string; don_gia: number; thanh_tien: number }
+export interface QuoteResult {
+  status: 'ok' | 'ask_back';
+  message?: string;
+  so_nguoi?: number;
+  dia_diem?: string | null;
+  gia_moi_khach?: number;
+  gia_bao?: number;
+  tong?: number;
+  moi_nguoi?: number;
+  ngan_sach?: number | null;
+  vuot?: number | null;
+  chenh_pct?: number;
+  dong?: QuoteLine[];
+  vi_sao_vuot?: string[];
+  tham_chieu?: string;
+  chung_tu?: string[];
+  ca_nhan?: string[];
+  cau_hoi?: string[];
+  to_trinh?: string;
+  markdown?: string;
 }

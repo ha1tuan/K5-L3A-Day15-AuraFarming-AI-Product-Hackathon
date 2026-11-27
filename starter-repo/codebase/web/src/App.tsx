@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { MapPinned } from 'lucide-react';
+import { MapPinned, CalendarRange, FileSearch } from 'lucide-react';
+import { QuoteAudit } from './components/QuoteAudit';
 import type { ApproveInput, Field, TripView } from './api/types';
 import { approveTrip, createTrip, DEMO, getTrip } from './api/client';
 import { parseVnd } from './lib/format';
@@ -18,7 +19,7 @@ type Screen =
   | { kind: 'loading'; steps: string[] }
   | { kind: 'view'; view: TripView; chosenDest?: string };
 
-const CREATE_STEPS = ['Hiểu yêu cầu', 'Tìm địa điểm, chỗ ở, quán ăn trên mạng', 'Tính chi phí 3 gói cho cả đoàn', 'Xếp lịch & kiểm tra'];
+const CREATE_STEPS = ['Hiểu yêu cầu', 'Chọn địa điểm, chỗ ở, ăn uống, hoạt động từ dữ liệu', 'Tính chi phí 3 gói cho cả đoàn', 'Xếp lịch từng giờ & kiểm tra'];
 const APPROVE_STEPS = ['Tính lại theo lựa chọn', 'Chọn khách sạn, nhà hàng, hoạt động', 'Xếp lịch từng giờ & kiểm tra'];
 
 function setTripInUrl(id: string | null) {
@@ -27,7 +28,16 @@ function setTripInUrl(id: string | null) {
   window.history.replaceState(null, '', u);
 }
 
+type Tab = 'plan' | 'quote';
+
 export default function App() {
+  const [tab, setTab] = useState<Tab>(() => new URLSearchParams(window.location.search).get('tab') === 'bao-gia' ? 'quote' : 'plan');
+  const switchTab = (t: Tab) => {
+    const u = new URL(window.location.href);
+    if (t === 'quote') u.searchParams.set('tab', 'bao-gia'); else u.searchParams.delete('tab');
+    window.history.replaceState(null, '', u);
+    setTab(t);
+  };
   const [form, setForm] = useState<FormState>(EMPTY);
   const [screen, setScreen] = useState<Screen>({ kind: 'form', errors: [], askBack: false });
   const [error, setError] = useState<string | null>(null);
@@ -129,12 +139,24 @@ export default function App() {
           {DEMO && <span className="rounded bg-est-bg px-2 py-0.5 text-xs font-medium text-est">Chế độ demo — dữ liệu mẫu</span>}
           <span className="ml-auto hidden text-sm text-white/70 sm:inline">AI đề xuất · bạn quyết định</span>
         </div>
+        <nav className="mx-auto flex max-w-6xl gap-1 px-4" aria-label="Chức năng">
+          {([['plan', 'Lập kế hoạch & dự trù', CalendarRange], ['quote', 'Soát báo giá tour', FileSearch]] as const).map(([t, label, Icon]) => (
+            <button key={t} type="button" onClick={() => switchTab(t)} aria-current={tab === t ? 'page' : undefined}
+              className={`inline-flex cursor-pointer items-center gap-2 rounded-t-lg px-4 py-2.5 text-sm font-medium ${tab === t ? 'bg-white text-primary' : 'text-white/80 hover:bg-white/10'}`}>
+              <Icon className="size-4" aria-hidden />{label}
+            </button>
+          ))}
+        </nav>
       </header>
+      {tab === 'quote' ? (
+        <main id="main" className="mx-auto max-w-6xl px-4 py-8"><QuoteAudit /></main>
+      ) : (<>
       <StepBar step={step} skipped={skipped} />
       <main id="main" className="mx-auto max-w-6xl px-4 py-8">
         {error && <div className="mb-6"><Notice tone="error" title="Có lỗi">{error}</Notice></div>}
         {body}
       </main>
+      </>)}
     </>
   );
 }

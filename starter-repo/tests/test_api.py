@@ -30,10 +30,11 @@ def test_post_missing_returns_ask_back(world):
     assert v["status"] == "ask_back" and v["missing_fields"] == ["origin", "purpose"] and v["trip_id"]
 
 
-def test_post_entry_a_returns_error_not_supported(world):
+def test_post_entry_a_suggests_destinations(world):
+    # 27/11 tối: cách A chạy trên đường dữ liệu (du_lieu_service) — trước đó trả "Bản hiện tại cần cả kinh phí và địa điểm."
     r = client.post("/api/trips", json={**BODY, "destination": ""})
     assert r.status_code == 200
-    assert r.json()["status"] == "error" and r.json()["message"] == "Bản hiện tại cần cả kinh phí và địa điểm."
+    assert r.json()["status"] == "choose_destination" and r.json()["destinations"]
 
 
 def test_post_out_of_range_is_refused_not_500(world):

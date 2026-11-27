@@ -1,3 +1,4 @@
+import { DESTINATIONS, ORIGINS } from '../lib/places';
 import { useId } from 'react';
 import { ArrowRight, Users, Palmtree, Sparkles, Route } from 'lucide-react';
 import type { Field, Purpose } from '../api/types';
@@ -101,7 +102,7 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
 
         <div>
           <label htmlFor={`${id}-origin`} className={label}>Xuất phát từ <span className="text-over">*</span></label>
-          <input id={`${id}-origin`} className={inputCls} placeholder="vd: Hà Nội" value={value.origin} onChange={e => set('origin', e.target.value)}
+          <input id={`${id}-origin`} className={inputCls} placeholder="vd: Hà Nội" list="dl-origin" value={value.origin} onChange={e => set('origin', e.target.value)}
             aria-invalid={has('origin')} aria-describedby={has('origin') ? `${id}-origin-err` : undefined} />
           {err('origin')}
         </div>
@@ -138,7 +139,7 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
             </div>
             <div>
               <label htmlFor={`${id}-dest`} className={label}>Địa điểm</label>
-              <input id={`${id}-dest`} className={inputCls} placeholder="vd: Hạ Long" value={value.destination}
+              <input id={`${id}-dest`} className={inputCls} placeholder="vd: Hạ Long" list="dl-dest" value={value.destination}
                 onChange={e => set('destination', e.target.value)} aria-invalid={has('budget_or_destination')} />
               <p className="mt-2 text-xs text-muted">Để trống nếu muốn được gợi ý.</p>
             </div>
@@ -154,7 +155,9 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
         <div className="flex justify-end">
           <button type="submit" className={btnPrimary}>Lập kế hoạch <ArrowRight className="size-4" aria-hidden /></button>
         </div>
-      </form>
+      <datalist id="dl-origin">{ORIGINS.map(x => <option key={x} value={x} />)}</datalist>
+      <datalist id="dl-dest">{DESTINATIONS.map(x => <option key={x} value={x} />)}</datalist>
+    </form>
     </div>
   );
 }
