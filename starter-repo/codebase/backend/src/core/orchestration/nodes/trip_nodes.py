@@ -241,17 +241,17 @@ def parse_request(state: dict) -> dict:
 
 def parse_form(state: dict) -> dict:
     """Node parse của đường form (web): state["raw"] đã có trường, không gọi model."""
-    return _classify(state.get("raw") or {}, _today(state.get("today")), None)
+    return _classify(state.get("raw") or {}, _today(state.get("today")), None, allow_b=True)
 
 
-def _classify(raw: dict, today: date, notice: Optional[str]) -> dict:
+def _classify(raw: dict, today: date, notice: Optional[str], *, allow_b: bool = False) -> dict:
     req, missing, refusal = build_request(raw, today)
     out = {"notice": notice, "missing": missing, "refusal": refusal, "request": req}
     if refusal:
         return {**out, "status": "refused"}
     if missing:
         return {**out, "status": "ask_back"}
-    if req.entry != "C":
+    if req.entry != "C" and not (allow_b and req.entry == "B"):
         lack = "kinh phí (tổng hoặc mỗi người)" if req.budget is None else "địa điểm muốn đến"
         return {**out, "status": "refused", "refusal": NOT_C % lack}
     return {**out, "status": "ok"}
