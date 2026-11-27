@@ -7,7 +7,7 @@ from src.core.planning.estimates import load_estimates
 from src.core.planning.pricing import price_packages, price_tier, round1k
 from src.core.planning.rooms import allocate_rooms
 from src.core.planning.travel import leg
-from src.core.planning.types import GeoPoint, RoomType, TripRequest
+from src.core.planning.types import Candidate, GeoPoint, RoomType, TripRequest
 
 HERE = Path(__file__).parent
 EST = load_estimates(HERE / "fixtures" / "estimates_small.json")
@@ -130,3 +130,34 @@ def test_real_estimates_file_loads_and_every_value_has_source():
     walk(json.loads(path.read_text(encoding="utf-8")))
     est = load_estimates()
     assert est.tier_stars == {"tiet_kiem": 3, "can_bang": 4, "cao_cap": 5} and "Phú Quốc" in est.flight_only
+
+
+def _lodging(p):
+    return [(li.description, li.qty, li.unit_price) for li in p.line_items if li.category == "Lưu trú"]
+
+
+def _hotel(**kw):
+    return Candidate(id="h1", name="KS Thật", group="luu_tru", **kw)
+
+
+def test_category_tiers_lodging_ignores_passed_hotel():
+    real = _hotel(stars=5, room_types=[rt("2", 2, 9_000_000), rt("4", 4, 9_500_000)])
+    cut = price_tier(REQ_C_60, "cao_cap", HN, HALONG, real, EST, category_tiers={"Lưu trú": "tiet_kiem"})
+    generic = price_tier(REQ_C_60, "tiet_kiem", HN, HALONG, None, EST)
+    assert _lodging(cut) == _lodging(generic)
+    assert "KS Thật" not in cut.summary.lodging and cut.summary.lodging == generic.summary.lodging
+
+
+def test_hotel_with_unlisted_stars_falls_back_to_tier_rooms():
+    for stars in (1, 2, None):
+        p = price_tier(REQ_C_60, "can_bang", HN, HALONG, _hotel(stars=stars), EST)
+        generic = price_tier(REQ_C_60, "can_bang", HN, HALONG, None, EST)
+        assert [x[1:] for x in _lodging(p)] == [x[1:] for x in _lodging(generic)]
+
+
+def test_no_rooms_available_note_not_on_transport_line():
+    sold_out = _hotel(room_types=[rt("4", 4, 1_000_000, available=0)])
+    p = price_tier(REQ_C_60, "can_bang", HN, HALONG, sold_out, EST)
+    assert p.room_plan.short == 60
+    assert p.line_items[0].category == "Di chuyển" and p.line_items[0].note is None
+    assert any(li.category == "Lưu trú" and li.note and "Thiếu chỗ" in li.note for li in p.line_items)

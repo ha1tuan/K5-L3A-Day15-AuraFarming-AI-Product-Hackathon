@@ -1,20 +1,14 @@
 """Dự trù chi phí 3 gói (tiết kiệm / cân bằng / cao cấp) cho cách C. Số do code tính từ bảng ước tính
 (estimates) và khách sạn đã chọn; mọi dòng có amount = qty × unit_price."""
-import math
 from typing import Optional
 
-from .estimates import Estimates
+from .estimates import Estimates, round1k  # noqa: F401  (round1k re-export)
 from .rooms import allocate_rooms
 from .travel import leg
 from .types import Candidate, GeoPoint, LineItem, Package, PackageSummary, TripRequest
 
 TIERS = ("tiet_kiem", "can_bang", "cao_cap")
 CONTINGENCY = 0.05
-
-
-def round1k(x) -> int:
-    """Làm tròn nửa lên tới 1.000."""
-    return int(math.floor(x / 1000 + 0.5)) * 1000
 
 
 def _item(category, description, qty, unit, unit_price, estimated=True, source_url=None, note=None) -> LineItem:
@@ -50,12 +44,14 @@ def price_tier(req: TripRequest, tier: str, origin_pt: Optional[GeoPoint], dest_
 
     # Lưu trú
     room_plan = None
+    if "Lưu trú" in ct:
+        hotel = None  # R9: lưu trú đã chuyển sang bảng giá gói khác -> bỏ khách sạn đã chọn
     if nights >= 1 and "Lưu trú" not in drop:
         lt = use("Lưu trú")
         if hotel is not None and hotel.room_types:
             types, hname, url = hotel.room_types, hotel.name, hotel.source_url
         else:
-            stars = hotel.stars if hotel is not None and hotel.stars else est.tier_stars[lt]
+            stars = hotel.stars if hotel is not None and str(hotel.stars) in est.rooms else est.tier_stars[lt]
             types = est.rooms[str(stars)]
             hname, url = (hotel.name if hotel is not None else f"khách sạn {stars} sao"), None
         room_plan = allocate_rooms(n, types)
@@ -65,6 +61,8 @@ def price_tier(req: TripRequest, tier: str, origin_pt: Optional[GeoPoint], dest_
             items.append(_item("Lưu trú", f"{_room_label(kind)} – {hname}", count * nights, "phòng-đêm", rt.price,
                                estimated=rt.estimated, source_url=rt.source_url or url))
         if room_plan.short:
+            if not room_plan.counts:
+                items.append(_item("Lưu trú", f"Chưa có phòng trống – {hname}", 0, "phòng-đêm", 0, estimated=False))
             items[-1].note = f"Thiếu chỗ cho {room_plan.short} người, cần xác nhận thêm phòng"
 
     # Gala thay bữa tối đêm cuối

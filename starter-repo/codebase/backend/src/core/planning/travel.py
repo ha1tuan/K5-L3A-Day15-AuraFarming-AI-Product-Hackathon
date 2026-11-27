@@ -3,7 +3,7 @@ giờ xe = km/50 + 0.5 giờ nghỉ cho mỗi 3 giờ chạy. Chỉ thư viện 
 import math
 from typing import Optional
 
-from .estimates import Estimates, band_of
+from .estimates import Estimates, band_of, round1k
 from .types import GeoPoint, Leg
 
 ROAD_FACTOR = 1.3
@@ -39,6 +39,6 @@ def leg(origin: Optional[GeoPoint], dest: Optional[GeoPoint], tier: str, headcou
                    estimated=guessed, note="Vé máy bay khứ hồi")
     t = est.transport[tier]
     vehicles = -(-headcount // t["capacity"])
-    price = round(road_km * 2 * t["price_per_km"] + t["day_fee"] * days)
+    price = round1k(road_km * 2 * t["price_per_km"] + t["day_fee"] * days)
     return Leg(mode="bus", road_km=road_km, hours=hours, vehicles=vehicles, unit_price=price, qty=vehicles,
                estimated=guessed, note=f"{t['vehicle']} khứ hồi")

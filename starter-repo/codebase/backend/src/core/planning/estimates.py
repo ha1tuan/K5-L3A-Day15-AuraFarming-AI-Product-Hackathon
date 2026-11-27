@@ -1,6 +1,7 @@
 """Bảng ước tính giá (data/estimates.json). Mỗi giá trị trong file đều kèm "_source"
 ("tự ước tính" khi chưa có nguồn thật). Loader bỏ các khoá "_source" và trả về Estimates."""
 import json
+import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -9,6 +10,11 @@ from .types import RoomType
 
 DEFAULT_PATH = Path(__file__).resolve().parents[5] / "data" / "estimates.json"
 BANDS = ("<500", "500–1000", ">1000")
+
+
+def round1k(x) -> int:
+    """Làm tròn nửa lên tới 1.000."""
+    return int(math.floor(x / 1000 + 0.5)) * 1000
 
 
 def band_of(km: float) -> str:
