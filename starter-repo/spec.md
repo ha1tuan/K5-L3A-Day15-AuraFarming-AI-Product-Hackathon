@@ -15,7 +15,7 @@ Data BTC cấp đã dùng (nếu có — không commit nguyên file): không (tr
 - Việc họ cố làm xong (`động từ + đối tượng + bối cảnh`, không có chữ AI):
 - Hôm nay họ giải bằng gì, hỏng ở đâu, vì sao chưa bỏ:
 - Pain (KHÔNG chữ AI): ai — đang làm gì — vướng đâu — hậu quả gì:
-- Bằng chứng — số chính + kết luận (chi tiết: `evidence/summary.md`): __
+- Bằng chứng — số chính + kết luận (chi tiết: `evidence/summary.md`): đào 7.130 review Google Play công khai (5 app du lịch VN) → trong 1.880 review 1–2★, ≈104 (5,5%) kể đã trả tiền mà đến nơi không có phòng / đơn không được xác nhận, ≈85 (4,5%) kể giá / phí lúc trả khác lúc xem; 15 review kể chuyện đặt cho đoàn / nhiều phòng / hoá đơn công ty gặp sự cố. Giả thuyết **phải đổi**: pain thiếu phòng nặng ngang pain lệch giá; chưa có phỏng vấn người tổ chức đoàn để kiểm lại.
 
 ## §2. Impact & quyết định chọn *(guide 1.3)*
 
@@ -107,7 +107,7 @@ flowchart TB
 - **Bị đòi ngoài phạm vi (lớp 3):** đặt chỗ, thanh toán, lệnh từ "đại lý" → từ chối, nói hệ thống chỉ đề xuất. · **Trường hợp đặc thù lĩnh vực (lớp 4):** vượt ngân sách → giải thích có số và cách cắt giảm; thiếu phòng → gợi ý khách sạn thứ hai; đường quá xa → máy bay.
 
 ## §7. Đánh giá & chuẩn "đạt" *(guide 2.4, 4.1)*
-- Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 26 câu (thuong 11 · kho 10 · tu_choi 5, trong đó 2 câu tấn công: R02, R03) · metric: `eval/metric_spec.yaml` (6 metric: so_khop_tien, giai_thich_vuot, xep_phong_dung, dung_cach_vao, hoi_lai_dung, tu_choi_dung)
+- Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 30 câu (thuong 11 · kho 11 · tu_choi 8, trong đó 3 câu tấn công: R02, R03, R07; 26 câu có từ CP2 + 4 câu thêm trước CP3: K11, R06, R07, R08) · metric: `eval/metric_spec.yaml` (6 metric: so_khop_tien, giai_thich_vuot, xep_phong_dung, dung_cach_vao, hoi_lai_dung, tu_choi_dung)
 - **Chuẩn "đạt"** (chốt **trước 19:30 Thứ Sáu 27/11**, giữ nguyên đến 23:59 Thứ Bảy 28/11): "Đạt khi ≥ 80% câu qua (≥ 21/26), và 100% câu tu_choi qua, và so_khop_tien, giai_thich_vuot đạt 100%"
 - Kết quả: lượt 1 __/__ (__%) · lượt 2 __/__ (__%) — run ID: __ / __ → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
 
@@ -127,6 +127,9 @@ flowchart TB
 - Phân công có tên (theo chặng, chia cặp — guide "Cách chia việc"): __
 - Dùng AI vào việc gì (2–3 dòng; chi tiết `docs/ai-usage.md`):
 - Nhật ký thay đổi — **mọi thay đổi sau CP2 19:30 Thứ Sáu 27/11 phải có dòng ở đây**:
+  - 27/11 tối: thêm 4 câu thử K11, R06, R07, R08 (bộ 26 → 30); không sửa / xoá câu cũ, không đổi chuẩn "đạt" và `metric_spec.yaml`. Chuẩn "≥ 80%" áp cho 30 câu = ≥ 24/30.
+  - 27/11 tối: bản chạy thử gọi model thật (OpenAI `gpt-5.4-mini`): workflow `codebase/agent.py` + guardrails `codebase/guardrails.py` (che số thẻ / OTP / SĐT, từ chối đặt chỗ / thanh toán, chỉ trong nước, 5–500 người, coi lời tự xưng đại lý / lệnh chèn là dữ liệu, bọc dữ liệu người dùng trong thẻ, lọc câu khẳng định đã đặt / còn phòng ở đầu ra) + lõi tính tiền `codebase/planner.py`. Chưa có Tavily: không nêu tên cơ sở, mọi đơn giá là "ước tính".
+  - 27/11 tối: bằng chứng pain — đào review Google Play (`evidence/data-mining.md`, `evidence/summary.md`).
 
 **CP2 → CP4** (vd thu hẹp lát cắt, hỏi thêm người dùng, lần cải tiến trước lượt 2)
 
