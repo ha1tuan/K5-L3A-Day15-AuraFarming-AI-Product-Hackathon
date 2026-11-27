@@ -1,7 +1,7 @@
 """Kiểm lịch: validate(req, plan, pkg) -> list[Violation].
 Mã: CHONG_GIO (khối chồng nhau) · QUA_GIO_KET_THUC (kết thúc sau 22:00, trừ chặng về) · VE_MUON (đi về trong
 ngày mà chặng về tới nơi sau 23:00) · TRUNG_DIEM
-(cùng một nơi xuất hiện hai lần) · THIEU_PHONG (RoomPlan.short > 0) · THIEU_SUC_CHUA (nguồn ghi sức chứa < số người).
+(cùng một ứng viên xuất hiện hai lần) · THIEU_PHONG (RoomPlan.short > 0) · THIEU_SUC_CHUA (nguồn ghi sức chứa < số người).
 (ID_KHONG_TON_TAI do bước chọn của trip_nodes phát ra.)"""
 import re
 
@@ -30,9 +30,10 @@ def validate(req, plan, pkg) -> list[Violation]:
                 out.append(Violation("QUA_GIO_KET_THUC", "%s: \"%s\" kết thúc sau 22:00" % (day.label, s.title),
                                      s.title))
             if s.source_url and s.kind in ("meal", "activity", "sight"):
-                if s.source_url in seen:
+                key = s.ref or s.title  # một trang nguồn có thể nhắc nhiều nơi: so theo id ứng viên
+                if key in seen:
                     out.append(Violation("TRUNG_DIEM", "\"%s\" xuất hiện nhiều hơn một lần" % s.title, s.title))
-                seen.add(s.source_url)
+                seen.add(key)
             m = CAPACITY_RE.search(s.details or "")
             if m and int(m.group(1)) < req.headcount:
                 out.append(Violation("THIEU_SUC_CHUA", "\"%s\" chỉ chứa %s người, đoàn %d người" % (

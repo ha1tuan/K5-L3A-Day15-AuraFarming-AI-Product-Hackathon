@@ -104,7 +104,8 @@ def schedule(req: TripRequest, pkg: Package, pick: TierPick, ranked: dict, est: 
             flags.append("confirm_capacity")
         title = "%s – %s" % (label, c.name) if c else "%s (nhà hàng địa phương)" % label
         return Slot(hm(max(cur, fixed)), "meal", title, note=pick.reasons.get(c.id) if c else None, flags=flags,
-                    source_url=c.source_url if c else None, menu=menu, details=_cap_note(c) if c else None)
+                    source_url=c.source_url if c else None, menu=menu, details=_cap_note(c) if c else None,
+                    ref=c.id if c else None)
 
     def sight(cur: int, fixed: int, d: int, part: str) -> Slot:
         c = acts.pop(0) if acts else None
@@ -112,7 +113,7 @@ def schedule(req: TripRequest, pkg: Package, pick: TierPick, ranked: dict, est: 
             return Slot(hm(max(cur, fixed)), "sight", "Tham quan %s – %s ngày %d" % (dest, part, d),
                         flags=["estimate"])
         return Slot(hm(max(cur, fixed)), "sight", c.name, note=pick.reasons.get(c.id), source_url=c.source_url,
-                    details=_cap_note(c))
+                    details=_cap_note(c), ref=c.id)
 
     def hotel_in(cur: int, fixed: int) -> Slot:
         if hotel is None:
@@ -176,6 +177,7 @@ def schedule(req: TripRequest, pkg: Package, pick: TierPick, ranked: dict, est: 
             add(Slot(hm(s), "activity", ("Team building – %s" % tb_cand.name) if tb_cand else "Team building",
                      note=pick.reasons.get(tb_cand.id) if tb_cand else None,
                      flags=[] if tb_cand else ["estimate"], source_url=tb_cand.source_url if tb_cand else None,
+                     ref=tb_cand.id if tb_cand else None,
                      program={"title": prog["title"], "steps": _steps(prog, s), "includes": prog["includes"],
                               "fallback": prog["fallback"]}))
         if not (first and team) and (not last or first) and (not rest_mode or last):

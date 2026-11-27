@@ -159,6 +159,14 @@ def _package_view(pkg: Package) -> dict:
     return _clean(d)
 
 
+def _plan_view(plan: Plan) -> dict:
+    d = asdict(plan)
+    for day in d["days"]:
+        for s in day["slots"]:
+            s.pop("ref", None)
+    return _clean(d)
+
+
 def to_view(trip_id: str, req: TripRequest, packages: list[Package], plans: list[Plan],
             message: Optional[str] = None) -> dict:
     """Dict đúng TripView (codebase/web/src/api/types.ts) cho cách C, status "ok"."""
@@ -168,4 +176,4 @@ def to_view(trip_id: str, req: TripRequest, packages: list[Package], plans: list
             "purpose": req.purpose, "budget": req.budget, "entry": req.entry}
     return {"trip_id": trip_id, "status": "ok", "message": message or understood_text(req), "request": echo,
             "destination": req.destination, "packages": [_package_view(p) for p in packages],
-            "plans": [_clean(asdict(p)) for p in plans]}
+            "plans": [_plan_view(p) for p in plans]}

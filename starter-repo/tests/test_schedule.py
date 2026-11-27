@@ -271,3 +271,25 @@ def test_day_trip_near_not_flagged_late():
     plan, pkg = build(req)
     codes = {v.code for v in validate(req, plan, pkg)}
     assert "VE_MUON" not in codes and "QUA_GIO_KET_THUC" not in codes and "CHONG_GIO" not in codes
+
+
+def test_trung_diem_keys_on_candidate_not_shared_link():
+    req = make_req()
+    link = "https://a.vn/top-10-da-lat"
+    r1 = cand("an_uong", "Quan Hoa")
+    r2 = cand("an_uong", "Quan Mai")
+    a1 = cand("hoat_dong", "Doi Che")
+    for c in (r1, r2, a1):
+        c.source_url = link
+    plan, pkg = build(req, pick=TierPick(None, [r1.id, r2.id], [a1.id], {}),
+                      ranked={"an_uong": [r1, r2], "hoat_dong": [a1]})
+    assert "TRUNG_DIEM" not in [v.code for v in validate(req, plan, pkg)]
+
+
+def test_view_does_not_leak_internal_slot_ref():
+    from src.core.planning.render import to_view
+    req = make_req()
+    r = cand("an_uong", "Quan Hoa")
+    plan, pkg = build(req, pick=TierPick(None, [r.id], [], {}), ranked={"an_uong": [r]})
+    view = to_view("x", req, [pkg], [plan])
+    assert all("ref" not in s for p in view["plans"] for d in p["days"] for s in d["slots"])

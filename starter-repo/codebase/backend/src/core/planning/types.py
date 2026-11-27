@@ -160,6 +160,7 @@ class Slot:
     menu: Optional[Menu] = None
     program: Optional[dict] = None  # {title?, steps: list[ProgramStep], includes?, fallback?}
     details: Optional[str] = None
+    ref: Optional[str] = None  # nội bộ: id ứng viên (không thuộc hợp đồng web, to_view bỏ đi)
 
 
 @dataclass
