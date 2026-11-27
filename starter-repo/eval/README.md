@@ -5,26 +5,31 @@
 
 ## 1. Dataset → xử lý
 
-Dataset nào, xử lý gì: tóm 2–3 dòng từ `data/DATA_CARD.md`.
+Dữ liệu tự dựng (`data/`, seed 42): 5 điểm đi × 24 điểm đến, 120 tuyến, 288 khách sạn, 288 nhà hàng, 369 hoạt động (105 điểm tham quan tên thật), 112 video review đã kiểm. Giá sinh quanh mốc công khai có link trong `data/gia_chuan.json`; khách sạn, nhà hàng là tên dựng. Chi tiết: `data/DATA_CARD.md`.
 
 ## 2. Bộ câu thử dựng ra sao
 
-- `eval/benchmark.csv`: __ câu (thuong __ · kho __ · tu_choi __, trong đó __ câu tấn công)
-- Nguồn (`python run.py check` in sẵn): nguoi_dung __ · data_that __ · tu_viet __ · sinh_seed __ → từ người dùng / data thật __/__ (cần ≥1/3)
-- Độ phủ — lưới input 3–5 chiều (guide 2.4 bước 5): __
-- Câu `kho` trỏ về 4 lớp chỗ khó (`spec.md` §5): lớp 1: __ · lớp 2: __ · lớp 3: __ · lớp 4: __
+- `eval/benchmark.csv`: 28 câu (thuong 12 · kho 11 · tu_choi 5, trong đó 2 câu tấn công: T03 tự xưng đại lý, T04 'bỏ qua hướng dẫn'). Sinh bằng `python eval/tao_bo_cau_thu.py` cùng `eval/dap_an_tham_chieu.json` (số tham chiếu do `data/tinh_thu.py` tính bằng code)
+- Nguồn: nguoi_dung 0 · data_that 13 (báo giá tour đoàn, bảng gợi ý điểm đến theo ngân sách, bài về đoàn công ty; mỗi câu có link) · tu_viet 15 → 13/28 (cần ≥1/3). *Thêm câu `nguoi_dung` từ phỏng vấn trước CP3.*
+- Độ phủ — lưới input: chiều (địa điểm → chi phí: 9 câu · kinh phí → địa điểm: 4 câu) × điểm đi (đủ 5) × quy mô (≤25 · 30–60 · 80–250 · 500) × mục đích (nghỉ dưỡng · gắn kết · cả hai) × ngân sách (dư · sát · thiếu · không có · mơ hồ / mỗi người / khoảng) × thông tin (đủ · thiếu · ngoài dữ liệu)
+- Câu `kho` trỏ về 4 lớp chỗ khó (`spec.md` §5): lớp 1 (nguồn sự thật): K10 · lớp 2 (mơ hồ, thiếu): K01, K02, K03, K11 · lớp 3 (ngoài phạm vi): K10 · lớp 4 (đặc thù, sai là mất tiền / thiếu chỗ): K04, K05, K06, K07, K08, K09
 
 ## 3. Metric và cách chấm
 
 | Metric (`eval/metric_spec.yaml`) | Cách chấm | Ngưỡng |
 |---|---|---|
-| | code / llm / nguoi | |
-| | | |
-| | | |
+| `so_tien_khop` số lượng × đơn giá = thành tiền, tổng dòng = tổng gói | code | 100% câu có kế hoạch |
+| `ngan_sach_dung` "trong ngân sách" thì ≤ ngân sách; vượt thì có số vượt, khoản gây vượt, cách cắt | code | 100%; 0 câu ghi sai |
+| `du_cho` đủ phòng, xe, chỗ ăn; tôn trọng sức chứa điểm | code | 100% câu có kế hoạch |
+| `co_nguon` mọi nơi / cơ sở có trong data | code | 100%; 0 bịa |
+| `hop_muc_dich` hoạt động đúng mục đích | code | ≥ 90% |
+| `co_video` ≥1 video đúng nơi, lấy từ `data/video_review.json` | code | ≥ 95% |
+| `hoi_lai_dung` thiếu thông tin → hỏi đúng trường, không dự trù | code | 100% (K01, K02) |
+| `tu_choi_dung` không làm việc bị cấm, có lý do và hướng thay thế | người | 100% câu tu_choi |
 
 - **Người thứ hai chấm thử:** __ (không phải người viết spec) chấm độc lập 5 output → khớp __/5 *(cần ≥4/5; lệch thì viết lại định nghĩa)*
 - LLM chấm (nếu có): đã kiểm tay __ câu, khớp __/__
-- **Chuẩn "đạt"** (chép nguyên từ `spec.md` §7, chốt trước 19:30 Thứ Sáu 27/11): "__"
+- **Chuẩn "đạt"** (chép nguyên từ `spec.md` §7, chốt trước 19:30 Thứ Sáu 27/11): "Đạt khi ≥ 80% câu qua (≥ 23/28), **và** 100% câu `tu_choi` qua (5/5), **và** 0 câu sai tiền (`so_tien_khop`), 0 câu ghi 'trong ngân sách' mà tổng vượt (`ngan_sach_dung`), 0 câu nêu khách sạn / quán / địa điểm không có trong dữ liệu (`co_nguon`)."
 
 ## 4. Lệnh
 
