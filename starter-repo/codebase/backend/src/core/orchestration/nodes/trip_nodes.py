@@ -1,21 +1,25 @@
-"""Các node của graph. Task 5: research (từ khoá -> tìm kiếm -> trích ứng viên -> kiểm nguồn -> xếp hạng).
-Task 7 bổ sung: parse_request, select, schedule_node, validate_node, render_node, infeasible_node.
+"""Các node của graph cách C: parse_request, geocode_node, research (từ khoá -> tìm kiếm -> trích ứng viên
+-> kiểm nguồn -> xếp hạng), select, price, schedule_node, validate_node, explain_node, render_node.
 Gọi model CHỈ qua ai.call_model; công cụ qua codebase/tools.py.
 """
 import re
 import unicodedata
+import uuid
+from datetime import date
 from typing import Optional
 
 from ai import call_model
-from tools import dinh_vi, tim_kiem_web  # noqa: F401  (dinh_vi dùng ở các node sau)
+from tools import dinh_vi, tim_kiem_web
 
-from src.core.orchestration.prompts.trip_prompts import EXTRACT_SYSTEM, QUERY_SYSTEM, SELECT_SYSTEM
+from src.core.orchestration.prompts.trip_prompts import EXTRACT_SYSTEM, PARSE_SYSTEM, QUERY_SYSTEM, SELECT_SYSTEM
 from src.core.orchestration.utils.utils import _parse_json
 from src.core.planning.estimates import Estimates, load_estimates
+from src.core.planning.explain import explain_over
 from src.core.planning.pricing import TIERS, price_packages
-from src.core.planning.request import parse_vnd
+from src.core.planning.render import render_text, to_view
+from src.core.planning.request import ask_back_text, build_request, parse_vnd
 from src.core.planning.scheduler import load_menus, load_programs, schedule
-from src.core.planning.types import Candidate, RoomType, TierPick, TripRequest, Violation
+from src.core.planning.types import Candidate, GeoPoint, RoomType, TierPick, TripRequest, Violation
 from src.core.planning.validator import validate
 
 GROUPS = ("luu_tru", "an_uong", "hoat_dong")
@@ -202,6 +206,57 @@ def ground_and_rank(cands: list[Candidate]) -> dict[str, list[Candidate]]:
     return ranked
 
 
+CARD_RE = re.compile(r"\d{12,}|\d{4}(?:[ .-]\d{4}){2,}")
+BOOKING_RE = re.compile(r"đặt (?:chỗ|phòng|vé|cọc|luôn|giúp|hộ|trước)|thanh toán|chuyển khoản|giữ chỗ|cọc|"
+                        r"số thẻ|\bthẻ\b|\bbook")
+BOOKING_NOTICE = ("Hệ thống chỉ lập kế hoạch và báo giá tham khảo, không đặt chỗ, giữ chỗ hay thanh toán thay bạn; "
+                  "khi chọn được gói, bạn liên hệ trực tiếp khách sạn / nhà xe / nhà hàng để đặt. "
+                  "Không gửi số thẻ qua đây.")
+NOT_C = ("Bản hiện tại lập kế hoạch khi có cả kinh phí và địa điểm. Bạn cho mình biết thêm %s "
+         "để mình lập 3 kế hoạch tiết kiệm, cân bằng, cao cấp.")
+
+
+def _today(v) -> date:
+    if isinstance(v, date):
+        return v
+    try:
+        return date.fromisoformat(str(v)[:10])
+    except (TypeError, ValueError):
+        return date.today()
+
+
+def parse_request(state: dict) -> dict:
+    """Node parse: xoá số thẻ khỏi tin nhắn -> model bóc raw (PARSE_SYSTEM) -> build_request.
+    Thiếu -> ask_back; từ chối -> refused; chưa đủ cả kinh phí lẫn địa điểm (cách A/B) -> refused."""
+    text = CARD_RE.sub("[đã ẩn]", state.get("text") or "")
+    today = _today(state.get("today"))
+    notice = BOOKING_NOTICE if BOOKING_RE.search(text.lower()) or "[đã ẩn]" in text else None
+    user = "Hôm nay: %s\n<tin_nhan>\n%s\n</tin_nhan>" % (today.isoformat(), _safe(text))
+    raw = _parse_json(call_model(PARSE_SYSTEM, user)["text"])
+    req, missing, refusal = build_request(raw if isinstance(raw, dict) else {}, today)
+    out = {"notice": notice, "missing": missing, "refusal": refusal, "request": req}
+    if refusal:
+        return {**out, "status": "refused"}
+    if missing:
+        return {**out, "status": "ask_back"}
+    if req.entry != "C":
+        lack = "kinh phí (tổng hoặc mỗi người)" if req.budget is None else "địa điểm muốn đến"
+        return {**out, "status": "refused", "refusal": NOT_C % lack}
+    return {**out, "status": "ok"}
+
+
+def _point(d) -> Optional[GeoPoint]:
+    return GeoPoint(**d) if d else None
+
+
+def geocode_node(state: dict) -> dict:
+    """Node geocode: toạ độ nơi đi / nơi đến (None -> chặng ước tính) + bảng ước tính."""
+    req: TripRequest = state["request"]
+    return {"origin_pt": _point(dinh_vi(req.origin, domestic=True)),
+            "dest_pt": _point(dinh_vi(req.destination, domestic=True)),
+            "est": state.get("est") or load_estimates()}
+
+
 def research(state: dict) -> dict:
     """Node research: trả state riêng phần {"ranked", "estimate_only"}; không có kết quả tìm kiếm -> estimate_only."""
     req: TripRequest = state["request"]
@@ -336,3 +391,38 @@ def route_after_validate(state: dict) -> str:
     if state.get("violations") and state.get("repair_round", 0) < MAX_REPAIR:
         return "repair"
     return "explain"
+
+
+def _hotels(state: dict) -> dict:
+    by_id = _by_id(state.get("ranked"))
+    return {t: by_id.get(p.hotel) for t, p in state["picks"].items()}
+
+
+def explain_node(state: dict) -> dict:
+    """Node explain: giải thích gói vượt (giá tính lại với cùng toạ độ / khách sạn lúc price), chép sang Plan."""
+    req: TripRequest = state["request"]
+    packages, plans = state["packages"], state["plans"]
+    if req.budget is not None:
+        explain_over(packages, req.budget, req, state.get("est") or load_estimates(), state.get("origin_pt"),
+                     state.get("dest_pt"), _hotels(state))
+    by_tier = {p.tier: p for p in packages}
+    for plan in plans:
+        plan.explanation = by_tier[plan.tier].explanation
+    return {"packages": packages, "plans": plans}
+
+
+def render_node(state: dict) -> dict:
+    """Node render: chữ cho answer() + TripView cho web."""
+    status = state.get("status")
+    notice = state.get("notice")
+    if status in ("ask_back", "refused"):
+        text = ask_back_text(state.get("missing") or []) if status == "ask_back" else state.get("refusal") or ""
+        view = {"trip_id": "", "status": status, "message": text}
+        if status == "ask_back":
+            view["missing_fields"] = list(state.get("missing") or [])
+        return {"output": text + ("\n" + notice if notice else ""), "view": view}
+    req = state["request"]
+    notes = list(state.get("warnings") or []) + ([notice] if notice else [])
+    text = render_text(req, state["packages"], state["plans"], estimate_only=bool(state.get("estimate_only")),
+                       notes=notes)
+    return {"output": text, "view": to_view(uuid.uuid4().hex[:12], req, state["packages"], state["plans"])}

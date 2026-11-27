@@ -43,14 +43,36 @@ MODEL_NAME = (os.environ.get("MODEL_NAME") or "").strip()
 API_KEY = (os.environ.get("API_KEY") or "").strip()
 
 
+_client = None
+
+
+def _gemini_client():
+    """Client google-genai dùng chung (tạo lần đầu gọi)."""
+    global _client
+    if _client is None:
+        from google import genai
+
+        _client = genai.Client(api_key=API_KEY)
+    return _client
+
+
 @model_call
 def call_model(system: str, user: str) -> dict:
     if MODEL_PROVIDER == "fake":
         last = (user.strip().splitlines() or [""])[-1]
         return {"text": "[câu trả lời giả — chưa nối model] " + last[:60], "model": "fake", "tokens_in": 0, "tokens_out": 0}
 
-    # NHÓM VIẾT: gọi model thật ở đây (theo MODEL_PROVIDER, MODEL_NAME, API_KEY) rồi trả đúng 4 khoá.
-    # Ví dụ chép được cho từng nhà cung cấp: docs/connect-model.md mục 2.
+    if MODEL_PROVIDER == "gemini":
+        from google.genai import types
+
+        resp = _gemini_client().models.generate_content(
+            model=MODEL_NAME, contents=user, config=types.GenerateContentConfig(system_instruction=system or None))
+        usage = resp.usage_metadata
+        return {"text": resp.text or "", "model": MODEL_NAME,
+                "tokens_in": getattr(usage, "prompt_token_count", None) or 0,
+                "tokens_out": (getattr(usage, "candidates_token_count", None) or 0)
+                + (getattr(usage, "thoughts_token_count", None) or 0)}
+
     raise NotImplementedError(
         "chưa viết phần gọi model thật cho MODEL_PROVIDER=%s trong codebase/ai.py — xem docs/connect-model.md"
         % MODEL_PROVIDER)
