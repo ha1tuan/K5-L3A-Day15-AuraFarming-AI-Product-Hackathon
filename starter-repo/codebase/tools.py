@@ -8,6 +8,7 @@ Số công cụ, kiểu công cụ do thiết kế của nhóm quyết định �
 Công cụ có tác động ra ngoài: KHÔNG tự làm. Trả về bản nháp chờ người duyệt (guide bước 2.2, "chỗ người duyệt").
 Dữ liệu công cụ đọc (bài mẫu, thông báo mẫu, lịch…): để trong data/ và mô tả ở data/DATA_CARD.md.
 """
+import os
 from dataclasses import asdict
 from datetime import date
 from types import SimpleNamespace
@@ -16,6 +17,7 @@ from tracing import tool, note, TOOLS  # noqa: F401  (TOOLS: danh sách công c�
 
 from src.core.planning.estimates import load_estimates
 from src.core.planning.pricing import price_packages
+from src.core.planning.request import default_start
 from src.core.planning.rooms import allocate_rooms
 from src.core.planning.types import Day, GeoPoint, Menu, Plan, Slot, TripRequest
 from src.core.planning.validator import validate
@@ -75,7 +77,8 @@ def du_tru_goi(headcount: int, days: int, nights: int, origin: str, destination:
     ngân sách tổng (tuỳ chọn), ngày đi ISO (tuỳ chọn) · output: 3 gói tiết kiệm / cân bằng / cao cấp
     (dòng chi phí, tổng, bình quân người) tính bằng bảng ước tính, chưa chọn khách sạn cụ thể · không tác động ra ngoài."""
     req = TripRequest(headcount=headcount, days=days, nights=nights,
-                      start_date=date.fromisoformat(start_date) if start_date else date.today(), origin=origin,
+                      start_date=date.fromisoformat(start_date) if start_date else default_start(
+                          date.fromisoformat(os.environ.get("TRAVEL_TODAY") or date.today().isoformat())), origin=origin,
                       purpose=purpose, budget=budget, budget_per_person_input=False, destination=destination,
                       date_assumed=start_date is None, entry="C")
     pkgs = price_packages(req, _point(dinh_vi(origin)), _point(dinh_vi(destination)), {}, load_estimates())

@@ -265,6 +265,8 @@ def select_for_tiers(req: TripRequest, ranked: dict, violations: Optional[list] 
             return out
 
         hotel = raw.get("hotel")
+        if isinstance(hotel, str) and hotel.strip().lower() in ("", "null", "none"):
+            hotel = None
         if isinstance(hotel, str) and hotel not in known["luu_tru"]:
             if sink is not None:
                 sink.append(Violation("ID_KHONG_TON_TAI", "Id %s không có trong danh sách ứng viên" % hotel, hotel))
@@ -313,24 +315,24 @@ def schedule_node(state: dict) -> dict:
 
 def validate_node(state: dict) -> dict:
     """Node validate: vi phạm của từng gói + id lạ của bước chọn. repair_round = số lần sửa đã chạy
-    (lần kiểm đầu giữ 0; mỗi lần kiểm sau một lượt sửa tăng 1)."""
+    (lần kiểm đầu giữ 0; mỗi lần kiểm sau một lượt sửa tăng 1). Hết lần sửa mà còn vi phạm -> trả thêm
+    "warnings" (nối vào cảnh báo cũ) để router giữ thuần."""
     req = state["request"]
     found = list(state.get("pick_violations") or [])
     for plan, pkg in zip(state["plans"], state["packages"]):
         found += validate(req, plan, pkg)
     rounds = state.get("repair_round", 0) + (1 if "violations" in state else 0)
-    return {"violations": found, "repair_round": rounds}
+    out = {"violations": found, "repair_round": rounds}
+    if found and rounds >= MAX_REPAIR:
+        out["warnings"] = list(state.get("warnings") or []) + [
+            "Kế hoạch còn %d điểm chưa đạt sau %d lần sửa, cần kiểm tra lại: %s" % (
+                len(found), rounds, "; ".join(v.message for v in found[:5]))]
+    return out
 
 
 def route_after_validate(state: dict) -> str:
-    """"repair" nếu còn vi phạm và chưa đủ MAX_REPAIR lần sửa; hết lần thì giữ kế hoạch và ghi cảnh báo."""
-    violations = state.get("violations") or []
-    if violations and state.get("repair_round", 0) < MAX_REPAIR:
+    """"repair" nếu còn vi phạm và chưa đủ MAX_REPAIR lần sửa; không thì "explain" (giữ kế hoạch).
+    Hàm thuần: cảnh báo do validate_node trả."""
+    if state.get("violations") and state.get("repair_round", 0) < MAX_REPAIR:
         return "repair"
-    if violations:
-        warning = "Kế hoạch còn %d điểm chưa đạt sau %d lần sửa, cần kiểm tra lại: %s" % (
-            len(violations), state.get("repair_round", 0), "; ".join(v.message for v in violations[:5]))
-        warnings = state.setdefault("warnings", [])
-        if warning not in warnings:
-            warnings.append(warning)
     return "explain"

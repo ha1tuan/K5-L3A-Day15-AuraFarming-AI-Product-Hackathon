@@ -153,3 +153,37 @@ def test_repair_loop_stops_after_two_rounds(monkeypatch):
             break
     assert len(calls) == 3 and state["warnings"] and state["violations"]
     assert "Violation" not in state["warnings"][0] and len(state["plans"]) == 3
+
+
+def test_route_is_pure_and_validate_node_returns_warning(monkeypatch):
+    h = cand("luu_tru", "Hotel Mai", stars=4)
+    bad = {"hotel": h.id, "restaurants": ["an_uong:khong-co"]}
+    fake_select(monkeypatch, {t: bad for t in ("tiet_kiem", "can_bang", "cao_cap")})
+    state = {"request": make_req(), "ranked": {"luu_tru": [h]}, "est": EST, "origin_pt": None, "dest_pt": None,
+             "warnings": ["cũ"], "repair_round": 1, "violations": []}
+    for node in (tn.select, tn.price, tn.schedule_node):
+        state.update(node(state))
+    out = tn.validate_node(state)
+    assert out["repair_round"] == 2 and out["warnings"][0] == "cũ" and len(out["warnings"]) == 2
+    state.update(out)
+    before = dict(state)
+    assert tn.route_after_validate(state) == "explain" and state == before
+
+
+def test_select_treats_null_hotel_strings_as_none(monkeypatch):
+    h = cand("luu_tru", "Hotel Mai", stars=4)
+    fake_select(monkeypatch, {t: {"hotel": v} for t, v in
+                              (("tiet_kiem", "null"), ("can_bang", "None"), ("cao_cap", " "))})
+    sink = []
+    picks = tn.select_for_tiers(make_req(), {"luu_tru": [h]}, est=EST, sink=sink)
+    assert all(p.hotel is None for p in picks.values()) and not sink
+
+
+def test_du_tru_goi_defaults_start_to_travel_today(monkeypatch):
+    import tools
+    seen = {}
+    monkeypatch.setenv("TRAVEL_TODAY", "2026-11-27")
+    monkeypatch.setattr(tools, "dinh_vi", lambda *a, **k: None)
+    monkeypatch.setattr(tools, "price_packages", lambda req, *a: seen.setdefault("req", req) and [])
+    tools.du_tru_goi(30, 2, 1, "Hà Nội", "Đà Lạt")
+    assert seen["req"].start_date == date(2026, 12, 4) and seen["req"].date_assumed
