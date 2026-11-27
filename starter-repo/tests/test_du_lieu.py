@@ -163,3 +163,20 @@ def test_xuat_phat_tu_diem_den_khac(model):
                       "ngan_sach_tong": 30000000, "dia_diem": "Đà Lạt"}
     out = agent.answer("12 người từ Nha Trang đi Đà Lạt 2 ngày 1 đêm, nghỉ dưỡng, 30 triệu")["output"]
     assert model["du_tru"] == 0 and out.count("### Gói ") == 3 and "xe 16 chỗ" in out
+
+
+def test_ngan_sach_lay_so_trong_cau_khi_model_doc_sai(model):
+    # nhóm lỗi lượt 1: model đọc "30 triệu" thành 300.000.000đ → code lấy số người dùng viết
+    model["parse"] = {"so_nguoi": 12, "noi_xuat_phat": "Nha Trang", "muc_dich": "nghi_duong", "so_ngay": 2, "so_dem": 1,
+                      "ngan_sach_tong": 300000000, "dia_diem": "Đà Lạt"}
+    out = agent.answer("12 người từ Nha Trang đi Đà Lạt 2 ngày 1 đêm, nghỉ dưỡng, 30 triệu")["output"]
+    assert "Ngân sách đã hiểu: **30.000.000đ cho 12 người**" in out
+
+
+def test_chat_chon_duong(monkeypatch):
+    import chat
+    monkeypatch.setattr(chat, "call_model", lambda s, u: {"text": "[câu trả lời giả — chưa nối model] x", "model": "fake"})
+    assert chat.tra_loi([{"role": "user", "content": "Dữ liệu giá lấy từ đâu?"}])["kind"] == "faq"
+    assert "24 điểm đến" in chat.tra_loi([{"role": "user", "content": "Dữ liệu giá lấy từ đâu?"}])["reply"]
+    assert chat.la_yeu_cau_chuyen_di("50 người từ Đà Nẵng, 2 ngày 1 đêm")
+    assert not chat.la_yeu_cau_chuyen_di("Bạn là ai?")

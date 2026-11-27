@@ -6,7 +6,7 @@ const API = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
 /** ?demo=1 hoặc VITE_DEMO=1: chạy bằng dữ liệu mẫu trong trình duyệt (khi backend chưa xong). */
 export const DEMO =
-  new URLSearchParams(window.location.search).get('demo') === '1' || import.meta.env.VITE_DEMO === '1';
+  (typeof window !== 'undefined' && new URLSearchParams(window.location.search).get('demo') === '1') || import.meta.env.VITE_DEMO === '1';
 
 async function post<T>(url: string, body: unknown, signal?: AbortSignal): Promise<T> {
   const res = await fetch(url, {
@@ -37,4 +37,11 @@ export async function getTrip(id: string): Promise<TripView> {
 export function auditQuote(text: string, signal?: AbortSignal): Promise<QuoteResult> {
   if (DEMO) return Promise.reject(new Error('Soát báo giá cần máy chủ (chế độ demo không có).'));
   return post(`${API}/api/quote-audit`, { text }, signal);
+}
+
+export type ChatMsg = { role: 'user' | 'assistant'; content: string };
+/** Trợ lý Aura (POST /api/chat): báo giá → soát; yêu cầu chuyến đi → agent; còn lại → hỏi đáp. */
+export function chat(messages: ChatMsg[], signal?: AbortSignal): Promise<{ reply: string; kind: string }> {
+  if (DEMO) return Promise.resolve({ reply: 'Chế độ demo chưa nối trợ lý — chạy cùng máy chủ để trò chuyện với Aura.', kind: 'faq' });
+  return post(`${API}/api/chat`, { messages }, signal);
 }

@@ -385,10 +385,12 @@ def boc_tach(text):
     r["so_dem"] = int(m.group(1)) if m else (0 if re.search(r"trong ngay|di ve trong ngay", t) else None)
     if r["so_dem"] == 0 and not r["so_ngay"]:
         r["so_ngay"] = 1
-    m = re.search(r"([\d.,]+)\s*(ty|trieu|tr)\b(\s*(?:/|mot|moi|1)\s*(?:nguoi|dau nguoi|khach))?", t)
+    tp = unicodedata.normalize("NFD", str(text).lower()).replace("đ", "d")          # giữ dấu phẩy thập phân: "1,5 tỷ"
+    tp = " ".join("".join(c for c in tp if unicodedata.category(c) != "Mn").split())
+    m = re.search(r"(\d+(?:[.,]\d+)?)\s*(ty|trieu|tr)\b(\s*(?:/|mot|moi|1)\s*(?:nguoi|dau nguoi|khach))?", tp)
     if m:
         v = int(_so(m.group(1)) * (1e9 if m.group(2) == "ty" else 1e6))
-        r["ngan_sach_moi_nguoi" if m.group(3) or re.search(r"(moi|dau) nguoi", t[max(0, m.start() - 15):m.start()]) else
+        r["ngan_sach_moi_nguoi" if m.group(3) or re.search(r"(moi|dau) nguoi", tp[max(0, m.start() - 15):m.start()]) else
           "ngan_sach_tong"] = v
     tu = re.search(r"(?:tu|xuat phat(?: tu)?|khoi hanh(?: tu)?)\s+([a-z. ]{2,25})", t)
     if tu:

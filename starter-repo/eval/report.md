@@ -31,8 +31,8 @@ Kết quả từng câu: `eval/run-1.csv`, `eval/run-2.csv`. Trace: `traces/run-
 
 ## 3. Một lần cải tiến
 
-- Nhắm vào nhóm lỗi: __ — vì sao là nhóm **đau nhất với người dùng**: __
-- Đã sửa gì (có thể vài thay đổi cùng nhắm nhóm lỗi đó): __
+- Nhắm vào nhóm lỗi: **bóc tách sai ngân sách** — vì sao là nhóm **đau nhất với người dùng**: ngân sách sai thì nhãn trong / vượt sai, giám đốc duyệt một gói tưởng vừa tiền mà thực tế vượt (hoặc ngược lại) — đúng rủi ro lớn nhất ở `spec.md` §4.
+- Đã sửa gì (có thể vài thay đổi cùng nhắm nhóm lỗi đó): `agent.parse_request` lấy số tiền người dùng viết rõ (code bóc) khi lệch số model trả; sửa đọc số thập phân "1,5 tỷ". Kết quả đo ở lượt 2 (chưa chạy).
 - Kết quả: nhóm lỗi đó __/__ → __/__ · tổng __% → __%
 - Câu nào **tệ đi** sau khi sửa: __
 

@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { FEATURED, type Featured } from '../lib/featured';
 import { formatVndShort } from '../lib/format';
+import { Logo } from './Brand';
 
 const thumb = (id: string, q: 'hq' | 'mq' = 'hq') => `https://i.ytimg.com/vi/${id}/${q}default.jpg`;
 const HERO_IDS = ['halong', 'phuquoc', 'dalat', 'hoian', 'sapa', 'ninhbinh']
@@ -242,6 +243,7 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
       </section>
 
       <footer className="mx-auto max-w-6xl px-4 py-10 text-xs text-muted">
+        <div className="mb-4"><Logo dark /></div>
         Dữ liệu: 24 điểm đến dựng từ giá gốc có nguồn (<code>data/gia_chuan.json</code>) · video YouTube kiểm qua oEmbed 27/11/2026 · 30 báo giá tour đoàn công khai (vietnambooking.com) ·
         khách sạn / nhà hàng là mức giá theo hạng, không phải cơ sở cụ thể. Nhóm AuraFarming — AI20K Hackathon Track C.
       </footer>

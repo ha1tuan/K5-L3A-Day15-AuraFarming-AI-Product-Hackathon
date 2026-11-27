@@ -1,5 +1,5 @@
 """Schema Pydantic của API, khớp codebase/web/src/api/types.ts (TripInput)."""
-from typing import List, Optional
+from typing import Dict, List, Optional
 
 from pydantic import BaseModel
 
@@ -24,3 +24,7 @@ class ApproveInput(BaseModel):
 
 class QuoteInput(BaseModel):
     text: str
+
+
+class ChatInput(BaseModel):
+    messages: List[Dict[str, str]]

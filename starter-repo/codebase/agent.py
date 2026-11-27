@@ -148,6 +148,15 @@ def parse_request(safe_text):
         if req["so_nguoi"] and str(req["so_nguoi"]) not in re.sub(r"[.,]", "", safe_text):
             note("parse: bỏ số người model tự điền (câu không có số này)")
             req["so_nguoi"] = None
+        # Lượt 2 (sửa nhóm lỗi lượt 1: model đọc "30 triệu" thành 300.000.000đ): số tiền người dùng viết rõ
+        # ("150 triệu", "3 tr / người", "1 tỷ") do code bóc → nếu lệch số model trả thì lấy số của code.
+        ns_code = code["ngan_sach_tong"] or (code["ngan_sach_moi_nguoi"] * req["so_nguoi"]
+                                             if code["ngan_sach_moi_nguoi"] and req["so_nguoi"] else None)
+        if ns_code and req["ngan_sach"] != ns_code:
+            note("parse: ngân sách model %s ≠ số trong câu %s → dùng số trong câu" % (req["ngan_sach"], ns_code))
+            req["ngan_sach"] = ns_code
+            req["ngan_sach_cach_hieu"] = ("%s/người × %d người" % (planner.fmt_vnd(code["ngan_sach_moi_nguoi"]), req["so_nguoi"])
+                                          if code["ngan_sach_moi_nguoi"] else "tổng cả đoàn")
     return req
 
 

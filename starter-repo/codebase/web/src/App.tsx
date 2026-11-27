@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { Compass, CalendarRange, FileSearch, Home } from 'lucide-react';
+import { CalendarRange, FileSearch, Home } from 'lucide-react';
 import { Landing } from './components/Landing';
+import { ChatWidget } from './components/ChatWidget';
+import { Logo } from './components/Brand';
 import { QuoteAudit } from './components/QuoteAudit';
 import type { ApproveInput, Field, TripView } from './api/types';
 import { approveTrip, createTrip, DEMO, getTrip } from './api/client';
@@ -140,11 +142,7 @@ export default function App() {
       <a href="#main" className="skip-link">Bỏ qua tới nội dung</a>
       <header className={`no-print z-40 text-white ${tab === 'home' ? 'absolute inset-x-0 top-0' : 'sticky top-0 bg-ocean/95 shadow-lg backdrop-blur'}`}>
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
-          <button type="button" onClick={() => switchTab('home')} className="flex cursor-pointer items-center gap-2">
-            <span className="grid size-9 place-items-center rounded-xl bg-sun shadow-lg shadow-sun/30"><Compass className="size-5" aria-hidden /></span>
-            <span className="text-left leading-tight"><span className="block text-base font-extrabold tracking-tight">TeamTrip</span>
-              <span className="block text-[11px] text-white/70">Chuyến đi công ty · đúng tiền, đủ hoá đơn</span></span>
-          </button>
+          <button type="button" onClick={() => switchTab('home')} className="cursor-pointer" aria-label="AuraFarming — trang chủ"><Logo /></button>
           {DEMO && <span className="rounded bg-est-bg px-2 py-0.5 text-xs font-medium text-est">Chế độ demo — dữ liệu mẫu</span>}
           <nav className="ml-auto flex gap-1 rounded-full p-1 glass" aria-label="Chức năng">
             {([['home', 'Trang chủ', Home], ['plan', 'Lập kế hoạch', CalendarRange], ['quote', 'Soát báo giá', FileSearch]] as const).map(([t, label, Icon]) => (
@@ -178,6 +176,7 @@ export default function App() {
       </main>
       </>)}
       </>)}
+      <ChatWidget />
     </>
   );
 }

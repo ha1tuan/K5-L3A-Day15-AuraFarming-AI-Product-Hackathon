@@ -1,7 +1,7 @@
 """Router /api/trips: POST tạo chuyến (cách C), GET đọc lại chuyến đã lưu."""
 from fastapi import APIRouter, HTTPException
 
-from src.api.schemas import ApproveInput, QuoteInput, TripInput
+from src.api.schemas import ApproveInput, ChatInput, QuoteInput, TripInput
 from src.api.services import trip_service
 
 router = APIRouter(prefix="/api/trips", tags=["Trips"])
@@ -40,3 +40,13 @@ def quote_audit(body: QuoteInput) -> dict:
     if not soat_bao_gia.la_bao_gia(safe):
         return {"status": "ask_back", "message": "Chưa thấy báo giá: cần có giá / khách và mục \"bao gồm\", \"không bao gồm\"."}
     return soat_bao_gia.soat(safe, ket_qua=True)
+
+
+chat_router = APIRouter(prefix="/api/chat", tags=["Chat"])
+
+
+@chat_router.post("")
+def chat(body: ChatInput) -> dict:
+    """Trợ lý Aura: báo giá → soát; yêu cầu chuyến đi → agent.answer(); còn lại → hỏi đáp (codebase/chat.py)."""
+    import chat as aura
+    return aura.tra_loi(body.messages)
