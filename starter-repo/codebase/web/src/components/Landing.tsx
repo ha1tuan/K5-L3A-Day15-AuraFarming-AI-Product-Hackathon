@@ -168,8 +168,8 @@ function Hero({ onStart, onQuote }: { onStart: () => void; onQuote: () => void }
         <p className="fade-up glass inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-medium">
           <Sparkles className="size-3.5 text-orange-300" aria-hidden />AuraFarming · AI cho người tổ chức chuyến đi của cả công ty
         </p>
-        <h1 className="fade-up-2 mt-6 max-w-4xl text-[2.6rem] font-extrabold leading-[1.05] tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,.35)] sm:text-7xl">
-          Đưa cả công ty đi chơi —<br /><span className="text-gradient-sun">đúng tiền, đủ hoá đơn.</span>
+        <h1 className="fade-up-2 mt-6 text-balance text-[2.6rem] font-extrabold leading-[1.05] tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,.35)] sm:text-7xl">
+          Đưa cả công ty đi chơi <span className="text-gradient-sun sm:whitespace-nowrap">đúng tiền, đủ hoá đơn.</span>
         </h1>
         <div className="fade-up-3 mt-7 grid max-w-3xl gap-1.5 text-lg text-white/90 sm:text-xl">
           <p>3 phương án có bảng chi phí và lịch từng giờ — chỉ trong vài giây.</p>
