@@ -1,0 +1,289 @@
+﻿Mã,Tên (tên dựng),Điểm đến,Mức gói,Sức chứa (người),Giá/người/bữa (đ),Mở,Đóng,Nhận đoàn
+NH001,Hải sản Ngư Phủ Hạ Long (tên dựng),Hạ Long,tiet_kiem,300,190000,10:00,22:00,có
+NH002,Nhà hàng Đồng Quê Hạ Long (tên dựng),Hạ Long,tiet_kiem,200,225000,10:00,22:00,có
+NH003,Nhà hàng Thuyền Rồng Hạ Long (tên dựng),Hạ Long,tiet_kiem,80,170000,10:00,22:00,có
+NH004,Nhà hàng Phù Sa Hạ Long (tên dựng),Hạ Long,tiet_kiem,25,180000,11:00,14:00,không
+NH005,Nhà hàng Đoàn Viên Hạ Long (tên dựng),Hạ Long,can_bang,600,275000,10:00,22:00,có
+NH006,Nhà hàng Gió Biển Hạ Long (tên dựng),Hạ Long,can_bang,150,245000,10:00,22:00,có
+NH007,Nhà hàng Hoa Sen Hạ Long (tên dựng),Hạ Long,can_bang,80,250000,10:00,22:00,có
+NH008,Nhà hàng Mộc Hạ Long (tên dựng),Hạ Long,can_bang,25,270000,11:00,14:00,không
+NH009,Nhà hàng Hội Ngộ Hạ Long (tên dựng),Hạ Long,day_du,400,390000,10:00,22:00,có
+NH010,Bếp Quê Hạ Long (tên dựng),Hạ Long,day_du,200,370000,10:00,22:00,có
+NH011,Phố Ẩm Thực Hạ Long (tên dựng),Hạ Long,day_du,80,450000,10:00,22:00,có
+NH012,Buffet Đại Dương Hạ Long (tên dựng),Hạ Long,day_du,25,420000,11:00,14:00,không
+NH013,Bếp Nhà Làng Cát Bà (tên dựng),Cát Bà,tiet_kiem,600,185000,10:00,22:00,có
+NH014,Hải sản Biển Xanh Cát Bà (tên dựng),Cát Bà,tiet_kiem,200,185000,10:00,22:00,có
+NH015,Hải sản Ngư Phủ Cát Bà (tên dựng),Cát Bà,tiet_kiem,60,195000,10:00,22:00,có
+NH016,Nhà hàng Đồng Quê Cát Bà (tên dựng),Cát Bà,tiet_kiem,25,230000,11:00,14:00,không
+NH017,Nhà hàng Thuyền Rồng Cát Bà (tên dựng),Cát Bà,can_bang,400,255000,10:00,22:00,có
+NH018,Nhà hàng Phù Sa Cát Bà (tên dựng),Cát Bà,can_bang,200,250000,10:00,22:00,có
+NH019,Nhà hàng Đoàn Viên Cát Bà (tên dựng),Cát Bà,can_bang,80,245000,10:00,22:00,có
+NH020,Nhà hàng Gió Biển Cát Bà (tên dựng),Cát Bà,can_bang,25,255000,11:00,14:00,không
+NH021,Nhà hàng Hoa Sen Cát Bà (tên dựng),Cát Bà,day_du,600,440000,10:00,22:00,có
+NH022,Nhà hàng Mộc Cát Bà (tên dựng),Cát Bà,day_du,100,445000,10:00,22:00,có
+NH023,Nhà hàng Hội Ngộ Cát Bà (tên dựng),Cát Bà,day_du,80,425000,10:00,22:00,có
+NH024,Bếp Quê Cát Bà (tên dựng),Cát Bà,day_du,25,395000,11:00,14:00,không
+NH025,Phố Ẩm Thực Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,400,195000,10:00,22:00,có
+NH026,Buffet Đại Dương Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,100,180000,10:00,22:00,có
+NH027,Bếp Nhà Làng Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,60,160000,10:00,22:00,có
+NH028,Hải sản Biển Xanh Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,25,165000,11:00,14:00,không
+NH029,Hải sản Ngư Phủ Sầm Sơn (tên dựng),Sầm Sơn,can_bang,300,215000,10:00,22:00,có
+NH030,Nhà hàng Đồng Quê Sầm Sơn (tên dựng),Sầm Sơn,can_bang,100,255000,10:00,22:00,có
+NH031,Nhà hàng Thuyền Rồng Sầm Sơn (tên dựng),Sầm Sơn,can_bang,80,240000,10:00,22:00,có
+NH032,Nhà hàng Phù Sa Sầm Sơn (tên dựng),Sầm Sơn,can_bang,25,275000,11:00,14:00,không
+NH033,Nhà hàng Đoàn Viên Sầm Sơn (tên dựng),Sầm Sơn,day_du,300,330000,10:00,22:00,có
+NH034,Nhà hàng Gió Biển Sầm Sơn (tên dựng),Sầm Sơn,day_du,200,365000,10:00,22:00,có
+NH035,Nhà hàng Hoa Sen Sầm Sơn (tên dựng),Sầm Sơn,day_du,60,405000,10:00,22:00,có
+NH036,Nhà hàng Mộc Sầm Sơn (tên dựng),Sầm Sơn,day_du,25,375000,11:00,14:00,không
+NH037,Nhà hàng Hội Ngộ Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,600,160000,10:00,22:00,có
+NH038,Bếp Quê Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,150,170000,10:00,22:00,có
+NH039,Phố Ẩm Thực Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,60,155000,10:00,22:00,có
+NH040,Buffet Đại Dương Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,25,180000,11:00,14:00,không
+NH041,Bếp Nhà Làng Cửa Lò (tên dựng),Cửa Lò,can_bang,400,270000,10:00,22:00,có
+NH042,Hải sản Biển Xanh Cửa Lò (tên dựng),Cửa Lò,can_bang,100,225000,10:00,22:00,có
+NH043,Hải sản Ngư Phủ Cửa Lò (tên dựng),Cửa Lò,can_bang,60,250000,10:00,22:00,có
+NH044,Nhà hàng Đồng Quê Cửa Lò (tên dựng),Cửa Lò,can_bang,25,280000,11:00,14:00,không
+NH045,Nhà hàng Thuyền Rồng Cửa Lò (tên dựng),Cửa Lò,day_du,200,355000,10:00,22:00,có
+NH046,Nhà hàng Phù Sa Cửa Lò (tên dựng),Cửa Lò,day_du,200,340000,10:00,22:00,có
+NH047,Nhà hàng Đoàn Viên Cửa Lò (tên dựng),Cửa Lò,day_du,60,425000,10:00,22:00,có
+NH048,Nhà hàng Gió Biển Cửa Lò (tên dựng),Cửa Lò,day_du,25,345000,11:00,14:00,không
+NH049,Nhà hàng Hoa Sen Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,400,175000,10:00,22:00,có
+NH050,Nhà hàng Mộc Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,100,215000,10:00,22:00,có
+NH051,Nhà hàng Hội Ngộ Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,80,175000,10:00,22:00,có
+NH052,Bếp Quê Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,25,195000,11:00,14:00,không
+NH053,Phố Ẩm Thực Ninh Bình (tên dựng),Ninh Bình,can_bang,200,275000,10:00,22:00,có
+NH054,Buffet Đại Dương Ninh Bình (tên dựng),Ninh Bình,can_bang,200,270000,10:00,22:00,có
+NH055,Bếp Nhà Làng Ninh Bình (tên dựng),Ninh Bình,can_bang,60,240000,10:00,22:00,có
+NH056,Hải sản Biển Xanh Ninh Bình (tên dựng),Ninh Bình,can_bang,25,275000,11:00,14:00,không
+NH057,Hải sản Ngư Phủ Ninh Bình (tên dựng),Ninh Bình,day_du,400,440000,10:00,22:00,có
+NH058,Nhà hàng Đồng Quê Ninh Bình (tên dựng),Ninh Bình,day_du,200,345000,10:00,22:00,có
+NH059,Nhà hàng Thuyền Rồng Ninh Bình (tên dựng),Ninh Bình,day_du,60,345000,10:00,22:00,có
+NH060,Nhà hàng Phù Sa Ninh Bình (tên dựng),Ninh Bình,day_du,25,415000,11:00,14:00,không
+NH061,Nhà hàng Đoàn Viên Sa Pa (tên dựng),Sa Pa,tiet_kiem,400,205000,10:00,22:00,có
+NH062,Nhà hàng Gió Biển Sa Pa (tên dựng),Sa Pa,tiet_kiem,200,185000,10:00,22:00,có
+NH063,Nhà hàng Hoa Sen Sa Pa (tên dựng),Sa Pa,tiet_kiem,60,200000,10:00,22:00,có
+NH064,Nhà hàng Mộc Sa Pa (tên dựng),Sa Pa,tiet_kiem,25,190000,11:00,14:00,không
+NH065,Nhà hàng Hội Ngộ Sa Pa (tên dựng),Sa Pa,can_bang,400,265000,10:00,22:00,có
+NH066,Bếp Quê Sa Pa (tên dựng),Sa Pa,can_bang,200,290000,10:00,22:00,có
+NH067,Phố Ẩm Thực Sa Pa (tên dựng),Sa Pa,can_bang,80,280000,10:00,22:00,có
+NH068,Buffet Đại Dương Sa Pa (tên dựng),Sa Pa,can_bang,25,250000,11:00,14:00,không
+NH069,Bếp Nhà Làng Sa Pa (tên dựng),Sa Pa,day_du,200,360000,10:00,22:00,có
+NH070,Hải sản Biển Xanh Sa Pa (tên dựng),Sa Pa,day_du,200,390000,10:00,22:00,có
+NH071,Hải sản Ngư Phủ Sa Pa (tên dựng),Sa Pa,day_du,60,395000,10:00,22:00,có
+NH072,Nhà hàng Đồng Quê Sa Pa (tên dựng),Sa Pa,day_du,25,380000,11:00,14:00,không
+NH073,Nhà hàng Thuyền Rồng Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,300,205000,10:00,22:00,có
+NH074,Nhà hàng Phù Sa Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,150,210000,10:00,22:00,có
+NH075,Nhà hàng Đoàn Viên Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,80,215000,10:00,22:00,có
+NH076,Nhà hàng Gió Biển Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,25,170000,11:00,14:00,không
+NH077,Nhà hàng Hoa Sen Mộc Châu (tên dựng),Mộc Châu,can_bang,400,250000,10:00,22:00,có
+NH078,Nhà hàng Mộc Mộc Châu (tên dựng),Mộc Châu,can_bang,200,265000,10:00,22:00,có
+NH079,Nhà hàng Hội Ngộ Mộc Châu (tên dựng),Mộc Châu,can_bang,60,245000,10:00,22:00,có
+NH080,Bếp Quê Mộc Châu (tên dựng),Mộc Châu,can_bang,25,245000,11:00,14:00,không
+NH081,Phố Ẩm Thực Mộc Châu (tên dựng),Mộc Châu,day_du,200,450000,10:00,22:00,có
+NH082,Buffet Đại Dương Mộc Châu (tên dựng),Mộc Châu,day_du,100,445000,10:00,22:00,có
+NH083,Bếp Nhà Làng Mộc Châu (tên dựng),Mộc Châu,day_du,80,390000,10:00,22:00,có
+NH084,Hải sản Biển Xanh Mộc Châu (tên dựng),Mộc Châu,day_du,25,455000,11:00,14:00,không
+NH085,Hải sản Ngư Phủ Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,300,170000,10:00,22:00,có
+NH086,Nhà hàng Đồng Quê Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,150,170000,10:00,22:00,có
+NH087,Nhà hàng Thuyền Rồng Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,80,220000,10:00,22:00,có
+NH088,Nhà hàng Phù Sa Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,25,190000,11:00,14:00,không
+NH089,Nhà hàng Đoàn Viên Tam Đảo (tên dựng),Tam Đảo,can_bang,400,235000,10:00,22:00,có
+NH090,Nhà hàng Gió Biển Tam Đảo (tên dựng),Tam Đảo,can_bang,150,255000,10:00,22:00,có
+NH091,Nhà hàng Hoa Sen Tam Đảo (tên dựng),Tam Đảo,can_bang,60,265000,10:00,22:00,có
+NH092,Nhà hàng Mộc Tam Đảo (tên dựng),Tam Đảo,can_bang,25,245000,11:00,14:00,không
+NH093,Nhà hàng Hội Ngộ Tam Đảo (tên dựng),Tam Đảo,day_du,400,375000,10:00,22:00,có
+NH094,Bếp Quê Tam Đảo (tên dựng),Tam Đảo,day_du,100,410000,10:00,22:00,có
+NH095,Phố Ẩm Thực Tam Đảo (tên dựng),Tam Đảo,day_du,60,440000,10:00,22:00,có
+NH096,Buffet Đại Dương Tam Đảo (tên dựng),Tam Đảo,day_du,25,420000,11:00,14:00,không
+NH097,Bếp Nhà Làng Ba Vì (tên dựng),Ba Vì,tiet_kiem,400,210000,10:00,22:00,có
+NH098,Hải sản Biển Xanh Ba Vì (tên dựng),Ba Vì,tiet_kiem,200,185000,10:00,22:00,có
+NH099,Hải sản Ngư Phủ Ba Vì (tên dựng),Ba Vì,tiet_kiem,60,210000,10:00,22:00,có
+NH100,Nhà hàng Đồng Quê Ba Vì (tên dựng),Ba Vì,tiet_kiem,25,205000,11:00,14:00,không
+NH101,Nhà hàng Thuyền Rồng Ba Vì (tên dựng),Ba Vì,can_bang,600,260000,10:00,22:00,có
+NH102,Nhà hàng Phù Sa Ba Vì (tên dựng),Ba Vì,can_bang,150,270000,10:00,22:00,có
+NH103,Nhà hàng Đoàn Viên Ba Vì (tên dựng),Ba Vì,can_bang,60,240000,10:00,22:00,có
+NH104,Nhà hàng Gió Biển Ba Vì (tên dựng),Ba Vì,can_bang,25,270000,11:00,14:00,không
+NH105,Nhà hàng Hoa Sen Ba Vì (tên dựng),Ba Vì,day_du,200,430000,10:00,22:00,có
+NH106,Nhà hàng Mộc Ba Vì (tên dựng),Ba Vì,day_du,150,375000,10:00,22:00,có
+NH107,Nhà hàng Hội Ngộ Ba Vì (tên dựng),Ba Vì,day_du,80,460000,10:00,22:00,có
+NH108,Bếp Quê Ba Vì (tên dựng),Ba Vì,day_du,25,420000,11:00,14:00,không
+NH109,Phố Ẩm Thực Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,200,185000,10:00,22:00,có
+NH110,Buffet Đại Dương Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,100,205000,10:00,22:00,có
+NH111,Bếp Nhà Làng Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,60,180000,10:00,22:00,có
+NH112,Hải sản Biển Xanh Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,25,215000,11:00,14:00,không
+NH113,Hải sản Ngư Phủ Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,300,265000,10:00,22:00,có
+NH114,Nhà hàng Đồng Quê Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,100,230000,10:00,22:00,có
+NH115,Nhà hàng Thuyền Rồng Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,80,235000,10:00,22:00,có
+NH116,Nhà hàng Phù Sa Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,25,255000,11:00,14:00,không
+NH117,Nhà hàng Đoàn Viên Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,600,355000,10:00,22:00,có
+NH118,Nhà hàng Gió Biển Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,200,445000,10:00,22:00,có
+NH119,Nhà hàng Hoa Sen Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,80,355000,10:00,22:00,có
+NH120,Nhà hàng Mộc Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,25,450000,11:00,14:00,không
+NH121,Nhà hàng Hội Ngộ Huế (tên dựng),Huế,tiet_kiem,400,220000,10:00,22:00,có
+NH122,Bếp Quê Huế (tên dựng),Huế,tiet_kiem,100,205000,10:00,22:00,có
+NH123,Phố Ẩm Thực Huế (tên dựng),Huế,tiet_kiem,80,180000,10:00,22:00,có
+NH124,Buffet Đại Dương Huế (tên dựng),Huế,tiet_kiem,25,180000,11:00,14:00,không
+NH125,Bếp Nhà Làng Huế (tên dựng),Huế,can_bang,600,265000,10:00,22:00,có
+NH126,Hải sản Biển Xanh Huế (tên dựng),Huế,can_bang,200,225000,10:00,22:00,có
+NH127,Hải sản Ngư Phủ Huế (tên dựng),Huế,can_bang,80,255000,10:00,22:00,có
+NH128,Nhà hàng Đồng Quê Huế (tên dựng),Huế,can_bang,25,235000,11:00,14:00,không
+NH129,Nhà hàng Thuyền Rồng Huế (tên dựng),Huế,day_du,600,435000,10:00,22:00,có
+NH130,Nhà hàng Phù Sa Huế (tên dựng),Huế,day_du,200,425000,10:00,22:00,có
+NH131,Nhà hàng Đoàn Viên Huế (tên dựng),Huế,day_du,80,420000,10:00,22:00,có
+NH132,Nhà hàng Gió Biển Huế (tên dựng),Huế,day_du,25,340000,11:00,14:00,không
+NH133,Nhà hàng Hoa Sen Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,600,245000,10:00,22:00,có
+NH134,Nhà hàng Mộc Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,150,235000,10:00,22:00,có
+NH135,Nhà hàng Hội Ngộ Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,60,205000,10:00,22:00,có
+NH136,Bếp Quê Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,25,240000,11:00,14:00,không
+NH137,Phố Ẩm Thực Đà Nẵng (tên dựng),Đà Nẵng,can_bang,600,275000,10:00,22:00,có
+NH138,Buffet Đại Dương Đà Nẵng (tên dựng),Đà Nẵng,can_bang,100,365000,10:00,22:00,có
+NH139,Bếp Nhà Làng Đà Nẵng (tên dựng),Đà Nẵng,can_bang,60,285000,10:00,22:00,có
+NH140,Hải sản Biển Xanh Đà Nẵng (tên dựng),Đà Nẵng,can_bang,25,275000,11:00,14:00,không
+NH141,Hải sản Ngư Phủ Đà Nẵng (tên dựng),Đà Nẵng,day_du,400,470000,10:00,22:00,có
+NH142,Nhà hàng Đồng Quê Đà Nẵng (tên dựng),Đà Nẵng,day_du,150,440000,10:00,22:00,có
+NH143,Nhà hàng Thuyền Rồng Đà Nẵng (tên dựng),Đà Nẵng,day_du,60,485000,10:00,22:00,có
+NH144,Nhà hàng Phù Sa Đà Nẵng (tên dựng),Đà Nẵng,day_du,25,500000,11:00,14:00,không
+NH145,Nhà hàng Đoàn Viên Hội An (tên dựng),Hội An,tiet_kiem,600,245000,10:00,22:00,có
+NH146,Nhà hàng Gió Biển Hội An (tên dựng),Hội An,tiet_kiem,200,230000,10:00,22:00,có
+NH147,Nhà hàng Hoa Sen Hội An (tên dựng),Hội An,tiet_kiem,60,235000,10:00,22:00,có
+NH148,Nhà hàng Mộc Hội An (tên dựng),Hội An,tiet_kiem,25,265000,11:00,14:00,không
+NH149,Nhà hàng Hội Ngộ Hội An (tên dựng),Hội An,can_bang,600,305000,10:00,22:00,có
+NH150,Bếp Quê Hội An (tên dựng),Hội An,can_bang,200,290000,10:00,22:00,có
+NH151,Phố Ẩm Thực Hội An (tên dựng),Hội An,can_bang,80,360000,10:00,22:00,có
+NH152,Buffet Đại Dương Hội An (tên dựng),Hội An,can_bang,25,305000,11:00,14:00,không
+NH153,Bếp Nhà Làng Hội An (tên dựng),Hội An,day_du,400,500000,10:00,22:00,có
+NH154,Hải sản Biển Xanh Hội An (tên dựng),Hội An,day_du,200,440000,10:00,22:00,có
+NH155,Hải sản Ngư Phủ Hội An (tên dựng),Hội An,day_du,80,445000,10:00,22:00,có
+NH156,Nhà hàng Đồng Quê Hội An (tên dựng),Hội An,day_du,25,490000,11:00,14:00,không
+NH157,Nhà hàng Thuyền Rồng Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,300,210000,10:00,22:00,có
+NH158,Nhà hàng Phù Sa Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,150,210000,10:00,22:00,có
+NH159,Nhà hàng Đoàn Viên Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,80,200000,10:00,22:00,có
+NH160,Nhà hàng Gió Biển Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,25,200000,11:00,14:00,không
+NH161,Nhà hàng Hoa Sen Quy Nhơn (tên dựng),Quy Nhơn,can_bang,400,285000,10:00,22:00,có
+NH162,Nhà hàng Mộc Quy Nhơn (tên dựng),Quy Nhơn,can_bang,150,285000,10:00,22:00,có
+NH163,Nhà hàng Hội Ngộ Quy Nhơn (tên dựng),Quy Nhơn,can_bang,60,315000,10:00,22:00,có
+NH164,Bếp Quê Quy Nhơn (tên dựng),Quy Nhơn,can_bang,25,270000,11:00,14:00,không
+NH165,Phố Ẩm Thực Quy Nhơn (tên dựng),Quy Nhơn,day_du,400,360000,10:00,22:00,có
+NH166,Buffet Đại Dương Quy Nhơn (tên dựng),Quy Nhơn,day_du,100,475000,10:00,22:00,có
+NH167,Bếp Nhà Làng Quy Nhơn (tên dựng),Quy Nhơn,day_du,80,365000,10:00,22:00,có
+NH168,Hải sản Biển Xanh Quy Nhơn (tên dựng),Quy Nhơn,day_du,25,475000,11:00,14:00,không
+NH169,Hải sản Ngư Phủ Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,400,185000,10:00,22:00,có
+NH170,Nhà hàng Đồng Quê Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,200,220000,10:00,22:00,có
+NH171,Nhà hàng Thuyền Rồng Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,80,185000,10:00,22:00,có
+NH172,Nhà hàng Phù Sa Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,25,205000,11:00,14:00,không
+NH173,Nhà hàng Đoàn Viên Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,400,290000,10:00,22:00,có
+NH174,Nhà hàng Gió Biển Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,100,285000,10:00,22:00,có
+NH175,Nhà hàng Hoa Sen Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,60,260000,10:00,22:00,có
+NH176,Nhà hàng Mộc Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,25,295000,11:00,14:00,không
+NH177,Nhà hàng Hội Ngộ Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,300,365000,10:00,22:00,có
+NH178,Bếp Quê Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,200,410000,10:00,22:00,có
+NH179,Phố Ẩm Thực Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,60,445000,10:00,22:00,có
+NH180,Buffet Đại Dương Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,25,370000,11:00,14:00,không
+NH181,Bếp Nhà Làng Nha Trang (tên dựng),Nha Trang,tiet_kiem,300,225000,10:00,22:00,có
+NH182,Hải sản Biển Xanh Nha Trang (tên dựng),Nha Trang,tiet_kiem,100,260000,10:00,22:00,có
+NH183,Hải sản Ngư Phủ Nha Trang (tên dựng),Nha Trang,tiet_kiem,60,255000,10:00,22:00,có
+NH184,Nhà hàng Đồng Quê Nha Trang (tên dựng),Nha Trang,tiet_kiem,25,230000,11:00,14:00,không
+NH185,Nhà hàng Thuyền Rồng Nha Trang (tên dựng),Nha Trang,can_bang,300,300000,10:00,22:00,có
+NH186,Nhà hàng Phù Sa Nha Trang (tên dựng),Nha Trang,can_bang,150,280000,10:00,22:00,có
+NH187,Nhà hàng Đoàn Viên Nha Trang (tên dựng),Nha Trang,can_bang,80,350000,10:00,22:00,có
+NH188,Nhà hàng Gió Biển Nha Trang (tên dựng),Nha Trang,can_bang,25,335000,11:00,14:00,không
+NH189,Nhà hàng Hoa Sen Nha Trang (tên dựng),Nha Trang,day_du,300,545000,10:00,22:00,có
+NH190,Nhà hàng Mộc Nha Trang (tên dựng),Nha Trang,day_du,200,435000,10:00,22:00,có
+NH191,Nhà hàng Hội Ngộ Nha Trang (tên dựng),Nha Trang,day_du,60,540000,10:00,22:00,có
+NH192,Bếp Quê Nha Trang (tên dựng),Nha Trang,day_du,25,435000,11:00,14:00,không
+NH193,Phố Ẩm Thực Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,200,170000,10:00,22:00,có
+NH194,Buffet Đại Dương Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,150,205000,10:00,22:00,có
+NH195,Bếp Nhà Làng Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,80,210000,10:00,22:00,có
+NH196,Hải sản Biển Xanh Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,25,180000,11:00,14:00,không
+NH197,Hải sản Ngư Phủ Đà Lạt (tên dựng),Đà Lạt,can_bang,200,270000,10:00,22:00,có
+NH198,Nhà hàng Đồng Quê Đà Lạt (tên dựng),Đà Lạt,can_bang,100,235000,10:00,22:00,có
+NH199,Nhà hàng Thuyền Rồng Đà Lạt (tên dựng),Đà Lạt,can_bang,80,305000,10:00,22:00,có
+NH200,Nhà hàng Phù Sa Đà Lạt (tên dựng),Đà Lạt,can_bang,25,250000,11:00,14:00,không
+NH201,Nhà hàng Đoàn Viên Đà Lạt (tên dựng),Đà Lạt,day_du,600,370000,10:00,22:00,có
+NH202,Nhà hàng Gió Biển Đà Lạt (tên dựng),Đà Lạt,day_du,100,435000,10:00,22:00,có
+NH203,Nhà hàng Hoa Sen Đà Lạt (tên dựng),Đà Lạt,day_du,80,380000,10:00,22:00,có
+NH204,Nhà hàng Mộc Đà Lạt (tên dựng),Đà Lạt,day_du,25,425000,11:00,14:00,không
+NH205,Nhà hàng Hội Ngộ Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,400,170000,10:00,22:00,có
+NH206,Bếp Quê Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,200,190000,10:00,22:00,có
+NH207,Phố Ẩm Thực Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,60,190000,10:00,22:00,có
+NH208,Buffet Đại Dương Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,25,210000,11:00,14:00,không
+NH209,Bếp Nhà Làng Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,300,305000,10:00,22:00,có
+NH210,Hải sản Biển Xanh Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,100,280000,10:00,22:00,có
+NH211,Hải sản Ngư Phủ Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,80,245000,10:00,22:00,có
+NH212,Nhà hàng Đồng Quê Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,25,295000,11:00,14:00,không
+NH213,Nhà hàng Thuyền Rồng Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,300,400000,10:00,22:00,có
+NH214,Nhà hàng Phù Sa Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,100,390000,10:00,22:00,có
+NH215,Nhà hàng Đoàn Viên Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,80,390000,10:00,22:00,có
+NH216,Nhà hàng Gió Biển Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,25,385000,11:00,14:00,không
+NH217,Nhà hàng Hoa Sen Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,400,205000,10:00,22:00,có
+NH218,Nhà hàng Mộc Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,150,205000,10:00,22:00,có
+NH219,Nhà hàng Hội Ngộ Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,80,185000,10:00,22:00,có
+NH220,Bếp Quê Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,25,190000,11:00,14:00,không
+NH221,Phố Ẩm Thực Vũng Tàu (tên dựng),Vũng Tàu,can_bang,300,275000,10:00,22:00,có
+NH222,Buffet Đại Dương Vũng Tàu (tên dựng),Vũng Tàu,can_bang,100,250000,10:00,22:00,có
+NH223,Bếp Nhà Làng Vũng Tàu (tên dựng),Vũng Tàu,can_bang,60,295000,10:00,22:00,có
+NH224,Hải sản Biển Xanh Vũng Tàu (tên dựng),Vũng Tàu,can_bang,25,315000,11:00,14:00,không
+NH225,Hải sản Ngư Phủ Vũng Tàu (tên dựng),Vũng Tàu,day_du,400,435000,10:00,22:00,có
+NH226,Nhà hàng Đồng Quê Vũng Tàu (tên dựng),Vũng Tàu,day_du,200,475000,10:00,22:00,có
+NH227,Nhà hàng Thuyền Rồng Vũng Tàu (tên dựng),Vũng Tàu,day_du,60,405000,10:00,22:00,có
+NH228,Nhà hàng Phù Sa Vũng Tàu (tên dựng),Vũng Tàu,day_du,25,385000,11:00,14:00,không
+NH229,Nhà hàng Đoàn Viên Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,300,225000,10:00,22:00,có
+NH230,Nhà hàng Gió Biển Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,150,265000,10:00,22:00,có
+NH231,Nhà hàng Hoa Sen Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,60,220000,10:00,22:00,có
+NH232,Nhà hàng Mộc Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,25,245000,11:00,14:00,không
+NH233,Nhà hàng Hội Ngộ Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,600,345000,10:00,22:00,có
+NH234,Bếp Quê Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,200,340000,10:00,22:00,có
+NH235,Phố Ẩm Thực Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,60,330000,10:00,22:00,có
+NH236,Buffet Đại Dương Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,25,350000,11:00,14:00,không
+NH237,Bếp Nhà Làng Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,600,420000,10:00,22:00,có
+NH238,Hải sản Biển Xanh Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,200,490000,10:00,22:00,có
+NH239,Hải sản Ngư Phủ Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,80,420000,10:00,22:00,có
+NH240,Nhà hàng Đồng Quê Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,25,490000,11:00,14:00,không
+NH241,Nhà hàng Thuyền Rồng Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,300,205000,10:00,22:00,có
+NH242,Nhà hàng Phù Sa Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,200,255000,10:00,22:00,có
+NH243,Nhà hàng Đoàn Viên Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,60,225000,10:00,22:00,có
+NH244,Nhà hàng Gió Biển Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,25,240000,11:00,14:00,không
+NH245,Nhà hàng Hoa Sen Phú Quốc (tên dựng),Phú Quốc,can_bang,600,350000,10:00,22:00,có
+NH246,Nhà hàng Mộc Phú Quốc (tên dựng),Phú Quốc,can_bang,100,320000,10:00,22:00,có
+NH247,Nhà hàng Hội Ngộ Phú Quốc (tên dựng),Phú Quốc,can_bang,80,325000,10:00,22:00,có
+NH248,Bếp Quê Phú Quốc (tên dựng),Phú Quốc,can_bang,25,320000,11:00,14:00,không
+NH249,Phố Ẩm Thực Phú Quốc (tên dựng),Phú Quốc,day_du,200,510000,10:00,22:00,có
+NH250,Buffet Đại Dương Phú Quốc (tên dựng),Phú Quốc,day_du,200,455000,10:00,22:00,có
+NH251,Bếp Nhà Làng Phú Quốc (tên dựng),Phú Quốc,day_du,80,415000,10:00,22:00,có
+NH252,Hải sản Biển Xanh Phú Quốc (tên dựng),Phú Quốc,day_du,25,445000,11:00,14:00,không
+NH253,Hải sản Ngư Phủ Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,200,235000,10:00,22:00,có
+NH254,Nhà hàng Đồng Quê Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,200,200000,10:00,22:00,có
+NH255,Nhà hàng Thuyền Rồng Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,60,220000,10:00,22:00,có
+NH256,Nhà hàng Phù Sa Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,25,200000,11:00,14:00,không
+NH257,Nhà hàng Đoàn Viên Côn Đảo (tên dựng),Côn Đảo,can_bang,200,275000,10:00,22:00,có
+NH258,Nhà hàng Gió Biển Côn Đảo (tên dựng),Côn Đảo,can_bang,100,315000,10:00,22:00,có
+NH259,Nhà hàng Hoa Sen Côn Đảo (tên dựng),Côn Đảo,can_bang,80,350000,10:00,22:00,có
+NH260,Nhà hàng Mộc Côn Đảo (tên dựng),Côn Đảo,can_bang,25,350000,11:00,14:00,không
+NH261,Nhà hàng Hội Ngộ Côn Đảo (tên dựng),Côn Đảo,day_du,600,475000,10:00,22:00,có
+NH262,Bếp Quê Côn Đảo (tên dựng),Côn Đảo,day_du,150,545000,10:00,22:00,có
+NH263,Phố Ẩm Thực Côn Đảo (tên dựng),Côn Đảo,day_du,80,465000,10:00,22:00,có
+NH264,Buffet Đại Dương Côn Đảo (tên dựng),Côn Đảo,day_du,25,420000,11:00,14:00,không
+NH265,Bếp Nhà Làng Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,300,170000,10:00,22:00,có
+NH266,Hải sản Biển Xanh Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,200,220000,10:00,22:00,có
+NH267,Hải sản Ngư Phủ Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,80,185000,10:00,22:00,có
+NH268,Nhà hàng Đồng Quê Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,25,170000,11:00,14:00,không
+NH269,Nhà hàng Thuyền Rồng Cần Thơ (tên dựng),Cần Thơ,can_bang,300,305000,10:00,22:00,có
+NH270,Nhà hàng Phù Sa Cần Thơ (tên dựng),Cần Thơ,can_bang,100,265000,10:00,22:00,có
+NH271,Nhà hàng Đoàn Viên Cần Thơ (tên dựng),Cần Thơ,can_bang,60,285000,10:00,22:00,có
+NH272,Nhà hàng Gió Biển Cần Thơ (tên dựng),Cần Thơ,can_bang,25,260000,11:00,14:00,không
+NH273,Nhà hàng Hoa Sen Cần Thơ (tên dựng),Cần Thơ,day_du,600,395000,10:00,22:00,có
+NH274,Nhà hàng Mộc Cần Thơ (tên dựng),Cần Thơ,day_du,100,360000,10:00,22:00,có
+NH275,Nhà hàng Hội Ngộ Cần Thơ (tên dựng),Cần Thơ,day_du,60,360000,10:00,22:00,có
+NH276,Bếp Quê Cần Thơ (tên dựng),Cần Thơ,day_du,25,445000,11:00,14:00,không
+NH277,Phố Ẩm Thực Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,200,195000,10:00,22:00,có
+NH278,Buffet Đại Dương Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,100,215000,10:00,22:00,có
+NH279,Bếp Nhà Làng Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,80,210000,10:00,22:00,có
+NH280,Hải sản Biển Xanh Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,25,175000,11:00,14:00,không
+NH281,Hải sản Ngư Phủ Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,200,260000,10:00,22:00,có
+NH282,Nhà hàng Đồng Quê Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,100,280000,10:00,22:00,có
+NH283,Nhà hàng Thuyền Rồng Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,60,295000,10:00,22:00,có
+NH284,Nhà hàng Phù Sa Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,25,245000,11:00,14:00,không
+NH285,Nhà hàng Đoàn Viên Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,200,365000,10:00,22:00,có
+NH286,Nhà hàng Gió Biển Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,150,365000,10:00,22:00,có
+NH287,Nhà hàng Hoa Sen Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,80,445000,10:00,22:00,có
+NH288,Nhà hàng Mộc Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,25,345000,11:00,14:00,không

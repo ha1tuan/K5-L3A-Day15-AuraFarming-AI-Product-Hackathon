@@ -1,0 +1,289 @@
+﻿Mã,Tên (tên dựng),Điểm đến,Mức gói,Hạng sao,Loại,Phòng 2 người: giá/đêm,Phòng 3 người: giá/đêm,Phòng 4 người: giá/đêm,Phòng 2 người: số phòng,Phòng 3 người: số phòng,Phòng 4 người: số phòng,Tổng phòng,Sức chứa tối đa (người),Hồ bơi,Bãi biển riêng,Spa,Khuôn viên team building (người),Hội trường (chỗ),Điểm hợp nghỉ dưỡng,Điểm hợp gắn kết
+KS001,Khách sạn Hướng Dương Hạ Long (tên dựng),Hạ Long,tiet_kiem,2,khach_san,430000,580000,690000,10,80,30,120,380,,,,,,0,0
+KS002,Khách sạn Tân Cảng Hạ Long (tên dựng),Hạ Long,tiet_kiem,3,khach_san,540000,730000,,10,80,,90,260,,,,,80,0,0
+KS003,Khách sạn Ánh Dương Hạ Long (tên dựng),Hạ Long,tiet_kiem,3,khach_san,600000,810000,960000,3,3,3,9,27,có,,,60,,1,0
+KS004,Khách sạn Bình Minh Hạ Long (tên dựng),Hạ Long,tiet_kiem,3,khach_san,630000,850000,1010000,80,80,80,240,720,,,,,,0,0
+KS005,Resort Trường Sơn Hạ Long (tên dựng),Hạ Long,can_bang,4,resort,1270000,1710000,2030000,120,120,10,250,640,có,,có,300,300,3,4
+KS006,Resort Cẩm Tú Hạ Long (tên dựng),Hạ Long,can_bang,4,resort,1140000,1540000,,20,120,,140,400,có,có,có,300,300,4,4
+KS007,Khách sạn Sao Biển Hạ Long (tên dựng),Hạ Long,can_bang,4,khach_san,1270000,1710000,2030000,20,3,13,36,101,có,,có,,,2,0
+KS008,Resort Đông Á Hạ Long (tên dựng),Hạ Long,can_bang,4,resort,1050000,1420000,1680000,30,120,80,230,740,có,có,,500,200,3,4
+KS009,Resort Hồng Hạc Hạ Long (tên dựng),Hạ Long,day_du,5,resort,2850000,3850000,4560000,10,80,20,110,340,có,,,150,200,2,3
+KS010,Resort Ngân Hà Hạ Long (tên dựng),Hạ Long,day_du,5,resort,2560000,3460000,,40,80,,120,320,có,có,có,150,500,4,3
+KS011,Khách sạn Hoàng Gia Hạ Long (tên dựng),Hạ Long,day_du,5,khach_san,2450000,3310000,3920000,13,13,3,29,77,có,,có,,80,2,0
+KS012,Resort Vạn Xuân Hạ Long (tên dựng),Hạ Long,day_du,5,resort,2870000,3870000,4590000,20,40,40,100,320,có,có,,500,500,3,4
+KS013,Khách sạn Phú Gia Cát Bà (tên dựng),Cát Bà,tiet_kiem,2,khach_san,370000,500000,590000,30,120,120,270,900,,,,,,0,0
+KS014,Khách sạn Ngọc Lan Cát Bà (tên dựng),Cát Bà,tiet_kiem,3,khach_san,680000,920000,,120,30,,150,330,có,,,,80,1,0
+KS015,Khách sạn Mai Vàng Cát Bà (tên dựng),Cát Bà,tiet_kiem,3,khach_san,690000,930000,1100000,5,3,13,21,71,,,,60,,0,0
+KS016,Khách sạn Bạch Đằng Cát Bà (tên dựng),Cát Bà,tiet_kiem,3,khach_san,540000,730000,860000,20,20,80,120,420,,,,,80,0,0
+KS017,Resort Đại Dương Cát Bà (tên dựng),Cát Bà,can_bang,4,resort,1270000,1710000,2030000,60,40,30,130,360,có,có,,500,300,3,4
+KS018,Resort Thiên Hà Cát Bà (tên dựng),Cát Bà,can_bang,4,resort,1060000,1430000,,10,120,,130,380,có,có,có,500,300,4,4
+KS019,Khách sạn An Bình Cát Bà (tên dựng),Cát Bà,can_bang,4,khach_san,1270000,1710000,2030000,6,6,10,22,70,có,,,150,,1,1
+KS020,Resort Sông Hồng Cát Bà (tên dựng),Cát Bà,can_bang,4,resort,1430000,1930000,2290000,120,10,80,210,590,có,,có,500,300,3,4
+KS021,Resort Phương Nam Cát Bà (tên dựng),Cát Bà,day_du,4,resort,1540000,2080000,2460000,30,10,30,70,210,có,có,có,500,500,4,4
+KS022,Resort Lan Anh Cát Bà (tên dựng),Cát Bà,day_du,4,resort,1300000,1760000,,60,120,,180,480,có,có,có,500,300,4,4
+KS023,Khách sạn Thanh Bình Cát Bà (tên dựng),Cát Bà,day_du,4,khach_san,1580000,2130000,2530000,10,10,3,23,62,có,,có,,80,2,0
+KS024,Resort Hải Âu Cát Bà (tên dựng),Cát Bà,day_du,4,resort,1630000,2200000,2610000,60,10,60,130,390,có,có,có,300,300,4,4
+KS025,Khách sạn Hướng Dương Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,2,khach_san,330000,450000,530000,20,60,10,90,260,,,,,80,0,0
+KS026,Khách sạn Tân Cảng Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,3,khach_san,510000,690000,,10,120,,130,380,,,,,80,0,0
+KS027,Khách sạn Ánh Dương Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,3,khach_san,510000,690000,820000,10,3,5,18,49,,,,60,,0,0
+KS028,Khách sạn Bình Minh Sầm Sơn (tên dựng),Sầm Sơn,tiet_kiem,3,khach_san,590000,800000,940000,60,120,80,260,800,,,,60,,0,0
+KS029,Resort Trường Sơn Sầm Sơn (tên dựng),Sầm Sơn,can_bang,4,resort,940000,1270000,1500000,80,80,30,190,520,có,có,có,150,200,4,3
+KS030,Resort Cẩm Tú Sầm Sơn (tên dựng),Sầm Sơn,can_bang,4,resort,880000,1190000,,30,10,,40,90,có,có,có,150,200,4,3
+KS031,Khách sạn Sao Biển Sầm Sơn (tên dựng),Sầm Sơn,can_bang,4,khach_san,1040000,1400000,1660000,3,3,3,9,27,có,,,80,,1,0
+KS032,Resort Đông Á Sầm Sơn (tên dựng),Sầm Sơn,can_bang,4,resort,980000,1320000,1570000,30,80,40,150,460,có,có,có,500,500,4,4
+KS033,Resort Hồng Hạc Sầm Sơn (tên dựng),Sầm Sơn,day_du,4,resort,1110000,1500000,1780000,120,40,120,280,840,có,có,có,500,300,4,4
+KS034,Resort Ngân Hà Sầm Sơn (tên dựng),Sầm Sơn,day_du,4,resort,1060000,1430000,,40,40,,80,200,có,,có,500,200,3,4
+KS035,Khách sạn Hoàng Gia Sầm Sơn (tên dựng),Sầm Sơn,day_du,4,khach_san,950000,1280000,1520000,13,5,20,38,121,có,,,,,1,0
+KS036,Resort Vạn Xuân Sầm Sơn (tên dựng),Sầm Sơn,day_du,4,resort,1000000,1350000,1600000,40,20,40,100,300,có,có,có,150,300,4,3
+KS037,Khách sạn Phú Gia Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,2,khach_san,400000,540000,640000,120,60,10,190,460,,,,,80,0,0
+KS038,Khách sạn Ngọc Lan Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,3,khach_san,600000,810000,,120,10,,130,270,,,,,,0,0
+KS039,Khách sạn Mai Vàng Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,3,khach_san,500000,680000,800000,6,3,20,29,101,,,,,,0,0
+KS040,Khách sạn Bạch Đằng Cửa Lò (tên dựng),Cửa Lò,tiet_kiem,3,khach_san,490000,660000,780000,40,30,120,190,650,,,,,,0,0
+KS041,Resort Đại Dương Cửa Lò (tên dựng),Cửa Lò,can_bang,4,resort,1040000,1400000,1660000,80,120,60,260,760,có,có,có,150,300,4,3
+KS042,Resort Thiên Hà Cửa Lò (tên dựng),Cửa Lò,can_bang,4,resort,880000,1190000,,10,60,,70,200,có,có,có,150,200,4,3
+KS043,Khách sạn An Bình Cửa Lò (tên dựng),Cửa Lò,can_bang,4,khach_san,1000000,1350000,1600000,10,20,10,40,120,có,,có,150,,2,1
+KS044,Resort Sông Hồng Cửa Lò (tên dựng),Cửa Lò,can_bang,4,resort,1090000,1470000,1740000,10,60,10,80,240,có,có,có,150,500,4,3
+KS045,Resort Phương Nam Cửa Lò (tên dựng),Cửa Lò,day_du,4,resort,1020000,1380000,1630000,60,10,60,130,390,có,có,có,500,500,4,4
+KS046,Resort Lan Anh Cửa Lò (tên dựng),Cửa Lò,day_du,4,resort,1050000,1420000,,30,20,,50,120,có,,có,300,200,3,4
+KS047,Khách sạn Thanh Bình Cửa Lò (tên dựng),Cửa Lò,day_du,4,khach_san,1190000,1610000,1900000,5,6,5,16,48,có,,,,,1,0
+KS048,Resort Hải Âu Cửa Lò (tên dựng),Cửa Lò,day_du,4,resort,1100000,1480000,1760000,60,10,10,80,190,có,có,có,150,300,4,3
+KS049,Khách sạn Hướng Dương Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,2,khach_san,410000,550000,660000,20,30,30,80,250,,,,,,0,0
+KS050,Khách sạn Tân Cảng Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,3,khach_san,630000,850000,,80,30,,110,250,,,,60,80,0,0
+KS051,Khách sạn Ánh Dương Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,3,khach_san,470000,630000,750000,20,10,5,35,90,,,,,,0,0
+KS052,Khách sạn Bình Minh Ninh Bình (tên dựng),Ninh Bình,tiet_kiem,3,khach_san,520000,700000,830000,10,80,60,150,500,có,,,,80,1,0
+KS053,Resort Trường Sơn Ninh Bình (tên dựng),Ninh Bình,can_bang,4,resort,1020000,1380000,1630000,30,20,80,130,440,có,,có,300,500,3,4
+KS054,Resort Cẩm Tú Ninh Bình (tên dựng),Ninh Bình,can_bang,4,resort,1120000,1510000,,120,10,,130,270,có,,có,300,200,3,4
+KS055,Khách sạn Sao Biển Ninh Bình (tên dựng),Ninh Bình,can_bang,4,khach_san,940000,1270000,1500000,20,3,13,36,101,có,,,,80,1,0
+KS056,Resort Đông Á Ninh Bình (tên dựng),Ninh Bình,can_bang,4,resort,1110000,1500000,1780000,80,40,60,180,520,có,,có,150,500,3,3
+KS057,Resort Hồng Hạc Ninh Bình (tên dựng),Ninh Bình,day_du,5,resort,2800000,3780000,4480000,60,10,120,190,630,có,,có,500,200,3,4
+KS058,Resort Ngân Hà Ninh Bình (tên dựng),Ninh Bình,day_du,5,resort,2400000,3240000,,10,30,,40,110,có,,,150,300,2,3
+KS059,Khách sạn Hoàng Gia Ninh Bình (tên dựng),Ninh Bình,day_du,5,khach_san,2220000,3000000,3550000,3,13,3,19,57,có,,có,150,,2,1
+KS060,Resort Vạn Xuân Ninh Bình (tên dựng),Ninh Bình,day_du,5,resort,2860000,3860000,4580000,80,20,20,120,300,có,,,150,300,2,3
+KS061,Khách sạn Phú Gia Sa Pa (tên dựng),Sa Pa,tiet_kiem,2,khach_san,300000,400000,480000,80,30,120,230,730,,,,,80,0,0
+KS062,Khách sạn Ngọc Lan Sa Pa (tên dựng),Sa Pa,tiet_kiem,3,khach_san,630000,850000,,120,20,,140,300,có,,,60,,1,0
+KS063,Khách sạn Mai Vàng Sa Pa (tên dựng),Sa Pa,tiet_kiem,3,khach_san,540000,730000,860000,3,20,6,29,90,có,,,,,1,0
+KS064,Khách sạn Bạch Đằng Sa Pa (tên dựng),Sa Pa,tiet_kiem,3,khach_san,530000,720000,850000,120,120,20,260,680,có,,,60,,1,0
+KS065,Resort Đại Dương Sa Pa (tên dựng),Sa Pa,can_bang,4,resort,1090000,1470000,1740000,30,120,10,160,460,có,,,300,300,2,4
+KS066,Resort Thiên Hà Sa Pa (tên dựng),Sa Pa,can_bang,4,resort,1180000,1590000,,40,80,,120,320,có,,có,150,200,3,3
+KS067,Khách sạn An Bình Sa Pa (tên dựng),Sa Pa,can_bang,4,khach_san,1270000,1710000,2030000,5,3,10,18,59,có,,,80,,1,0
+KS068,Resort Sông Hồng Sa Pa (tên dựng),Sa Pa,can_bang,4,resort,980000,1320000,1570000,40,30,80,150,490,có,,có,300,500,3,4
+KS069,Resort Phương Nam Sa Pa (tên dựng),Sa Pa,day_du,5,resort,3110000,4200000,4980000,10,40,60,110,380,có,,có,150,500,3,3
+KS070,Resort Lan Anh Sa Pa (tên dựng),Sa Pa,day_du,5,resort,2610000,3520000,,60,120,,180,480,có,,có,500,500,3,4
+KS071,Khách sạn Thanh Bình Sa Pa (tên dựng),Sa Pa,day_du,5,khach_san,2820000,3810000,4510000,5,6,3,14,40,có,,,80,80,1,0
+KS072,Resort Hải Âu Sa Pa (tên dựng),Sa Pa,day_du,5,resort,2500000,3380000,4000000,120,10,80,210,590,có,,,500,300,2,4
+KS073,Khách sạn Hướng Dương Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,2,khach_san,380000,510000,610000,30,40,80,150,500,,,,,80,0,0
+KS074,Khách sạn Tân Cảng Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,3,khach_san,490000,660000,,40,80,,120,320,,,,,80,0,0
+KS075,Khách sạn Ánh Dương Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,3,khach_san,580000,780000,930000,6,10,20,36,122,có,,,,,1,0
+KS076,Khách sạn Bình Minh Mộc Châu (tên dựng),Mộc Châu,tiet_kiem,3,khach_san,550000,740000,880000,60,60,80,200,620,,,,,,0,0
+KS077,Resort Trường Sơn Mộc Châu (tên dựng),Mộc Châu,can_bang,4,resort,1200000,1620000,1920000,60,40,120,220,720,có,,,500,200,2,4
+KS078,Resort Cẩm Tú Mộc Châu (tên dựng),Mộc Châu,can_bang,4,resort,1190000,1610000,,30,60,,90,240,có,,có,300,200,3,4
+KS079,Khách sạn Sao Biển Mộc Châu (tên dựng),Mộc Châu,can_bang,4,khach_san,1250000,1690000,2000000,20,3,13,36,101,có,,có,,,2,0
+KS080,Resort Đông Á Mộc Châu (tên dựng),Mộc Châu,can_bang,4,resort,940000,1270000,1500000,20,40,60,120,400,có,,,150,300,2,3
+KS081,Resort Hồng Hạc Mộc Châu (tên dựng),Mộc Châu,day_du,4,resort,1260000,1700000,2020000,80,60,20,160,420,có,,có,300,300,3,4
+KS082,Resort Ngân Hà Mộc Châu (tên dựng),Mộc Châu,day_du,4,resort,1250000,1690000,,20,80,,100,280,có,,có,150,300,3,3
+KS083,Khách sạn Hoàng Gia Mộc Châu (tên dựng),Mộc Châu,day_du,4,khach_san,1170000,1580000,1870000,20,13,10,43,119,có,,có,150,,2,1
+KS084,Resort Vạn Xuân Mộc Châu (tên dựng),Mộc Châu,day_du,4,resort,1480000,2000000,2370000,10,40,20,70,220,có,,,500,500,2,4
+KS085,Khách sạn Phú Gia Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,2,khach_san,420000,570000,670000,60,30,120,210,690,,,,,80,0,0
+KS086,Khách sạn Ngọc Lan Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,3,khach_san,620000,840000,,60,40,,100,240,,,,,,0,0
+KS087,Khách sạn Mai Vàng Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,3,khach_san,610000,820000,980000,6,6,5,17,50,,,,60,,0,0
+KS088,Khách sạn Bạch Đằng Tam Đảo (tên dựng),Tam Đảo,tiet_kiem,3,khach_san,610000,820000,980000,60,40,80,180,560,có,,,,,1,0
+KS089,Resort Đại Dương Tam Đảo (tên dựng),Tam Đảo,can_bang,4,resort,1210000,1630000,1940000,20,30,30,80,250,có,,có,500,200,3,4
+KS090,Resort Thiên Hà Tam Đảo (tên dựng),Tam Đảo,can_bang,4,resort,990000,1340000,,20,40,,60,160,có,,có,150,200,3,3
+KS091,Khách sạn An Bình Tam Đảo (tên dựng),Tam Đảo,can_bang,4,khach_san,1090000,1470000,1740000,5,10,6,21,64,có,,có,,,2,0
+KS092,Resort Sông Hồng Tam Đảo (tên dựng),Tam Đảo,can_bang,4,resort,1080000,1460000,1730000,120,60,80,260,740,có,,có,500,300,3,4
+KS093,Resort Phương Nam Tam Đảo (tên dựng),Tam Đảo,day_du,4,resort,1290000,1740000,2060000,30,30,120,180,630,có,,có,300,500,3,4
+KS094,Resort Lan Anh Tam Đảo (tên dựng),Tam Đảo,day_du,4,resort,1410000,1900000,,60,120,,180,480,có,,,300,200,2,4
+KS095,Khách sạn Thanh Bình Tam Đảo (tên dựng),Tam Đảo,day_du,4,khach_san,1200000,1620000,1920000,6,3,6,15,45,có,,có,150,,2,1
+KS096,Resort Hải Âu Tam Đảo (tên dựng),Tam Đảo,day_du,4,resort,1400000,1890000,2240000,120,40,20,180,440,có,,,500,200,2,4
+KS097,Khách sạn Hướng Dương Ba Vì (tên dựng),Ba Vì,tiet_kiem,2,khach_san,410000,550000,660000,60,60,80,200,620,,,,,,0,0
+KS098,Khách sạn Tân Cảng Ba Vì (tên dựng),Ba Vì,tiet_kiem,3,khach_san,590000,800000,,20,120,,140,400,có,,,,,1,0
+KS099,Khách sạn Ánh Dương Ba Vì (tên dựng),Ba Vì,tiet_kiem,3,khach_san,530000,720000,850000,6,5,5,16,47,,,,,,0,0
+KS100,Khách sạn Bình Minh Ba Vì (tên dựng),Ba Vì,tiet_kiem,3,khach_san,610000,820000,980000,120,40,30,190,480,,,,,,0,0
+KS101,Resort Trường Sơn Ba Vì (tên dựng),Ba Vì,can_bang,4,resort,1220000,1650000,1950000,10,30,20,60,190,có,,có,500,200,3,4
+KS102,Resort Cẩm Tú Ba Vì (tên dựng),Ba Vì,can_bang,4,resort,1230000,1660000,,20,20,,40,100,có,,có,150,200,3,3
+KS103,Khách sạn Sao Biển Ba Vì (tên dựng),Ba Vì,can_bang,4,khach_san,980000,1320000,1570000,13,3,10,26,75,có,,,80,80,1,0
+KS104,Resort Đông Á Ba Vì (tên dựng),Ba Vì,can_bang,4,resort,1030000,1390000,1650000,30,20,60,110,360,có,,có,500,500,3,4
+KS105,Resort Hồng Hạc Ba Vì (tên dựng),Ba Vì,day_du,4,resort,1130000,1530000,1810000,120,20,30,170,420,có,,có,150,300,3,3
+KS106,Resort Ngân Hà Ba Vì (tên dựng),Ba Vì,day_du,4,resort,1330000,1800000,,40,40,,80,200,có,,có,500,500,3,4
+KS107,Khách sạn Hoàng Gia Ba Vì (tên dựng),Ba Vì,day_du,4,khach_san,1440000,1940000,2300000,3,3,13,19,67,có,,có,150,80,2,1
+KS108,Resort Vạn Xuân Ba Vì (tên dựng),Ba Vì,day_du,4,resort,1430000,1930000,2290000,120,60,120,300,900,có,,có,500,300,3,4
+KS109,Khách sạn Phú Gia Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,2,khach_san,380000,510000,610000,10,60,80,150,520,,,,,,0,0
+KS110,Khách sạn Ngọc Lan Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,3,khach_san,630000,850000,,120,40,,160,360,,,,,80,0,0
+KS111,Khách sạn Mai Vàng Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,3,khach_san,640000,860000,1020000,6,13,3,22,63,,,,60,80,0,0
+KS112,Khách sạn Bạch Đằng Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),tiet_kiem,3,khach_san,650000,880000,1040000,30,60,120,210,720,,,,,,0,0
+KS113,Resort Đại Dương Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,4,resort,1100000,1480000,1760000,80,60,30,170,460,có,có,có,150,300,4,3
+KS114,Resort Thiên Hà Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,4,resort,1270000,1710000,,20,120,,140,400,có,có,có,300,200,4,4
+KS115,Khách sạn An Bình Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,4,khach_san,1130000,1530000,1810000,5,3,6,14,43,có,,có,80,,2,0
+KS116,Resort Sông Hồng Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),can_bang,4,resort,1040000,1400000,1660000,60,80,30,170,480,có,có,có,150,200,4,3
+KS117,Resort Phương Nam Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,4,resort,1180000,1590000,1890000,40,40,60,140,440,có,,có,500,500,3,4
+KS118,Resort Lan Anh Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,4,resort,1290000,1740000,,120,10,,130,270,có,có,có,150,300,4,3
+KS119,Khách sạn Thanh Bình Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,4,khach_san,1370000,1850000,2190000,5,6,10,21,68,có,,có,80,80,2,0
+KS120,Resort Hải Âu Quảng Bình (Phong Nha) (tên dựng),Quảng Bình (Phong Nha),day_du,4,resort,1320000,1780000,2110000,30,80,40,150,460,có,có,có,150,500,4,3
+KS121,Khách sạn Hướng Dương Huế (tên dựng),Huế,tiet_kiem,2,khach_san,320000,430000,510000,10,80,60,150,500,,,,60,,0,0
+KS122,Khách sạn Tân Cảng Huế (tên dựng),Huế,tiet_kiem,3,khach_san,500000,680000,,80,40,,120,280,,,,60,80,0,0
+KS123,Khách sạn Ánh Dương Huế (tên dựng),Huế,tiet_kiem,3,khach_san,520000,700000,830000,3,20,3,26,78,có,,,,,1,0
+KS124,Khách sạn Bình Minh Huế (tên dựng),Huế,tiet_kiem,3,khach_san,530000,720000,850000,80,60,20,160,420,có,,,,80,1,0
+KS125,Khách sạn Trường Sơn Huế (tên dựng),Huế,can_bang,4,khach_san,1050000,1420000,1680000,20,80,120,220,760,có,,có,,200,2,1
+KS126,Khách sạn Cẩm Tú Huế (tên dựng),Huế,can_bang,4,khach_san,1160000,1570000,,40,40,,80,200,có,,có,,300,2,1
+KS127,Khách sạn Sao Biển Huế (tên dựng),Huế,can_bang,4,khach_san,1300000,1760000,2080000,6,3,20,29,101,có,,có,80,,2,0
+KS128,Khách sạn Đông Á Huế (tên dựng),Huế,can_bang,4,khach_san,1160000,1570000,1860000,80,10,20,110,270,có,,có,150,300,2,2
+KS129,Khách sạn Hồng Hạc Huế (tên dựng),Huế,day_du,5,khach_san,2110000,2850000,3380000,20,10,60,90,310,có,,có,150,500,2,2
+KS130,Khách sạn Ngân Hà Huế (tên dựng),Huế,day_du,5,khach_san,2700000,3650000,,20,120,,140,400,có,,có,80,300,2,1
+KS131,Khách sạn Hoàng Gia Huế (tên dựng),Huế,day_du,5,khach_san,2760000,3730000,4420000,6,5,10,21,67,có,,có,150,80,2,1
+KS132,Khách sạn Vạn Xuân Huế (tên dựng),Huế,day_du,5,khach_san,2120000,2860000,3390000,120,20,80,220,620,có,,có,150,200,2,2
+KS133,Khách sạn Phú Gia Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,2,khach_san,410000,550000,660000,20,60,10,90,260,,,,,,0,0
+KS134,Khách sạn Ngọc Lan Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,3,khach_san,740000,1000000,,80,60,,140,340,có,,,,,1,0
+KS135,Khách sạn Mai Vàng Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,3,khach_san,820000,1110000,1310000,13,20,6,39,110,có,,,,,1,0
+KS136,Khách sạn Bạch Đằng Đà Nẵng (tên dựng),Đà Nẵng,tiet_kiem,3,khach_san,840000,1130000,1340000,80,60,80,220,660,,,,,,0,0
+KS137,Resort Đại Dương Đà Nẵng (tên dựng),Đà Nẵng,can_bang,4,resort,1340000,1810000,2140000,20,80,20,120,360,có,,,150,200,2,3
+KS138,Resort Thiên Hà Đà Nẵng (tên dựng),Đà Nẵng,can_bang,4,resort,1360000,1840000,,30,60,,90,240,có,,,300,200,2,4
+KS139,Khách sạn An Bình Đà Nẵng (tên dựng),Đà Nẵng,can_bang,4,khach_san,1520000,2050000,2430000,5,13,6,24,73,có,,,150,80,1,1
+KS140,Resort Sông Hồng Đà Nẵng (tên dựng),Đà Nẵng,can_bang,4,resort,1530000,2070000,2450000,10,60,10,80,240,có,,có,500,300,3,4
+KS141,Resort Phương Nam Đà Nẵng (tên dựng),Đà Nẵng,day_du,5,resort,3010000,4060000,4820000,20,80,120,220,760,có,,có,150,500,3,3
+KS142,Resort Lan Anh Đà Nẵng (tên dựng),Đà Nẵng,day_du,5,resort,3980000,5370000,,60,10,,70,150,có,,có,500,300,3,4
+KS143,Khách sạn Thanh Bình Đà Nẵng (tên dựng),Đà Nẵng,day_du,5,khach_san,4100000,5540000,6560000,3,10,6,19,60,có,,có,80,,2,0
+KS144,Resort Hải Âu Đà Nẵng (tên dựng),Đà Nẵng,day_du,5,resort,3550000,4790000,5680000,40,30,30,100,290,có,có,,300,300,3,4
+KS145,Khách sạn Hướng Dương Hội An (tên dựng),Hội An,tiet_kiem,2,khach_san,490000,660000,780000,30,80,40,150,460,,,,60,,0,0
+KS146,Khách sạn Tân Cảng Hội An (tên dựng),Hội An,tiet_kiem,3,khach_san,760000,1030000,,30,30,,60,150,có,,,,80,1,0
+KS147,Khách sạn Ánh Dương Hội An (tên dựng),Hội An,tiet_kiem,3,khach_san,850000,1150000,1360000,3,13,20,36,125,,,,,,0,0
+KS148,Khách sạn Bình Minh Hội An (tên dựng),Hội An,tiet_kiem,3,khach_san,690000,930000,1100000,30,60,120,210,720,,,,,,0,0
+KS149,Resort Trường Sơn Hội An (tên dựng),Hội An,can_bang,4,resort,1380000,1860000,2210000,60,20,30,110,300,có,có,có,150,200,4,3
+KS150,Resort Cẩm Tú Hội An (tên dựng),Hội An,can_bang,4,resort,1790000,2420000,,60,120,,180,480,có,,có,150,500,3,3
+KS151,Khách sạn Sao Biển Hội An (tên dựng),Hội An,can_bang,4,khach_san,1490000,2010000,2380000,3,20,3,26,78,có,,có,,80,2,0
+KS152,Resort Đông Á Hội An (tên dựng),Hội An,can_bang,4,resort,1710000,2310000,2740000,40,80,30,150,440,có,có,có,300,300,4,4
+KS153,Resort Hồng Hạc Hội An (tên dựng),Hội An,day_du,5,resort,3270000,4410000,5230000,60,20,40,120,340,có,có,có,500,200,4,4
+KS154,Resort Ngân Hà Hội An (tên dựng),Hội An,day_du,5,resort,4030000,5440000,,30,120,,150,420,có,,có,500,300,3,4
+KS155,Khách sạn Hoàng Gia Hội An (tên dựng),Hội An,day_du,5,khach_san,3980000,5370000,6370000,5,13,5,23,69,có,,,150,80,1,1
+KS156,Resort Vạn Xuân Hội An (tên dựng),Hội An,day_du,5,resort,3570000,4820000,5710000,20,40,60,120,400,có,có,có,500,300,4,4
+KS157,Khách sạn Phú Gia Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,2,khach_san,400000,540000,640000,30,120,20,170,500,,,,60,,0,0
+KS158,Khách sạn Ngọc Lan Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,3,khach_san,630000,850000,,20,120,,140,400,,,,,80,0,0
+KS159,Khách sạn Mai Vàng Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,3,khach_san,610000,820000,980000,20,6,6,32,82,,,,60,,0,0
+KS160,Khách sạn Bạch Đằng Quy Nhơn (tên dựng),Quy Nhơn,tiet_kiem,3,khach_san,610000,820000,980000,10,20,60,90,320,,,,,,0,0
+KS161,Resort Đại Dương Quy Nhơn (tên dựng),Quy Nhơn,can_bang,4,resort,1390000,1880000,2220000,40,10,60,110,350,có,,có,150,300,3,3
+KS162,Resort Thiên Hà Quy Nhơn (tên dựng),Quy Nhơn,can_bang,4,resort,1390000,1880000,,20,10,,30,70,có,,có,500,500,3,4
+KS163,Khách sạn An Bình Quy Nhơn (tên dựng),Quy Nhơn,can_bang,4,khach_san,1190000,1610000,1900000,3,20,5,28,86,có,,,150,,1,1
+KS164,Resort Sông Hồng Quy Nhơn (tên dựng),Quy Nhơn,can_bang,4,resort,1420000,1920000,2270000,80,80,120,280,880,có,có,có,500,200,4,4
+KS165,Resort Phương Nam Quy Nhơn (tên dựng),Quy Nhơn,day_du,5,resort,2420000,3270000,3870000,80,30,20,130,330,có,,có,150,500,3,3
+KS166,Resort Lan Anh Quy Nhơn (tên dựng),Quy Nhơn,day_du,5,resort,2850000,3850000,,10,40,,50,140,có,có,,150,300,3,3
+KS167,Khách sạn Thanh Bình Quy Nhơn (tên dựng),Quy Nhơn,day_du,5,khach_san,2930000,3960000,4690000,5,5,5,15,45,có,,có,,80,2,0
+KS168,Resort Hải Âu Quy Nhơn (tên dựng),Quy Nhơn,day_du,5,resort,2580000,3480000,4130000,80,120,20,220,600,có,có,có,300,500,4,4
+KS169,Khách sạn Hướng Dương Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,2,khach_san,440000,590000,700000,40,60,20,120,340,,,,,,0,0
+KS170,Khách sạn Tân Cảng Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,3,khach_san,640000,860000,,40,30,,70,170,có,,,,,1,0
+KS171,Khách sạn Ánh Dương Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,3,khach_san,650000,880000,1040000,3,3,6,12,39,,,,60,,0,0
+KS172,Khách sạn Bình Minh Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),tiet_kiem,3,khach_san,640000,860000,1020000,40,80,30,150,440,,,,,,0,0
+KS173,Resort Trường Sơn Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,4,resort,1440000,1940000,2300000,120,40,10,170,400,có,có,có,500,300,4,4
+KS174,Resort Cẩm Tú Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,4,resort,1440000,1940000,,30,10,,40,90,có,có,có,500,500,4,4
+KS175,Khách sạn Sao Biển Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,4,khach_san,1350000,1820000,2160000,3,10,13,26,88,có,,có,80,,2,0
+KS176,Resort Đông Á Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),can_bang,4,resort,1270000,1710000,2030000,30,20,80,130,440,có,có,có,500,500,4,4
+KS177,Resort Hồng Hạc Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,4,resort,1500000,2030000,2400000,20,80,10,110,320,có,,có,300,300,3,4
+KS178,Resort Ngân Hà Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,4,resort,1190000,1610000,,30,80,,110,300,có,có,có,500,300,4,4
+KS179,Khách sạn Hoàng Gia Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,4,khach_san,1260000,1700000,2020000,3,20,10,33,106,có,,,80,80,1,0
+KS180,Resort Vạn Xuân Phú Yên (Tuy Hoà) (tên dựng),Phú Yên (Tuy Hoà),day_du,4,resort,1420000,1920000,2270000,30,120,20,170,500,có,có,,300,300,3,4
+KS181,Khách sạn Phú Gia Nha Trang (tên dựng),Nha Trang,tiet_kiem,2,khach_san,500000,680000,800000,30,120,10,160,460,,,,,,0,0
+KS182,Khách sạn Ngọc Lan Nha Trang (tên dựng),Nha Trang,tiet_kiem,3,khach_san,670000,900000,,20,120,,140,400,,,,,80,0,0
+KS183,Khách sạn Mai Vàng Nha Trang (tên dựng),Nha Trang,tiet_kiem,3,khach_san,730000,990000,1170000,20,6,3,29,70,có,,,,,1,0
+KS184,Khách sạn Bạch Đằng Nha Trang (tên dựng),Nha Trang,tiet_kiem,3,khach_san,730000,990000,1170000,80,80,30,190,520,,,,60,,0,0
+KS185,Resort Đại Dương Nha Trang (tên dựng),Nha Trang,can_bang,4,resort,1330000,1800000,2130000,20,40,10,70,200,có,có,,300,500,3,4
+KS186,Resort Thiên Hà Nha Trang (tên dựng),Nha Trang,can_bang,4,resort,1390000,1880000,,10,80,,90,260,có,có,có,500,300,4,4
+KS187,Khách sạn An Bình Nha Trang (tên dựng),Nha Trang,can_bang,4,khach_san,1340000,1810000,2140000,3,3,5,11,35,có,,,,,1,0
+KS188,Resort Sông Hồng Nha Trang (tên dựng),Nha Trang,can_bang,4,resort,1400000,1890000,2240000,60,20,40,120,340,có,có,có,500,500,4,4
+KS189,Resort Phương Nam Nha Trang (tên dựng),Nha Trang,day_du,5,resort,4130000,5580000,6610000,40,60,80,180,580,có,,,500,200,2,4
+KS190,Resort Lan Anh Nha Trang (tên dựng),Nha Trang,day_du,5,resort,4000000,5400000,,60,40,,100,240,có,có,có,300,300,4,4
+KS191,Khách sạn Thanh Bình Nha Trang (tên dựng),Nha Trang,day_du,5,khach_san,4140000,5590000,6620000,20,5,3,28,67,có,,,80,80,1,0
+KS192,Resort Hải Âu Nha Trang (tên dựng),Nha Trang,day_du,5,resort,4080000,5510000,6530000,80,30,10,120,290,có,có,có,150,300,4,3
+KS193,Khách sạn Hướng Dương Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,2,khach_san,310000,420000,500000,20,80,80,180,600,,,,60,,0,0
+KS194,Khách sạn Tân Cảng Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,3,khach_san,480000,650000,,30,20,,50,120,,,,,,0,0
+KS195,Khách sạn Ánh Dương Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,3,khach_san,630000,850000,1010000,10,3,10,23,69,có,,,,,1,0
+KS196,Khách sạn Bình Minh Đà Lạt (tên dựng),Đà Lạt,tiet_kiem,3,khach_san,620000,840000,990000,120,60,10,190,460,có,,,,,1,0
+KS197,Resort Trường Sơn Đà Lạt (tên dựng),Đà Lạt,can_bang,4,resort,1140000,1540000,1820000,120,20,10,150,340,có,,có,150,200,3,3
+KS198,Resort Cẩm Tú Đà Lạt (tên dựng),Đà Lạt,can_bang,4,resort,940000,1270000,,120,120,,240,600,có,,có,150,200,3,3
+KS199,Khách sạn Sao Biển Đà Lạt (tên dựng),Đà Lạt,can_bang,4,khach_san,1040000,1400000,1660000,3,13,6,22,69,có,,có,150,,2,1
+KS200,Resort Đông Á Đà Lạt (tên dựng),Đà Lạt,can_bang,4,resort,1120000,1510000,1790000,120,30,60,210,570,có,,có,300,500,3,4
+KS201,Resort Hồng Hạc Đà Lạt (tên dựng),Đà Lạt,day_du,5,resort,2410000,3250000,3860000,60,10,80,150,470,có,,có,500,500,3,4
+KS202,Resort Ngân Hà Đà Lạt (tên dựng),Đà Lạt,day_du,5,resort,2480000,3350000,,80,10,,90,190,có,,,300,300,2,4
+KS203,Khách sạn Hoàng Gia Đà Lạt (tên dựng),Đà Lạt,day_du,5,khach_san,2830000,3820000,4530000,6,13,6,25,75,có,,có,,,2,0
+KS204,Resort Vạn Xuân Đà Lạt (tên dựng),Đà Lạt,day_du,5,resort,2760000,3730000,4420000,10,20,30,60,200,có,,có,500,500,3,4
+KS205,Khách sạn Phú Gia Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,2,khach_san,440000,590000,700000,40,60,60,160,500,,,,,,0,0
+KS206,Khách sạn Ngọc Lan Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,3,khach_san,620000,840000,,40,10,,50,110,,,,60,80,0,0
+KS207,Khách sạn Mai Vàng Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,3,khach_san,690000,930000,1100000,10,13,20,43,139,có,,,,,1,0
+KS208,Khách sạn Bạch Đằng Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,tiet_kiem,3,khach_san,600000,810000,960000,120,40,40,200,520,,,,,,0,0
+KS209,Resort Đại Dương Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,4,resort,1200000,1620000,1920000,80,30,30,140,370,có,,có,300,200,3,4
+KS210,Resort Thiên Hà Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,4,resort,1060000,1430000,,10,10,,20,50,có,có,có,150,500,4,3
+KS211,Khách sạn An Bình Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,4,khach_san,1050000,1420000,1680000,10,10,5,25,70,có,,có,80,,2,0
+KS212,Resort Sông Hồng Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,can_bang,4,resort,1390000,1880000,2220000,120,40,120,280,840,có,,có,300,500,3,4
+KS213,Resort Phương Nam Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,5,resort,2490000,3360000,3980000,10,60,60,130,440,có,có,có,150,200,4,3
+KS214,Resort Lan Anh Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,5,resort,2530000,3420000,,60,30,,90,210,có,,có,300,500,3,4
+KS215,Khách sạn Thanh Bình Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,5,khach_san,3100000,4190000,4960000,20,10,10,40,110,có,,có,150,,2,1
+KS216,Resort Hải Âu Phan Thiết - Mũi Né (tên dựng),Phan Thiết - Mũi Né,day_du,5,resort,2760000,3730000,4420000,80,120,80,280,840,có,có,có,500,300,4,4
+KS217,Khách sạn Hướng Dương Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,2,khach_san,470000,630000,750000,30,10,20,60,170,,,,,80,0,0
+KS218,Khách sạn Tân Cảng Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,3,khach_san,650000,880000,,10,20,,30,80,,,,,,0,0
+KS219,Khách sạn Ánh Dương Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,3,khach_san,670000,900000,1070000,3,6,6,15,48,,,,,,0,0
+KS220,Khách sạn Bình Minh Vũng Tàu (tên dựng),Vũng Tàu,tiet_kiem,3,khach_san,580000,780000,930000,30,120,60,210,660,,,,,,0,0
+KS221,Resort Trường Sơn Vũng Tàu (tên dựng),Vũng Tàu,can_bang,4,resort,1090000,1470000,1740000,60,10,80,150,470,có,có,có,300,300,4,4
+KS222,Resort Cẩm Tú Vũng Tàu (tên dựng),Vũng Tàu,can_bang,4,resort,1270000,1710000,,40,30,,70,170,có,,có,300,200,3,4
+KS223,Khách sạn Sao Biển Vũng Tàu (tên dựng),Vũng Tàu,can_bang,4,khach_san,1140000,1540000,1820000,13,10,6,29,80,có,,có,80,,2,0
+KS224,Resort Đông Á Vũng Tàu (tên dựng),Vũng Tàu,can_bang,4,resort,1110000,1500000,1780000,60,10,10,80,190,có,có,,150,300,3,3
+KS225,Resort Hồng Hạc Vũng Tàu (tên dựng),Vũng Tàu,day_du,5,resort,2470000,3330000,3950000,10,10,40,60,210,có,,có,300,500,3,4
+KS226,Resort Ngân Hà Vũng Tàu (tên dựng),Vũng Tàu,day_du,5,resort,2850000,3850000,,60,60,,120,300,có,có,có,300,500,4,4
+KS227,Khách sạn Hoàng Gia Vũng Tàu (tên dựng),Vũng Tàu,day_du,5,khach_san,2250000,3040000,3600000,3,6,3,12,36,có,,,150,,1,1
+KS228,Resort Vạn Xuân Vũng Tàu (tên dựng),Vũng Tàu,day_du,5,resort,2730000,3690000,4370000,80,80,40,200,560,có,có,có,300,200,4,4
+KS229,Khách sạn Phú Gia Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,2,khach_san,510000,690000,820000,60,40,120,220,720,,,,60,,0,0
+KS230,Khách sạn Ngọc Lan Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,3,khach_san,660000,890000,,120,10,,130,270,,,,,80,0,0
+KS231,Khách sạn Mai Vàng Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,3,khach_san,660000,890000,1060000,20,5,13,38,107,,,,,,0,0
+KS232,Khách sạn Bạch Đằng Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,tiet_kiem,3,khach_san,660000,890000,1060000,80,10,60,150,430,,,,,,0,0
+KS233,Resort Đại Dương Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,4,resort,1660000,2240000,2660000,120,80,120,320,960,có,có,có,300,200,4,4
+KS234,Resort Thiên Hà Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,4,resort,1370000,1850000,,20,120,,140,400,có,có,có,500,300,4,4
+KS235,Khách sạn An Bình Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,4,khach_san,1520000,2050000,2430000,10,20,10,40,120,có,,có,150,80,2,1
+KS236,Resort Sông Hồng Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,can_bang,4,resort,1610000,2170000,2580000,60,30,120,210,690,có,,có,300,200,3,4
+KS237,Resort Phương Nam Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,5,resort,3550000,4790000,5680000,80,30,120,230,730,có,có,có,500,200,4,4
+KS238,Resort Lan Anh Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,5,resort,3360000,4540000,,40,10,,50,110,có,có,có,500,200,4,4
+KS239,Khách sạn Thanh Bình Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,5,khach_san,3730000,5040000,5970000,10,6,6,22,62,có,,có,150,,2,1
+KS240,Resort Hải Âu Hồ Tràm - Long Hải (tên dựng),Hồ Tràm - Long Hải,day_du,5,resort,3530000,4770000,5650000,120,60,80,260,740,có,có,có,500,200,4,4
+KS241,Khách sạn Hướng Dương Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,2,khach_san,530000,720000,850000,40,10,120,170,590,,,,,80,0,0
+KS242,Khách sạn Tân Cảng Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,3,khach_san,660000,890000,,80,20,,100,220,có,,,,,1,0
+KS243,Khách sạn Ánh Dương Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,3,khach_san,780000,1050000,1250000,10,3,5,18,49,,,,,,0,0
+KS244,Khách sạn Bình Minh Phú Quốc (tên dựng),Phú Quốc,tiet_kiem,3,khach_san,740000,1000000,1180000,30,80,60,170,540,có,,,60,80,1,0
+KS245,Resort Trường Sơn Phú Quốc (tên dựng),Phú Quốc,can_bang,4,resort,1450000,1960000,2320000,30,10,60,100,330,có,có,có,500,500,4,4
+KS246,Resort Cẩm Tú Phú Quốc (tên dựng),Phú Quốc,can_bang,4,resort,1780000,2400000,,60,120,,180,480,có,có,có,150,300,4,3
+KS247,Khách sạn Sao Biển Phú Quốc (tên dựng),Phú Quốc,can_bang,4,khach_san,1440000,1940000,2300000,13,13,13,39,117,có,,có,150,80,2,1
+KS248,Resort Đông Á Phú Quốc (tên dựng),Phú Quốc,can_bang,4,resort,1770000,2390000,2830000,30,60,40,130,400,có,có,có,150,500,4,3
+KS249,Resort Hồng Hạc Phú Quốc (tên dựng),Phú Quốc,day_du,5,resort,3840000,5180000,6140000,80,80,60,220,640,có,có,có,500,300,4,4
+KS250,Resort Ngân Hà Phú Quốc (tên dựng),Phú Quốc,day_du,5,resort,3000000,4050000,,30,20,,50,120,có,có,có,150,200,4,3
+KS251,Khách sạn Hoàng Gia Phú Quốc (tên dựng),Phú Quốc,day_du,5,khach_san,4200000,5670000,6720000,3,3,5,11,35,có,,,,80,1,0
+KS252,Resort Vạn Xuân Phú Quốc (tên dựng),Phú Quốc,day_du,5,resort,3920000,5290000,6270000,120,80,60,260,720,có,có,có,500,200,4,4
+KS253,Khách sạn Phú Gia Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,2,khach_san,480000,650000,770000,20,20,20,60,180,,,,60,80,0,0
+KS254,Khách sạn Ngọc Lan Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,3,khach_san,850000,1150000,,20,80,,100,280,có,,,,80,1,0
+KS255,Khách sạn Mai Vàng Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,3,khach_san,830000,1120000,1330000,6,10,5,21,62,,,,,,0,0
+KS256,Khách sạn Bạch Đằng Côn Đảo (tên dựng),Côn Đảo,tiet_kiem,3,khach_san,780000,1050000,1250000,30,120,120,270,900,,,,,,0,0
+KS257,Resort Đại Dương Côn Đảo (tên dựng),Côn Đảo,can_bang,4,resort,1630000,2200000,2610000,60,40,40,140,400,có,,có,500,500,3,4
+KS258,Resort Thiên Hà Côn Đảo (tên dựng),Côn Đảo,can_bang,4,resort,1490000,2010000,,20,120,,140,400,có,,có,300,200,3,4
+KS259,Khách sạn An Bình Côn Đảo (tên dựng),Côn Đảo,can_bang,4,khach_san,1610000,2170000,2580000,20,5,10,35,95,có,,,150,80,1,1
+KS260,Resort Sông Hồng Côn Đảo (tên dựng),Côn Đảo,can_bang,4,resort,1720000,2320000,2750000,30,10,120,160,570,có,có,có,500,200,4,4
+KS261,Resort Phương Nam Côn Đảo (tên dựng),Côn Đảo,day_du,5,resort,3990000,5390000,6380000,10,20,120,150,560,có,có,có,150,300,4,3
+KS262,Resort Lan Anh Côn Đảo (tên dựng),Côn Đảo,day_du,5,resort,3040000,4100000,,60,30,,90,210,có,có,có,150,200,4,3
+KS263,Khách sạn Thanh Bình Côn Đảo (tên dựng),Côn Đảo,day_du,5,khach_san,3370000,4550000,5390000,3,20,13,36,118,có,,có,,,2,0
+KS264,Resort Hải Âu Côn Đảo (tên dựng),Côn Đảo,day_du,5,resort,3020000,4080000,4830000,120,40,80,240,680,có,,có,300,300,3,4
+KS265,Khách sạn Hướng Dương Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,2,khach_san,370000,500000,590000,10,10,30,50,170,,,,,,0,0
+KS266,Khách sạn Tân Cảng Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,3,khach_san,570000,770000,,80,60,,140,340,,,,,,0,0
+KS267,Khách sạn Ánh Dương Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,3,khach_san,530000,720000,850000,3,3,6,12,39,,,,60,,0,0
+KS268,Khách sạn Bình Minh Cần Thơ (tên dựng),Cần Thơ,tiet_kiem,3,khach_san,480000,650000,770000,120,40,60,220,600,,,,60,80,0,0
+KS269,Khách sạn Trường Sơn Cần Thơ (tên dựng),Cần Thơ,can_bang,4,khach_san,1160000,1570000,1860000,80,20,30,130,340,có,,có,150,300,2,2
+KS270,Khách sạn Cẩm Tú Cần Thơ (tên dựng),Cần Thơ,can_bang,4,khach_san,1030000,1390000,,40,20,,60,140,có,,có,150,300,2,2
+KS271,Khách sạn Sao Biển Cần Thơ (tên dựng),Cần Thơ,can_bang,4,khach_san,960000,1300000,1540000,10,10,10,30,90,có,,có,150,80,2,1
+KS272,Khách sạn Đông Á Cần Thơ (tên dựng),Cần Thơ,can_bang,4,khach_san,940000,1270000,1500000,120,40,10,170,400,có,,có,80,300,2,1
+KS273,Khách sạn Hồng Hạc Cần Thơ (tên dựng),Cần Thơ,day_du,4,khach_san,1410000,1900000,2260000,30,120,10,160,460,có,,có,150,500,2,2
+KS274,Khách sạn Ngân Hà Cần Thơ (tên dựng),Cần Thơ,day_du,4,khach_san,1350000,1820000,,120,60,,180,420,có,,có,,200,2,1
+KS275,Khách sạn Hoàng Gia Cần Thơ (tên dựng),Cần Thơ,day_du,4,khach_san,1230000,1660000,1970000,5,20,13,38,122,có,,có,150,,2,1
+KS276,Khách sạn Vạn Xuân Cần Thơ (tên dựng),Cần Thơ,day_du,4,khach_san,1510000,2040000,2420000,40,80,20,140,400,có,,,,500,1,1
+KS277,Khách sạn Phú Gia Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,2,khach_san,390000,530000,620000,40,10,30,80,230,,,,,,0,0
+KS278,Khách sạn Ngọc Lan Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,3,khach_san,620000,840000,,10,30,,40,110,,,,60,,0,0
+KS279,Khách sạn Mai Vàng Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,3,khach_san,520000,700000,830000,20,13,3,36,91,có,,,,80,1,0
+KS280,Khách sạn Bạch Đằng Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),tiet_kiem,3,khach_san,530000,720000,850000,10,120,30,160,500,,,,,80,0,0
+KS281,Resort Đại Dương Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,4,resort,1100000,1480000,1760000,40,30,20,90,250,có,,có,300,300,3,4
+KS282,Resort Thiên Hà Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,4,resort,1290000,1740000,,60,30,,90,210,có,,có,300,200,3,4
+KS283,Khách sạn An Bình Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,4,khach_san,1100000,1480000,1760000,20,3,10,33,89,có,,có,,,2,0
+KS284,Resort Sông Hồng Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),can_bang,4,resort,1060000,1430000,1700000,30,30,40,100,310,có,,có,300,200,3,4
+KS285,Resort Phương Nam Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,4,resort,1380000,1860000,2210000,30,40,10,80,220,có,,có,300,500,3,4
+KS286,Resort Lan Anh Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,4,resort,1520000,2050000,,30,80,,110,300,có,,,150,500,2,3
+KS287,Khách sạn Thanh Bình Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,4,khach_san,1360000,1840000,2180000,5,10,20,35,120,có,,có,,,2,0
+KS288,Resort Hải Âu Tây Ninh (Núi Bà Đen) (tên dựng),Tây Ninh (Núi Bà Đen),day_du,4,resort,1140000,1540000,1820000,60,80,120,260,840,có,,có,150,200,3,3

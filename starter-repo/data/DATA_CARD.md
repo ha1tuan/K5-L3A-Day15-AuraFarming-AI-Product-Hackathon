@@ -24,6 +24,7 @@
 | `python data/sinh_du_lieu.py` | Sinh 6 file JSON, **seed 42**. Chạy lại ra đúng cùng nội dung (đã kiểm hash) |
 | `python data/lay_video_review.py` | Lấy video review (cần mạng, ~6 phút; chạy lại chỉ lấy điểm còn thiếu, `--lam-moi` lấy lại tất cả) |
 | `python data/tinh_thu.py …` | **Bộ tính tham chiếu** chạy cả 2 chiều trên dữ liệu này, mọi số do code tính. Dùng để kiểm dữ liệu đủ cho bài toán và tính đáp án bộ câu thử |
+| `python data/xuat_bang.py` | Xuất bản **để xem bằng mắt**: `data/xem/bo_du_lieu.xlsx` (9 sheet), `data/xem/*.csv`, `data/xem/vi_du_ket_qua.md` (kết quả chạy thật 4 đầu vào). Nguồn sự thật vẫn là `data/*.json` |
 
 ```bash
 python data/tinh_thu.py --tu "Hà Nội" --den "Hạ Long" --nguoi 40 --ngay 3 --muc-dich gan_ket --ngan-sach 150tr
