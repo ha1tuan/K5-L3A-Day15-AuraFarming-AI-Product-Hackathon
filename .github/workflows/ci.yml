@@ -1,0 +1,68 @@
+﻿name: CI - Test & Docker Build
+
+on:
+  push:
+    branches: [ main, "feat/**" ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-test:
+    name: Backend Test (Pytest)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: starter-repo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r codebase/backend/requirements.txt pytest
+
+      - name: Run smoke tests
+        env:
+          MODEL_PROVIDER: ""
+          API_KEY: "test-key"
+        run: pytest tests/test_smoke.py
+
+  frontend-build:
+    name: Frontend Build (React + Vite)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: starter-repo/codebase/web
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+
+  docker-verify:
+    name: Verify Docker Compose Build
+    runs-on: ubuntu-latest
+    needs: [backend-test, frontend-build]
+    defaults:
+      run:
+        working-directory: starter-repo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker images
+        run: docker compose build
