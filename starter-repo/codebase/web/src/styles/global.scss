@@ -28,6 +28,29 @@ body {
   &:focus { left: 1rem; top: 1rem; z-index: 50; background: var(--c-card); padding: .5rem 1rem; }
 }
 
+// --- Trang giới thiệu: chuyển động nhẹ ---------------------------------------------------------
+@keyframes kenburns { from { transform: scale(1.08) translate3d(0, 0, 0); } to { transform: scale(1.18) translate3d(-2%, -1%, 0); } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.kenburns { animation: kenburns 24s ease-in-out infinite alternate; }
+.fade-up { animation: fade-up .8s cubic-bezier(.2, .7, .2, 1) both; }
+.fade-up-2 { animation: fade-up .8s .15s cubic-bezier(.2, .7, .2, 1) both; }
+.fade-up-3 { animation: fade-up .8s .3s cubic-bezier(.2, .7, .2, 1) both; }
+.float-y { animation: float-y 5s ease-in-out infinite; }
+.text-gradient-sun {
+  background: linear-gradient(90deg, #fdba74, #fb923c 45%, #fde68a);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-overlay {
+  background:
+    radial-gradient(1200px 500px at 15% 20%, rgba(14, 116, 144, .55), transparent 60%),
+    linear-gradient(180deg, rgba(6, 38, 58, .55) 0%, rgba(6, 38, 58, .82) 55%, var(--c-bg) 100%);
+}
+.glass { background: rgba(255, 255, 255, .1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, .18); }
+.card-lift { transition: transform .25s ease, box-shadow .25s ease; }
+.card-lift:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -18px rgba(6, 38, 58, .45); }
+.app-hero { background: linear-gradient(120deg, var(--c-ocean) 0%, #0b4a63 55%, #0e7490 100%); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }

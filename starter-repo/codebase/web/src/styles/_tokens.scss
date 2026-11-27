@@ -1,12 +1,16 @@
 // Nguồn duy nhất của màu, chữ, khoảng cách. index.css (@theme inline) đọc các biến này cho Tailwind.
 $colors: (
-  primary: #0f172a,
-  accent: #0369a1,
-  accent-dark: #075985,
-  accent-soft: #f0f9ff,
-  bg: #f8fafc,
+  primary: #0b1f2a,       // mực đậm — chữ, nền tối
+  accent: #0e7490,        // xanh biển — nút, link
+  accent-dark: #155e75,
+  accent-soft: #ecfeff,
+  sun: #f97316,           // cam hoàng hôn — điểm nhấn, CTA chính
+  sun-dark: #ea580c,
+  sun-soft: #fff7ed,
+  ocean: #06263a,         // nền hero / header
+  bg: #f6f8fa,
   card: #ffffff,
-  muted: #475569,
+  muted: #4b5b67,
   line: #e2e8f0,
   soft: #f1f5f9,
   ok: #15803d,

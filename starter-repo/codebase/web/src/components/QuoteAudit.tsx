@@ -39,7 +39,7 @@ export function QuoteAudit() {
   return (
     <div className="grid gap-6">
       <section aria-labelledby="qa-h">
-        <h1 id="qa-h" className="text-2xl font-bold">Soát báo giá tour đoàn</h1>
+        <h2 id="qa-h" className="text-xl font-bold">Dán báo giá của công ty tour</h2>
         <p className="mt-1 max-w-3xl text-muted">
           Dán báo giá công ty tour gửi (giá / khách, mục <i>bao gồm</i> và <i>không bao gồm</i>) kèm <b>số người</b> và <b>ngân sách</b>.
           Hệ thống cộng các khoản ngoài giá (VAT, vé, tip, vé máy bay…) ra <b>tổng chi thật</b>, soát hoá đơn / chuyển khoản để kế toán duyệt được.

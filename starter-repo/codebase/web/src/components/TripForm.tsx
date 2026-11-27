@@ -65,7 +65,7 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
 
   return (
     <div className="max-w-3xl">
-      <h1 className="mb-1 text-2xl font-bold">Lập kế hoạch chuyến đi công ty</h1>
+      <h2 className="mb-1 text-xl font-bold">Thông tin chuyến đi</h2>
       <p className="mb-6 text-muted">Điền thông tin cơ bản. Có kinh phí, có địa điểm, hoặc cả hai đều được.</p>
       {askBack && errors.length > 0 && (
         <div className="mb-6">
@@ -76,7 +76,7 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
       )}
       <form
         noValidate
-        className="grid gap-5 rounded-xl border border-line bg-card p-6 shadow-sm"
+        className="grid gap-5 rounded-3xl border border-line bg-card p-6 shadow-xl sm:p-8"
         onSubmit={e => { e.preventDefault(); onSubmit(); }}
       >
         <div className="grid gap-4 sm:grid-cols-3">

@@ -4,7 +4,7 @@ const STEPS = ['Thông tin', 'Chọn & duyệt', 'Kế hoạch'];
 
 export function StepBar({ step, skipped }: { step: 1 | 2 | 3; skipped?: boolean }) {
   return (
-    <nav aria-label="Các bước" className="no-print border-b border-line bg-card">
+    <nav aria-label="Các bước" className="no-print bg-card">
       <ol className="mx-auto flex max-w-6xl flex-wrap gap-x-6 gap-y-2 px-4 py-3 text-sm">
         {STEPS.map((label, i) => {
           const n = i + 1;

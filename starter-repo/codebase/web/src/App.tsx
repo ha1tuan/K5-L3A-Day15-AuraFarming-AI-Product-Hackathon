@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { MapPinned, CalendarRange, FileSearch } from 'lucide-react';
+import { Compass, CalendarRange, FileSearch, Home } from 'lucide-react';
+import { Landing } from './components/Landing';
 import { QuoteAudit } from './components/QuoteAudit';
 import type { ApproveInput, Field, TripView } from './api/types';
 import { approveTrip, createTrip, DEMO, getTrip } from './api/client';
@@ -28,15 +29,20 @@ function setTripInUrl(id: string | null) {
   window.history.replaceState(null, '', u);
 }
 
-type Tab = 'plan' | 'quote';
+type Tab = 'home' | 'plan' | 'quote';
+const TAB_PARAM: Record<Tab, string | null> = { home: null, plan: 'lap-ke-hoach', quote: 'bao-gia' };
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>(() => new URLSearchParams(window.location.search).get('tab') === 'bao-gia' ? 'quote' : 'plan');
+  const [tab, setTab] = useState<Tab>(() => {
+    const q = new URLSearchParams(window.location.search);
+    return q.get('tab') === 'bao-gia' ? 'quote' : (q.get('tab') === 'lap-ke-hoach' || q.get('trip')) ? 'plan' : 'home';
+  });
   const switchTab = (t: Tab) => {
     const u = new URL(window.location.href);
-    if (t === 'quote') u.searchParams.set('tab', 'bao-gia'); else u.searchParams.delete('tab');
+    if (TAB_PARAM[t]) u.searchParams.set('tab', TAB_PARAM[t]!); else u.searchParams.delete('tab');
     window.history.replaceState(null, '', u);
     setTab(t);
+    window.scrollTo(0, 0);
   };
   const [form, setForm] = useState<FormState>(EMPTY);
   const [screen, setScreen] = useState<Screen>({ kind: 'form', errors: [], askBack: false });
@@ -132,30 +138,45 @@ export default function App() {
   return (
     <>
       <a href="#main" className="skip-link">Bỏ qua tới nội dung</a>
-      <header className="no-print bg-primary text-white">
-        <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-4">
-          <MapPinned className="size-6" aria-hidden />
-          <span className="text-lg font-semibold">Kế hoạch du lịch công ty</span>
+      <header className={`no-print z-40 text-white ${tab === 'home' ? 'absolute inset-x-0 top-0' : 'sticky top-0 bg-ocean/95 shadow-lg backdrop-blur'}`}>
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
+          <button type="button" onClick={() => switchTab('home')} className="flex cursor-pointer items-center gap-2">
+            <span className="grid size-9 place-items-center rounded-xl bg-sun shadow-lg shadow-sun/30"><Compass className="size-5" aria-hidden /></span>
+            <span className="text-left leading-tight"><span className="block text-base font-extrabold tracking-tight">TeamTrip</span>
+              <span className="block text-[11px] text-white/70">Chuyến đi công ty · đúng tiền, đủ hoá đơn</span></span>
+          </button>
           {DEMO && <span className="rounded bg-est-bg px-2 py-0.5 text-xs font-medium text-est">Chế độ demo — dữ liệu mẫu</span>}
-          <span className="ml-auto hidden text-sm text-white/70 sm:inline">AI đề xuất · bạn quyết định</span>
+          <nav className="ml-auto flex gap-1 rounded-full p-1 glass" aria-label="Chức năng">
+            {([['home', 'Trang chủ', Home], ['plan', 'Lập kế hoạch', CalendarRange], ['quote', 'Soát báo giá', FileSearch]] as const).map(([t, label, Icon]) => (
+              <button key={t} type="button" onClick={() => switchTab(t)} aria-current={tab === t ? 'page' : undefined}
+                className={`inline-flex cursor-pointer items-center gap-1.5 rounded-full px-3 py-2 text-sm font-medium transition sm:px-4 ${tab === t ? 'bg-white text-ocean shadow' : 'text-white/85 hover:bg-white/10'}`}>
+                <Icon className="size-4" aria-hidden /><span className={t === 'home' ? 'hidden sm:inline' : ''}>{label}</span>
+              </button>
+            ))}
+          </nav>
         </div>
-        <nav className="mx-auto flex max-w-6xl gap-1 px-4" aria-label="Chức năng">
-          {([['plan', 'Lập kế hoạch & dự trù', CalendarRange], ['quote', 'Soát báo giá tour', FileSearch]] as const).map(([t, label, Icon]) => (
-            <button key={t} type="button" onClick={() => switchTab(t)} aria-current={tab === t ? 'page' : undefined}
-              className={`inline-flex cursor-pointer items-center gap-2 rounded-t-lg px-4 py-2.5 text-sm font-medium ${tab === t ? 'bg-white text-primary' : 'text-white/80 hover:bg-white/10'}`}>
-              <Icon className="size-4" aria-hidden />{label}
-            </button>
-          ))}
-        </nav>
       </header>
-      {tab === 'quote' ? (
-        <main id="main" className="mx-auto max-w-6xl px-4 py-8"><QuoteAudit /></main>
+      {tab === 'home' ? (
+        <main id="main"><Landing onStart={dest => { restart(); setForm(f => ({ ...f, destination: dest ?? f.destination })); switchTab('plan'); }} onQuote={() => switchTab('quote')} /></main>
       ) : (<>
-      <StepBar step={step} skipped={skipped} />
-      <main id="main" className="mx-auto max-w-6xl px-4 py-8">
+      <section className="app-hero no-print text-white">
+        <div className="mx-auto max-w-6xl px-4 pb-14 pt-8">
+          <p className="text-sm font-semibold uppercase tracking-wider text-orange-300">{tab === 'quote' ? 'Trước khi trình sếp' : 'Dự trù cho cả đoàn'}</p>
+          <h1 className="mt-1 text-3xl font-extrabold sm:text-4xl">{tab === 'quote' ? 'Soát báo giá tour đoàn' : 'Lập kế hoạch chuyến đi công ty'}</h1>
+          <p className="mt-2 max-w-2xl text-white/80">{tab === 'quote'
+            ? 'Biết tổng chi thật (VAT, vé, tip, vé máy bay ngoài giá) và chứng từ cần có — trong vài giây.'
+            : '3 gói Tiết kiệm · Cân bằng · Cao cấp với bảng chi phí, cơ cấu phòng, số xe và lịch từng giờ — mọi con số do code tính.'}</p>
+        </div>
+      </section>
+      {tab === 'quote' ? (
+        <main id="main" className="relative mx-auto -mt-8 max-w-6xl px-4 pb-16"><div className="rounded-3xl bg-card p-5 shadow-xl ring-1 ring-black/5 sm:p-8"><QuoteAudit /></div></main>
+      ) : (<>
+      <div className="relative mx-auto -mt-8 max-w-6xl px-4"><div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5"><StepBar step={step} skipped={skipped} /></div></div>
+      <main id="main" className="mx-auto max-w-6xl px-4 pb-16 pt-8">
         {error && <div className="mb-6"><Notice tone="error" title="Có lỗi">{error}</Notice></div>}
         {body}
       </main>
+      </>)}
       </>)}
     </>
   );
