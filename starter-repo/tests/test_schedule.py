@@ -293,3 +293,28 @@ def test_view_does_not_leak_internal_slot_ref():
     plan, pkg = build(req, pick=TierPick(None, [r.id], [], {}), ranked={"an_uong": [r]})
     view = to_view("x", req, [pkg], [plan])
     assert all("ref" not in s for p in view["plans"] for d in p["days"] for s in d["slots"])
+
+
+def _v(code):
+    from src.core.planning.types import Violation
+    return Violation(code, code)
+
+
+def test_route_skips_repair_for_violations_select_cannot_fix():
+    for code in ("THIEU_PHONG", "CHONG_GIO", "QUA_GIO_KET_THUC", "VE_MUON"):
+        state = {"violations": [_v(code)], "repair_round": 0}
+        before = dict(state)
+        assert tn.route_after_validate(state) == "explain" and state == before
+    for code in ("ID_KHONG_TON_TAI", "TRUNG_DIEM", "THIEU_SUC_CHUA"):
+        assert tn.route_after_validate({"violations": [_v("THIEU_PHONG"), _v(code)], "repair_round": 0}) == "repair"
+
+
+def test_validate_node_warns_at_once_for_unfixable():
+    req = make_req(days=1, nights=0)
+    plan, pkg = build(req)
+    pkg.leg = replace(pkg.leg, hours=9.0)
+    plan = schedule(req, pkg, TierPick(), {}, EST, MENUS, PROGRAMS)
+    out = tn.validate_node({"request": req, "plans": [plan], "packages": [pkg], "warnings": []})
+    assert out["repair_round"] == 0 and [v.code for v in out["violations"]] == ["VE_MUON"]
+    assert out["warnings"] and "23:00" in out["warnings"][0]
+    assert tn.route_after_validate(out) == "explain"

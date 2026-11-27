@@ -28,6 +28,9 @@ MAX_HITS_PER_GROUP = 12
 LODGING_PER_STAR = 3
 LIMITS = {"luu_tru": 9, "an_uong": 8, "hoat_dong": 6}
 MAX_REPAIR = 2
+# R16: chỉ vi phạm bước chọn sửa được mới chạy lại select; THIEU_PHONG, CHONG_GIO, QUA_GIO_KET_THUC, VE_MUON
+# do chặng đi / khách sạn gây ra -> đi thẳng tới explain kèm cảnh báo.
+REPAIRABLE = {"ID_KHONG_TON_TAI", "TRUNG_DIEM", "THIEU_SUC_CHUA"}
 REASON_MAX = 200
 
 
@@ -387,17 +390,22 @@ def validate_node(state: dict) -> dict:
         found += validate(req, plan, pkg)
     rounds = state.get("repair_round", 0) + (1 if "violations" in state else 0)
     out = {"violations": found, "repair_round": rounds}
-    if found and rounds >= MAX_REPAIR:
+    if found and (rounds >= MAX_REPAIR or not _repairable(found)):
+        after = " sau %d lần sửa" % rounds if rounds else ""
         out["warnings"] = list(state.get("warnings") or []) + [
-            "Kế hoạch còn %d điểm chưa đạt sau %d lần sửa, cần kiểm tra lại: %s" % (
-                len(found), rounds, "; ".join(v.message for v in found[:5]))]
+            "Kế hoạch còn %d điểm chưa đạt%s, cần kiểm tra lại: %s" % (
+                len(found), after, "; ".join(v.message for v in found[:5]))]
     return out
 
 
+def _repairable(violations) -> bool:
+    return any(v.code in REPAIRABLE for v in violations or [])
+
+
 def route_after_validate(state: dict) -> str:
-    """"repair" nếu còn vi phạm và chưa đủ MAX_REPAIR lần sửa; không thì "explain" (giữ kế hoạch).
-    Hàm thuần: cảnh báo do validate_node trả."""
-    if state.get("violations") and state.get("repair_round", 0) < MAX_REPAIR:
+    """"repair" nếu còn vi phạm bước chọn sửa được (REPAIRABLE) và chưa đủ MAX_REPAIR lần sửa; không thì
+    "explain" (giữ kế hoạch). Hàm thuần: cảnh báo do validate_node trả."""
+    if _repairable(state.get("violations")) and state.get("repair_round", 0) < MAX_REPAIR:
         return "repair"
     return "explain"
 
