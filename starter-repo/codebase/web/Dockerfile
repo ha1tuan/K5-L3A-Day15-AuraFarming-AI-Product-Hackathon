@@ -1,11 +1,10 @@
-FROM node:20-alpine AS builder
+﻿FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-# Dùng Nginx phục vụ web React tĩnh siêu nhẹ và chuyển tiếp /api sang backend
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 RUN printf 'server {\n\
@@ -16,8 +15,9 @@ RUN printf 'server {\n\
     try_files $uri $uri/ /index.html;\n\
   }\n\
   location /api/ {\n\
-    proxy_pass http://backend:8000/api/;\n\
-    proxy_set_header Host $host;\n\
+    proxy_pass https://aurafarming-backend-krwu.onrender.com/api/;\n\
+    proxy_ssl_server_name on;\n\
+    proxy_set_header Host aurafarming-backend-krwu.onrender.com;\n\
     proxy_set_header X-Real-IP $remote_addr;\n\
   }\n\
 }\n' > /etc/nginx/conf.d/default.conf
