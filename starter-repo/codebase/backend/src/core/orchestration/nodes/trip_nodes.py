@@ -233,7 +233,16 @@ def parse_request(state: dict) -> dict:
     notice = BOOKING_NOTICE if BOOKING_RE.search(text.lower()) or "[đã ẩn]" in text else None
     user = "Hôm nay: %s\n<tin_nhan>\n%s\n</tin_nhan>" % (today.isoformat(), _safe(text))
     raw = _parse_json(call_model(PARSE_SYSTEM, user)["text"])
-    req, missing, refusal = build_request(raw if isinstance(raw, dict) else {}, today)
+    return _classify(raw if isinstance(raw, dict) else {}, today, notice)
+
+
+def parse_form(state: dict) -> dict:
+    """Node parse của đường form (web): state["raw"] đã có trường, không gọi model."""
+    return _classify(state.get("raw") or {}, _today(state.get("today")), None)
+
+
+def _classify(raw: dict, today: date, notice: Optional[str]) -> dict:
+    req, missing, refusal = build_request(raw, today)
     out = {"notice": notice, "missing": missing, "refusal": refusal, "request": req}
     if refusal:
         return {**out, "status": "refused"}

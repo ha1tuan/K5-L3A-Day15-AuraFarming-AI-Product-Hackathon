@@ -11,9 +11,10 @@ def _after_parse(state: dict) -> str:
     return "render" if state.get("status") in ("ask_back", "refused") else "geocode"
 
 
-def build_trip_graph():
+def build_trip_graph(entry: str = "text"):
+    """entry="text": parse bằng model từ tin nhắn; entry="form": state["raw"] đã có trường, không gọi model."""
     g = StateGraph(TripState)
-    for name, fn in (("parse", tn.parse_request), ("geocode", tn.geocode_node), ("research", tn.research),
+    for name, fn in (("parse", tn.parse_form if entry == "form" else tn.parse_request), ("geocode", tn.geocode_node), ("research", tn.research),
                      ("select", tn.select), ("price", tn.price), ("schedule", tn.schedule_node),
                      ("validate", tn.validate_node), ("explain", tn.explain_node), ("render", tn.render_node)):
         g.add_node(name, fn)

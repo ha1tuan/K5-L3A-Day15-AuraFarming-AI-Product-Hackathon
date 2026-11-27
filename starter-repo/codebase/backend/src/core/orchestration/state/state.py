@@ -9,6 +9,7 @@ from src.core.planning.types import Candidate, GeoPoint, Package, Plan, TierPick
 
 class TripState(TypedDict, total=False):
     text: str                       # tin nhắn người dùng (đầu vào)
+    raw: dict                       # trường đã bóc sẵn (đường form của web)
     today: Union[date, str]         # ngày tham chiếu (date hoặc YYYY-MM-DD)
     request: Optional[TripRequest]
     missing: list[str]
