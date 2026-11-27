@@ -119,3 +119,25 @@ def giai_thich_vuot(req: dict, budget: int, g: dict, g_thap, goi_raw: dict, goi_
     output: số vượt + %, khoản gây vượt có số, cách cắt giảm có số (tính lại bằng code) ·
     tác động ra ngoài: không."""
     return planner.giai_thich_vuot(req, budget, g, g_thap, goi_raw, goi_thap_raw)
+
+
+# --- Bộ dữ liệu data/*.json (codebase/du_lieu.py) ---------------------------------------------------
+import du_lieu  # noqa: E402
+
+
+@tool
+def du_tru_tu_du_lieu(req: dict):
+    """du_tru_tu_du_lieu · input: yêu cầu đã chuẩn hoá (so_nguoi, so_ngay, so_dem, muc_dich, noi_xuat_phat, dia_diem) ·
+    output: 3 gói tính từ data/*.json (chặng đi theo tuyến, phòng / bữa / hoạt động theo mức và mục đích, video)
+    hoặc None nếu nơi đi / điểm đến không có trong dữ liệu · không tác động ra ngoài."""
+    tu, den = du_lieu.tim_diem_di(req.get("noi_xuat_phat")), du_lieu.tim_diem_den(req.get("dia_diem"))
+    return du_lieu.dung_diem_den(req, tu, den) if tu and den else None
+
+
+@tool
+def goi_y_diem_den(req: dict, so: int = 3) -> list:
+    """goi_y_diem_den · input: yêu cầu đã chuẩn hoá (có ngân sách, chưa có địa điểm), số gợi ý ·
+    output: tối đa `so` điểm đến trong 24 nơi của data/*.json, xếp bằng code theo mục đích, gói cao nhất còn trong
+    ngân sách, giờ đi một chiều, mùa đẹp; mỗi nơi đủ 3 gói · không tác động ra ngoài."""
+    tu = du_lieu.tim_diem_di(req.get("noi_xuat_phat"))
+    return du_lieu.goi_y_diem_den(req, tu, so) if tu else []

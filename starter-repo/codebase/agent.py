@@ -7,7 +7,9 @@ Các bước (mỗi bước ghi note() vào trace):
      đại lý + đòi bỏ quy tắc · điểm đến nước ngoài → từ chối · dữ liệu người dùng bọc trong thẻ <du_lieu_nguoi_dung>
   1. parse_request (model → JSON) + code chuẩn hoá: ngân sách / người × số người, số đêm, kiểm giới hạn 5–500 người,
      thiếu thông tin → hỏi lại đúng chỗ thiếu (không gọi bước sau)
-  2. du_tru (model → hạng mục + đơn giá tham khảo; KHÔNG trả tổng) → code tính 3 gói (tools.du_tru_goi)
+  2. du_tru: nơi đi + điểm đến có trong data/*.json → hạng mục + đơn giá lấy từ dữ liệu (du_lieu.py), cách A xếp hạng
+     24 điểm đến bằng code; ngoài dữ liệu → model đề xuất hạng mục + đơn giá "ước tính" (KHÔNG trả tổng).
+     Cả hai đường đều do code tính 3 gói (tools.du_tru_goi → planner.tinh_goi)
   3. chọn nhánh A / B / C bằng code; tự duyệt gói theo luật ở metric dung_cach_vao
   4. lap_lich (model → khối giờ, không có tiền) → kiem_lich_trinh (code) → sửa tối đa MAX_REPAIR vòng
   5. render bằng code + giải thích vượt ngân sách (tools.giai_thich_vuot) → guardrails đầu ra
@@ -15,10 +17,11 @@ Các bước (mỗi bước ghi note() vào trace):
 import json
 import re
 
+import du_lieu
 import guardrails as gr
 import planner
 from ai import call_model
-from tools import du_tru_goi, giai_thich_vuot
+from tools import dinh_vi, du_tru_goi, du_tru_tu_du_lieu, giai_thich_vuot, goi_y_diem_den
 from tracing import note
 
 MAX_REPAIR = 1   # số vòng sửa lịch khi kiem_lich_trinh báo vi phạm (mỗi vòng = 1 lần gọi model)
@@ -114,6 +117,9 @@ def _finish(parts):
 # --- Bước 1 ----------------------------------------------------------------------------------
 def parse_request(safe_text):
     r = _json(call_model(PARSE_SYSTEM, gr.wrap_untrusted(safe_text))["text"])
+    if not r and du_lieu.co_du_lieu():
+        r = du_lieu.boc_tach(safe_text)        # model không trả JSON (chế độ giả / lỗi): bóc bằng code, chỉ lấy ý nói rõ
+        note("parse: model không trả JSON → bóc tách bằng code")
     req = {k: r.get(k) for k in ("noi_xuat_phat", "muc_dich", "dia_diem")}
     req["so_nguoi"] = _int(r.get("so_nguoi"))
     req["so_ngay"] = _int(r.get("so_ngay"))
@@ -133,6 +139,14 @@ def parse_request(safe_text):
     req["dia_diem_xac_dinh"] = r.get("dia_diem_xac_dinh") is not False
     req["trong_nuoc"] = r.get("trong_nuoc") is not False
     req["khong_muon"] = [str(x).lower() for x in (r.get("khong_muon") or [])]
+    if du_lieu.co_du_lieu():                     # chặn model tự điền thông tin câu không nói (G10: không đoán)
+        code = du_lieu.boc_tach(safe_text)
+        if req["muc_dich"] and not code["muc_dich"] and not du_lieu.co_y_muc_dich(safe_text):
+            note("parse: bỏ mục đích model tự điền (câu không nêu)")
+            req["muc_dich"] = None
+        if req["so_nguoi"] and str(req["so_nguoi"]) not in re.sub(r"[.,]", "", safe_text):
+            note("parse: bỏ số người model tự điền (câu không có số này)")
+            req["so_nguoi"] = None
     return req
 
 
@@ -148,7 +162,21 @@ def ask_back(req):
 
 
 # --- Bước 2–3 ----------------------------------------------------------------------------------
+def destinations_from_data(req, branch):
+    """Đường dữ liệu: None nếu nơi xuất phát / điểm đến không có trong data/*.json."""
+    if not du_lieu.co_du_lieu() or not du_lieu.tim_diem_di(req["noi_xuat_phat"]):
+        return None
+    if branch == "A":
+        return goi_y_diem_den(req) or None
+    d = du_tru_tu_du_lieu(req) if du_lieu.tim_diem_den(req["dia_diem"]) else None
+    return [d] if d else None
+
+
 def compute_destinations(req, safe_text, branch):
+    dests = destinations_from_data(req, branch)
+    if dests:
+        note("nguồn: data/*.json (%s)" % ", ".join(d["ten"] for d in dests))
+        return dests
     brief = {"so_nguoi": req["so_nguoi"], "noi_xuat_phat": req["noi_xuat_phat"], "muc_dich": req["muc_dich"],
              "so_ngay": req["so_ngay"], "so_dem": req["so_dem"], "ngan_sach_tong": req["ngan_sach"],
              "khong_muon": req["khong_muon"]}
@@ -205,7 +233,15 @@ def kiem_lich_trinh(req, lich):
 
 
 def lap_lich(req, dest, levels):
-    goi = {lv: {"hoat_dong": [h.get("ten") for h in (dest["raw"].get(lv) or {}).get("hoat_dong") or []],
+    if dest.get("nguon") == "du_lieu":                     # đường dữ liệu: code xếp giờ, không gọi model
+        lich = {lv: dest["lich"][lv] for lv in levels}
+        bad = {lv: kiem_lich_trinh(req, lich[lv]) for lv in levels}
+        bad = {k: v for k, v in bad.items() if v}
+        if bad:
+            note("kiem_lich_trinh (lịch code): " + json.dumps(bad, ensure_ascii=False))
+        return lich
+    goi = {lv: {"hoat_dong": [h.get("ten") for h in (dest["raw"].get(lv) or {}).get("hoat_dong") or []]
+                + list((dest["raw"].get(lv) or {}).get("_mien_phi") or []),
                 "gala": bool(((dest["raw"].get(lv) or {}).get("gala") or {}).get("co")) and "gala" not in " ".join(req["khong_muon"]),
                 "di_chuyen": dest["calc"][lv]["lines"][0][1]} for lv in levels}
     brief = {"dia_diem": dest["ten"], "noi_xuat_phat": req["noi_xuat_phat"], "so_ngay": req["so_ngay"],
@@ -260,14 +296,16 @@ def block_goi(req, dest, lv, name, lich=None):
     return "\n\n".join(parts)
 
 
-def header(req, branch):
+def header(req, branch, tu_du_lieu=False):
     h = ["## Kế hoạch chuyến đi: %d người · %s · từ %s · %d ngày %d đêm" % (
         req["so_nguoi"], MUC_DICH.get(req["muc_dich"], ""), req["noi_xuat_phat"], req["so_ngay"], req["so_dem"])]
     if req["ngan_sach"]:
         h.append("Ngân sách đã hiểu: **%s cho %d người** (%s)." % (
             planner.fmt_vnd(req["ngan_sach"]), req["so_nguoi"], req["ngan_sach_cach_hieu"]))
-    h.append("Mọi đơn giá là **ước tính** tham khảo (hệ thống chưa có nguồn giá trực tuyến để kiểm); tiền, số phòng, "
-             "số xe, phát sinh 5%% do code tính. Cách vào: %s." % {
+    nguon = ("Đơn giá lấy từ bộ dữ liệu của nhóm (`data/*.json`: giá gốc có link nguồn, phần còn lại **ước tính**), "
+             "chưa phải báo giá của cơ sở cụ thể" if tu_du_lieu else
+             "Mọi đơn giá là **ước tính** tham khảo (hệ thống chưa có nguồn giá trực tuyến để kiểm)")
+    h.append(nguon + "; tiền, số phòng, số xe, phát sinh 5%% do code tính. Cách vào: %s." % {
                  "A": "A — chỉ có kinh phí → gợi ý địa điểm", "B": "B — chỉ có địa điểm → dự trù 3 gói",
                  "C": "C — có cả kinh phí và địa điểm → 3 kế hoạch"}[branch])
     return "\n\n".join(h)
@@ -314,6 +352,9 @@ def answer(text: str) -> dict:
     if size:
         note("guardrail: số người ngoài 5–500")
         return _finish(pre + [size])
+    if req.get("dia_diem") and req["dia_diem_xac_dinh"] and not du_lieu.tim_diem_den(req["dia_diem"]):
+        # ngoài bộ dữ liệu: chỉ đi tiếp khi định vị được trong nước (không tin model tự khẳng định nơi đó có thật)
+        req["dia_diem_xac_dinh"] = dinh_vi(req["dia_diem"], domestic=True) is not None
     if req.get("dia_diem") and not req["dia_diem_xac_dinh"]:
         note("dừng: không định vị được địa điểm")
         return _finish(pre + ["Mình không tìm được / không định vị chắc chắn được địa điểm \"%s\", nên chưa lập dự trù "
@@ -330,7 +371,8 @@ def answer(text: str) -> dict:
     if not dests:
         return _finish(pre + ["Chưa lập được dự trù (model không trả hạng mục hợp lệ). Bạn thử gửi lại yêu cầu."])
     b = req["ngan_sach"]
-    parts = pre + [header(req, branch)]
+    tu_dl = dests[0].get("nguon") == "du_lieu"
+    parts = pre + [header(req, branch, tu_dl)]
 
     if branch == "C":
         d = dests[0]
@@ -339,6 +381,8 @@ def answer(text: str) -> dict:
         parts.append(none_fit_note(req, d))
         for lv, name in planner.PACKAGES:
             parts.append(block_goi(req, d, lv, name, lich.get(lv)))
+        if tu_dl:
+            parts.append(du_lieu.thong_tin_them(d, req))
         parts.append("Giám đốc chọn 1 trong 3 kế hoạch; công ty tự liên hệ và đặt trực tiếp với cơ sở.")
         parts.append(gr.FOOTER)
         return _finish(parts)
@@ -353,6 +397,14 @@ def answer(text: str) -> dict:
             rows.append("| %d | %s | %s (%s km) | %s | %s | %s | %s |" % (
                 i, d["ten"], t, c.get("km", "?"), *[planner.fmt_vnd(d["calc"][lv]["tong"]) + ("" if not b or d["calc"][lv]["tong"] <= b else " ❌") for lv, _ in planner.PACKAGES], d["ly_do"]))
         parts.append("### Gợi ý địa điểm (tổng cả đoàn của 3 gói, ❌ = vượt ngân sách)\n\n" + "\n".join(rows))
+        if tu_dl:
+            vids = []
+            for x in dests:
+                v = du_lieu.video(x["id"], 1, 0)
+                if v:
+                    vids.append("- %s: [%s](%s)" % (x["ten"], v[0]["tieu_de"], v[0]["url"]))
+            if vids:
+                parts.append("Video review từng nơi (YouTube, đã kiểm link):\n" + "\n".join(vids))
         d = dests[0]
         lv = best_within(d, b) or "tiet_kiem"
     else:  # B: không có ngân sách → gói cân bằng
@@ -371,5 +423,7 @@ def answer(text: str) -> dict:
         parts.append(block_goi(req, d, lv, name, lich.get(lv)))
     else:
         parts.append("### Lịch từng giờ — gói %s\n\n%s" % (name, render_lich(lich.get(lv))))
+    if tu_dl:
+        parts.append(du_lieu.thong_tin_them(d, req))
     parts.append(gr.FOOTER)
     return _finish(parts)
