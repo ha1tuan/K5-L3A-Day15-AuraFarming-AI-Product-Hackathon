@@ -41,12 +41,20 @@ def _fetch(query: str, max_results: int) -> list[dict]:
     )
     resp.raise_for_status()
     return [
-        {"title": r.get("title", ""), "url": r.get("url", ""), "content": r.get("content", "")}
+        {
+            "title": r.get("title", ""),
+            "url": r.get("url", ""),
+            "domain": _domain(r.get("url", "")),
+            "snippet": _trim_sentences(r.get("content", "")),
+        }
         for r in resp.json().get("results", [])
     ]
 
 
 def search(query: str, max_results: int = 8) -> list[SearchHit]:
-    raw = cached_call("tavily", {"query": query, "max_results": max_results},
-                      lambda: _fetch(query, max_results))
-    return [SearchHit(r["title"], r["url"], _trim_sentences(r["content"]), _domain(r["url"])) for r in raw]
+    try:
+        raw = cached_call("tavily", {"query": query, "max_results": max_results},
+                          lambda: _fetch(query, max_results))
+    except httpx.HTTPError as e:
+        raise SearchUnavailable(str(e)) from e
+    return [SearchHit(r["title"], r["url"], r["snippet"], r["domain"]) for r in raw]

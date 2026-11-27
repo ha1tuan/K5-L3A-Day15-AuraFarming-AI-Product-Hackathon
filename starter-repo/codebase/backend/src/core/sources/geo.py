@@ -43,7 +43,10 @@ def geocode(name: str, near: Optional[str] = None, domestic: bool = False) -> Op
     }
     if domestic:
         params["countrycodes"] = "vn"
-    rows = cached_call("geo", params, lambda: _fetch(params))
+    try:
+        rows = cached_call("geo", params, lambda: _fetch(params))
+    except httpx.HTTPError:
+        return None
     if not rows:
         return None
     r = rows[0]

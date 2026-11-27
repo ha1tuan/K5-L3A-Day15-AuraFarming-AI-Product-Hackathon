@@ -102,3 +102,39 @@ def test_geocode_rate_limit(monkeypatch):
     now[0] += 0.25
     geo.geocode("B")
     assert sleeps and sleeps[-1] == pytest.approx(0.75)
+
+
+def test_search_cache_keeps_only_trimmed_fields(monkeypatch, tmp_path):
+    import json
+    monkeypatch.setenv("TAVILY_API_KEY", "k")
+    payload = {"results": [{
+        "title": "T", "url": "https://www.vnexpress.net/x",
+        "content": "Mot. Hai! Ba. Bon.", "raw_content": "long", "score": 0.9,
+    }]}
+    monkeypatch.setattr(tavily_client.httpx, "post", lambda *a, **k: FakeResponse(payload))
+    tavily_client.search("q")
+    files = list((tmp_path / "tavily").glob("*.json"))
+    assert len(files) == 1
+    rec = json.loads(files[0].read_text(encoding="utf-8"))[0]
+    assert set(rec) == {"title", "url", "domain", "snippet"}
+    assert rec["snippet"] == "Mot. Hai!"
+
+
+def test_search_http_error_raises_unavailable(monkeypatch):
+    monkeypatch.setenv("TAVILY_API_KEY", "k")
+
+    def boom(*a, **k):
+        raise tavily_client.httpx.ConnectTimeout("t")
+
+    monkeypatch.setattr(tavily_client.httpx, "post", boom)
+    with pytest.raises(SearchUnavailable):
+        tavily_client.search("q")
+
+
+def test_geocode_http_error_returns_none(monkeypatch):
+    def boom(*a, **k):
+        raise geo.httpx.ConnectError("x")
+
+    monkeypatch.setattr(geo.time, "sleep", lambda s: None)
+    monkeypatch.setattr(geo.httpx, "get", boom)
+    assert geo.geocode("Da Lat") is None
