@@ -67,11 +67,16 @@ def _number_hits(hits_by_group: dict[str, list[dict]]) -> list[dict]:
     return flat
 
 
+def _safe(s) -> str:
+    """Bỏ < > để đoạn trích không đóng được khối <du_lieu>."""
+    return str(s).replace("<", "(").replace(">", ")")
+
+
 def _extract_prompt(flat: list[dict]) -> str:
     lines = ["<du_lieu>"]
     for k, h in enumerate(flat, 1):
-        lines.append("[%d] (nhóm: %s) %s | %s | %s" % (k, h["group"], h.get("title", ""), h.get("domain", ""),
-                                                       h.get("snippet", "")))
+        lines.append("[%d] (nhóm: %s) %s | %s | %s" % (k, h["group"], _safe(h.get("title", "")),
+                                                       _safe(h.get("domain", "")), _safe(h.get("snippet", ""))))
     lines.append("</du_lieu>")
     return "\n".join(lines)
 
@@ -80,8 +85,7 @@ def _price_in_snippet(text, snippet: str) -> Optional[int]:
     """Giá chỉ nhận khi chuỗi nguyên văn nằm trong đoạn trích và parse ra > 0."""
     if not isinstance(text, str) or not text.strip() or text.strip().lower() not in snippet.lower():
         return None
-    # parse_vnd đọc sai "350.000đ" (đ nằm trong lookahead chữ cái) -> bỏ ký hiệu tiền trước khi parse.
-    v = parse_vnd(re.sub(r"(?i)\s*(đ|₫|vnd|vnđ)(?![a-zà-ỹ])", "", text))
+    v = parse_vnd(text)
     return v if v and v > 0 else None
 
 

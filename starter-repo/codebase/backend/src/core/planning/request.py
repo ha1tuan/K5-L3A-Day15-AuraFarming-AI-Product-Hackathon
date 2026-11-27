@@ -22,6 +22,7 @@ _FIELD_TEXT = {
 _UNITS = {"tỷ": 10**9, "tỉ": 10**9, "ty": 10**9, "triệu": 10**6, "trieu": 10**6, "tr": 10**6,
           "nghìn": 10**3, "ngàn": 10**3, "k": 10**3}
 _NUM = re.compile(r"(\d+(?:[.,]\d+)*)\s*(tỷ|tỉ|ty|triệu|trieu|tr|nghìn|ngàn|k)?(?![a-zà-ỹ])")
+_CURRENCY = re.compile(r"\s*(?:đồng|vnđ|vnd|₫|đ)(?![a-zà-ỹ])")  # ký hiệu tiền: bỏ trước khi đọc số
 _PER_PERSON = re.compile(r"(mỗi|một)\s*(người|nguoi|pax)\b|/\s*(người|nguoi|pax)\b|đầu người|dau nguoi|per person")
 
 
@@ -36,7 +37,7 @@ def parse_vnd(s) -> Optional[int]:
         return None
     if isinstance(s, (int, float)):
         return int(s)
-    text = str(s).lower()
+    text = _CURRENCY.sub("", str(s).lower())
     matches = list(_NUM.finditer(text))
     if not matches:
         return None
