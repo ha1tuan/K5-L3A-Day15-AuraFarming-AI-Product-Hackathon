@@ -209,7 +209,7 @@ def ground_and_rank(cands: list[Candidate]) -> dict[str, list[Candidate]]:
     return ranked
 
 
-CARD_RE = re.compile(r"\d{12,}|\d{4}(?:[ .-]\d{4}){2,}")
+CARD_RE = re.compile(r"\d{12,}|\d{4}(?:[ .-]\d{4}){2,}|\d{4}[ .-]\d{6}[ .-]\d{5}")  # liền / nhóm 4 / Amex 4-6-5
 BOOKING_RE = re.compile(r"đặt (?:chỗ|phòng|vé|cọc|luôn|giúp|hộ|trước)|thanh toán|chuyển khoản|giữ chỗ|cọc|"
                         r"số thẻ|\bthẻ\b|\bbook")
 BOOKING_NOTICE = ("Hệ thống chỉ lập kế hoạch và báo giá tham khảo, không đặt chỗ, giữ chỗ hay thanh toán thay bạn; "
@@ -325,6 +325,8 @@ def select_for_tiers(req: TripRequest, ranked: dict, violations: Optional[list] 
         def keep(ids, group) -> list[str]:
             out = []
             for i in ids if isinstance(ids, list) else []:
+                if isinstance(i, str) and i.strip().lower() in ("", "null", "none"):
+                    continue
                 if i in known[group]:
                     out.append(i)
                 elif isinstance(i, str) and sink is not None:

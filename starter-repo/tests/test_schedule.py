@@ -318,3 +318,21 @@ def test_validate_node_warns_at_once_for_unfixable():
     assert out["repair_round"] == 0 and [v.code for v in out["violations"]] == ["VE_MUON"]
     assert out["warnings"] and "23:00" in out["warnings"][0]
     assert tn.route_after_validate(out) == "explain"
+
+
+def test_select_drops_null_strings_in_lists_without_violation(monkeypatch):
+    r = cand("an_uong", "Quan Hoa")
+    a = cand("hoat_dong", "Doi Che")
+    pick = {"restaurants": ["null", r.id, "None", ""], "activities": ["none", a.id]}
+    fake_select(monkeypatch, {t: pick for t in ("tiet_kiem", "can_bang", "cao_cap")})
+    sink = []
+    picks = tn.select_for_tiers(make_req(), {"an_uong": [r], "hoat_dong": [a]}, est=EST, sink=sink)
+    assert picks["can_bang"].restaurants == [r.id] and picks["can_bang"].activities == [a.id] and not sink
+
+
+def test_card_re_redacts_amex_but_keeps_dates_and_money():
+    assert tn.CARD_RE.sub("X", "thẻ 3782 822463 10005 nhé") == "thẻ X nhé"
+    assert tn.CARD_RE.sub("X", "378282246310005") == "X"
+    assert tn.CARD_RE.sub("X", "4111 1111 1111 1111") == "X"
+    keep = "đi 04/12/2026 150.000.000đ, gọi 0912 345 678"
+    assert tn.CARD_RE.sub("X", keep) == keep
