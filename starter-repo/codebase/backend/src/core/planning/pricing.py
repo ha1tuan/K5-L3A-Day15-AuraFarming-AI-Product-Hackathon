@@ -43,7 +43,7 @@ def price_tier(req: TripRequest, tier: str, origin_pt: Optional[GeoPoint], dest_
                            note="Khoảng cách ước tính" if lg.estimated else None))
 
     # Lưu trú
-    room_plan = None
+    room_plan = extra_plan = None
     if "Lưu trú" in ct:
         hotel = None  # R9: lưu trú đã chuyển sang bảng giá gói khác -> bỏ khách sạn đã chọn
     if nights >= 1 and "Lưu trú" not in drop:
@@ -64,6 +64,14 @@ def price_tier(req: TripRequest, tier: str, origin_pt: Optional[GeoPoint], dest_
             if not room_plan.counts:
                 items.append(_item("Lưu trú", f"Chưa có phòng trống – {hname}", 0, "phòng-đêm", 0, estimated=False))
             items[-1].note = f"Thiếu chỗ cho {room_plan.short} người, cần xác nhận thêm phòng"
+            # R15: người chưa có phòng tính theo phòng chung của gói (ước tính) để tổng không thiếu lưu trú
+            gstars = est.tier_stars[lt]
+            extra_plan = allocate_rooms(room_plan.short, est.rooms[str(gstars)])
+            g_by_kind = {t.kind: t for t in est.rooms[str(gstars)]}
+            for kind, count in extra_plan.counts.items():
+                items.append(_item("Lưu trú", f"{_room_label(kind)} – khách sạn {gstars} sao (cho "
+                                   f"{room_plan.short} người chưa có phòng)", count * nights, "phòng-đêm",
+                                   g_by_kind[kind].price, estimated=True))
 
     # Gala thay bữa tối đêm cuối
     gala_tier = use("Gala")
@@ -104,6 +112,10 @@ def price_tier(req: TripRequest, tier: str, origin_pt: Optional[GeoPoint], dest_
 
     rooms_text = "Không lưu trú" if nights < 1 else ", ".join(
         f"{c} phòng {k} người" if k.isdigit() else f"{c} phòng {k}" for k, c in room_plan.counts.items())
+    if nights >= 1 and extra_plan is not None:
+        rooms_text = ", ".join(x for x in (rooms_text, "thêm " + ", ".join(
+            f"{c} phòng {k} người" for k, c in extra_plan.counts.items()) + " ở khách sạn %d sao (ước tính)" % gstars)
+            if x)
     stars = est.tier_stars[use("Lưu trú")]
     summary = PackageSummary(
         transport=lg.note or "", lodging="" if nights < 1 else (hotel.name if hotel else f"Khách sạn {stars} sao"),

@@ -165,3 +165,27 @@ def test_no_rooms_available_note_not_on_transport_line():
     assert p.room_plan.short == 60
     assert p.line_items[0].category == "Di chuyển" and p.line_items[0].note is None
     assert any(li.category == "Lưu trú" and li.note and "Thiếu chỗ" in li.note for li in p.line_items)
+
+
+def test_short_hotel_prices_missing_people_with_generic_rooms():
+    req = replace(REQ_C_60, headcount=50, budget=None)
+    short = _hotel(stars=4, room_types=[rt("2", 2, 1_000_000, available=3)])  # "còn 3 phòng" cho 50 người
+    p = price_tier(req, "can_bang", HN, HALONG, short, EST)
+    assert p.room_plan.short == 44
+    hotel_part = 3 * 1_000_000 * req.nights
+    extra = allocate_rooms(44, EST.rooms[str(EST.tier_stars["can_bang"])])
+    lodging = sum(li.amount for li in p.line_items if li.category == "Lưu trú")
+    assert lodging == hotel_part + extra.cost_per_night * req.nights
+    generic_lines = [li for li in p.line_items if li.category == "Lưu trú" and li.estimated]
+    assert generic_lines and all("44 người" in li.description for li in generic_lines)
+    assert any(li.note and "Thiếu chỗ cho 44 người" in li.note for li in p.line_items)
+    assert sum(li.amount for li in p.line_items) == p.total
+
+
+def test_short_hotel_recommendation_uses_full_total():
+    req = replace(REQ_C_60, headcount=50)
+    short = _hotel(stars=4, room_types=[rt("2", 2, 1_000_000, available=3)])
+    full = price_tier(replace(req, budget=None), "can_bang", HN, HALONG, short, EST).total
+    pk = price_packages(replace(req, budget=full - 1), HN, HALONG, {"can_bang": short}, EST)
+    assert pk[1].total == full and pk[1].over_budget == 1 and not pk[1].recommended
+    assert pk[1].room_plan.short == 44
