@@ -93,7 +93,7 @@ def _plan_from_dict(d: dict) -> Plan:
 def kiem_lich_trinh(headcount: int, plan: dict, room_short: int = 0, leg_hours: float = 4.0) -> list:
     """kiem_lich_trinh · input: số người, plan (dict dạng Plan của web), room_short: số người còn thiếu phòng,
     leg_hours: giờ của chặng di chuyển · output: danh sách {code, message, ref} với mã CHONG_GIO, QUA_GIO_KET_THUC,
-    TRUNG_DIEM, THIEU_PHONG, THIEU_SUC_CHUA · không tác động ra ngoài."""
+    VE_MUON, TRUNG_DIEM, THIEU_PHONG, THIEU_SUC_CHUA · không tác động ra ngoài."""
     pkg = SimpleNamespace(tier=plan.get("tier"), leg=SimpleNamespace(hours=leg_hours),
                           room_plan=SimpleNamespace(short=room_short))
     found = validate(SimpleNamespace(headcount=headcount), _plan_from_dict(plan), pkg)

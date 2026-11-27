@@ -5,7 +5,8 @@ from datetime import date
 from src.core.orchestration.nodes import trip_nodes as tn
 from src.core.planning.estimates import load_estimates
 from src.core.planning.pricing import price_packages
-from src.core.planning.scheduler import load_menus, load_programs, schedule
+from src.core.planning.scheduler import hm, load_menus, load_programs, schedule, slot_minutes, to_min
+from src.core.planning.travel import bus_hours, leg
 from src.core.planning.types import Candidate, GeoPoint, TierPick, TripRequest
 from src.core.planning.validator import validate
 
@@ -187,3 +188,86 @@ def test_du_tru_goi_defaults_start_to_travel_today(monkeypatch):
     monkeypatch.setattr(tools, "price_packages", lambda req, *a: seen.setdefault("req", req) and [])
     tools.du_tru_goi(30, 2, 1, "Hà Nội", "Đà Lạt")
     assert seen["req"].start_date == date(2026, 12, 4) and seen["req"].date_assumed
+
+
+HN, DL = GeoPoint(21.03, 105.85), GeoPoint(11.94, 108.44)
+
+
+def assert_chronological(plan):
+    for d in plan.days:
+        mins = [to_min(s.start) for s in d.slots]
+        assert mins == sorted(mins), (d.label, [s.start for s in d.slots])
+        assert all(0 <= m < 24 * 60 for m in mins), (d.label, [s.start for s in d.slots])
+
+
+def test_hm_never_wraps_past_midnight():
+    assert hm(25 * 60 + 10) != "01:10"
+
+
+def test_every_tier_flies_when_bus_leg_over_10h():
+    near_10 = GeoPoint(11.94 + 4.0, 108.44)  # ~ 580 km đường bộ, xe ~ 13 giờ
+    km = 0
+    for tier in ("tiet_kiem", "can_bang", "cao_cap"):
+        lg = leg(near_10, DL, tier, 50, "Đà Lạt", EST, days=3)
+        assert bus_hours(lg.road_km) > 10 and lg.mode == "plane", tier
+        km = lg.road_km
+    assert km
+
+
+def test_bus_up_to_10h_stays_bus_for_non_premium():
+    p = GeoPoint(11.94 + 2.6, 108.44)  # xe ~ 8–10 giờ
+    lg = leg(p, DL, "tiet_kiem", 50, "Đà Lạt", EST, days=3)
+    assert 8 < bus_hours(lg.road_km) <= 10 and lg.mode == "bus"
+
+
+def test_hanoi_dalat_50_people_all_tiers_fly_and_clock_valid():
+    req = make_req(headcount=50, days=3, nights=2)
+    pkgs = price_packages(req, HN, DL, {}, EST)
+    assert [p.leg.mode for p in pkgs] == ["plane"] * 3
+    for pkg in pkgs:
+        plan = schedule(req, pkg, TierPick(), {}, EST, MENUS, PROGRAMS)
+        assert_chronological(plan)
+        day1 = plan.days[0].slots
+        arrive = to_min(day1[0].start) + slot_minutes(day1[0], pkg)
+        lunch = next(s for s in day1 if s.kind == "meal")
+        assert to_min(lunch.start) >= arrive
+        codes = {v.code for v in validate(req, plan, pkg)}
+        assert "CHONG_GIO" not in codes and "QUA_GIO_KET_THUC" not in codes, (pkg.tier, codes)
+
+
+def test_leg_past_midnight_moves_arrival_to_next_day():
+    req = make_req(headcount=50, days=3, nights=2)
+    plan, pkg = build(req)
+    pkg.leg = replace(pkg.leg, mode="bus", hours=31.7)
+    plan = schedule(req, pkg, TierPick(), {}, EST, MENUS, PROGRAMS)
+    assert_chronological(plan)
+    assert [s.kind for s in plan.days[0].slots] == ["travel"]
+    arrive = 6 * 60 + 30 + int(round(31.7 * 60)) - 24 * 60  # 14:12 ngày 2
+    assert "14:12" in plan.days[0].slots[0].details and "ngày 2" in plan.days[0].slots[0].details
+    day2 = plan.days[1].slots
+    assert day2[0].kind == "meal" and to_min(day2[0].start) >= arrive
+    assert any(s.kind == "hotel" and s.title.startswith("Nhận phòng") for s in day2)
+
+
+def test_return_past_midnight_is_not_shown_as_early_morning():
+    req = make_req(days=2, nights=1)
+    plan, pkg = build(req)
+    pkg.leg = replace(pkg.leg, hours=12.0)
+    plan = schedule(req, pkg, TierPick(), {}, EST, MENUS, PROGRAMS)
+    ret = plan.days[-1].slots[-1]
+    assert ret.title.startswith("Về") and "hôm sau" in ret.details
+
+
+def test_day_trip_late_return_flagged():
+    req = make_req(days=1, nights=0)
+    plan, pkg = build(req)
+    pkg.leg = replace(pkg.leg, hours=9.0)
+    plan = schedule(req, pkg, TierPick(), {}, EST, MENUS, PROGRAMS)
+    assert "VE_MUON" in {v.code for v in validate(req, plan, pkg)}
+
+
+def test_day_trip_near_not_flagged_late():
+    req = make_req(days=1, nights=0)
+    plan, pkg = build(req)
+    codes = {v.code for v in validate(req, plan, pkg)}
+    assert "VE_MUON" not in codes and "QUA_GIO_KET_THUC" not in codes and "CHONG_GIO" not in codes

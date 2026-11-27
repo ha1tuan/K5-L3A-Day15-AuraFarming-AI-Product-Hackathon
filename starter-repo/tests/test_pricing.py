@@ -6,7 +6,7 @@ from pathlib import Path
 from src.core.planning.estimates import load_estimates
 from src.core.planning.pricing import price_packages, price_tier, round1k
 from src.core.planning.rooms import allocate_rooms
-from src.core.planning.travel import leg
+from src.core.planning.travel import bus_hours, leg
 from src.core.planning.types import Candidate, GeoPoint, RoomType, TripRequest
 
 HERE = Path(__file__).parent
@@ -45,8 +45,12 @@ def test_leg_flight_only_destination():
 
 
 def test_leg_premium_flies_when_road_over_8h():
-    assert leg(HN, NHA_TRANG, "cao_cap", 40, "Nha Trang", EST).mode == "plane"
-    assert leg(HN, NHA_TRANG, "tiet_kiem", 40, "Nha Trang", EST).mode == "bus"
+    # R13: xe 8–10 giờ -> chỉ cao cấp bay; xe quá 10 giờ (Hà Nội – Nha Trang) -> mọi gói bay
+    mid = GeoPoint(HALONG.lat - 2.6, HALONG.lon)
+    assert 8 < bus_hours(leg(mid, HALONG, "tiet_kiem", 40, "Hạ Long", EST).road_km) <= 10
+    assert leg(mid, HALONG, "cao_cap", 40, "Hạ Long", EST).mode == "plane"
+    assert leg(mid, HALONG, "tiet_kiem", 40, "Hạ Long", EST).mode == "bus"
+    assert all(leg(HN, NHA_TRANG, t, 40, "Nha Trang", EST).mode == "plane" for t in ("tiet_kiem", "can_bang"))
 
 
 def test_leg_missing_coords_assumes_300km():

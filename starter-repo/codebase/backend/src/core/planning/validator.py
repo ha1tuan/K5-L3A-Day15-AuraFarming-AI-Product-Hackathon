@@ -1,5 +1,6 @@
 """Kiểm lịch: validate(req, plan, pkg) -> list[Violation].
-Mã: CHONG_GIO (khối chồng nhau) · QUA_GIO_KET_THUC (kết thúc sau 22:00, trừ chặng về) · TRUNG_DIEM
+Mã: CHONG_GIO (khối chồng nhau) · QUA_GIO_KET_THUC (kết thúc sau 22:00, trừ chặng về) · VE_MUON (đi về trong
+ngày mà chặng về tới nơi sau 23:00) · TRUNG_DIEM
 (cùng một nơi xuất hiện hai lần) · THIEU_PHONG (RoomPlan.short > 0) · THIEU_SUC_CHUA (nguồn ghi sức chứa < số người).
 (ID_KHONG_TON_TAI do bước chọn của trip_nodes phát ra.)"""
 import re
@@ -8,6 +9,7 @@ from .scheduler import RETURN_PREFIX, slot_minutes, to_min
 from .types import Violation
 
 LATEST_END = 22 * 60
+LATEST_RETURN = 23 * 60
 CAPACITY_RE = re.compile(r"Sức chứa theo nguồn: (\d+)")
 
 
@@ -22,6 +24,8 @@ def validate(req, plan, pkg) -> list[Violation]:
                                      b.title))
         for s in slots:
             is_return = s.kind == "travel" and s.title.startswith(RETURN_PREFIX)
+            if is_return and len(plan.days) == 1 and to_min(s.start) + slot_minutes(s, pkg) > LATEST_RETURN:
+                out.append(Violation("VE_MUON", "%s: chặng về tới nơi sau 23:00" % day.label, s.title))
             if not is_return and to_min(s.start) + slot_minutes(s, pkg) > LATEST_END:
                 out.append(Violation("QUA_GIO_KET_THUC", "%s: \"%s\" kết thúc sau 22:00" % (day.label, s.title),
                                      s.title))

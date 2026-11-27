@@ -1,5 +1,5 @@
 """Chặng đi từ điểm xuất phát tới điểm đến: leg(...) -> Leg. Đường bộ = haversine × 1.3;
-giờ xe = km/50 + 0.5 giờ nghỉ cho mỗi 3 giờ chạy. Chỉ thư viện chuẩn + planning."""
+giờ xe = km/50 + 0.5 giờ nghỉ cho mỗi 3 giờ chạy; xe quá 10 giờ (cao cấp: 8 giờ) -> máy bay. Chỉ thư viện chuẩn + planning."""
 import math
 from typing import Optional
 
@@ -11,7 +11,8 @@ BUS_KMH = 50
 DEFAULT_KM = 300
 PLANE_KMH = 700
 PLANE_OVERHEAD_H = 3.0   # làm thủ tục + di chuyển ra/vào sân bay
-PREMIUM_FLY_OVER_H = 8
+PREMIUM_FLY_OVER_H = 8   # gói cao cấp bay khi xe quá 8 giờ
+FLY_OVER_H = 10          # mọi gói bay khi xe quá 10 giờ (R13)
 
 
 def haversine_km(a: GeoPoint, b: GeoPoint) -> float:
@@ -33,7 +34,8 @@ def leg(origin: Optional[GeoPoint], dest: Optional[GeoPoint], tier: str, headcou
     guessed = origin is None or dest is None
     road_km = DEFAULT_KM if guessed else round(haversine_km(origin, dest) * ROAD_FACTOR)
     hours = bus_hours(road_km)
-    if dest_name in est.flight_only or (tier == "cao_cap" and hours > PREMIUM_FLY_OVER_H):
+    if dest_name in est.flight_only or hours > FLY_OVER_H \
+            or (tier == "cao_cap" and hours > PREMIUM_FLY_OVER_H):
         return Leg(mode="plane", road_km=road_km, hours=round(road_km / PLANE_KMH + PLANE_OVERHEAD_H, 2),
                    vehicles=0, unit_price=est.flight_per_pax[tier][band_of(road_km)], qty=headcount,
                    estimated=guessed, note="Vé máy bay khứ hồi")

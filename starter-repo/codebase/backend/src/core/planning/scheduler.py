@@ -1,7 +1,8 @@
 """Xếp lịch bằng code: schedule(req, pkg, pick, ranked, est, menus, programs) -> Plan.
 Model chỉ chọn id; giờ, thực đơn, chương trình do code ghép. Mỗi khối nối tiếp theo con trỏ thời gian
 nên không chồng nhau; giờ cố định (trưa 11:30, tối 18:00, gala 18:30, team building 14:00) chỉ đẩy muộn
-khi chặng đi kéo dài. Chỉ thư viện chuẩn + planning."""
+khi chặng đi kéo dài. Đồng hồ không quay vòng 24 giờ: chặng đi tới sau 20:00 hoặc qua nửa đêm thì phần
+lịch còn lại dời sang ngày tới nơi (ngày giữa chỉ còn di chuyển). Chỉ thư viện chuẩn + planning."""
 import json
 from datetime import timedelta
 from pathlib import Path
@@ -15,6 +16,8 @@ WEEKDAYS = ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "T
 RETURN_PREFIX = "Về"
 DURATION = {"hotel": 30, "meal": 90, "activity": 180, "sight": 150, "rest": 90, "gala": 180}
 DEFAULT_TRAVEL_MIN = 240
+DAY_MIN = 24 * 60
+LATE_ARRIVAL = 20 * 60   # tới sau giờ này: ngày đó chỉ còn di chuyển + nhận phòng
 
 
 def load_menus(path: Optional[Path] = None) -> dict:
@@ -35,8 +38,14 @@ def to_min(hhmm: str) -> int:
 
 
 def hm(minutes: int) -> str:
-    minutes %= 24 * 60
+    """Phút -> "HH:MM", không quay vòng: quá 24 giờ thì giờ ≥ 24 (validator sẽ bắt)."""
     return "%02d:%02d" % (minutes // 60, minutes % 60)
+
+
+def clock(minutes: int) -> str:
+    """Giờ kèm ngày cho mốc có thể qua nửa đêm: 1570 -> "02:10 hôm sau"."""
+    days, m = divmod(minutes, DAY_MIN)
+    return hm(m) + ("" if days == 0 else " hôm sau" if days == 1 else " (%d ngày sau)" % days)
 
 
 def _step_end(step) -> str:
@@ -118,11 +127,18 @@ def schedule(req: TripRequest, pkg: Package, pick: TierPick, ranked: dict, est: 
         return Slot(hm(max(cur, fixed)), "hotel", title, note=pick.reasons.get(pick.hotel) if hotel else None,
                     flags=flags, source_url=url, details=pkg.summary.rooms or None)
 
+    plane = leg.mode == "plane"
+    out_start = 330 if plane else 390
+    arrive_day, arrive_at = divmod(out_start + int(round(leg.hours * 60)), DAY_MIN)
+    arrive_day += 1  # ngày (1-based) tới nơi
+    content_day = arrive_day + 1 if arrive_at > LATE_ARRIVAL else arrive_day  # ngày bắt đầu lịch ở điểm đến
+    checked_in = False
+
     out_days = []
     for d in range(1, days + 1):
-        first, last = d == 1, d == days
+        first, last = d == content_day, d == days
         slots: list[Slot] = []
-        cur = 0
+        cur = arrive_at if d == arrive_day else 0
 
         def add(slot: Slot) -> Slot:
             nonlocal cur
@@ -130,19 +146,26 @@ def schedule(req: TripRequest, pkg: Package, pick: TierPick, ranked: dict, est: 
             cur = to_min(slot.start) + slot_minutes(slot, pkg)
             return slot
 
-        if first:
-            plane = leg.mode == "plane"
-            start = 330 if plane else 390
+        if d == 1:
             title = ("Tập hợp ra sân bay %s, bay đi %s" % (req.origin, dest)) if plane else \
                 "Xuất phát từ %s đi %s" % (req.origin, dest)
-            add(Slot(hm(start), "travel", title, note=leg.note, flags=["estimate"] if leg.estimated else [],
-                     details="Khoảng %s km, dự kiến %s giờ" % (leg.road_km, leg.hours)))
-        else:
+            when = hm(arrive_at) + ("" if arrive_day == 1 else " ngày %d" % arrive_day)
+            add(Slot(hm(out_start), "travel", title, note=leg.note, flags=["estimate"] if leg.estimated else [],
+                     details="Khoảng %s km, dự kiến %s giờ, tới nơi khoảng %s" % (leg.road_km, leg.hours, when)))
+            cur = arrive_at if arrive_day == 1 else 0
+        if d < content_day:  # ngày chỉ còn di chuyển; tới muộn thì nhận phòng nghỉ luôn
+            if d == arrive_day and req.nights >= 1:
+                add(hotel_in(arrive_at, arrive_at))
+                checked_in = True
+            day_date = req.start_date + timedelta(days=d - 1)
+            out_days.append(Day("Ngày %d · %s" % (d, WEEKDAYS[day_date.weekday()]), day_date.isoformat(), slots))
+            continue
+        if not first:
             if last and req.nights >= 1:
                 add(Slot("08:00", "hotel", "Trả phòng khách sạn"))
             add(sight(cur, 510, d, "buổi sáng"))
         add(meal("bua_trua", "Bữa trưa", cur, 690))
-        if first and req.nights >= 1:
+        if first and req.nights >= 1 and not checked_in:
             add(hotel_in(cur, 780))
         if rest_mode:
             r = programs["nghi_duong"]["rest"][(d - 1) % len(programs["nghi_duong"]["rest"])]
@@ -173,7 +196,7 @@ def schedule(req: TripRequest, pkg: Package, pick: TierPick, ranked: dict, est: 
             arrive = dep + int(round(leg.hours * 60))
             add(Slot(hm(dep), "travel", "%s %s" % (RETURN_PREFIX, req.origin), note=leg.note,
                      flags=["estimate"] if leg.estimated else [],
-                     details="Dự kiến đến nơi lúc %s" % hm(arrive)))
+                     details="Dự kiến đến nơi lúc %s" % clock(arrive)))
         day_date = req.start_date + timedelta(days=d - 1)
         out_days.append(Day("Ngày %d · %s" % (d, WEEKDAYS[day_date.weekday()]), day_date.isoformat(), slots))
 
