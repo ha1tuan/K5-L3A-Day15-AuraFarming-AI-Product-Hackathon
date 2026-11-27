@@ -138,3 +138,21 @@ def test_geocode_http_error_returns_none(monkeypatch):
     monkeypatch.setattr(geo.time, "sleep", lambda s: None)
     monkeypatch.setattr(geo.httpx, "get", boom)
     assert geo.geocode("Da Lat") is None
+
+
+class BadJson(FakeResponse):
+    def json(self):
+        raise ValueError("không phải JSON")
+
+
+def test_search_bad_json_raises_unavailable(monkeypatch):
+    monkeypatch.setenv("TAVILY_API_KEY", "k")
+    monkeypatch.setattr(tavily_client.httpx, "post", lambda *a, **k: BadJson(None))
+    with pytest.raises(SearchUnavailable):
+        tavily_client.search("q")
+
+
+def test_geocode_bad_json_returns_none(monkeypatch):
+    monkeypatch.setattr(geo.time, "sleep", lambda s: None)
+    monkeypatch.setattr(geo.httpx, "get", lambda *a, **k: BadJson(None))
+    assert geo.geocode("Da Lat") is None

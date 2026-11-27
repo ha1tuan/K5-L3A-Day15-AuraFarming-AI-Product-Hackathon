@@ -45,7 +45,7 @@ def geocode(name: str, near: Optional[str] = None, domestic: bool = False) -> Op
         params["countrycodes"] = "vn"
     try:
         rows = cached_call("geo", params, lambda: _fetch(params))
-    except httpx.HTTPError:
+    except (httpx.HTTPError, ValueError):  # ValueError: phản hồi không phải JSON
         return None
     if not rows:
         return None

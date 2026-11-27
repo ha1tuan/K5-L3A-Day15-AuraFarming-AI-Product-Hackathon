@@ -55,6 +55,6 @@ def search(query: str, max_results: int = 8) -> list[SearchHit]:
     try:
         raw = cached_call("tavily", {"query": query, "max_results": max_results},
                           lambda: _fetch(query, max_results))
-    except httpx.HTTPError as e:
+    except (httpx.HTTPError, ValueError) as e:  # ValueError: phản hồi không phải JSON
         raise SearchUnavailable(str(e)) from e
     return [SearchHit(r["title"], r["url"], r["snippet"], r["domain"]) for r in raw]
