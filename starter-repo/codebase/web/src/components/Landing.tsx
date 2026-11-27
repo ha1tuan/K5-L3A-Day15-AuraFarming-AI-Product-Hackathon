@@ -94,10 +94,10 @@ function DestCard({ d, big, onOpen }: { d: Featured; big?: boolean; onOpen: () =
   const Icon = d.island || d.hours > 6 ? Plane : Bus;
   return (
     <button type="button" onClick={onOpen}
-      className={`card-lift group relative cursor-pointer overflow-hidden rounded-3xl bg-ocean text-left text-white ${big ? 'sm:col-span-2 sm:row-span-2' : ''}`}>
+      className={`group relative block cursor-pointer overflow-hidden rounded-3xl bg-ocean text-left text-white shadow-lg transition duration-500 hover:-translate-y-1 hover:shadow-2xl ${big ? 'h-[26rem] w-[34rem]' : 'h-[22rem] w-[17rem] sm:w-[19rem]'}`}>
       <img src={thumb(v.id)} alt="" loading="lazy" className="absolute inset-0 size-full scale-110 object-cover transition duration-1000 group-hover:scale-125" />
       <div className="absolute inset-0 bg-gradient-to-t from-ocean via-ocean/35 to-transparent" />
-      <div className={`relative flex h-full flex-col p-5 ${big ? 'min-h-[24rem] sm:p-7' : 'min-h-[16rem]'}`}>
+      <div className="relative flex h-full flex-col p-5">
         <div className="flex flex-wrap gap-1.5">
           {d.scenery.slice(0, 2).map(s => {
             const I = SCENERY_ICON[s] ?? MapPin;
@@ -123,6 +123,34 @@ function DestCard({ d, big, onOpen }: { d: Featured; big?: boolean; onOpen: () =
   );
 }
 
+/* --- Dải trượt "dây chuyền" tự động (phải → trái), rê chuột thì dừng ------------------------------- */
+function Marquee({ children, seconds = 40, reverse = false, className = '' }: { children: React.ReactNode[]; seconds?: number; reverse?: boolean; className?: string }) {
+  const items = children.length ? children : [];
+  const rep = Math.max(1, Math.ceil(8 / Math.max(1, items.length)));        // ít thẻ (lọc) thì lặp cho kín dải
+  const row = Array.from({ length: rep }, () => items).flat();
+  return (
+    <div className={`marquee-wrap ${className}`}>
+      <div className={`marquee-track ${reverse ? 'reverse' : ''}`} style={{ animationDuration: `${seconds * rep}s` }}>
+        {[...row, ...row].map((c, k) => <div key={k} className="shrink-0" aria-hidden={k >= row.length || undefined}>{c}</div>)}
+      </div>
+    </div>
+  );
+}
+
+function SceneCard({ s, small = false }: { s: Scene; small?: boolean }) {
+  return (
+    <a href={s.page} target="_blank" rel="noreferrer"
+      className={`img-zoom group relative block overflow-hidden rounded-3xl bg-black/30 ${small ? 'h-56 w-[22rem] sm:h-64 sm:w-[28rem]' : 'h-72 w-[26rem] sm:h-[22rem] sm:w-[36rem]'}`}>
+      <img src={s.src} alt={`${s.name}, ${s.province}`} loading="lazy" decoding="async" className="size-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent" />
+      <div className="absolute bottom-0 p-5">
+        <p className="text-lg font-extrabold">{s.name}</p>
+        <p className="text-xs text-white/70">{s.province} · {s.artist} · {s.license}</p>
+      </div>
+    </a>
+  );
+}
+
 /* --- Hero trình chiếu 4K ------------------------------------------------------------------------- */
 function Hero({ onStart, onQuote }: { onStart: () => void; onQuote: () => void }) {
   const [i, setI] = useState(0);
@@ -143,9 +171,10 @@ function Hero({ onStart, onQuote }: { onStart: () => void; onQuote: () => void }
         <h1 className="fade-up-2 mt-6 max-w-4xl text-[2.6rem] font-extrabold leading-[1.05] tracking-tight drop-shadow-[0_4px_30px_rgba(0,0,0,.35)] sm:text-7xl">
           Đưa cả công ty đi chơi —<br /><span className="text-gradient-sun">đúng tiền, đủ hoá đơn.</span>
         </h1>
-        <p className="fade-up-3 mt-6 max-w-2xl text-lg text-white/90 sm:text-xl">
-          3 phương án có bảng chi phí và lịch từng giờ trong vài giây. Đã có báo giá tour? Dán vào để biết <b>tổng chi thật</b> trước khi trình sếp.
-        </p>
+        <div className="fade-up-3 mt-7 grid max-w-3xl gap-1.5 text-lg text-white/90 sm:text-xl">
+          <p>3 phương án có bảng chi phí và lịch từng giờ — chỉ trong vài giây.</p>
+          <p>Đã có báo giá tour? Dán vào để biết <b className="text-white">tổng chi thật</b> trước khi trình sếp.</p>
+        </div>
         <div className="fade-up-3 mt-9 flex flex-wrap gap-3">
           <button type="button" onClick={onStart} className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-sun px-8 py-4 text-base font-semibold shadow-2xl shadow-sun/40 transition hover:-translate-y-0.5 hover:bg-sun-dark">
             <CalendarRange className="size-5" aria-hidden />Lập kế hoạch ngay
@@ -188,7 +217,6 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
   }, [filter]);
   const nVideo = FEATURED.reduce((s, f) => s + f.videos.length, 0);
   const hanoi = scene('hanoi'), hue = scene('hue'), danang = scene('danang');
-  const GALLERY = ['phongnha', 'sapa', 'hue', 'phuquoc', 'hoian', 'trangan'].map(scene);
 
   return (
     <div>
@@ -286,56 +314,43 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
         </ol>
       </section>
 
-      {/* 4. ĐIỂM ĐẾN + VIDEO ----------------------------------------------------------------------- */}
-      <section className="bg-soft py-24 sm:py-32" aria-labelledby="dest-feat">
+      {/* 4. ĐIỂM ĐẾN + VIDEO — dải trượt tự động ------------------------------------------------- */}
+      <section className="overflow-hidden bg-soft py-24 sm:py-28" aria-labelledby="dest-feat">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="mb-10 flex flex-wrap items-end gap-6">
+          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <Reveal><Eyebrow>Xem trước khi chọn</Eyebrow></Reveal>
               <Reveal delay={80}><h2 id="dest-feat" className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl">{FEATURED.length} điểm đến cho đoàn công ty</h2></Reveal>
-              <Reveal delay={160}><p className="mt-3 max-w-2xl text-lg text-muted">Bấm vào một nơi để xem video review và team building thật, mùa đẹp và giá tham khảo cho cả đoàn.</p></Reveal>
+              <Reveal delay={160}><p className="mt-3 max-w-2xl text-lg text-muted">Bấm vào thẻ để xem video review & team building thật, mùa đẹp và giá tham khảo cho cả đoàn. Rê chuột để dừng dải trượt.</p></Reveal>
             </div>
-          </div>
-          <Reveal className="mb-8 flex flex-wrap gap-2" role="tablist" aria-label="Lọc điểm đến">
-            {FILTERS.map(([f, l]) => (
-              <button key={f} type="button" role="tab" aria-selected={filter === f} onClick={() => setFilter(f)}
-                className={`cursor-pointer rounded-full px-5 py-2.5 text-sm font-semibold transition ${filter === f ? 'bg-ocean text-white shadow-lg' : 'bg-card text-muted ring-1 ring-line hover:text-primary'}`}>{l}</button>
-            ))}
-          </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {list.map((d, k) => (
-              <Reveal key={`${filter}-${d.id}`} delay={(k % 4) * 90} variant="zoom" className={filter === 'all' && k === 0 ? 'sm:col-span-2 sm:row-span-2' : ''}>
-                <DestCard d={d} big={filter === 'all' && k === 0} onOpen={() => setOpen(d)} />
-              </Reveal>
-            ))}
+            <Reveal delay={200} className="flex flex-wrap gap-2" role="tablist" aria-label="Lọc điểm đến">
+              {FILTERS.map(([f, l]) => (
+                <button key={f} type="button" role="tab" aria-selected={filter === f} onClick={() => setFilter(f)}
+                  className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold transition ${filter === f ? 'bg-ocean text-white shadow-lg' : 'bg-card text-muted ring-1 ring-line hover:text-primary'}`}>{l}</button>
+              ))}
+            </Reveal>
           </div>
         </div>
+        <Marquee key={filter} seconds={Math.max(30, list.length * 6)} className="mt-10">
+          {list.map(d => <DestCard key={d.id} d={d} onOpen={() => setOpen(d)} />)}
+        </Marquee>
       </section>
 
-      {/* 5. VIỆT NAM QUA ỐNG KÍNH ------------------------------------------------------------------ */}
-      <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+      {/* 5. VIỆT NAM QUA ỐNG KÍNH — hai dải ảnh 4K chạy ngược chiều -------------------------------- */}
+      <section className="overflow-hidden bg-ocean py-24 text-white sm:py-28">
+        <div className="mx-auto mb-12 grid max-w-7xl gap-4 px-4 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
-            <Reveal><Eyebrow>Cảm hứng</Eyebrow></Reveal>
+            <Reveal><Eyebrow light>Cảm hứng</Eyebrow></Reveal>
             <Reveal delay={80}><h2 className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl">Việt Nam qua ống kính 4K</h2></Reveal>
           </div>
-          <Reveal delay={160}><p className="max-w-md text-muted">Ảnh gốc độ phân giải cao từ Wikimedia Commons, giấy phép mở — bấm để xem bản đầy đủ và tác giả.</p></Reveal>
+          <Reveal delay={160}><p className="max-w-md text-white/70">{SCENES.length} danh thắng, ảnh gốc độ phân giải cao từ Wikimedia Commons (giấy phép mở). Bấm ảnh để xem bản đầy đủ và tác giả.</p></Reveal>
         </div>
-        <div className="grid auto-rows-[14rem] gap-4 sm:grid-cols-2 lg:auto-rows-[16rem] lg:grid-cols-4">
-          {GALLERY.map((s, k) => (
-            <Reveal key={s.id} delay={(k % 3) * 120} variant="zoom"
-              className={k === 0 ? 'sm:col-span-2 sm:row-span-2' : k === 3 ? 'lg:col-span-2' : ''}>
-              <a href={s.page} target="_blank" rel="noreferrer" className="img-zoom group relative block size-full overflow-hidden rounded-3xl bg-ocean">
-                <Img s={s} className="size-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean/85 via-ocean/10 to-transparent opacity-90 transition group-hover:opacity-100" />
-                <div className="absolute bottom-0 p-5 text-white">
-                  <p className="text-lg font-extrabold">{s.name}</p>
-                  <p className="text-xs text-white/70">{s.province} · {s.artist} · {s.license}</p>
-                </div>
-              </a>
-            </Reveal>
-          ))}
-        </div>
+        <Marquee seconds={70}>
+          {SCENES.slice(0, 6).map(s => <SceneCard key={s.id} s={s} />)}
+        </Marquee>
+        <Marquee seconds={80} reverse className="mt-5">
+          {[...SCENES.slice(6), SCENES[0]].map(s => <SceneCard key={s.id} s={s} small />)}
+        </Marquee>
       </section>
 
       {/* 6. HAI CÔNG CỤ — nền Huế ------------------------------------------------------------------ */}
