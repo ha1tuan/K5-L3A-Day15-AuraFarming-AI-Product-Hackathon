@@ -1,0 +1,34 @@
+{
+ "ngay": "2026-11-27",
+ "nguon": "vietnambooking.com sitemap",
+ "ket_qua": {
+  "G": {
+   "N": 30,
+   "K1_co_muc_khong_bao_gom": 30,
+   "K1_khong_bao_gom_ge3_khoan": 26,
+   "K1_so_khoan_trung_vi": 3,
+   "K2_vat_khong_bao_gom": 25,
+   "K2_vat_bao_gom": 0,
+   "K2_vat_nhac_noi_khac": 5,
+   "K2_vat_khong_nhac": 0,
+   "K3_phu_thu": 22,
+   "K4_chi_lien_he": 0,
+   "K5_gia_thay_doi": 9,
+   "NGUONG_ge3_khoan_va_vat_khong_ro": 25
+  },
+  "S": {
+   "N": 60,
+   "K1_co_muc_khong_bao_gom": 53,
+   "K1_khong_bao_gom_ge3_khoan": 45,
+   "K1_so_khoan_trung_vi": 4,
+   "K2_vat_khong_bao_gom": 46,
+   "K2_vat_bao_gom": 2,
+   "K2_vat_nhac_noi_khac": 9,
+   "K2_vat_khong_nhac": 3,
+   "K3_phu_thu": 42,
+   "K4_chi_lien_he": 0,
+   "K5_gia_thay_doi": 14,
+   "NGUONG_ge3_khoan_va_vat_khong_ro": 43
+  }
+ }
+}

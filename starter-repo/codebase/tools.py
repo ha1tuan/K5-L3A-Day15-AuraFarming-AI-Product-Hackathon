@@ -142,3 +142,14 @@ def goi_y_diem_den(req: dict, so: int = 3) -> list:
     ngân sách, giờ đi một chiều, mùa đẹp; mỗi nơi đủ 3 gói · không tác động ra ngoài."""
     tu = du_lieu.tim_diem_di(req.get("noi_xuat_phat"))
     return du_lieu.goi_y_diem_den(req, tu, so) if tu else []
+
+
+import soat_bao_gia  # noqa: E402
+
+
+@tool
+def soat_bao_gia_tour(text: str) -> str:
+    """soat_bao_gia_tour · input: tin nhắn có báo giá tour đoàn (giá / khách, 'bao gồm', 'không bao gồm') + số người,
+    ngân sách · output: bảng tổng chi thật (giá tour + VAT + vé / tip / vé máy bay tính được), so ngân sách, soát hoá đơn /
+    chuyển khoản / trần phúc lợi (data/quy_tac_chung_tu.json), câu cần hỏi lại công ty tour · không tác động ra ngoài."""
+    return soat_bao_gia.soat(text)

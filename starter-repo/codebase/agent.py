@@ -19,9 +19,10 @@ import re
 
 import du_lieu
 import guardrails as gr
+import soat_bao_gia
 import planner
 from ai import call_model
-from tools import dinh_vi, du_tru_goi, du_tru_tu_du_lieu, giai_thich_vuot, goi_y_diem_den
+from tools import dinh_vi, du_tru_goi, du_tru_tu_du_lieu, giai_thich_vuot, goi_y_diem_den, soat_bao_gia_tour
 from tracing import note
 
 MAX_REPAIR = 1   # số vòng sửa lịch khi kiem_lich_trinh báo vi phạm (mỗi vòng = 1 lần gọi model)
@@ -343,6 +344,10 @@ def answer(text: str) -> dict:
     if foreign:
         note("guardrail: ngoài phạm vi (nước ngoài: %s)" % foreign)
         return _finish(pre + [gr.refuse_foreign(foreign)])
+
+    if soat_bao_gia.la_bao_gia(safe):              # người dùng dán báo giá tour → soát tổng chi thật + chứng từ (code)
+        note("nhánh soát báo giá")
+        return _finish(pre + [soat_bao_gia_tour(safe), gr.FOOTER])
 
     req = parse_request(safe)
     note("parse: " + json.dumps(req, ensure_ascii=False))

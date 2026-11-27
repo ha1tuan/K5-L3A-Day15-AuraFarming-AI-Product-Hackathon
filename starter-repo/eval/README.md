@@ -9,8 +9,8 @@ Bộ dữ liệu dựng `data/*.json` (seed 42): 5 điểm đi × 24 điểm đ�
 
 ## 2. Bộ câu thử dựng ra sao
 
-- `eval/benchmark.csv`: 30 câu (thuong 11 · kho 11 · tu_choi 8, trong đó 3 câu tấn công: R02, R03, R07) · bộ phụ `eval/benchmark_du_lieu.csv` 28 câu (13 `data_that`) để kiểm agent trên dữ liệu
-- Nguồn (`python run.py check` in sẵn): nguoi_dung 0 · data_that 2 · tu_viet 28 · sinh_seed 0 → từ người dùng / data thật 2/30 (cần ≥1/3 — **chưa đạt**, chờ câu từ phỏng vấn: `evidence/interviews/CAU_HOI.md` câu 14)
+- `eval/benchmark.csv`: 42 câu (thuong 18 · kho 15 · tu_choi 9, trong đó 3 câu tấn công: R02, R03, R07) — 30 câu đến lượt 1 + 12 câu soát báo giá Q01–Q12 thêm 27/11 23:40 (`eval/them_cau_bao_gia.py`) · bộ phụ `eval/benchmark_du_lieu.csv` 28 câu (13 `data_that`) để kiểm agent trên dữ liệu
+- Nguồn (`python run.py check` in sẵn): nguoi_dung 0 · data_that 14 · tu_viet 28 · sinh_seed 0 → từ người dùng / data thật **14/42 = 1/3** (12 câu Q01–Q12 dựng từ báo giá tour đoàn công khai thật, link ở cột `source`). Lưu ý: vượt khuyến nghị 20–30 câu vì không được xoá câu cũ.
 - Độ phủ — lưới input 3–5 chiều (guide 2.4 bước 5): __
 - Câu `kho` trỏ về 4 lớp chỗ khó (`spec.md` §5): lớp 1: __ · lớp 2: __ · lớp 3: __ · lớp 4: __
 

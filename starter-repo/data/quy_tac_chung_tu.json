@@ -1,0 +1,49 @@
+{
+ "_mo_ta": "Quy tắc chứng từ / thuế dùng để soát báo giá chuyến đi công ty (codebase/soat_bao_gia.py). Mỗi quy tắc có nguồn + ngày xem. Nguồn là bài tư vấn / công văn, KHÔNG phải văn bản gốc — output luôn ghi 'kế toán đối chiếu văn bản hiện hành'. Không phải tư vấn thuế.",
+ "ngay_xem": "2026-11-27",
+ "quy_tac": [
+  {
+   "id": "HOA_DON_VAT",
+   "noi_dung": "Khoản chi chỉ được tính vào chi phí được trừ khi có hoá đơn, chứng từ hợp pháp (hợp đồng với công ty lữ hành, hoá đơn phòng, ăn uống, vé).",
+   "ap_dung": "báo giá không gồm VAT / phải phụ thu mới xuất hoá đơn → cộng phần VAT vào tổng thật của công ty",
+   "nguon": [
+    "https://thuvienphapluat.vn/hoi-dap-phap-luat/chi-phi-cho-can-bo-nhan-vien-di-nghi-mat-co-duoc-tru-khi-tinh-thue-tndn-hay-khong-138034479.html",
+    "https://amis.misa.vn/109119/chi-phi-nghi-mat/"
+   ]
+  },
+  {
+   "id": "CHUYEN_KHOAN_5TR",
+   "noi_dung": "Từ 01/07/2025 (Luật Thuế GTGT 2024), hoá đơn từ 5 triệu đồng trở lên (gồm thuế) phải thanh toán không dùng tiền mặt mới được khấu trừ thuế GTGT đầu vào.",
+   "ap_dung": "tổng thanh toán cho công ty tour ≥ 5.000.000đ → chuyển khoản từ tài khoản công ty, không trả tiền mặt",
+   "nguon": [
+    "https://amis.misa.vn/51249/quy-dinh-thanh-toan-khong-dung-tien-mat/",
+    "https://cafef.vn/quy-dinh-moi-tu-1-7-2025-hoa-don-tren-5-trieu-dong-co-bat-buoc-chuyen-khoan-188250628102304535.chn"
+   ]
+  },
+  {
+   "id": "TRAN_PHUC_LOI",
+   "noi_dung": "Theo Thông tư 96/2015/TT-BTC: tổng chi phúc lợi (gồm nghỉ mát) trong năm không quá 01 tháng lương bình quân thực tế thì mới được trừ khi tính thuế TNDN. Luật Thuế TNDN 2025 / Nghị định 320/2025 có thể đã thay đổi — cần đối chiếu.",
+   "ap_dung": "nếu người dùng cho lương bình quân: chi phí chuyến đi / người so với 1 tháng lương bình quân (chưa tính các khoản phúc lợi khác trong năm)",
+   "nguon": [
+    "https://thuvienphapluat.vn/hoi-dap-phap-luat/chi-phi-cho-can-bo-nhan-vien-di-nghi-mat-co-duoc-tru-khi-tinh-thue-tndn-hay-khong-138034479.html",
+    "https://amis.misa.vn/109119/chi-phi-nghi-mat/"
+   ]
+  },
+  {
+   "id": "CHI_CHUNG_TAP_THE",
+   "noi_dung": "Chi trả dịch vụ du lịch chung cho tập thể, chứng từ không ghi tên từng cá nhân thì không tính vào thu nhập chịu thuế TNCN của người lao động.",
+   "ap_dung": "hợp đồng / hoá đơn ghi 'đoàn N khách công ty X', không ghi danh sách tên",
+   "nguon": [
+    "https://amis.misa.vn/109119/chi-phi-nghi-mat/"
+   ]
+  },
+  {
+   "id": "KHOAN_KHO_CO_HOA_DON",
+   "noi_dung": "Khoản chi tự túc tại chỗ (tip hướng dẫn viên / tài xế, đồ uống, vé mua tại cổng, quán ngoài chương trình) thường không lấy được hoá đơn cho công ty.",
+   "ap_dung": "đưa các khoản này vào hợp đồng tour để có hoá đơn, hoặc ghi rõ là nhân viên tự chi",
+   "nguon": [
+    "nhóm tự suy từ mục 'không bao gồm' của 30 báo giá tour đoàn (evidence/bao-gia.md)"
+   ]
+  }
+ ]
+}

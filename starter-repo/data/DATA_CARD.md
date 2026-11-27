@@ -153,3 +153,22 @@ Hai nguồn: `data/gia_chuan.json` (mỗi số có link + ngày xem + độ tin 
 | Từ đâu | `python eval/tao_bo_cau_thu.py`: 13 câu từ số liệu công khai có link (`data_that`), 15 câu tự viết (`tu_viet`) |
 | Metric | `eval/metric_spec_du_lieu.yaml` (6 metric nhóm + 4 metric: trong_ngan_sach_dung, co_nguon, hop_muc_dich, co_video) |
 | Đáp án tham chiếu | `eval/dap_an_tham_chieu.json`, tính bằng code (`data/tinh_thu.py`) |
+
+## Dataset 7 · Báo giá tour đoàn công khai (`data/bao_gia_mau.json`)
+
+| | |
+|---|---|
+| Dùng để làm gì | câu thử `data_that` Q01–Q12 và kiểm chức năng soát báo giá (`codebase/soat_bao_gia.py`) |
+| Từ đâu | 30 trang tour đoàn / team building / MICE công khai trên vietnambooking.com (sitemap công khai, robots.txt cho phép), lấy 27/11/2026 bằng `evidence/dem_bao_gia.py` |
+| Xử lý | chỉ giữ: link, tiêu đề, giá / khách (JSON-LD của trang), tối đa 12 dòng mục "bao gồm" và "không bao gồm" (≤ 160 ký tự / dòng); không lưu nguyên trang |
+| Số dòng | 30 báo giá (29 có giá / khách) |
+| Nhãn | thật (trích công khai) |
+| Giới hạn | một trang web; giá có thể đổi sau ngày lấy; báo giá gửi riêng cho công ty có thể khác bản công khai |
+
+## Dataset 8 · Quy tắc chứng từ / thuế (`data/quy_tac_chung_tu.json`)
+
+| | |
+|---|---|
+| Dùng để làm gì | soát hoá đơn VAT, chuyển khoản ≥ 5 triệu, trần phúc lợi, chi chung cho tập thể, khoản khó có hoá đơn |
+| Từ đâu | bài tư vấn / công văn (thuvienphapluat, MISA AMIS, CafeF) — **không phải văn bản gốc**; mỗi quy tắc có link, xem 27/11/2026 |
+| Giới hạn | Thông tư 96/2015 có thể đã được thay bằng Luật Thuế TNDN 2025 / Nghị định 320/2025 — output luôn ghi "kế toán đối chiếu văn bản hiện hành", không phải tư vấn thuế |

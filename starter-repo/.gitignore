@@ -42,3 +42,4 @@ codebase/web/*.tsbuildinfo
 
 # Data tải về để tham khảo (lịch trình thật của người thật, bộ ngoài): chỉ giữ ở máy, mô tả ở data/DATA_CARD.md
 data/raw/
+evidence/raw_tour/
