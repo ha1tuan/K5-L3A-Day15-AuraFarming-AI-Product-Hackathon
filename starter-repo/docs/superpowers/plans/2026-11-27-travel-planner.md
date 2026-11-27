@@ -1,5 +1,7 @@
 # Travel Planner (Đà Lạt 2–3 ngày) Implementation Plan
 
+> **Đã thay:** bài toán đổi sang chuyến đi cả công ty. Cách C (có kinh phí + địa điểm) làm theo [2026-11-27-entry-c-plan.md](2026-11-27-entry-c-plan.md). Plan này chỉ còn để tham khảo.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Agent nhận một tin nhắn tiếng Việt (sở thích, ngân sách, số ngày, số người) và trả lịch trình Đà Lạt từng ngày, từng giờ, kèm tổng tiền và lý do — hoặc hỏi lại / báo không xếp được; chạy được qua `python run.py eval` và qua API FastAPI đã dọn.

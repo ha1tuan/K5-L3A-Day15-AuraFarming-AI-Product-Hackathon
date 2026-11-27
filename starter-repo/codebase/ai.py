@@ -78,6 +78,19 @@ def call_openai(system, user):
             "tokens_in": u["prompt_tokens"], "tokens_out": u["completion_tokens"]}
 
 
+_client = None
+
+
+def _gemini_client():
+    """Client google-genai dùng chung (tạo lần đầu gọi)."""
+    global _client
+    if _client is None:
+        from google import genai
+
+        _client = genai.Client(api_key=API_KEY)
+    return _client
+
+
 @model_call
 def call_model(system: str, user: str) -> dict:
     if MODEL_PROVIDER == "fake":

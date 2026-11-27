@@ -1,0 +1,244 @@
+{
+  "transport": {
+    "tiet_kiem": {
+      "vehicle": "xe 45 chỗ",
+      "capacity": 45,
+      "price_per_km": 12000,
+      "day_fee": 1500000,
+      "_source": "tự ước tính"
+    },
+    "can_bang": {
+      "vehicle": "xe 45 chỗ đời mới",
+      "capacity": 45,
+      "price_per_km": 15000,
+      "day_fee": 2000000,
+      "_source": "tự ước tính"
+    },
+    "cao_cap": {
+      "vehicle": "xe 29 chỗ cao cấp",
+      "capacity": 29,
+      "price_per_km": 20000,
+      "day_fee": 3000000,
+      "_source": "tự ước tính"
+    }
+  },
+  "flight_per_pax": {
+    "tiet_kiem": {
+      "<500": {
+        "value": 1800000,
+        "_source": "tự ước tính"
+      },
+      "500–1000": {
+        "value": 2400000,
+        "_source": "tự ước tính"
+      },
+      ">1000": {
+        "value": 3000000,
+        "_source": "tự ước tính"
+      }
+    },
+    "can_bang": {
+      "<500": {
+        "value": 2200000,
+        "_source": "tự ước tính"
+      },
+      "500–1000": {
+        "value": 2900000,
+        "_source": "tự ước tính"
+      },
+      ">1000": {
+        "value": 3600000,
+        "_source": "tự ước tính"
+      }
+    },
+    "cao_cap": {
+      "<500": {
+        "value": 3000000,
+        "_source": "tự ước tính"
+      },
+      "500–1000": {
+        "value": 3900000,
+        "_source": "tự ước tính"
+      },
+      ">1000": {
+        "value": 4800000,
+        "_source": "tự ước tính"
+      }
+    }
+  },
+  "rooms": {
+    "3": [
+      {
+        "capacity": 2,
+        "price": 600000,
+        "_source": "tự ước tính"
+      },
+      {
+        "capacity": 3,
+        "price": 800000,
+        "_source": "tự ước tính"
+      },
+      {
+        "capacity": 4,
+        "price": 1000000,
+        "_source": "tự ước tính"
+      }
+    ],
+    "4": [
+      {
+        "capacity": 2,
+        "price": 1000000,
+        "_source": "tự ước tính"
+      },
+      {
+        "capacity": 3,
+        "price": 1350000,
+        "_source": "tự ước tính"
+      },
+      {
+        "capacity": 4,
+        "price": 1700000,
+        "_source": "tự ước tính"
+      }
+    ],
+    "5": [
+      {
+        "capacity": 2,
+        "price": 2000000,
+        "_source": "tự ước tính"
+      },
+      {
+        "capacity": 3,
+        "price": 2700000,
+        "_source": "tự ước tính"
+      },
+      {
+        "capacity": 4,
+        "price": 3300000,
+        "_source": "tự ước tính"
+      }
+    ]
+  },
+  "meal_per_pax": {
+    "tiet_kiem": {
+      "value": 150000,
+      "_source": "tự ước tính"
+    },
+    "can_bang": {
+      "value": 250000,
+      "_source": "tự ước tính"
+    },
+    "cao_cap": {
+      "value": 450000,
+      "_source": "tự ước tính"
+    }
+  },
+  "gala_per_pax": {
+    "tiet_kiem": {
+      "value": 400000,
+      "_source": "tự ước tính"
+    },
+    "can_bang": {
+      "value": 600000,
+      "_source": "tự ước tính"
+    },
+    "cao_cap": {
+      "value": 1000000,
+      "_source": "tự ước tính"
+    }
+  },
+  "gala_fixed": {
+    "tiet_kiem": {
+      "value": 5000000,
+      "_source": "tự ước tính"
+    },
+    "can_bang": {
+      "value": 10000000,
+      "_source": "tự ước tính"
+    },
+    "cao_cap": {
+      "value": 20000000,
+      "_source": "tự ước tính"
+    }
+  },
+  "activity_per_pax": {
+    "gan_ket": {
+      "tiet_kiem": {
+        "value": 200000,
+        "_source": "tự ước tính"
+      },
+      "can_bang": {
+        "value": 350000,
+        "_source": "tự ước tính"
+      },
+      "cao_cap": {
+        "value": 600000,
+        "_source": "tự ước tính"
+      }
+    },
+    "nghi_duong": {
+      "tiet_kiem": {
+        "value": 150000,
+        "_source": "tự ước tính"
+      },
+      "can_bang": {
+        "value": 300000,
+        "_source": "tự ước tính"
+      },
+      "cao_cap": {
+        "value": 500000,
+        "_source": "tự ước tính"
+      }
+    },
+    "ca_hai": {
+      "tiet_kiem": {
+        "value": 250000,
+        "_source": "tự ước tính"
+      },
+      "can_bang": {
+        "value": 400000,
+        "_source": "tự ước tính"
+      },
+      "cao_cap": {
+        "value": 700000,
+        "_source": "tự ước tính"
+      }
+    }
+  },
+  "sight_per_pax": {
+    "tiet_kiem": {
+      "value": 60000,
+      "_source": "tự ước tính"
+    },
+    "can_bang": {
+      "value": 100000,
+      "_source": "tự ước tính"
+    },
+    "cao_cap": {
+      "value": 150000,
+      "_source": "tự ước tính"
+    }
+  },
+  "tier_stars": {
+    "tiet_kiem": {
+      "value": 3,
+      "_source": "tự ước tính"
+    },
+    "can_bang": {
+      "value": 4,
+      "_source": "tự ước tính"
+    },
+    "cao_cap": {
+      "value": 5,
+      "_source": "tự ước tính"
+    }
+  },
+  "flight_only": {
+    "value": [
+      "Phú Quốc",
+      "Côn Đảo",
+      "Lý Sơn"
+    ],
+    "_source": "tự ước tính"
+  }
+}

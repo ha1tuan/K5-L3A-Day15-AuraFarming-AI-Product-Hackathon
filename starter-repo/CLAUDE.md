@@ -8,7 +8,7 @@ Repo nộp bài hackathon AI20K, Track C: agent lập lịch trình du lịch Đ
 
 - **Bản đồ code, luồng graph, bất biến** — [ARCHITECTURE.md](ARCHITECTURE.md). Đọc trước khi tạo file mới hoặc đổi chỗ code.
 - **Lý do của từng quyết định** — [spec](docs/superpowers/specs/2026-11-27-travel-planner-design.md).
-- **Việc đang làm** — [plan](docs/superpowers/plans/2026-11-27-travel-planner.md): làm đúng một task, đúng tên hàm và test trong khối *Interfaces* của task đó.
+- **Việc đang làm** — [plan cách C](docs/superpowers/plans/2026-11-27-entry-c-plan.md) (plan cũ [travel-planner](docs/superpowers/plans/2026-11-27-travel-planner.md) viết cho bài toán người đi lẻ — chỉ tham khảo): làm đúng một task, đúng tên hàm và test trong khối *Interfaces* của task đó.
 
 ## Lệnh (chạy từ `starter-repo/`, luôn dùng venv)
 
