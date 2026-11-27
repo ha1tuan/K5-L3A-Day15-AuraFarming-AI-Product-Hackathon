@@ -43,18 +43,17 @@
       {"noi": "Đà Lạt", "hang": "4 sao", "tu": 968175, "nguon": "https://www.vn.kayak.com/Dalat-Hotels-Muong-Thanh-Holiday-Da-Lat-Hotel.321583.ksp", "do_tin_cay": "vua"},
       {"noi": "Phú Quốc", "hang": "3/4/5 sao", "mo_ta": "3★ 450.000–3.100.000 · 4★ 700.000–4.200.000 · 5★ 2.600.000–10.000.000 đ/người/đêm", "nguon": "https://vinpearl.com/vi/tong-hop-khach-san-phu-quoc-tot-nhat-va-kinh-nghiem-dat-phong", "do_tin_cay": "thap", "ghi_chu": "bài của chuỗi khách sạn tự quảng bá, tính theo NGƯỜI, khoảng rất rộng"}
     ],
-    "gia_goc_phong_doi": {
-      "_mo_ta": "giá phòng 2 người/đêm dùng để sinh data, theo điểm đến × hạng sao",
-      "Hạ Long":       {"2": 450000, "3": 650000, "4": 1200000, "5": 2600000},
-      "Sầm Sơn":       {"2": 350000, "3": 550000, "4": 1000000, "5": 2200000},
-      "Đà Nẵng - Hội An": {"2": 400000, "3": 600000, "4": 1300000, "5": 3000000},
-      "Nha Trang":     {"2": 400000, "3": 600000, "4": 1200000, "5": 2800000},
-      "Đà Lạt":        {"2": 300000, "3": 500000, "4": 1000000, "5": 2400000},
-      "Phú Quốc":      {"2": 450000, "3": 700000, "4": 1500000, "5": 3500000}
+    "gia_goc_phong_doi_theo_nhom": {
+      "_mo_ta": "giá phòng 2 người/đêm dùng để sinh data, theo NHÓM GIÁ của điểm đến × hạng sao (nhóm gán trong sinh_du_lieu.py)",
+      "bien_cao_cap":  {"2": 450000, "3": 750000, "4": 1500000, "5": 3500000},
+      "bien_trung":    {"2": 400000, "3": 600000, "4": 1200000, "5": 2600000},
+      "bien_binh_dan": {"2": 350000, "3": 500000, "4": 950000,  "5": 2100000},
+      "nui_cao_nguyen":{"2": 350000, "3": 550000, "4": 1100000, "5": 2600000},
+      "di_san_thanh_pho": {"2": 350000, "3": 550000, "4": 1100000, "5": 2400000}
     },
     "he_so_phong": {"2": 1.0, "3": 1.35, "4": 1.6},
     "uoc_tinh": true,
-    "ghi_chu": "Đà Lạt 3–4★ bám mốc KAYAK; điểm đến khác ước tính tương đối so với Đà Lạt (biển, mùa hè cao hơn). Phòng 3, 4 người = giá phòng đôi × hệ số."
+    "ghi_chu": "nhóm núi - cao nguyên bám mốc KAYAK Đà Lạt (3★ 261.000–757.000đ, 4★ từ 968.000đ); nhóm khác ước tính tương đối (biển cao cấp như Phú Quốc, Côn Đảo đắt hơn; biển bình dân như Sầm Sơn, Cửa Lò rẻ hơn). Phòng 3, 4 người = giá phòng đôi × hệ số."
   },
 
   "an_uong": {
@@ -76,6 +75,9 @@
     ],
     "team_building": {"tiet_kiem": 0, "can_bang": 300000, "day_du": 550000},
     "gala_dinner": {"tiet_kiem": 0, "can_bang": 450000, "day_du": 850000},
+    "spa_thu_gian": {"tiet_kiem": 250000, "can_bang": 450000, "day_du": 900000},
+    "bbq_tiec_ngoai_troi": {"tiet_kiem": 250000, "can_bang": 350000, "day_du": 550000},
+    "phi_pha_nguoi": 50000,
     "uoc_tinh": true,
     "ghi_chu": "tiết kiệm: tự tổ chức, không gala. Không tìm được bảng giá theo người đáng tin, toàn bộ là ước tính."
   },

@@ -1,5 +1,5 @@
 {
- "_mo_ta": "Di chuyển chặng đi/về. Đường bộ = chim bay × 1,3; xe 50 km/h + 30 phút nghỉ mỗi 3 giờ. Đường bay: 700 km/h + 0,3 giờ cất hạ cánh; thủ tục + đưa đón 2,5 giờ.",
+ "_mo_ta": "Chặng đi/về. Đường bộ = chim bay × 1,3; xe 50 km/h + 30 phút nghỉ mỗi 3 giờ; phà +1 giờ. Đường bay 700 km/h + 0,3 giờ; thủ tục 2 giờ; đưa đón sân bay theo km_san_bay_toi_diem_den. Cặp sân bay không kiểm có chuyến bay thẳng hay không (giới hạn, xem DATA_CARD).",
  "xe": [
   {
    "loai": "xe_16_cho",
@@ -29,23 +29,132 @@
  "phi_luu_dem_tai_xe": 500000,
  "km_toi_thieu_moi_ngay": 100,
  "km_noi_vung_moi_ngay": 60,
- "toc_do_xe_kmh": 50,
- "he_so_duong_bo": 1.3,
+ "phi_pha_nguoi_luot": 50000,
  "tuyen": [
   {
    "tu": "HAN",
    "den": "halong",
    "duong_bo_km": 166,
    "duong_bo_gio": 3.8,
+   "co_pha": false,
    "duong_bay": null,
    "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "catba",
+   "duong_bo_km": 167,
+   "duong_bo_gio": 4.8,
+   "co_pha": true,
+   "duong_bay": null,
+   "ghi_chu": "có đoạn phà"
   },
   {
    "tu": "HAN",
    "den": "samson",
    "duong_bo_km": 187,
    "duong_bo_gio": 4.2,
+   "co_pha": false,
    "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "cualo",
+   "duong_bo_km": 320,
+   "duong_bo_gio": 7.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-VII",
+    "km": 277,
+    "gio_bay": 0.7,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 13,
+    "gia_ve_mot_chieu": 850000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "ninhbinh",
+   "duong_bo_km": 114,
+   "duong_bo_gio": 2.3,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "sapa",
+   "duong_bo_km": 330,
+   "duong_bo_gio": 7.6,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "mocchau",
+   "duong_bo_km": 167,
+   "duong_bo_gio": 3.8,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "tamdao",
+   "duong_bo_km": 68,
+   "duong_bo_gio": 1.4,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "bavi",
+   "duong_bo_km": 66,
+   "duong_bo_gio": 1.3,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "phongnha",
+   "duong_bo_km": 500,
+   "duong_bo_gio": 11.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-VDH",
+    "km": 420,
+    "gio_bay": 0.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 44,
+    "gia_ve_mot_chieu": 980000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "hue",
+   "duong_bo_km": 701,
+   "duong_bo_gio": 16.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-HUI",
+    "km": 572,
+    "gio_bay": 1.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 18,
+    "gia_ve_mot_chieu": 1110000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
    "ghi_chu": ""
   },
   {
@@ -53,12 +162,68 @@
    "den": "danang",
    "duong_bo_km": 789,
    "duong_bo_gio": 18.3,
+   "co_pha": false,
    "duong_bay": {
     "chang": "HAN-DAD",
     "km": 628,
     "gio_bay": 1.2,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 1,
     "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "hoian",
+   "duong_bo_km": 818,
+   "duong_bo_gio": 18.9,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-DAD",
+    "km": 628,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 31,
+    "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "quynhon",
+   "duong_bo_km": 1147,
+   "duong_bo_gio": 26.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-UIH",
+    "km": 878,
+    "gio_bay": 1.6,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 36,
+    "gia_ve_mot_chieu": 1390000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "phuyen",
+   "duong_bo_km": 1243,
+   "duong_bo_gio": 28.9,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-TBB",
+    "km": 983,
+    "gio_bay": 1.7,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 6,
+    "gia_ve_mot_chieu": 1480000,
     "uoc_tinh": true,
     "nguon": null
    },
@@ -69,11 +234,13 @@
    "den": "nhatrang",
    "duong_bo_km": 1352,
    "duong_bo_gio": 31.5,
+   "co_pha": false,
    "duong_bay": {
     "chang": "HAN-CXR",
     "km": 1088,
     "gio_bay": 1.9,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 35,
     "gia_ve_mot_chieu": 1400000,
     "uoc_tinh": false,
     "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
@@ -85,11 +252,13 @@
    "den": "dalat",
    "duong_bo_km": 1362,
    "duong_bo_gio": 31.7,
+   "co_pha": false,
    "duong_bay": {
     "chang": "HAN-DLI",
     "km": 1088,
     "gio_bay": 1.9,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 30,
     "gia_ve_mot_chieu": 1580000,
     "uoc_tinh": true,
     "nguon": null
@@ -98,14 +267,70 @@
   },
   {
    "tu": "HAN",
+   "den": "muine",
+   "duong_bo_km": 1498,
+   "duong_bo_gio": 34.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-SGN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 233,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "vungtau",
+   "duong_bo_km": 1554,
+   "duong_bo_gio": 36.1,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-SGN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 92,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "hotram",
+   "duong_bo_km": 1540,
+   "duong_bo_gio": 35.8,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-SGN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 117,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
    "den": "phuquoc",
    "duong_bo_km": null,
    "duong_bo_gio": null,
+   "co_pha": false,
    "duong_bay": {
     "chang": "HAN-PQC",
     "km": 1244,
     "gio_bay": 2.1,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 9,
     "gia_ve_mot_chieu": 1600000,
     "uoc_tinh": false,
     "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
@@ -113,15 +338,431 @@
    "ghi_chu": "đảo: chỉ đường bay"
   },
   {
+   "tu": "HAN",
+   "den": "condao",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-VCS",
+    "km": 1392,
+    "gio_bay": 2.3,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 1850000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "HAN",
+   "den": "cantho",
+   "duong_bo_km": 1588,
+   "duong_bo_gio": 36.8,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-VCA",
+    "km": 1238,
+    "gio_bay": 2.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 1710000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HAN",
+   "den": "tayninh",
+   "duong_bo_km": 1395,
+   "duong_bo_gio": 32.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HAN-SGN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 106,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "halong",
+   "duong_bo_km": 55,
+   "duong_bo_gio": 1.1,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "catba",
+   "duong_bo_km": 52,
+   "duong_bo_gio": 2.0,
+   "co_pha": true,
+   "duong_bay": null,
+   "ghi_chu": "có đoạn phà"
+  },
+  {
+   "tu": "HPH",
+   "den": "samson",
+   "duong_bo_km": 192,
+   "duong_bo_gio": 4.3,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "cualo",
+   "duong_bo_km": 321,
+   "duong_bo_gio": 7.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-VII",
+    "km": 256,
+    "gio_bay": 0.7,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 13,
+    "gia_ve_mot_chieu": 830000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "ninhbinh",
+   "duong_bo_km": 129,
+   "duong_bo_gio": 2.6,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "sapa",
+   "duong_bo_km": 439,
+   "duong_bo_gio": 9.8,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "mocchau",
+   "duong_bo_km": 278,
+   "duong_bo_gio": 6.1,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "tamdao",
+   "duong_bo_km": 166,
+   "duong_bo_gio": 3.8,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "bavi",
+   "duong_bo_km": 181,
+   "duong_bo_gio": 4.1,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "phongnha",
+   "duong_bo_km": 474,
+   "duong_bo_gio": 11.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-VDH",
+    "km": 368,
+    "gio_bay": 0.8,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 44,
+    "gia_ve_mot_chieu": 930000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "hue",
+   "duong_bo_km": 645,
+   "duong_bo_gio": 14.9,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-HUI",
+    "km": 502,
+    "gio_bay": 1.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 18,
+    "gia_ve_mot_chieu": 1050000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "danang",
+   "duong_bo_km": 724,
+   "duong_bo_gio": 16.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-DAD",
+    "km": 553,
+    "gio_bay": 1.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 1,
+    "gia_ve_mot_chieu": 1100000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "hoian",
+   "duong_bo_km": 753,
+   "duong_bo_gio": 17.6,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-DAD",
+    "km": 553,
+    "gio_bay": 1.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 31,
+    "gia_ve_mot_chieu": 1100000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "quynhon",
+   "duong_bo_km": 1080,
+   "duong_bo_gio": 25.1,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-UIH",
+    "km": 802,
+    "gio_bay": 1.4,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 36,
+    "gia_ve_mot_chieu": 1320000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "phuyen",
+   "duong_bo_km": 1179,
+   "duong_bo_gio": 27.1,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-TBB",
+    "km": 907,
+    "gio_bay": 1.6,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 6,
+    "gia_ve_mot_chieu": 1420000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "nhatrang",
+   "duong_bo_km": 1292,
+   "duong_bo_gio": 29.8,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-CXR",
+    "km": 1016,
+    "gio_bay": 1.8,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 35,
+    "gia_ve_mot_chieu": 1510000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "dalat",
+   "duong_bo_km": 1310,
+   "duong_bo_gio": 30.2,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-DLI",
+    "km": 1024,
+    "gio_bay": 1.8,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 30,
+    "gia_ve_mot_chieu": 1520000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "muine",
+   "duong_bo_km": 1450,
+   "duong_bo_gio": 33.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-SGN",
+    "km": 1112,
+    "gio_bay": 1.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 233,
+    "gia_ve_mot_chieu": 1600000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "vungtau",
+   "duong_bo_km": 1519,
+   "duong_bo_gio": 35.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-SGN",
+    "km": 1112,
+    "gio_bay": 1.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 92,
+    "gia_ve_mot_chieu": 1600000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "hotram",
+   "duong_bo_km": 1502,
+   "duong_bo_gio": 35.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-SGN",
+    "km": 1112,
+    "gio_bay": 1.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 117,
+    "gia_ve_mot_chieu": 1600000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "phuquoc",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-PQC",
+    "km": 1220,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 9,
+    "gia_ve_mot_chieu": 1700000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "HPH",
+   "den": "condao",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-VCS",
+    "km": 1344,
+    "gio_bay": 2.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 1810000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "HPH",
+   "den": "cantho",
+   "duong_bo_km": 1567,
+   "duong_bo_gio": 36.3,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-VCA",
+    "km": 1199,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 1680000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "HPH",
+   "den": "tayninh",
+   "duong_bo_km": 1370,
+   "duong_bo_gio": 31.9,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "HPH-SGN",
+    "km": 1112,
+    "gio_bay": 1.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 106,
+    "gia_ve_mot_chieu": 1600000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
    "tu": "DAD",
    "den": "halong",
    "duong_bo_km": 724,
    "duong_bo_gio": 16.5,
+   "co_pha": false,
    "duong_bay": {
     "chang": "DAD-VDO",
     "km": 570,
     "gio_bay": 1.1,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 51,
     "gia_ve_mot_chieu": 1110000,
     "uoc_tinh": true,
     "nguon": null
@@ -130,14 +771,34 @@
   },
   {
    "tu": "DAD",
+   "den": "catba",
+   "duong_bo_km": 694,
+   "duong_bo_gio": 16.9,
+   "co_pha": true,
+   "duong_bay": {
+    "chang": "DAD-HPH",
+    "km": 553,
+    "gio_bay": 1.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 46,
+    "gia_ve_mot_chieu": 1100000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "có đoạn phà"
+  },
+  {
+   "tu": "DAD",
    "den": "samson",
    "duong_bo_km": 619,
    "duong_bo_gio": 14.4,
+   "co_pha": false,
    "duong_bay": {
     "chang": "DAD-THD",
     "km": 517,
     "gio_bay": 1.0,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 64,
     "gia_ve_mot_chieu": 1070000,
     "uoc_tinh": true,
     "nguon": null
@@ -146,22 +807,187 @@
   },
   {
    "tu": "DAD",
+   "den": "cualo",
+   "duong_bo_km": 526,
+   "duong_bo_gio": 12.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-VII",
+    "km": 402,
+    "gio_bay": 0.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 13,
+    "gia_ve_mot_chieu": 960000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "ninhbinh",
+   "duong_bo_km": 679,
+   "duong_bo_gio": 15.6,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-HAN",
+    "km": 628,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 142,
+    "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "sapa",
+   "duong_bo_km": 1085,
+   "duong_bo_gio": 25.2,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-HAN",
+    "km": 628,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 309,
+    "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "mocchau",
+   "duong_bo_km": 848,
+   "duong_bo_gio": 19.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-HAN",
+    "km": 628,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 168,
+    "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "tamdao",
+   "duong_bo_km": 856,
+   "duong_bo_gio": 19.6,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-HAN",
+    "km": 628,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 40,
+    "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "bavi",
+   "duong_bo_km": 823,
+   "duong_bo_gio": 19.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-HAN",
+    "km": 628,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 63,
+    "gia_ve_mot_chieu": 1170000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "phongnha",
+   "duong_bo_km": 346,
+   "duong_bo_gio": 7.9,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "hue",
+   "duong_bo_km": 103,
+   "duong_bo_gio": 2.1,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
    "den": "danang",
    "duong_bo_km": 0,
    "duong_bo_gio": 0.0,
+   "co_pha": false,
    "duong_bay": null,
    "ghi_chu": "cùng nơi: chỉ di chuyển nội vùng"
+  },
+  {
+   "tu": "DAD",
+   "den": "hoian",
+   "duong_bo_km": 31,
+   "duong_bo_gio": 0.6,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "quynhon",
+   "duong_bo_km": 359,
+   "duong_bo_gio": 8.2,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "phuyen",
+   "duong_bo_km": 456,
+   "duong_bo_gio": 10.6,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-TBB",
+    "km": 355,
+    "gio_bay": 0.8,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 6,
+    "gia_ve_mot_chieu": 920000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
   },
   {
    "tu": "DAD",
    "den": "nhatrang",
    "duong_bo_km": 569,
    "duong_bo_gio": 12.9,
+   "co_pha": false,
    "duong_bay": {
     "chang": "DAD-CXR",
     "km": 463,
     "gio_bay": 1.0,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 35,
     "gia_ve_mot_chieu": 1020000,
     "uoc_tinh": true,
     "nguon": null
@@ -173,12 +999,68 @@
    "den": "dalat",
    "duong_bo_km": 596,
    "duong_bo_gio": 13.4,
+   "co_pha": false,
    "duong_bay": {
     "chang": "DAD-DLI",
     "km": 478,
     "gio_bay": 1.0,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 30,
     "gia_ve_mot_chieu": 1030000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "muine",
+   "duong_bo_km": 740,
+   "duong_bo_gio": 16.8,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-SGN",
+    "km": 605,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 233,
+    "gia_ve_mot_chieu": 1140000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "vungtau",
+   "duong_bo_km": 840,
+   "duong_bo_gio": 19.3,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-SGN",
+    "km": 605,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 92,
+    "gia_ve_mot_chieu": 1140000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "hotram",
+   "duong_bo_km": 814,
+   "duong_bo_gio": 18.8,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-SGN",
+    "km": 605,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 117,
+    "gia_ve_mot_chieu": 1140000,
     "uoc_tinh": true,
     "nguon": null
    },
@@ -189,11 +1071,13 @@
    "den": "phuquoc",
    "duong_bo_km": null,
    "duong_bo_gio": null,
+   "co_pha": false,
    "duong_bay": {
     "chang": "DAD-PQC",
     "km": 796,
     "gio_bay": 1.4,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 9,
     "gia_ve_mot_chieu": 1320000,
     "uoc_tinh": true,
     "nguon": null
@@ -201,15 +1085,71 @@
    "ghi_chu": "đảo: chỉ đường bay"
   },
   {
+   "tu": "DAD",
+   "den": "condao",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-VCS",
+    "km": 831,
+    "gio_bay": 1.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "DAD",
+   "den": "cantho",
+   "duong_bo_km": 935,
+   "duong_bo_gio": 21.7,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-VCA",
+    "km": 715,
+    "gio_bay": 1.3,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 1240000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "DAD",
+   "den": "tayninh",
+   "duong_bo_km": 733,
+   "duong_bo_gio": 16.7,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "DAD-SGN",
+    "km": 605,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 106,
+    "gia_ve_mot_chieu": 1140000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
    "tu": "SGN",
    "den": "halong",
    "duong_bo_km": 1472,
    "duong_bo_gio": 33.9,
+   "co_pha": false,
    "duong_bay": {
     "chang": "SGN-VDO",
     "km": 1148,
     "gio_bay": 1.9,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 51,
     "gia_ve_mot_chieu": 1630000,
     "uoc_tinh": true,
     "nguon": null
@@ -218,15 +1158,179 @@
   },
   {
    "tu": "SGN",
+   "den": "catba",
+   "duong_bo_km": 1439,
+   "duong_bo_gio": 34.3,
+   "co_pha": true,
+   "duong_bay": {
+    "chang": "SGN-HPH",
+    "km": 1112,
+    "gio_bay": 1.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 46,
+    "gia_ve_mot_chieu": 1600000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "có đoạn phà"
+  },
+  {
+   "tu": "SGN",
    "den": "samson",
    "duong_bo_km": 1300,
    "duong_bo_gio": 30.0,
+   "co_pha": false,
    "duong_bay": {
     "chang": "SGN-THD",
     "km": 1018,
     "gio_bay": 1.8,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 64,
     "gia_ve_mot_chieu": 1520000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "cualo",
+   "duong_bo_km": 1170,
+   "duong_bo_gio": 26.9,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-VII",
+    "km": 887,
+    "gio_bay": 1.6,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 13,
+    "gia_ve_mot_chieu": 1400000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "ninhbinh",
+   "duong_bo_km": 1373,
+   "duong_bo_gio": 32.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-HAN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 142,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "sapa",
+   "duong_bo_km": 1717,
+   "duong_bo_gio": 39.8,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-HAN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 309,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "mocchau",
+   "duong_bo_km": 1484,
+   "duong_bo_gio": 34.2,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-HAN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 168,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "tamdao",
+   "duong_bo_km": 1551,
+   "duong_bo_gio": 36.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-HAN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 40,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "bavi",
+   "duong_bo_km": 1500,
+   "duong_bo_gio": 35.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-HAN",
+    "km": 1160,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 63,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": false,
+    "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa"
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "phongnha",
+   "duong_bo_km": 987,
+   "duong_bo_gio": 22.7,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-VDH",
+    "km": 745,
+    "gio_bay": 1.4,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 44,
+    "gia_ve_mot_chieu": 1270000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "hue",
+   "duong_bo_km": 831,
+   "duong_bo_gio": 19.1,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-HUI",
+    "km": 631,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 18,
+    "gia_ve_mot_chieu": 1170000,
     "uoc_tinh": true,
     "nguon": null
    },
@@ -237,12 +1341,68 @@
    "den": "danang",
    "duong_bo_km": 791,
    "duong_bo_gio": 18.3,
+   "co_pha": false,
    "duong_bay": {
     "chang": "SGN-DAD",
     "km": 605,
     "gio_bay": 1.2,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 1,
     "gia_ve_mot_chieu": 1140000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "hoian",
+   "duong_bo_km": 773,
+   "duong_bo_gio": 18.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-DAD",
+    "km": 605,
+    "gio_bay": 1.2,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 31,
+    "gia_ve_mot_chieu": 1140000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "quynhon",
+   "duong_bo_km": 561,
+   "duong_bo_gio": 12.7,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-UIH",
+    "km": 435,
+    "gio_bay": 0.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 36,
+    "gia_ve_mot_chieu": 990000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "phuyen",
+   "duong_bo_km": 498,
+   "duong_bo_gio": 11.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-TBB",
+    "km": 383,
+    "gio_bay": 0.8,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 6,
+    "gia_ve_mot_chieu": 940000,
     "uoc_tinh": true,
     "nguon": null
    },
@@ -253,11 +1413,13 @@
    "den": "nhatrang",
    "duong_bo_km": 412,
    "duong_bo_gio": 9.2,
+   "co_pha": false,
    "duong_bay": {
     "chang": "SGN-CXR",
     "km": 309,
     "gio_bay": 0.7,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 35,
     "gia_ve_mot_chieu": 880000,
     "uoc_tinh": true,
     "nguon": null
@@ -269,6 +1431,34 @@
    "den": "dalat",
    "duong_bo_km": 301,
    "duong_bo_gio": 7.0,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "muine",
+   "duong_bo_km": 226,
+   "duong_bo_gio": 5.0,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "vungtau",
+   "duong_bo_km": 83,
+   "duong_bo_gio": 1.7,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "hotram",
+   "duong_bo_km": 108,
+   "duong_bo_gio": 2.2,
+   "co_pha": false,
    "duong_bay": null,
    "ghi_chu": ""
   },
@@ -277,16 +1467,441 @@
    "den": "phuquoc",
    "duong_bo_km": null,
    "duong_bo_gio": null,
+   "co_pha": false,
    "duong_bay": {
     "chang": "SGN-PQC",
     "km": 300,
     "gio_bay": 0.7,
-    "gio_thu_tuc_dua_don": 2.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 9,
     "gia_ve_mot_chieu": 870000,
     "uoc_tinh": true,
     "nguon": null
    },
    "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "SGN",
+   "den": "condao",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "SGN-VCS",
+    "km": 232,
+    "gio_bay": 0.6,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 810000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "SGN",
+   "den": "cantho",
+   "duong_bo_km": 172,
+   "duong_bo_gio": 3.9,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "SGN",
+   "den": "tayninh",
+   "duong_bo_km": 115,
+   "duong_bo_gio": 2.3,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "halong",
+   "duong_bo_km": 1587,
+   "duong_bo_gio": 36.7,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-VDO",
+    "km": 1240,
+    "gio_bay": 2.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 51,
+    "gia_ve_mot_chieu": 1720000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "catba",
+   "duong_bo_km": 1555,
+   "duong_bo_gio": 37.1,
+   "co_pha": true,
+   "duong_bay": {
+    "chang": "VCA-HPH",
+    "km": 1199,
+    "gio_bay": 2.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 46,
+    "gia_ve_mot_chieu": 1680000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "có đoạn phà"
+  },
+  {
+   "tu": "VCA",
+   "den": "samson",
+   "duong_bo_km": 1401,
+   "duong_bo_gio": 32.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-THD",
+    "km": 1092,
+    "gio_bay": 1.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 64,
+    "gia_ve_mot_chieu": 1580000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "cualo",
+   "duong_bo_km": 1268,
+   "duong_bo_gio": 29.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-VII",
+    "km": 962,
+    "gio_bay": 1.7,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 13,
+    "gia_ve_mot_chieu": 1470000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "ninhbinh",
+   "duong_bo_km": 1476,
+   "duong_bo_gio": 34.0,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-HAN",
+    "km": 1238,
+    "gio_bay": 2.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 142,
+    "gia_ve_mot_chieu": 1710000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "sapa",
+   "duong_bo_km": 1796,
+   "duong_bo_gio": 41.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-HAN",
+    "km": 1238,
+    "gio_bay": 2.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 309,
+    "gia_ve_mot_chieu": 1710000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "mocchau",
+   "duong_bo_km": 1569,
+   "duong_bo_gio": 36.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-HAN",
+    "km": 1238,
+    "gio_bay": 2.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 168,
+    "gia_ve_mot_chieu": 1710000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "tamdao",
+   "duong_bo_km": 1650,
+   "duong_bo_gio": 38.5,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-HAN",
+    "km": 1238,
+    "gio_bay": 2.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 40,
+    "gia_ve_mot_chieu": 1710000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "bavi",
+   "duong_bo_km": 1595,
+   "duong_bo_gio": 36.9,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-HAN",
+    "km": 1238,
+    "gio_bay": 2.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 63,
+    "gia_ve_mot_chieu": 1710000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "phongnha",
+   "duong_bo_km": 1093,
+   "duong_bo_gio": 25.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-VDH",
+    "km": 832,
+    "gio_bay": 1.5,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 44,
+    "gia_ve_mot_chieu": 1350000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "hue",
+   "duong_bo_km": 963,
+   "duong_bo_gio": 22.3,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-HUI",
+    "km": 735,
+    "gio_bay": 1.4,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 18,
+    "gia_ve_mot_chieu": 1260000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "danang",
+   "duong_bo_km": 934,
+   "duong_bo_gio": 21.7,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-DAD",
+    "km": 715,
+    "gio_bay": 1.3,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 1,
+    "gia_ve_mot_chieu": 1240000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "hoian",
+   "duong_bo_km": 919,
+   "duong_bo_gio": 21.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-DAD",
+    "km": 715,
+    "gio_bay": 1.3,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 31,
+    "gia_ve_mot_chieu": 1240000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "quynhon",
+   "duong_bo_km": 730,
+   "duong_bo_gio": 16.6,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-UIH",
+    "km": 562,
+    "gio_bay": 1.1,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 36,
+    "gia_ve_mot_chieu": 1110000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "phuyen",
+   "duong_bo_km": 670,
+   "duong_bo_gio": 15.4,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-TBB",
+    "km": 514,
+    "gio_bay": 1.0,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 6,
+    "gia_ve_mot_chieu": 1060000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "nhatrang",
+   "duong_bo_km": 583,
+   "duong_bo_gio": 13.2,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-CXR",
+    "km": 438,
+    "gio_bay": 0.9,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 35,
+    "gia_ve_mot_chieu": 990000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "dalat",
+   "duong_bo_km": 472,
+   "duong_bo_gio": 10.9,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-DLI",
+    "km": 344,
+    "gio_bay": 0.8,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 30,
+    "gia_ve_mot_chieu": 910000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "muine",
+   "duong_bo_km": 383,
+   "duong_bo_gio": 8.7,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "vungtau",
+   "duong_bo_km": 195,
+   "duong_bo_gio": 4.4,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "hotram",
+   "duong_bo_km": 243,
+   "duong_bo_gio": 5.4,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
+  },
+  {
+   "tu": "VCA",
+   "den": "phuquoc",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-PQC",
+    "km": 188,
+    "gio_bay": 0.6,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 9,
+    "gia_ve_mot_chieu": 770000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "VCA",
+   "den": "condao",
+   "duong_bo_km": null,
+   "duong_bo_gio": null,
+   "co_pha": false,
+   "duong_bay": {
+    "chang": "VCA-VCS",
+    "km": 181,
+    "gio_bay": 0.6,
+    "gio_thu_tuc": 2.0,
+    "km_san_bay_toi_diem_den": 8,
+    "gia_ve_mot_chieu": 760000,
+    "uoc_tinh": true,
+    "nguon": null
+   },
+   "ghi_chu": "đảo: chỉ đường bay"
+  },
+  {
+   "tu": "VCA",
+   "den": "cantho",
+   "duong_bo_km": 0,
+   "duong_bo_gio": 0.0,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": "cùng nơi: chỉ di chuyển nội vùng"
+  },
+  {
+   "tu": "VCA",
+   "den": "tayninh",
+   "duong_bo_km": 202,
+   "duong_bo_gio": 4.5,
+   "co_pha": false,
+   "duong_bay": null,
+   "ghi_chu": ""
   }
  ]
 }

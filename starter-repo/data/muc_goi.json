@@ -1,5 +1,5 @@
 {
- "_mo_ta": "Quy tắc 3 gói. Cùng khung lịch (số ngày, giờ đi/về, bữa ăn); khác nhau ở MỨC của từng hạng mục.",
+ "_mo_ta": "Quy tắc 3 gói. Cùng khung lịch; khác nhau ở MỨC của từng hạng mục. Mục đích quyết định hoạt động.",
  "goi": {
   "tiet_kiem": {
    "ten": "Tiết kiệm",
@@ -9,8 +9,6 @@
    ],
    "xe": "xe_45_cho",
    "muc_an": "tiet_kiem",
-   "team_building": false,
-   "gala": false,
    "may_bay_khi_duong_bo_tren_gio": 12
   },
   "can_bang": {
@@ -20,9 +18,7 @@
    ],
    "xe": "xe_29_cho",
    "muc_an": "can_bang",
-   "team_building": true,
-   "gala": true,
-   "may_bay_khi_duong_bo_tren_gio": 10
+   "may_bay_khi_duong_bo_tren_gio": 9
   },
   "day_du": {
    "ten": "Đầy đủ",
@@ -31,9 +27,61 @@
    ],
    "xe": "limousine_18_cho",
    "muc_an": "day_du",
-   "team_building": true,
-   "gala": true,
-   "may_bay_khi_duong_bo_tren_gio": 8
+   "may_bay_khi_duong_bo_tren_gio": 6
+  }
+ },
+ "hoat_dong_theo_muc_dich": {
+  "nghi_duong": {
+   "tiet_kiem": [
+    "tham_quan",
+    "tu_do"
+   ],
+   "can_bang": [
+    "tham_quan",
+    "spa_thu_gian",
+    "tu_do"
+   ],
+   "day_du": [
+    "tham_quan",
+    "spa_thu_gian",
+    "bbq_tiec_ngoai_troi",
+    "tu_do"
+   ]
+  },
+  "gan_ket": {
+   "tiet_kiem": [
+    "tham_quan",
+    "bbq_tiec_ngoai_troi"
+   ],
+   "can_bang": [
+    "tham_quan",
+    "team_building",
+    "gala_dinner"
+   ],
+   "day_du": [
+    "tham_quan",
+    "team_building",
+    "gala_dinner"
+   ]
+  },
+  "ca_hai": {
+   "tiet_kiem": [
+    "tham_quan",
+    "bbq_tiec_ngoai_troi",
+    "tu_do"
+   ],
+   "can_bang": [
+    "tham_quan",
+    "team_building",
+    "gala_dinner",
+    "tu_do"
+   ],
+   "day_du": [
+    "tham_quan",
+    "team_building",
+    "gala_dinner",
+    "spa_thu_gian"
+   ]
   }
  },
  "phat_sinh_ty_le": 0.05,
