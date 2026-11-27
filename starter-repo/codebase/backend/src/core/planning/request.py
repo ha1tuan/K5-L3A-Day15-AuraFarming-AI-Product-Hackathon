@@ -7,6 +7,7 @@ from typing import Optional
 from .types import TripRequest
 
 MIN_HEADCOUNT, MAX_HEADCOUNT = 5, 500
+MAX_DAYS = 7
 PURPOSES = ("gan_ket", "nghi_duong", "ca_hai")
 EXCLUDABLE = ("gala", "team_building")
 DOMESTIC = {"", "vn", "vietnam", "viet nam", "việt nam"}
@@ -21,7 +22,7 @@ _FIELD_TEXT = {
 _UNITS = {"tỷ": 10**9, "tỉ": 10**9, "ty": 10**9, "triệu": 10**6, "trieu": 10**6, "tr": 10**6,
           "nghìn": 10**3, "ngàn": 10**3, "k": 10**3}
 _NUM = re.compile(r"(\d+(?:[.,]\d+)*)\s*(tỷ|tỉ|ty|triệu|trieu|tr|nghìn|ngàn|k)?(?![a-zà-ỹ])")
-_PER_PERSON = re.compile(r"(mỗi|mọi|/|một|1)\s*(người|ng|pax|nguoi)|đầu người|dau nguoi|per person|\bpp\b")
+_PER_PERSON = re.compile(r"(mỗi|một)\s*(người|nguoi|pax)\b|/\s*(người|nguoi|pax)\b|đầu người|dau nguoi|per person")
 
 
 def _amount(num: str, unit: Optional[str]) -> int:
@@ -69,6 +70,8 @@ def build_request(raw: dict, today: date):
         return None, [], f"Hiện chỉ hỗ trợ đoàn từ {MIN_HEADCOUNT} đến {MAX_HEADCOUNT} người."
 
     days = _int(raw.get("days"))
+    if days is not None and days > MAX_DAYS:
+        return None, [], f"Hiện chỉ hỗ trợ chuyến đi tối đa {MAX_DAYS} ngày."
     if days is not None and days < 1:
         days = None
     origin = _text(raw.get("origin"))
@@ -108,4 +111,6 @@ def ask_back_text(missing: list[str]) -> str:
 
 
 def understood_text(req: TripRequest) -> str:
+    if req.budget is None:
+        return f"Đã hiểu: {req.headcount} người"
     return f"Ngân sách đã hiểu: {_vnd(req.budget)} cho {req.headcount} người"

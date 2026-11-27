@@ -43,6 +43,22 @@ def test_foreign_refused():
     assert "trong nước" in refusal
 
 
+@pytest.mark.parametrize("txt", ["150 triệu mỗi ngày", "150 triệu cho mọi người", "150 triệu, 1 ngày"])
+def test_per_person_false_positives(txt):
+    req, _, _ = build_request({**FULL, "budget_text": txt}, TODAY)
+    assert req.budget == 150_000_000 and not req.budget_per_person_input
+
+
+def test_days_over_7_refused():
+    req, _, refusal = build_request({**FULL, "days": 8}, TODAY)
+    assert req is None and "tối đa 7 ngày" in refusal
+
+
+def test_understood_text_without_budget():
+    req, _, _ = build_request({**FULL, "budget_text": None}, TODAY)
+    assert understood_text(req) == "Đã hiểu: 60 người"
+
+
 def test_exclude_gala():
     req, _, _ = build_request({**FULL, "exclude": ["gala"]}, TODAY)
     assert req.exclude == {"gala"}
