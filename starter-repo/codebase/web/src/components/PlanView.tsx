@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Printer, CircleCheck, TriangleAlert, SkipForward, PlayCircle, Info } from 'lucide-react';
+import { Printer, CircleCheck, TriangleAlert, SkipForward } from 'lucide-react';
 import { InlineMd } from './InlineMd';
+import { TripExtras } from './TripExtras';
 import type { Plan, TripEcho } from '../api/types';
 import { formatVndShort, PURPOSE_LABEL, TIER_LABEL } from '../lib/format';
 import { btnGhost } from './ui';
@@ -62,24 +63,7 @@ function OnePlan({ plan, request }: { plan: Plan; request: TripEcho }) {
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
         <div><DayTimeline days={plan.days} /></div>
-        {(plan.info?.length || plan.videos?.length) ? (
-          <aside className="grid content-start gap-4">
-            {plan.info && plan.info.length > 0 && (
-              <div className="rounded-xl border border-line bg-card p-4 text-sm">
-                <p className="mb-2 flex items-center gap-2 font-semibold"><Info className="size-4 text-accent" aria-hidden />Thông tin thêm</p>
-                <ul className="grid gap-2">{plan.info.map((x, i) => <li key={i}><InlineMd text={x.replace(/^- /, '')} /></li>)}</ul>
-              </div>
-            )}
-            {plan.videos && plan.videos.length > 0 && (
-              <div className="rounded-xl border border-line bg-card p-4 text-sm">
-                <p className="mb-2 flex items-center gap-2 font-semibold"><PlayCircle className="size-4 text-accent" aria-hidden />Video tham khảo (đã kiểm link)</p>
-                <ul className="grid gap-2">{plan.videos.map(v => (
-                  <li key={v.url}><a href={v.url} target="_blank" rel="noreferrer" className="text-accent hover:underline">{v.title}</a><span className="text-muted"> — {v.channel}</span></li>
-                ))}</ul>
-              </div>
-            )}
-          </aside>
-        ) : null}
+        <TripExtras plan={plan} />
       </div>
     </>
   );

@@ -361,8 +361,8 @@ def thong_tin_them(dest, req, levels=None):
         out += ["  - [%s](%s) — %s" % (x["tieu_de"], x["url"], x["kenh"]) for x in vs]
     for w in sorted(dest.get("canh_bao") or []):
         out.append("- ⚠ " + w)
-    out.append("- Nguồn số: `data/*.json` — giá gốc có link ở `data/gia_chuan.json`; khách sạn / nhà hàng là mức giá "
-               "theo hạng, **chưa phải cơ sở cụ thể** — công ty tự chọn cơ sở thật cùng mức và xác nhận số phòng.")
+    out.append("- **Về giá:** giá tham khảo theo hạng khách sạn, nhà hàng và giá thị trường có nguồn — **chưa phải báo giá "
+               "của một cơ sở cụ thể**. Trước khi đặt, công ty chọn cơ sở thật cùng hạng và xác nhận đủ số phòng.")
     return "\n".join(out)
 
 

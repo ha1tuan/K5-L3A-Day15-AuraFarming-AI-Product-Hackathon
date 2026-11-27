@@ -154,13 +154,38 @@ def plan(req, dest, lv) -> dict:
     out = {"tier": lv, "destination": dest["ten"], "total": g["tong"], "per_person": g["moi_nguoi"], "estimate_total": g["tong"],
            "over_budget": _over(req, g), "days": days,
            "notes": sorted(dest.get("canh_bao") or []) + list(g["flags"]),
-           "videos": [{"title": v["tieu_de"], "url": v["url"], "channel": v["kenh"]} for v in vids],
+           "videos": [{"title": v["tieu_de"], "url": v["url"], "channel": v["kenh"],
+                       "kind": "Review du lịch" if v["loai"] == "review" else "Team building"} for v in vids],
+           "extra": extra(req, dest, lv),
            "info": [x for x in du_lieu.thong_tin_them(dest, req, [lv]).splitlines()[1:]
                     if not x.startswith(("- **Video", "  - [", "- ⚠"))]}
     ex = explanation(req, dest, lv)
     if ex:
         out["explanation"] = ex
     return out
+
+
+def _gio(h):
+    return ("%.1f" % h).rstrip("0").rstrip(".").replace(".", ",")
+
+
+def extra(req, dest, lv) -> dict:
+    """Thông tin thêm cho người dùng (web) — câu chữ thường, không tên file / thuật ngữ kỹ thuật."""
+    raw, den = dest["raw"][lv], dest["den"]
+    c = raw["_chang"]
+    di = (c["mo_ta"][0].upper() + c["mo_ta"][1:]).replace(" đường bộ ", " · đường bộ ").replace(" + ", " · ")
+    if c["gio"]:
+        di += " · khoảng %s giờ mỗi chiều%s" % (_gio(c["gio"]), " (đã gồm thủ tục bay, đưa đón sân bay)" if c["kieu"] == "ve" else "")
+    thang = du_lieu.thang_hien_tai()
+    trong_mua = du_lieu._trong_mua(den["mua_dep_thang"], thang)
+    sights = [h["ten"] for h in raw["hoat_dong"] if h["ten"] not in du_lieu.TEN_DICH_VU.values() and not h["ten"].startswith("Vé phà")]
+    sights += list(raw.get("_mien_phi") or [])
+    return {"travel": di, "lodging": raw.get("_luu_tru_chi_tiet") or "Không lưu trú (đi về trong ngày)",
+            "season": {"months": den["mua_dep_thang"], "in_season": trong_mua, "month_now": thang},
+            "sights": sights,
+            "price_note": "Giá trong kế hoạch là giá tham khảo theo hạng khách sạn, nhà hàng và giá thị trường có nguồn — "
+                          "chưa phải báo giá của một cơ sở cụ thể. Trước khi đặt, công ty chọn khách sạn / nhà hàng thật "
+                          "cùng hạng, xin báo giá và xác nhận đủ số phòng cho cả đoàn."}
 
 
 def destination_option(req, dest, recommended) -> dict:

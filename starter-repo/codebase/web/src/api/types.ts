@@ -123,7 +123,14 @@ export interface Plan {
   /** Cảnh báo (về muộn, bỏ việc không đủ giờ…), thông tin thêm (cách đi, nơi ở, mùa đẹp) và video review đã kiểm link. */
   notes?: string[];
   info?: string[];
-  videos?: { title: string; url: string; channel: string }[];
+  videos?: { title: string; url: string; channel: string; kind?: string }[];
+  extra?: {
+    travel: string;
+    lodging: string;
+    season: { months: string; in_season: boolean; month_now: number };
+    sights: string[];
+    price_note: string;
+  };
 }
 
 export interface TripView {

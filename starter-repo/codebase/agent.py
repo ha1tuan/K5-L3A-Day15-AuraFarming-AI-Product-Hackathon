@@ -312,7 +312,7 @@ def header(req, branch, tu_du_lieu=False):
     if req["ngan_sach"]:
         h.append("Ngân sách đã hiểu: **%s cho %d người** (%s)." % (
             planner.fmt_vnd(req["ngan_sach"]), req["so_nguoi"], req["ngan_sach_cach_hieu"]))
-    nguon = ("Đơn giá lấy từ bộ dữ liệu của nhóm (`data/*.json`: giá gốc có link nguồn, phần còn lại **ước tính**), "
+    nguon = ("Đơn giá là giá tham khảo từ bộ dữ liệu của nhóm (giá thị trường có nguồn, phần còn lại **ước tính**), "
              "chưa phải báo giá của cơ sở cụ thể" if tu_du_lieu else
              "Mọi đơn giá là **ước tính** tham khảo (hệ thống chưa có nguồn giá trực tuyến để kiểm)")
     h.append(nguon + "; tiền, số phòng, số xe, phát sinh 5%% do code tính. Cách vào: %s." % {

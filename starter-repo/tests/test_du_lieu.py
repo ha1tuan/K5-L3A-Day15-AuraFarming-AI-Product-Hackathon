@@ -96,7 +96,7 @@ def test_answer_cach_c_dung_du_lieu_khong_goi_model_du_tru(model):
     out = agent.answer("60 người từ Hà Nội đi Hạ Long 3 ngày 2 đêm gắn kết, 150 triệu")["output"]
     assert model["du_tru"] == 0
     assert out.count("### Gói ") == 3
-    assert "data/*.json" in out and "Thông tin thêm về Hạ Long" in out
+    assert "bộ dữ liệu của nhóm" in out and "Thông tin thêm về Hạ Long" in out
     assert "tên dựng" not in out                                  # không in tên khách sạn / quán dựng
     yt = set(re.findall(r"https://www\.youtube\.com/watch\?v=[\w-]+", out))
     assert yt and yt <= LINKS
