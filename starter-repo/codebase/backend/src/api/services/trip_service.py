@@ -1,19 +1,32 @@
-"""TripService: TripInput của web -> graph cách C (đường "form") -> TripView; lưu trong bộ nhớ tiến trình."""
+"""TripService: lập dự trù và lịch trình cho web, lưu chuyến trong bộ nhớ tiến trình."""
+import json
 import os
 import uuid
 from collections import OrderedDict
+from dataclasses import replace
+from pathlib import Path
 from typing import Optional
 
-from src.api.schemas import TripInput
+from src.api.schemas import ApproveInput, TripInput
 from src.core.orchestration.graphs.graph import build_trip_graph
 from src.api.services import du_lieu_service
+from src.core.planning.estimates import load_estimates
+from src.core.planning.pricing import price_packages
+from src.core.planning.render import to_view
+from src.core.planning.types import GeoPoint, TripRequest
+from tools import dinh_vi
 
 MAX_TRIPS = 200
-NOT_SUPPORTED = "Bản hiện tại cần cả kinh phí và địa điểm."
 
 _store: "OrderedDict[str, dict]" = OrderedDict()
 _reqs: dict = {}
+# Chuyến đi theo graph (nơi ngoài bộ dữ liệu): giữ raw + lựa chọn đã trả để duyệt gói (PR #13).
+_graph_choices: "OrderedDict[str, tuple[dict, dict]]" = OrderedDict()
 _graph = None
+
+
+class InvalidTripSelection(ValueError):
+    """Địa điểm hoặc gói nằm ngoài lựa chọn đã trả cho chuyến."""
 
 
 def _form_graph():
@@ -21,6 +34,32 @@ def _form_graph():
     if _graph is None:
         _graph = build_trip_graph(entry="form")
     return _graph
+
+
+def _load_destinations() -> list[dict]:
+    path = Path(__file__).resolve().parents[5] / "data" / "diem_den.json"
+    return json.loads(path.read_text(encoding="utf-8"))["diem_den"]
+
+
+def _rank_destinations(req: TripRequest):
+    origin = dinh_vi(req.origin, domestic=True)
+    origin_pt = GeoPoint(**origin) if origin else None
+    estimates = load_estimates()
+    ranked = []
+
+    for item in _load_destinations():
+        name = item["ten"]
+        dest_pt = GeoPoint(lat=item["lat"], lon=item["lon"])
+        candidate = replace(req, destination=name)
+        packages = price_packages(candidate, origin_pt, dest_pt, {}, estimates)
+        ranked.append((name, packages))
+
+    def sort_key(option):
+        name, packages = option
+        cheapest = min(pkg.total for pkg in packages)
+        return cheapest > req.budget, cheapest, name
+
+    return sorted(ranked, key=sort_key)[:3]
 
 
 def to_raw(inp: TripInput) -> dict:
@@ -86,6 +125,13 @@ def _save(view: dict, req: Optional[dict] = None) -> dict:
     return view
 
 
+def _save_graph(view: dict, raw: dict, choices: dict) -> dict:
+    _graph_choices[view["trip_id"]] = (raw, choices)
+    while len(_graph_choices) > MAX_TRIPS:
+        _graph_choices.popitem(last=False)
+    return _save(view)
+
+
 FIELD_VI = {"headcount": "số người đi", "days": "số ngày", "start_date": "ngày đi", "origin": "nơi xuất phát", "purpose": "mục đích",
             "budget_or_destination": "kinh phí hoặc địa điểm"}
 
@@ -111,6 +157,9 @@ def create_trip(inp: TripInput) -> dict:
 
 
 def approve_trip(trip_id: str, body) -> Optional[dict]:
+    """Chuyến theo graph (nơi ngoài dữ liệu) → duyệt theo lựa chọn đã trả (PR #13); còn lại → đường dữ liệu."""
+    if trip_id in _graph_choices:
+        return _approve_graph(trip_id, body)
     req = get_req(trip_id)
     if req is None:
         return None
@@ -136,14 +185,64 @@ def quote_for_trip(trip_id: str, tier: str, text: str) -> Optional[dict]:
 
 
 def _create_graph(inp: TripInput) -> dict:
-    state = _form_graph().invoke({"raw": to_raw(inp), "today": os.environ.get("TRAVEL_TODAY") or ""})
+    raw = to_raw(inp)
+    state = _form_graph().invoke({"raw": raw, "today": os.environ.get("TRAVEL_TODAY") or ""})
     view = dict(state["view"])
     req = state.get("request")
-    if req is not None and req.entry != "C":
-        view = {"status": "error", "message": NOT_SUPPORTED}
+    if req is not None and req.entry == "A":
+        view = {
+            "status": "choose_destination",
+            "message": "Gợi ý địa điểm theo kinh phí dự trù.",
+            "request": to_view("", req, [], [])["request"],
+            "destinations": [],
+        }
+        for index, (name, packages) in enumerate(_rank_destinations(req)):
+            cheapest = min(packages, key=lambda pkg: pkg.total)
+            view["destinations"].append({
+                "name": name,
+                "transport": cheapest.leg.mode,
+                "travel_time": f"Khoảng {cheapest.leg.hours:g} giờ mỗi chiều",
+                "why": "Có gói trong ngân sách." if cheapest.total <= req.budget
+                       else "Gói thấp nhất vẫn vượt ngân sách.",
+                "refs": {"articles": 0, "videos": 0},
+                "packages": to_view("", req, packages, [])["packages"],
+                "recommended": index == 0 and cheapest.total <= req.budget,
+            })
+    elif req is not None and req.entry == "B" and view["status"] == "ok":
+        view["status"] = "choose_package"
+        view["message"] = "Dự trù kinh phí cho ba gói."
+        view.pop("plans", None)
     view["trip_id"] = uuid.uuid4().hex
-    return _save(view)
+    return _save_graph(view, raw, view)
 
 
 def get_trip(trip_id: str) -> Optional[dict]:
     return _store.get(trip_id) or _load(trip_id)[0]
+
+
+def _approve_graph(trip_id: str, inp: ApproveInput) -> Optional[dict]:
+    raw, choices = _graph_choices[trip_id]
+    status = choices["status"]
+    destination = inp.destination or choices.get("destination")
+    if status == "choose_destination":
+        packages = next((item["packages"] for item in choices["destinations"]
+                         if item["name"] == destination), [])
+    elif status == "choose_package" and destination == choices["destination"]:
+        packages = choices["packages"]
+    else:
+        packages = []
+    if not any(pkg["tier"] == inp.package for pkg in packages):
+        raise InvalidTripSelection("Hãy chọn địa điểm và gói đã được đề xuất cho chuyến này.")
+
+    selected = {**raw, "destination": destination, "start_date": choices["request"]["start_date"],
+                "exclude": inp.remove_items or []}
+    if inp.headcount is not None:
+        selected["headcount"] = inp.headcount
+
+    state = _form_graph().invoke({"raw": selected, "today": os.environ.get("TRAVEL_TODAY") or ""})
+    view = dict(state["view"], trip_id=trip_id)
+    if view["status"] != "ok":
+        return view
+    view["request"]["entry"] = choices["request"]["entry"]
+    view["plans"] = [plan for plan in view["plans"] if plan["tier"] == inp.package]
+    return _save_graph(view, raw, choices)

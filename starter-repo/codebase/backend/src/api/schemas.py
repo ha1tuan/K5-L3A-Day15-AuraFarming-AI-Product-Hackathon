@@ -1,7 +1,9 @@
 """Schema Pydantic của API, khớp codebase/web/src/api/types.ts (TripInput)."""
-from typing import Dict, List, Optional
+from typing import Dict, List, Literal, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+
+from src.core.planning.types import Tier
 
 
 class TripInput(BaseModel):
