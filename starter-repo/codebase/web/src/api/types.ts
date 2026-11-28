@@ -143,6 +143,9 @@ export interface TripView {
   request?: TripEcho;
   missing_fields?: Field[];
   destinations?: DestinationOption[];
+  /** Cách A: các nơi đã gợi ý (kể cả lần trước) và còn nơi khác để gợi ý không. */
+  seen?: string[];
+  has_more?: boolean;
   destination?: string;
   packages?: Package[];
   plans?: Plan[];

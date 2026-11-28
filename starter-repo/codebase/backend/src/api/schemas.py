@@ -41,3 +41,7 @@ class RecalcInput(BaseModel):
 class TripQuoteInput(BaseModel):
     text: str
     tier: str = "can_bang"
+
+
+class MoreDestinationsInput(BaseModel):
+    exclude: List[str] = Field(default_factory=list)

@@ -3,7 +3,7 @@ from fastapi import APIRouter, HTTPException
 
 from fastapi.responses import Response
 
-from src.api.schemas import ApproveInput, ChatInput, QuoteInput, RecalcInput, TripInput, TripQuoteInput
+from src.api.schemas import ApproveInput, ChatInput, MoreDestinationsInput, QuoteInput, RecalcInput, TripInput, TripQuoteInput
 from src.api.services import du_lieu_service
 from src.api.services import trip_service
 
@@ -31,6 +31,15 @@ def get_trip(trip_id: str) -> dict:
     view = trip_service.get_trip(trip_id)
     if view is None:
         raise HTTPException(status_code=404, detail="Không tìm thấy chuyến đi")
+    return view
+
+
+@router.post("/{trip_id}/more-destinations")
+def more_destinations(trip_id: str, body: MoreDestinationsInput) -> dict:
+    """Cách A: "Gợi ý nơi khác" — bỏ các nơi đã xem, trả 3 nơi tiếp theo."""
+    view = trip_service.more_destinations(trip_id, body.exclude)
+    if view is None:
+        raise HTTPException(status_code=404, detail="Không tìm thấy chuyến đi gợi ý địa điểm")
     return view
 
 

@@ -46,6 +46,11 @@ export function chat(messages: ChatMsg[], signal?: AbortSignal): Promise<{ reply
   return post(`${API}/api/chat`, { messages }, signal);
 }
 
+/** Cách A: "Gợi ý nơi khác" — bỏ các nơi đã xem, lấy 3 nơi tiếp theo (exclude rỗng = xem lại từ đầu). */
+export function moreDestinations(id: string, exclude: string[], signal?: AbortSignal): Promise<TripView> {
+  return post(`${API}/api/trips/${id}/more-destinations`, { exclude }, signal);
+}
+
 /** Sửa gói ngay trên trang kế hoạch → tính lại (trả view mới, trip_id mới). */
 export function recalcTrip(id: string, body: RecalcInput, signal?: AbortSignal): Promise<TripView> {
   return post(`${API}/api/trips/${id}/recalc`, body, signal);

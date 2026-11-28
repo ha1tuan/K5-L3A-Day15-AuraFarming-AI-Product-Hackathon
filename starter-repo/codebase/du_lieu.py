@@ -290,9 +290,11 @@ def thang_hien_tai():
         return date.today().month
 
 
-def goi_y_diem_den(req, tu, so=3):
+def goi_y_diem_den(req, tu, so=3, bo_qua=()):
     """Cách A: xếp 24 điểm đến bằng code. Ưu tiên nơi hợp mục đích (≥2/3), gói cao nhất còn trong ngân sách,
-    thời gian đi một chiều hợp số ngày, đúng mùa. Không nơi nào vừa ngân sách → trả các nơi rẻ nhất."""
+    thời gian đi một chiều hợp số ngày, đúng mùa. Không nơi nào vừa ngân sách → trả các nơi rẻ nhất.
+    bo_qua: tên điểm đến người dùng đã xem (bấm "Gợi ý nơi khác") — bỏ ra để lấy các nơi tiếp theo."""
+    bo = {khong_dau(x) for x in bo_qua or ()}
     b, md, so_ngay = req["ngan_sach"], req["muc_dich"], max(1, req["so_ngay"])
     gio_toi_da = 3 if so_ngay == 1 else 2.5 * so_ngay + 1
     thang = thang_hien_tai()
@@ -300,6 +302,8 @@ def goi_y_diem_den(req, tu, so=3):
     for den in D("diem_den")["diem_den"]:
         ph = den["phu_hop"]
         if (md == "ca_hai" and min(ph.values()) < 2) or (md != "ca_hai" and ph[md] < 2):
+            continue
+        if khong_dau(den["ten"]) in bo:
             continue
         if den["id"] == tu["id"] or tuyen(tu, den)["duong_bo_km"] == 0:                            # đi chơi ngay tại thành phố xuất phát: không gợi ý
             continue

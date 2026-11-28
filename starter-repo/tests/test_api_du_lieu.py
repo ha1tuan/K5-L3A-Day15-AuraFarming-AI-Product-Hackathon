@@ -98,3 +98,22 @@ def test_uoc_tinh_doi_chieu_xuat_excel(c):
     assert r["status"] == "ok" and r["so_nguoi"] == 50 and r["doi_chieu"]["ke_hoach"] > 0
     x = c.get("/api/trips/%s/export.xlsx" % v["trip_id"])
     assert x.status_code == 200 and x.content[:2] == b"PK"
+
+
+def test_more_destinations_excludes_seen_and_can_reset(c):
+    """Cách A: "Gợi ý nơi khác" trả nơi chưa xem; exclude rỗng = xem lại từ đầu; trip lạ → 404."""
+    v = c.post("/api/trips", json=BASE).json()
+    assert v["status"] == "choose_destination"
+    first = [d["name"] for d in v["destinations"]]
+    assert v["seen"] == first
+    if v["has_more"]:
+        v2 = c.post(f"/api/trips/{v['trip_id']}/more-destinations", json={"exclude": v["seen"]}).json()
+        second = [d["name"] for d in v2["destinations"]]
+        assert second and not set(second) & set(first)
+        assert v2["seen"] == first + second
+        assert not any(d["recommended"] for d in v2["destinations"])
+        ok = c.post(f"/api/trips/{v2['trip_id']}/approve", json={"destination": second[0], "package": "tiet_kiem"})
+        assert ok.status_code == 200 and ok.json()["status"] == "ok"
+    v3 = c.post(f"/api/trips/{v['trip_id']}/more-destinations", json={"exclude": []}).json()
+    assert [d["name"] for d in v3["destinations"]] == first
+    assert c.post("/api/trips/khong-co/more-destinations", json={"exclude": []}).status_code == 404

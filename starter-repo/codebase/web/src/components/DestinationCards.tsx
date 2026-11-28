@@ -1,15 +1,39 @@
-import { Bus, Plane, PlayCircle, Info } from 'lucide-react';
+import { Bus, Plane, PlayCircle, Info, RefreshCw, RotateCcw } from 'lucide-react';
 import type { DestinationOption, TripEcho } from '../api/types';
 import { formatVndShort, TIER_LABEL } from '../lib/format';
 import { BudgetBadge, btnGhost, btnPrimary } from './ui';
 import { TripEchoLine } from './TripEchoLine';
 
-export function DestinationCards({ request, destinations, onChoose }: {
+export function DestinationCards({ request, destinations, onChoose, onMore, seen = [], hasMore = false, message }: {
   request: TripEcho; destinations: DestinationOption[]; onChoose: (name: string) => void;
+  /** Gọi lại gợi ý, bỏ các nơi trong danh sách (rỗng = xem lại từ đầu). Không có = ẩn nút (chế độ demo). */
+  onMore?: (exclude: string[]) => void; seen?: string[]; hasMore?: boolean; message?: string;
 }) {
+  const earlier = seen.filter(n => !destinations.some(d => d.name === n));
   return (
     <section aria-labelledby="dest-h">
-      <h1 id="dest-h" className="text-2xl font-bold">Gợi ý địa điểm</h1>
+      <div className="flex flex-wrap items-center gap-3">
+        <h1 id="dest-h" className="text-2xl font-bold">Gợi ý địa điểm</h1>
+        {onMore && destinations.length > 0 && (
+          <button type="button" className={`ml-auto ${btnGhost}`} disabled={!hasMore} onClick={() => onMore(seen)}
+            title={hasMore ? 'Bỏ các nơi đang xem, gợi ý 3 nơi khác vẫn hợp ngân sách và mục đích' : 'Đã gợi ý hết các nơi phù hợp trong dữ liệu'}>
+            <RefreshCw className="size-4" aria-hidden />{hasMore ? 'Gợi ý nơi khác' : 'Hết nơi phù hợp'}
+          </button>
+        )}
+      </div>
+      {earlier.length > 0 && (
+        <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted">
+          Đã xem trước: {earlier.join(', ')}
+          {onMore && <button type="button" className="inline-flex cursor-pointer items-center gap-1 font-medium text-accent hover:underline" onClick={() => onMore([])}>
+            <RotateCcw className="size-3.5" aria-hidden />Xem lại từ đầu</button>}
+        </p>
+      )}
+      {destinations.length === 0 && (
+        <div className="mt-4 rounded-xl bg-soft p-5 text-sm">
+          <p>{message}</p>
+          {onMore && <button type="button" className={`mt-3 ${btnPrimary}`} onClick={() => onMore([])}><RotateCcw className="size-4" aria-hidden />Xem lại từ đầu</button>}
+        </div>
+      )}
       <div className="mb-2 mt-1"><TripEchoLine e={request} /></div>
       <p className="mb-6 flex items-center gap-2 text-sm text-muted">
         <Info className="size-4" aria-hidden />Chi phí là dự trù cho cả đoàn, đã gồm di chuyển, lưu trú, ăn uống, hoạt động và 5% phát sinh.

@@ -6,7 +6,7 @@ import { Logo } from './components/Brand';
 import { useScroll } from './components/motion';
 import { QuoteAudit } from './components/QuoteAudit';
 import type { ApproveInput, Field, TripView } from './api/types';
-import { approveTrip, createTrip, DEMO, getTrip } from './api/client';
+import { approveTrip, createTrip, DEMO, getTrip, moreDestinations } from './api/client';
 import { parseVnd } from './lib/format';
 import { StepBar } from './components/StepBar';
 import { TripForm, validate, type FormState } from './components/TripForm';
@@ -120,7 +120,10 @@ export default function App() {
     else if (v.status === 'error' || !v.request) body = <Notice tone="error" title="Không lập được kế hoạch" action={again}>{v.message}</Notice>;
     else if (v.status === 'choose_destination' && !screen.chosenDest) {
       step = 2;
-      body = <DestinationCards request={v.request} destinations={v.destinations ?? []} onChoose={name => setScreen({ kind: 'view', view: v, chosenDest: name })} />;
+      const more = (exclude: string[]) => run(['Tìm nơi khác hợp ngân sách'], signal => moreDestinations(v.trip_id, exclude, signal), screen);
+      body = <DestinationCards request={v.request} destinations={v.destinations ?? []} message={v.message}
+        seen={v.seen ?? (v.destinations ?? []).map(d => d.name)} hasMore={v.has_more ?? false}
+        onMore={DEMO ? undefined : more} onChoose={name => setScreen({ kind: 'view', view: v, chosenDest: name })} />;
     } else if (v.status === 'choose_destination' || v.status === 'choose_package') {
       step = 2;
       const dest = screen.chosenDest ?? v.destination ?? '';

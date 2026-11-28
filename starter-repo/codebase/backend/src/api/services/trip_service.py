@@ -168,6 +168,18 @@ def approve_trip(trip_id: str, body) -> Optional[dict]:
     return _save(view, req2)
 
 
+def more_destinations(trip_id: str, exclude: list) -> Optional[dict]:
+    """Cách A: người dùng không ưng 3 nơi đã gợi ý → 3 nơi tiếp theo (bỏ các nơi đã xem). exclude rỗng = xem lại từ đầu."""
+    import copy
+    req = get_req(trip_id)
+    if req is None or req.get("dia_diem"):
+        return None
+    req = copy.deepcopy(req)
+    view = du_lieu_service.create(req, bo_qua=[str(x)[:100] for x in exclude[:50]])
+    view["trip_id"] = uuid.uuid4().hex
+    return _save(view, req)
+
+
 def recalc_trip(trip_id: str, body) -> Optional[dict]:
     req = get_req(trip_id)
     if req is None or not req.get("dia_diem"):

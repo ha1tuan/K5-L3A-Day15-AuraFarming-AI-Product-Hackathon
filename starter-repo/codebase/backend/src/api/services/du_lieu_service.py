@@ -573,19 +573,26 @@ def export_xlsx(view) -> bytes:
     return buf.getvalue()
 
 
-def create(req) -> dict:
-    """req đã đủ trường (missing() rỗng) và handles(req) đúng."""
+def create(req, bo_qua=()) -> dict:
+    """req đã đủ trường (missing() rỗng) và handles(req) đúng. bo_qua: điểm đến đã gợi ý trước (nút "Gợi ý nơi khác")."""
     tu = du_lieu.tim_diem_di(req["noi_xuat_phat"])
     if not req["dia_diem"]:
-        dests = du_lieu.goi_y_diem_den(req, tu)
+        bo_qua = list(bo_qua or [])
+        tat_ca = du_lieu.goi_y_diem_den(req, tu, so=99, bo_qua=bo_qua)
+        dests = tat_ca[:3]
+        req["_entry"] = "A"
+        if not dests and bo_qua:
+            return {"status": "choose_destination", "request": echo(req, "A"), "destinations": [], "seen": bo_qua, "has_more": False,
+                    "message": "Đã gợi ý hết %d điểm đến hợp mục đích và thời gian đi trong dữ liệu. Bấm \"Xem lại từ đầu\" "
+                               "hoặc nhập thẳng địa điểm bạn muốn." % len(bo_qua)}
         if not dests:
             return {"status": "error", "message": "Không tìm được điểm đến nào trong dữ liệu hợp mục đích và thời gian đi."}
         within = [d for d in dests if d["calc"]["tiet_kiem"]["tong"] <= (req["ngan_sach"] or 0)]
         msg = ("Gợi ý %d điểm đến cho %d người từ %s." % (len(dests), req["so_nguoi"], tu["ten"]) if within else
                "Không nơi nào vừa ngân sách; đây là các nơi rẻ nhất — xem ngân sách tối thiểu ở từng gói.")
-        req["_entry"] = "A"
         return {"status": "choose_destination", "message": msg, "request": echo(req, "A"),
-                "destinations": [destination_option(req, d, i == 0) for i, d in enumerate(dests)]}
+                "destinations": [destination_option(req, d, i == 0 and not bo_qua) for i, d in enumerate(dests)],
+                "seen": bo_qua + [d["ten"] for d in dests], "has_more": len(tat_ca) > 3}
     req["_entry"] = "C" if req["ngan_sach"] else "B"
     return view_for(req)
 
