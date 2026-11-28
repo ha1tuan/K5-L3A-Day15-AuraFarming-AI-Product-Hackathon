@@ -113,7 +113,7 @@ def tinh_goi(req, level, goi):
         suc = int(tai_cho.get("suc_chua") or 45) or 45
         so_xe = math.ceil(n / suc)
         gia = _price(tai_cho.get("don_gia_xe_ngay"), "xe_tai_cho", level, flags, "xe tại chỗ")
-        lines.append(("Di chuyển", "%s tại điểm đến (%d chỗ)" % (tai_cho.get("loai") or "Xe đưa đón", suc),
+        lines.append(("Di chuyển", "%s tại điểm đến (chở %d khách / xe) · %d xe × %d ngày" % (tai_cho.get("loai") or "Xe đưa đón", suc, so_xe, days),
                       so_xe * days, "xe·ngày", gia, so_xe * days * gia))
 
     # Lưu trú
@@ -145,7 +145,7 @@ def tinh_goi(req, level, goi):
         phong = xep_phong(types, n)
         noi = lt.get("mo_ta") or "Cơ sở lưu trú"
         for t, k in phong["co_cau"]:
-            lines.append(("Lưu trú", "%s — %s (%d người/phòng)" % (noi, t["ten"], t["suc_chua"]),
+            lines.append(("Lưu trú", "%s — %s (%d người/phòng) · %d phòng × %d đêm" % (noi, t["ten"], t["suc_chua"], k, nights),
                           k * nights, "phòng·đêm", t["gia_dem"], k * nights * t["gia_dem"]))
         if phong["thieu"] > 0:
             add = min(types, key=lambda t: t["gia_dem"] / t["suc_chua"])
@@ -153,14 +153,15 @@ def tinh_goi(req, level, goi):
             flags.append("⚠ Thiếu phòng: %s chỉ còn đủ %d chỗ cho %d người (thiếu %d chỗ). Cần thêm một cơ sở lưu trú "
                          "cùng mức hoặc đổi cơ sở; tạm tính %d %s ở cơ sở thứ hai theo cùng đơn giá — cần xác nhận."
                          % (noi, phong["so_cho"], n, phong["thieu"], k, add["ten"].lower()))
-            lines.append(("Lưu trú", "Cơ sở thứ hai cùng mức (cần tìm thêm) — %s" % add["ten"],
+            lines.append(("Lưu trú", "Cơ sở thứ hai cùng mức (cần tìm thêm) — %s · %d phòng × %d đêm" % (add["ten"], k, nights),
                           k * nights, "phòng·đêm", add["gia_dem"], k * nights * add["gia_dem"]))
 
     # Ăn uống
     au = goi.get("an_uong") or {}
     so_bua = max(1, 2 * days if days > 1 or nights > 0 else 2)
     gia = _price(au.get("don_gia_bua"), "bua", level, flags, "bữa ăn")
-    lines.append(("Ăn uống", au.get("mo_ta") or "Bữa chính theo đoàn", n * so_bua, "suất", gia, n * so_bua * gia))
+    lines.append(("Ăn uống", "%s · %d người × %d bữa" % (au.get("mo_ta") or "Bữa chính theo đoàn", n, so_bua),
+                  n * so_bua, "suất", gia, n * so_bua * gia))
 
     # Hoạt động
     banned = [b.lower() for b in req.get("khong_muon") or []]
