@@ -38,7 +38,7 @@ Bộ dữ liệu dựng `data/*.json` (seed 42): 5 điểm đi × 24 điểm đ�
 | Lượt | Run ID | Model | Cấu hình (prompt / công cụ / thay đổi) | Đạt / tổng | % | Đạt chuẩn? |
 |---|---|---|---|---|---|---|
 | 1 | `run-1@20261127-151750` | `ollama/qwen2.5:7b` | agent.py + du_lieu.py (đơn giá, xếp hạng, lịch do code từ `data/*.json`; model chỉ bóc tách yêu cầu) | 27/30 | 90% | chưa (tu_choi 6/8) |
-| 2 | | | | __/__ | | |
+| 2 | `run-2@20261128-010334` | `ollama/qwen2.5:7b` | + lấy ngân sách người dùng viết rõ khi lệch số model; + soát báo giá (12 câu Q mới) | 34/42 (30 câu cũ: 29/30) | 81% | chưa (tu_choi 8/9; giai_thich_vuot trượt 7 câu Q) |
 
 Lượt chạy lại vì lỗi kỹ thuật, lượt sau CP4: ghi thêm dòng, không sửa dòng cũ.
 

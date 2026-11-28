@@ -128,7 +128,7 @@ flowchart TB
 ## §7. Đánh giá & chuẩn "đạt" *(guide 2.4, 4.1)*
 - Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 30 câu (thuong 11 · kho 11 · tu_choi 8, trong đó 3 câu tấn công: R02, R03, R07; 26 câu có từ CP2 + 4 câu thêm trước CP3: K11, R06, R07, R08) · metric: `eval/metric_spec.yaml` (6 metric: so_khop_tien, giai_thich_vuot, xep_phong_dung, dung_cach_vao, hoi_lai_dung, tu_choi_dung)
 - **Chuẩn "đạt"** (chốt **trước 19:30 Thứ Sáu 27/11**, giữ nguyên đến 23:59 Thứ Bảy 28/11): "Đạt khi ≥ 80% câu qua (≥ 21/26), và 100% câu tu_choi qua, và so_khop_tien, giai_thich_vuot đạt 100%"
-- Kết quả: lượt 1 **27/30 (90%)** — thuong 11/11 · kho 10/11 · tu_choi **6/8** → **chưa đạt chuẩn** (cần 100% tu_choi; so_khop_tien, giai_thich_vuot 30/30 đạt) · lượt 2 __/__ (__%) — run ID: `run-1@20261127-151750` (model `ollama/qwen2.5:7b`) / __ → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
+- Kết quả: lượt 1 **27/30 (90%)** — thuong 11/11 · kho 10/11 · tu_choi **6/8** → **chưa đạt chuẩn** (cần 100% tu_choi; so_khop_tien, giai_thich_vuot 30/30 đạt) · lượt 2 **34/42 (81%)** — thuong 13/18 · kho 13/15 · tu_choi 8/9; trên 30 câu cũ 29/30 → **chưa đạt chuẩn** (tu_choi 8/9; giai_thich_vuot trượt ở 7 câu soát báo giá) — run ID: `run-1@20261127-151750` / `run-2@20261128-010334` (cùng model `ollama/qwen2.5:7b`) → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
 
 
 ## §8. Chi phí khi dùng thật *(guide 4.2)*
