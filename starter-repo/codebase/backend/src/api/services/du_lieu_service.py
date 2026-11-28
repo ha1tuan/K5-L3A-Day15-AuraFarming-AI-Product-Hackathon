@@ -9,6 +9,7 @@ Nơi đi / điểm đến ngoài dữ liệu → trả None để trip_service d
 """
 import copy
 import os
+import re
 import sys
 from datetime import date, datetime, timedelta, timezone
 from typing import Optional
@@ -234,6 +235,179 @@ def handles(req) -> bool:
     return not req["dia_diem"] or du_lieu.tim_diem_den(req["dia_diem"]) is not None
 
 
+def build_dest(req):
+    """Dựng 3 gói cho req (đã có nơi đi + điểm đến), áp các khoản người dùng bỏ (req["_bo"]: tên hoạt động, "Gala dinner")."""
+    tu, den = du_lieu.tim_diem_di(req["noi_xuat_phat"]), du_lieu.tim_diem_den(req["dia_diem"])
+    if not (tu and den):
+        return None
+    bo = set(req.get("_bo") or [])
+    req["khong_muon"] = ["gala"] if "Gala dinner" in bo else []
+    dest = du_lieu.dung_diem_den(req, tu, den)
+    if bo - {"Gala dinner"}:
+        for lv in TIERS:
+            dest["raw"][lv]["hoat_dong"] = [h for h in dest["raw"][lv]["hoat_dong"] if h["ten"] not in bo]
+            dest["raw"][lv]["_mien_phi"] = [x for x in dest["raw"][lv].get("_mien_phi") or [] if x not in bo]
+            dest["calc"][lv] = planner.tinh_goi(req, lv, dest["raw"][lv])
+            dest["lich"][lv], _ = du_lieu.lich_tu_du_lieu(req, dest, lv)
+    return dest
+
+
+def customize(req) -> dict:
+    """Những gì người dùng sửa được ngay trên trang kế hoạch (bỏ / thêm lại từng khoản, số người, số ngày)."""
+    r2 = dict(req, _bo=[])
+    full = build_dest(r2)
+    opts = []
+    if full:
+        for lv in TIERS:
+            for h in full["raw"][lv]["hoat_dong"]:
+                if h["ten"] not in opts and not h["ten"].startswith("Vé phà"):
+                    opts.append(h["ten"])
+            if full["raw"][lv]["gala"].get("co") and req["so_dem"] > 0 and "Gala dinner" not in opts:
+                opts.append("Gala dinner")
+    return {"options": opts, "removed": list(req.get("_bo") or []), "headcount": req["so_nguoi"], "days": req["so_ngay"]}
+
+
+def map_info(req, dest) -> dict:
+    tu, den = dest["tu"], dest["den"]
+    c = dest["raw"]["tiet_kiem"]["_chang"]
+    return {"origin": {"name": tu["ten"], "lat": tu["lat"], "lon": tu["lon"]},
+            "dest": {"name": den["ten"], "lat": den["lat"], "lon": den["lon"]},
+            "mode": "plane" if c["kieu"] == "ve" else "bus"}
+
+
+def view_for(req) -> dict:
+    """View đầy đủ theo trạng thái req: đã chọn gói (_tier) → 1 kế hoạch; có ngân sách (cách C) → 3 kế hoạch; cách B → chọn gói."""
+    dest = build_dest(req)
+    if not dest:
+        return {"status": "error", "message": "Không tìm thấy địa điểm trong dữ liệu."}
+    den = dest["den"]
+    base = {"request": echo(req, req.get("_entry", "C")), "destination": den["ten"], "packages": packages(req, dest),
+            "customize": customize(req), "map": map_info(req, dest)}
+    if req.get("_tier"):
+        lv = req["_tier"]
+        return dict(base, status="ok", message="Kế hoạch gói %s cho %s." % (dict(planner.PACKAGES)[lv], den["ten"]),
+                    plans=[plan(req, dest, lv)])
+    if req.get("_entry") == "B":
+        return dict(base, status="choose_package", message="Dự trù 3 gói cho %s — chọn gói để lập kế hoạch chi tiết." % den["ten"])
+    return dict(base, status="ok", message="3 kế hoạch cho %s." % den["ten"], plans=[plan(req, dest, lv) for lv in TIERS])
+
+
+def recalc(req, body) -> dict:
+    """Sửa ngay trên trang kế hoạch: số người, số ngày, danh sách khoản bỏ → tính lại toàn bộ."""
+    req = copy.deepcopy(req)
+    if body.headcount:
+        req["so_nguoi"] = int(body.headcount)
+        if req.get("_ns_moi_nguoi"):
+            req["ngan_sach"] = req["_ns_moi_nguoi"] * req["so_nguoi"]
+    if body.days:
+        req["so_ngay"], req["so_dem"] = int(body.days), max(0, int(body.days) - 1)
+    if body.removed is not None:
+        req["_bo"] = list(body.removed)
+    return view_for(req), req
+
+
+def estimate(origin, destination, n, days, purpose) -> Optional[dict]:
+    """Ước tính nhanh khi đang điền form: tổng / mỗi người của 3 gói."""
+    tu, den = du_lieu.tim_diem_di(origin), du_lieu.tim_diem_den(destination)
+    if not (tu and den and n and days):
+        return None
+    req = {"so_nguoi": n, "so_ngay": days, "so_dem": max(0, days - 1), "muc_dich": purpose or "ca_hai", "ngan_sach": None, "khong_muon": []}
+    d = du_lieu.dung_diem_den(req, tu, den)
+    return {"destination": den["ten"], "origin": tu["ten"],
+            "tiers": [{"tier": lv, "total": d["calc"][lv]["tong"], "per_person": d["calc"][lv]["moi_nguoi"]} for lv in TIERS]}
+
+
+def quote_compare(req, tier, text) -> dict:
+    """Soát báo giá tour rồi đặt cạnh gói đã lập (cùng số người, ngân sách)."""
+    import soat_bao_gia
+    if not re.search(r"\d+\s*(người|khách|nhân viên)", text, re.I):
+        text = "Công ty %d người%s.\n%s" % (req["so_nguoi"], (", ngân sách %d triệu" % round(req["ngan_sach"] / 1e6)) if req.get("ngan_sach") else "", text)
+    r = soat_bao_gia.soat(text, ket_qua=True)
+    if r.get("status") != "ok":
+        return r
+    dest = build_dest(req)
+    g = dest["calc"][tier] if dest else None
+    if g:
+        chenh = r["tong"] - g["tong"]
+        r["doi_chieu"] = {"tier": tier, "ke_hoach": g["tong"], "ke_hoach_moi_nguoi": g["moi_nguoi"], "bao_gia_that": r["tong"],
+                          "chenh": chenh, "chenh_pct": round(100.0 * chenh / g["tong"], 1),
+                          "nhan_xet": ("Báo giá tour (sau khi cộng khoản ngoài giá) **cao hơn** dự trù gói %s %s — có cơ sở để thương lượng."
+                                       if chenh > 0 else "Báo giá tour (sau khi cộng khoản ngoài giá) **thấp hơn** dự trù gói %s %s — kiểm kỹ tour đã gồm đủ hạng mục chưa.")
+                                      % (dict(planner.PACKAGES)[tier], planner.fmt_vnd(abs(chenh)))}
+    return r
+
+
+def export_xlsx(view) -> bytes:
+    """Tờ trình Excel: tóm tắt 3 gói + bảng chi phí từng gói + lịch trình — cho sếp và kế toán."""
+    import io
+    from openpyxl import Workbook
+    from openpyxl.styles import Alignment, Font, PatternFill
+    wb = Workbook()
+    ws = wb.active
+    ws.title = "Tờ trình"
+    rq = view.get("request") or {}
+    bold, head = Font(bold=True), PatternFill("solid", fgColor="0E7490")
+    ws.append(["TỜ TRÌNH DỰ TRÙ CHUYẾN ĐI CÔNG TY — AuraFarming"])
+    ws["A1"].font = Font(bold=True, size=14)
+    ws.append(["Địa điểm", view.get("destination")])
+    ws.append(["Số người", rq.get("headcount")])
+    ws.append(["Thời gian", "%s → %s (%s ngày %s đêm)" % (rq.get("start_date"), rq.get("end_date"), rq.get("days"), rq.get("nights"))])
+    ws.append(["Xuất phát", rq.get("origin")])
+    ws.append(["Ngân sách", rq.get("budget") or "chưa có"])
+    ws.append([])
+    ws.append(["Gói", "Tổng cả đoàn (đ)", "Mỗi người (đ)", "So với ngân sách", "Đề xuất"])
+    for c in ws[ws.max_row]:
+        c.font, c.fill = Font(bold=True, color="FFFFFF"), head
+    names = dict(planner.PACKAGES)
+    for p in view.get("packages") or []:
+        ws.append([names[p["tier"]], p["total"], p["per_person"],
+                   ("vượt " + planner.fmt_vnd(p["over_budget"])) if p["over_budget"] else ("trong ngân sách" if rq.get("budget") else "—"),
+                   "✔" if p["recommended"] else ""])
+    ws.append([])
+    for t in ["Ghi chú cho kế toán:",
+              "- Giá là tham khảo theo hạng khách sạn / nhà hàng và giá thị trường có nguồn, chưa phải báo giá của cơ sở cụ thể.",
+              "- Yêu cầu hoá đơn VAT ghi tên công ty; thanh toán chuyển khoản cho hoá đơn từ 5 triệu đồng trở lên.",
+              "- Hợp đồng / hoá đơn ghi theo đoàn, không kèm danh sách tên nhân viên.",
+              "- Đã gồm 5% dự phòng phát sinh."]:
+        ws.append([t])
+    ws.column_dimensions["A"].width, ws.column_dimensions["B"].width = 34, 22
+    for col in "CDE":
+        ws.column_dimensions[col].width = 20
+    for p in view.get("packages") or []:
+        w = wb.create_sheet("Chi phí " + names[p["tier"]])
+        w.append(["Nhóm", "Hạng mục", "Số lượng", "Đơn vị", "Đơn giá (đ)", "Thành tiền (đ)"])
+        for c in w[1]:
+            c.font, c.fill = Font(bold=True, color="FFFFFF"), head
+        for li in p["line_items"]:
+            w.append([li["category"], li["description"], li["qty"], li["unit"], li["unit_price"], li["amount"]])
+        w.append(["", "TỔNG CẢ ĐOÀN", "", "", "", p["total"]])
+        w.append(["", "MỖI NGƯỜI", "", "", "", p["per_person"]])
+        for r in (w.max_row - 1, w.max_row):
+            for c in w[r]:
+                c.font = bold
+        w.column_dimensions["B"].width = 70
+        for col in "ACDEF":
+            w.column_dimensions[col].width = 16
+    for pl in view.get("plans") or []:
+        w = wb.create_sheet("Lịch " + names[pl["tier"]])
+        w.append(["Ngày", "Giờ", "Việc"])
+        for c in w[1]:
+            c.font, c.fill = Font(bold=True, color="FFFFFF"), head
+        for d in pl["days"]:
+            for sl in d["slots"]:
+                w.append(["%s (%s)" % (d["label"], d["date"]), "%s %s" % (sl["start"], sl.get("note") or ""), sl["title"]])
+        w.column_dimensions["A"].width, w.column_dimensions["B"].width, w.column_dimensions["C"].width = 22, 16, 80
+    for w in wb.worksheets:
+        for row in w.iter_rows():
+            for c in row:
+                if isinstance(c.value, int) and c.value >= 1000:
+                    c.number_format = "#,##0"
+                c.alignment = Alignment(vertical="top", wrap_text=isinstance(c.value, str) and len(c.value) > 40)
+    buf = io.BytesIO()
+    wb.save(buf)
+    return buf.getvalue()
+
+
 def create(req) -> dict:
     """req đã đủ trường (missing() rỗng) và handles(req) đúng."""
     tu = du_lieu.tim_diem_di(req["noi_xuat_phat"])
@@ -247,18 +421,12 @@ def create(req) -> dict:
         req["_entry"] = "A"
         return {"status": "choose_destination", "message": msg, "request": echo(req, "A"),
                 "destinations": [destination_option(req, d, i == 0) for i, d in enumerate(dests)]}
-    den = du_lieu.tim_diem_den(req["dia_diem"])
-    dest = du_lieu.dung_diem_den(req, tu, den)
-    if req["ngan_sach"]:
-        return {"status": "ok", "message": "3 kế hoạch cho %s." % den["ten"], "request": echo(req, "C"), "destination": den["ten"],
-                "packages": packages(req, dest), "plans": [plan(req, dest, lv) for lv in TIERS]}
-    req["_entry"] = "B"
-    return {"status": "choose_package", "message": "Dự trù 3 gói cho %s — chọn gói để lập kế hoạch chi tiết." % den["ten"],
-            "request": echo(req, "B"), "destination": den["ten"], "packages": packages(req, dest)}
+    req["_entry"] = "C" if req["ngan_sach"] else "B"
+    return view_for(req)
 
 
-def approve(req, body) -> dict:
-    """Bước duyệt (cách A, B): đổi địa điểm / gói / số người / bỏ gala, team building → tính lại → 1 kế hoạch."""
+def approve(req, body):
+    """Bước duyệt (cách A, B): chọn địa điểm / gói, sửa số người, bỏ gala / team building → 1 kế hoạch. Trả (view, req mới)."""
     req = copy.deepcopy(req)
     if body.headcount:
         req["so_nguoi"] = body.headcount
@@ -266,18 +434,11 @@ def approve(req, body) -> dict:
             req["ngan_sach"] = req["_ns_moi_nguoi"] * body.headcount
     if body.destination:
         req["dia_diem"] = body.destination
-    for x in body.remove_items or []:
-        req["khong_muon"].append("gala" if x == "gala" else "team building")
-    tu, den = du_lieu.tim_diem_di(req["noi_xuat_phat"]), du_lieu.tim_diem_den(req["dia_diem"])
-    if not (tu and den):
-        return {"status": "error", "message": "Không tìm thấy địa điểm trong dữ liệu."}
-    dest = du_lieu.dung_diem_den(req, tu, den)
-    if "team building" in req["khong_muon"]:
-        for lv in TIERS:
-            dest["raw"][lv]["hoat_dong"] = [h for h in dest["raw"][lv]["hoat_dong"] if not h.get("team_building")]
-            dest["calc"][lv] = planner.tinh_goi(req, lv, dest["raw"][lv])
-            dest["lich"][lv], _ = du_lieu.lich_tu_du_lieu(req, dest, lv)
-    lv = body.package
-    return {"status": "ok", "message": "Kế hoạch gói %s cho %s." % (dict(planner.PACKAGES)[lv], den["ten"]),
-            "request": echo(req, req.get("_entry", "A")), "destination": den["ten"],
-            "packages": packages(req, dest), "plans": [plan(req, dest, lv)]}
+    req["_tier"] = body.package
+    bo = list(req.get("_bo") or [])
+    if "gala" in (body.remove_items or []):
+        bo.append("Gala dinner")
+    if "team_building" in (body.remove_items or []):
+        bo.append(du_lieu.TEN_DICH_VU["team_building"])
+    req["_bo"] = bo
+    return view_for(req), req

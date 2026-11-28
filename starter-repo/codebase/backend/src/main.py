@@ -31,6 +31,7 @@ app.add_middleware(
 app.include_router(trips.router)
 app.include_router(trips.quote_router)
 app.include_router(trips.chat_router)
+app.include_router(trips.estimate_router)
 
 
 @app.get("/api/health", tags=["System"])

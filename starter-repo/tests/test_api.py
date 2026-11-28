@@ -50,9 +50,11 @@ def test_get_trip_roundtrip(world):
 
 
 def test_store_evicts_oldest(world, monkeypatch):
+    # 28/11: bộ nhớ vẫn giới hạn MAX_TRIPS, nhưng chuyến bị đẩy ra vẫn đọc lại được từ SQLite (link chia sẻ bền)
     monkeypatch.setattr(trip_service, "MAX_TRIPS", 2)
     ids = [client.post("/api/trips", json={**BODY, "origin": ""}).json()["trip_id"] for _ in range(3)]
-    assert client.get("/api/trips/" + ids[0]).status_code == 404
+    assert ids[0] not in trip_service._store and len(trip_service._store) <= 2
+    assert client.get("/api/trips/" + ids[0]).status_code == 200
     assert client.get("/api/trips/" + ids[2]).status_code == 200
 
 

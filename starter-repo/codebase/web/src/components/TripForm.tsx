@@ -1,8 +1,9 @@
 import { DESTINATIONS, ORIGINS } from '../lib/places';
-import { useId } from 'react';
+import { useEffect, useId, useState } from 'react';
 import { ArrowRight, Users, Palmtree, Sparkles, Route } from 'lucide-react';
 import type { Field, Purpose } from '../api/types';
-import { groupDigits, startDateRange, viDate } from '../lib/format';
+import { formatVndShort, groupDigits, startDateRange, viDate, TIER_LABEL } from '../lib/format';
+import { estimate, type Estimate } from '../api/client';
 import { btnPrimary, inputCls, Notice } from './ui';
 
 export interface FormState {
@@ -66,6 +67,17 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
   const has = (f: Field) => errors.includes(f);
   const hint = entryHint(value);
   const range = startDateRange();
+  const [est, setEst] = useState<Estimate | null>(null);
+  useEffect(() => {
+    const n = Number(value.headcount);
+    if (!value.origin.trim() || !value.destination.trim() || !(n >= 5 && n <= 500)) { setEst(null); return; }
+    const ctl = new AbortController();
+    const t = setTimeout(() => {
+      estimate({ origin: value.origin, destination: value.destination, headcount: n, days: value.days, purpose: value.purpose }, ctl.signal)
+        .then(r => setEst(r.status === 'ok' ? r : null)).catch(() => {});
+    }, 450);
+    return () => { clearTimeout(t); ctl.abort(); };
+  }, [value.origin, value.destination, value.headcount, value.days, value.purpose]);
   const err = (f: Field) => has(f) && <p id={`${id}-${f}-err`} className="mt-1 text-xs text-over">{ERR[f]}</p>;
   const label = 'mb-1 block text-sm font-medium';
 
@@ -153,6 +165,22 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
           </div>
           {err('budget_or_destination')}
         </div>
+
+        {est?.tiers && (
+          <div className="fade-up rounded-2xl bg-gradient-to-r from-accent-soft to-sun-soft p-4 ring-1 ring-accent/15" aria-live="polite">
+            <p className="text-sm font-semibold">Ước tính nhanh · {est.origin} → {est.destination} · {value.headcount} người · {value.days} ngày</p>
+            <div className="mt-2 grid grid-cols-3 gap-2">
+              {est.tiers.map(t => (
+                <div key={t.tier} className="rounded-xl bg-card px-3 py-2 text-center shadow-sm">
+                  <p className="text-xs text-muted">{TIER_LABEL[t.tier]}</p>
+                  <p className="font-extrabold">{formatVndShort(t.per_person)}<span className="text-xs font-normal text-muted">/người</span></p>
+                  <p className="text-[11px] text-muted">{formatVndShort(t.total)} cả đoàn</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-2 text-[11px] text-muted">Tham khảo trước khi lập kế hoạch — bấm "Lập kế hoạch" để có bảng chi phí và lịch chi tiết.</p>
+          </div>
+        )}
 
         <div className={`flex gap-2 rounded-lg border p-3 text-sm ${hint.ok ? 'border-accent/30 bg-accent-soft' : 'border-over/40 bg-over-bg text-over'}`} aria-live="polite">
           <Route className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden />

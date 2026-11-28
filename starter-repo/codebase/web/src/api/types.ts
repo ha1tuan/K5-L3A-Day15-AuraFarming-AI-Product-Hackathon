@@ -143,7 +143,14 @@ export interface TripView {
   destination?: string;
   packages?: Package[];
   plans?: Plan[];
+  /** Sửa ngay trên trang kế hoạch (POST /api/trips/{id}/recalc). */
+  customize?: { options: string[]; removed: string[]; headcount: number; days: number };
+  map?: { origin: MapPoint; dest: MapPoint; mode: 'bus' | 'plane' };
 }
+
+export interface MapPoint { name: string; lat: number; lon: number }
+
+export interface RecalcInput { headcount?: number; days?: number; removed?: string[] }
 
 export interface ApproveInput {
   destination?: string;
@@ -174,4 +181,9 @@ export interface QuoteResult {
   cau_hoi?: string[];
   to_trinh?: string;
   markdown?: string;
+  doi_chieu?: QuoteCompare;
+}
+
+export interface QuoteCompare {
+  tier: Tier; ke_hoach: number; ke_hoach_moi_nguoi: number; bao_gia_that: number; chenh: number; chenh_pct: number; nhan_xet: string;
 }

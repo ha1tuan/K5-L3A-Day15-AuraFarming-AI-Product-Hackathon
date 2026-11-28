@@ -35,7 +35,6 @@ export function QuoteAudit() {
     } finally { setBusy(false); }
   }
 
-  const over = !!res?.vuot;
   return (
     <div className="grid gap-6">
       <section aria-labelledby="qa-h">
@@ -61,7 +60,16 @@ export function QuoteAudit() {
       {err && <Notice tone="error" title="Có lỗi">{err}</Notice>}
       {res?.status === 'ask_back' && <Notice tone="ask" title="Cần thêm thông tin">{res.message}</Notice>}
 
-      {res?.status === 'ok' && res.dong && (
+      {res?.status === 'ok' && res.dong && <QuoteResultView res={res} />}
+    </div>
+  );
+}
+
+/** Kết quả soát báo giá (dùng ở tab Soát báo giá và khung đối chiếu trong trang kế hoạch). */
+export function QuoteResultView({ res }: { res: QuoteResult }) {
+  const over = !!res.vuot;
+  return (
+    <div className="grid gap-6">
         <>
           <div className="grid gap-4 rounded-xl border border-line bg-card p-5 sm:grid-cols-4">
             <div><p className="text-sm text-muted">Giá báo ({res.so_nguoi} khách)</p><p className="text-2xl font-bold">{formatVndShort(res.gia_bao!)}</p></div>
@@ -89,7 +97,7 @@ export function QuoteAudit() {
                   <th className="py-2 pr-3">Hạng mục</th><th className="py-2 pr-3 text-right">Số lượng</th>
                   <th className="py-2 pr-3 text-right">Đơn giá</th><th className="py-2 text-right">Thành tiền</th></tr></thead>
                 <tbody>
-                  {res.dong.map((d, i) => (
+                  {(res.dong ?? []).map((d, i) => (
                     <tr key={i} className="border-b border-line/60">
                       <td className="py-2 pr-3">{d.ten}{/ước tính|tạm tính/.test(d.ten) && <span className="ml-2 rounded bg-est-bg px-1.5 py-0.5 text-xs text-est">ước tính</span>}</td>
                       <td className="py-2 pr-3 text-right">{d.so_luong.toLocaleString('vi-VN')} {d.don_vi}</td>
@@ -129,7 +137,6 @@ export function QuoteAudit() {
           </Section>
           <p className="text-xs text-muted">Hệ thống chỉ soát và dự trù, không đặt tour, không thanh toán; không phải tư vấn thuế — kế toán đối chiếu văn bản hiện hành.</p>
         </>
-      )}
     </div>
   );
 }

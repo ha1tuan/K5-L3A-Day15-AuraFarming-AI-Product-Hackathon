@@ -28,3 +28,14 @@ class QuoteInput(BaseModel):
 
 class ChatInput(BaseModel):
     messages: List[Dict[str, str]]
+
+
+class RecalcInput(BaseModel):
+    headcount: Optional[int] = None
+    days: Optional[int] = None
+    removed: Optional[List[str]] = None
+
+
+class TripQuoteInput(BaseModel):
+    text: str
+    tier: str = "can_bang"

@@ -13,7 +13,7 @@ import { TripForm, validate, type FormState } from './components/TripForm';
 import { LoadingSteps } from './components/LoadingSteps';
 import { DestinationCards } from './components/DestinationCards';
 import { PackageCompare } from './components/PackageCompare';
-import { PlanView } from './components/PlanView';
+import { PlanWorkspace } from './components/PlanWorkspace';
 import { Notice, btnGhost } from './components/ui';
 
 const EMPTY: FormState = { headcount: '', days: 3, start_date: '', origin: '', purpose: null, budget: '', budget_per_person: false, destination: '' };
@@ -132,7 +132,7 @@ export default function App() {
       skipped = v.request.entry === 'C';
       body = (
         <>
-          <PlanView plans={v.plans ?? []} request={v.request} />
+          <PlanWorkspace key={v.trip_id} view={v} onView={nv => { setTripInUrl(nv.trip_id); setScreen({ kind: 'view', view: nv }); }} />
           <div className="no-print mt-8"><button type="button" className={btnGhost} onClick={restart}>Lập chuyến đi khác</button></div>
         </>
       );

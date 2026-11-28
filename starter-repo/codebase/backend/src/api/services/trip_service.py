@@ -32,8 +32,53 @@ def to_raw(inp: TripInput) -> dict:
             "purpose": inp.purpose, "budget_text": budget_text, "destination": inp.destination, "country": "VN"}
 
 
-def _save(view: dict) -> dict:
+# Lưu bền (SQLite) để link ?trip=<id> gửi sếp vẫn mở được sau khi máy chủ khởi động lại. TRIPS_DB đổi chỗ lưu.
+_DB = os.environ.get("TRIPS_DB") or os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
+    os.path.abspath(__file__))))), "var", "trips.sqlite")
+
+
+def _db():
+    import sqlite3
+    os.makedirs(os.path.dirname(_DB), exist_ok=True)
+    c = sqlite3.connect(_DB, timeout=10)
+    c.execute("create table if not exists trips (id text primary key, view text, req text, ts real)")
+    return c
+
+
+def _persist(view: dict, req: Optional[dict]) -> None:
+    import json
+    import time
+    try:
+        with _db() as c:
+            c.execute("insert or replace into trips values (?, ?, ?, ?)",
+                      (view["trip_id"], json.dumps(view, ensure_ascii=False), json.dumps(req, ensure_ascii=False) if req else None, time.time()))
+    except Exception:  # noqa: BLE001 — không lưu được thì vẫn trả kết quả (chỉ mất link chia sẻ)
+        pass
+
+
+def _load(trip_id: str):
+    import json
+    try:
+        with _db() as c:
+            row = c.execute("select view, req from trips where id = ?", (trip_id,)).fetchone()
+    except Exception:  # noqa: BLE001
+        return None, None
+    if not row:
+        return None, None
+    return json.loads(row[0]), (json.loads(row[1]) if row[1] else None)
+
+
+def get_req(trip_id: str) -> Optional[dict]:
+    if trip_id in _reqs:
+        return _reqs[trip_id]
+    return _load(trip_id)[1]
+
+
+def _save(view: dict, req: Optional[dict] = None) -> dict:
     _store[view["trip_id"]] = view
+    if req is not None:
+        _reqs[view["trip_id"]] = req
+    _persist(view, req)
     while len(_reqs) > MAX_TRIPS:
         _reqs.pop(next(iter(_reqs)))
     while len(_store) > MAX_TRIPS:
@@ -61,19 +106,33 @@ def create_trip(inp: TripInput) -> dict:
     if du_lieu_service.handles(req):
         view = du_lieu_service.create(req)
         view["trip_id"] = uuid.uuid4().hex
-        _reqs[view["trip_id"]] = req
-        return _save(view)
+        return _save(view, req)
     return _create_graph(inp)
 
 
 def approve_trip(trip_id: str, body) -> Optional[dict]:
-    req = _reqs.get(trip_id)
+    req = get_req(trip_id)
     if req is None:
         return None
-    view = du_lieu_service.approve(req, body)
+    view, req2 = du_lieu_service.approve(req, body)
     view["trip_id"] = uuid.uuid4().hex
-    _reqs[view["trip_id"]] = req
-    return _save(view)
+    return _save(view, req2)
+
+
+def recalc_trip(trip_id: str, body) -> Optional[dict]:
+    req = get_req(trip_id)
+    if req is None or not req.get("dia_diem"):
+        return None
+    view, req2 = du_lieu_service.recalc(req, body)
+    view["trip_id"] = uuid.uuid4().hex
+    return _save(view, req2)
+
+
+def quote_for_trip(trip_id: str, tier: str, text: str) -> Optional[dict]:
+    req = get_req(trip_id)
+    if req is None or not req.get("dia_diem"):
+        return None
+    return du_lieu_service.quote_compare(req, tier, text)
 
 
 def _create_graph(inp: TripInput) -> dict:
@@ -87,4 +146,4 @@ def _create_graph(inp: TripInput) -> dict:
 
 
 def get_trip(trip_id: str) -> Optional[dict]:
-    return _store.get(trip_id)
+    return _store.get(trip_id) or _load(trip_id)[0]
