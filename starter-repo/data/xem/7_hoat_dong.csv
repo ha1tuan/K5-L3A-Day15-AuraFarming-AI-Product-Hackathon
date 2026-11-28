@@ -1,0 +1,370 @@
+﻿Mã,Tên,Điểm đến,Loại,Mục đích,Dùng cho gói,Giá/người (đ),Thời lượng (phút),Mở,Đóng,Đóng cửa thứ,Sức chứa/lượt,Tên dựng,Giá ước tính
+HD001,"Du thuyền vịnh Hạ Long (hang Sửng Sốt, đảo Ti Tốp)",Hạ Long,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",450000,300,08:00,17:00,,,tên thật,có
+HD002,Sun World Hạ Long (cáp treo Nữ Hoàng),Hạ Long,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",350000,180,09:00,18:00,,,tên thật,có
+HD003,Bãi Cháy và công viên ven biển,Hạ Long,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,06:00,22:00,,,tên thật,có
+HD004,Chèo kayak vịnh Hạ Long,Hạ Long,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",200000,90,08:00,16:00,,60,tên thật,có
+HD005,Bảo tàng Quảng Ninh,Hạ Long,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",40000,90,08:00,17:00,Hai,,tên thật,có
+HD006,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hạ Long (can_bang)",Hạ Long,team_building,gắn kết,can_bang,300000,180,07:00,17:30,,,có,có
+HD007,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hạ Long (day_du)",Hạ Long,team_building,gắn kết,day_du,550000,180,07:00,17:30,,,có,có
+HD008,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hạ Long (can_bang)",Hạ Long,gala_dinner,gắn kết,can_bang,450000,180,18:00,22:00,,,có,có
+HD009,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hạ Long (day_du)",Hạ Long,gala_dinner,gắn kết,day_du,850000,180,18:00,22:00,,,có,có
+HD010,"Spa, massage thư giãn (tên dựng) - Hạ Long (tiet_kiem)",Hạ Long,spa_thu_gian,nghỉ dưỡng,tiet_kiem,250000,90,09:00,21:00,,,có,có
+HD011,"Spa, massage thư giãn (tên dựng) - Hạ Long (can_bang)",Hạ Long,spa_thu_gian,nghỉ dưỡng,can_bang,450000,90,09:00,21:00,,,có,có
+HD012,"Spa, massage thư giãn (tên dựng) - Hạ Long (day_du)",Hạ Long,spa_thu_gian,nghỉ dưỡng,day_du,900000,90,09:00,21:00,,,có,có
+HD013,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hạ Long (tiet_kiem),Hạ Long,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,250000,150,17:30,21:30,,,có,có
+HD014,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hạ Long (can_bang),Hạ Long,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,350000,150,17:30,21:30,,,có,có
+HD015,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hạ Long (day_du),Hạ Long,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,550000,150,17:30,21:30,,,có,có
+HD016,Tự do nghỉ ngơi tại nơi ở - Hạ Long,Hạ Long,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD017,Tour vịnh Lan Hạ và chèo kayak,Cát Bà,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",400000,300,08:00,16:30,,80,tên thật,có
+HD018,Vườn quốc gia Cát Bà (leo núi Ngự Lâm),Cát Bà,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",80000,180,07:00,17:00,,,tên thật,có
+HD019,Pháo đài Thần Công,Cát Bà,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",40000,75,07:00,17:00,,,tên thật,có
+HD020,Bãi tắm Cát Cò,Cát Bà,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,06:00,19:00,,,tên thật,có
+HD021,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cát Bà (can_bang)",Cát Bà,team_building,gắn kết,can_bang,300000,180,07:00,17:30,,,có,có
+HD022,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cát Bà (day_du)",Cát Bà,team_building,gắn kết,day_du,550000,180,07:00,17:30,,,có,có
+HD023,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cát Bà (can_bang)",Cát Bà,gala_dinner,gắn kết,can_bang,450000,180,18:00,22:00,,,có,có
+HD024,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cát Bà (day_du)",Cát Bà,gala_dinner,gắn kết,day_du,850000,180,18:00,22:00,,,có,có
+HD025,"Spa, massage thư giãn (tên dựng) - Cát Bà (tiet_kiem)",Cát Bà,spa_thu_gian,nghỉ dưỡng,tiet_kiem,250000,90,09:00,21:00,,,có,có
+HD026,"Spa, massage thư giãn (tên dựng) - Cát Bà (can_bang)",Cát Bà,spa_thu_gian,nghỉ dưỡng,can_bang,450000,90,09:00,21:00,,,có,có
+HD027,"Spa, massage thư giãn (tên dựng) - Cát Bà (day_du)",Cát Bà,spa_thu_gian,nghỉ dưỡng,day_du,900000,90,09:00,21:00,,,có,có
+HD028,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cát Bà (tiet_kiem),Cát Bà,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,250000,150,17:30,21:30,,,có,có
+HD029,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cát Bà (can_bang),Cát Bà,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,350000,150,17:30,21:30,,,có,có
+HD030,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cát Bà (day_du),Cát Bà,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,550000,150,17:30,21:30,,,có,có
+HD031,Tự do nghỉ ngơi tại nơi ở - Cát Bà,Cát Bà,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD032,Bãi biển Sầm Sơn,Sầm Sơn,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,150,05:00,21:00,,,tên thật,có
+HD033,Đền Độc Cước và Hòn Trống Mái,Sầm Sơn,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,06:00,18:00,,,tên thật,có
+HD034,Quảng trường biển Sầm Sơn (buổi tối),Sầm Sơn,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",0,90,17:00,22:00,,,tên thật,có
+HD035,Chợ hải sản Sầm Sơn,Sầm Sơn,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,60,05:00,11:00,,,tên thật,có
+HD036,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sầm Sơn (can_bang)",Sầm Sơn,team_building,gắn kết,can_bang,270000,180,07:00,17:30,,,có,có
+HD037,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sầm Sơn (day_du)",Sầm Sơn,team_building,gắn kết,day_du,495000,180,07:00,17:30,,,có,có
+HD038,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sầm Sơn (can_bang)",Sầm Sơn,gala_dinner,gắn kết,can_bang,405000,180,18:00,22:00,,,có,có
+HD039,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sầm Sơn (day_du)",Sầm Sơn,gala_dinner,gắn kết,day_du,765000,180,18:00,22:00,,,có,có
+HD040,"Spa, massage thư giãn (tên dựng) - Sầm Sơn (tiet_kiem)",Sầm Sơn,spa_thu_gian,nghỉ dưỡng,tiet_kiem,225000,90,09:00,21:00,,,có,có
+HD041,"Spa, massage thư giãn (tên dựng) - Sầm Sơn (can_bang)",Sầm Sơn,spa_thu_gian,nghỉ dưỡng,can_bang,405000,90,09:00,21:00,,,có,có
+HD042,"Spa, massage thư giãn (tên dựng) - Sầm Sơn (day_du)",Sầm Sơn,spa_thu_gian,nghỉ dưỡng,day_du,810000,90,09:00,21:00,,,có,có
+HD043,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sầm Sơn (tiet_kiem),Sầm Sơn,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,225000,150,17:30,21:30,,,có,có
+HD044,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sầm Sơn (can_bang),Sầm Sơn,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,315000,150,17:30,21:30,,,có,có
+HD045,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sầm Sơn (day_du),Sầm Sơn,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,495000,150,17:30,21:30,,,có,có
+HD046,Tự do nghỉ ngơi tại nơi ở - Sầm Sơn,Sầm Sơn,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD047,Bãi biển Cửa Lò,Cửa Lò,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,150,05:00,21:00,,,tên thật,có
+HD048,Cano ra đảo Ngư,Cửa Lò,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",150000,150,07:00,16:00,,60,tên thật,có
+HD049,Khu di tích Kim Liên,Cửa Lò,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,07:00,17:00,,,tên thật,có
+HD050,Đảo Lan Châu,Cửa Lò,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,60,06:00,18:00,,,tên thật,có
+HD051,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cửa Lò (can_bang)",Cửa Lò,team_building,gắn kết,can_bang,270000,180,07:00,17:30,,,có,có
+HD052,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cửa Lò (day_du)",Cửa Lò,team_building,gắn kết,day_du,495000,180,07:00,17:30,,,có,có
+HD053,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cửa Lò (can_bang)",Cửa Lò,gala_dinner,gắn kết,can_bang,405000,180,18:00,22:00,,,có,có
+HD054,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cửa Lò (day_du)",Cửa Lò,gala_dinner,gắn kết,day_du,765000,180,18:00,22:00,,,có,có
+HD055,"Spa, massage thư giãn (tên dựng) - Cửa Lò (tiet_kiem)",Cửa Lò,spa_thu_gian,nghỉ dưỡng,tiet_kiem,225000,90,09:00,21:00,,,có,có
+HD056,"Spa, massage thư giãn (tên dựng) - Cửa Lò (can_bang)",Cửa Lò,spa_thu_gian,nghỉ dưỡng,can_bang,405000,90,09:00,21:00,,,có,có
+HD057,"Spa, massage thư giãn (tên dựng) - Cửa Lò (day_du)",Cửa Lò,spa_thu_gian,nghỉ dưỡng,day_du,810000,90,09:00,21:00,,,có,có
+HD058,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cửa Lò (tiet_kiem),Cửa Lò,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,225000,150,17:30,21:30,,,có,có
+HD059,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cửa Lò (can_bang),Cửa Lò,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,315000,150,17:30,21:30,,,có,có
+HD060,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cửa Lò (day_du),Cửa Lò,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,495000,150,17:30,21:30,,,có,có
+HD061,Tự do nghỉ ngơi tại nơi ở - Cửa Lò,Cửa Lò,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD062,Quần thể Tràng An (đi đò),Ninh Bình,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",250000,180,07:00,16:30,,,tên thật,có
+HD063,Chùa Bái Đính,Ninh Bình,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,06:00,18:00,,,tên thật,có
+HD064,Hang Múa (leo 500 bậc),Ninh Bình,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",100000,90,06:00,19:00,,,tên thật,có
+HD065,Tam Cốc - Bích Động,Ninh Bình,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",150000,150,07:00,17:00,,,tên thật,có
+HD066,Cố đô Hoa Lư,Ninh Bình,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,75,07:00,17:00,,,tên thật,có
+HD067,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ninh Bình (can_bang)",Ninh Bình,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD068,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ninh Bình (day_du)",Ninh Bình,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD069,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ninh Bình (can_bang)",Ninh Bình,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD070,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ninh Bình (day_du)",Ninh Bình,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD071,"Spa, massage thư giãn (tên dựng) - Ninh Bình (tiet_kiem)",Ninh Bình,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD072,"Spa, massage thư giãn (tên dựng) - Ninh Bình (can_bang)",Ninh Bình,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD073,"Spa, massage thư giãn (tên dựng) - Ninh Bình (day_du)",Ninh Bình,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD074,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ninh Bình (tiet_kiem),Ninh Bình,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD075,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ninh Bình (can_bang),Ninh Bình,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD076,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ninh Bình (day_du),Ninh Bình,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD077,Tự do nghỉ ngơi tại nơi ở - Ninh Bình,Ninh Bình,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD078,Fansipan Legend (cáp treo),Sa Pa,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",800000,300,07:30,17:00,,,tên thật,có
+HD079,Bản Cát Cát,Sa Pa,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",90000,120,07:00,18:00,,,tên thật,có
+HD080,Núi Hàm Rồng,Sa Pa,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",70000,120,06:00,18:00,,,tên thật,có
+HD081,Thung lũng Mường Hoa (trekking),Sa Pa,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",0,180,07:00,16:00,,,tên thật,có
+HD082,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sa Pa (can_bang)",Sa Pa,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD083,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sa Pa (day_du)",Sa Pa,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD084,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sa Pa (can_bang)",Sa Pa,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD085,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sa Pa (day_du)",Sa Pa,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD086,"Spa, massage thư giãn (tên dựng) - Sa Pa (tiet_kiem)",Sa Pa,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD087,"Spa, massage thư giãn (tên dựng) - Sa Pa (can_bang)",Sa Pa,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD088,"Spa, massage thư giãn (tên dựng) - Sa Pa (day_du)",Sa Pa,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD089,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sa Pa (tiet_kiem),Sa Pa,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD090,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sa Pa (can_bang),Sa Pa,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD091,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sa Pa (day_du),Sa Pa,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD092,Tự do nghỉ ngơi tại nơi ở - Sa Pa,Sa Pa,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD093,Đồi chè trái tim,Mộc Châu,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,90,06:00,18:00,,,tên thật,có
+HD094,Thác Dải Yếm,Mộc Châu,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,90,07:00,17:00,,,tên thật,có
+HD095,Cầu kính Bạch Long,Mộc Châu,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",300000,120,07:30,17:30,,,tên thật,có
+HD096,Rừng thông Bản Áng (cắm trại),Mộc Châu,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",20000,180,06:00,21:00,,,tên thật,có
+HD097,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Mộc Châu (can_bang)",Mộc Châu,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD098,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Mộc Châu (day_du)",Mộc Châu,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD099,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Mộc Châu (can_bang)",Mộc Châu,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD100,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Mộc Châu (day_du)",Mộc Châu,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD101,"Spa, massage thư giãn (tên dựng) - Mộc Châu (tiet_kiem)",Mộc Châu,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD102,"Spa, massage thư giãn (tên dựng) - Mộc Châu (can_bang)",Mộc Châu,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD103,"Spa, massage thư giãn (tên dựng) - Mộc Châu (day_du)",Mộc Châu,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD104,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Mộc Châu (tiet_kiem),Mộc Châu,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD105,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Mộc Châu (can_bang),Mộc Châu,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD106,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Mộc Châu (day_du),Mộc Châu,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD107,Tự do nghỉ ngơi tại nơi ở - Mộc Châu,Mộc Châu,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD108,Thị trấn Tam Đảo và nhà thờ đá,Tam Đảo,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,06:00,22:00,,,tên thật,có
+HD109,Thác Bạc,Tam Đảo,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,90,06:00,18:00,,,tên thật,có
+HD110,Cổng trời Tam Đảo,Tam Đảo,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,60,06:00,18:00,,,tên thật,có
+HD111,Đền Bà Chúa Thượng Ngàn,Tam Đảo,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,06:00,18:00,,,tên thật,có
+HD112,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tam Đảo (can_bang)",Tam Đảo,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD113,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tam Đảo (day_du)",Tam Đảo,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD114,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tam Đảo (can_bang)",Tam Đảo,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD115,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tam Đảo (day_du)",Tam Đảo,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD116,"Spa, massage thư giãn (tên dựng) - Tam Đảo (tiet_kiem)",Tam Đảo,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD117,"Spa, massage thư giãn (tên dựng) - Tam Đảo (can_bang)",Tam Đảo,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD118,"Spa, massage thư giãn (tên dựng) - Tam Đảo (day_du)",Tam Đảo,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD119,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tam Đảo (tiet_kiem),Tam Đảo,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD120,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tam Đảo (can_bang),Tam Đảo,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD121,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tam Đảo (day_du),Tam Đảo,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD122,Tự do nghỉ ngơi tại nơi ở - Tam Đảo,Tam Đảo,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD123,Vườn quốc gia Ba Vì (đền Thượng),Ba Vì,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",60000,180,07:00,17:00,,,tên thật,có
+HD124,Khu du lịch Ao Vua (công viên nước),Ba Vì,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",150000,180,08:00,17:00,,,tên thật,có
+HD125,Khu du lịch Thác Đa,Ba Vì,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",120000,150,08:00,17:00,,,tên thật,có
+HD126,Hồ Suối Hai,Ba Vì,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,06:00,18:00,,,tên thật,có
+HD127,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ba Vì (can_bang)",Ba Vì,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD128,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ba Vì (day_du)",Ba Vì,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD129,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ba Vì (can_bang)",Ba Vì,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD130,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ba Vì (day_du)",Ba Vì,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD131,"Spa, massage thư giãn (tên dựng) - Ba Vì (tiet_kiem)",Ba Vì,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD132,"Spa, massage thư giãn (tên dựng) - Ba Vì (can_bang)",Ba Vì,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD133,"Spa, massage thư giãn (tên dựng) - Ba Vì (day_du)",Ba Vì,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD134,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ba Vì (tiet_kiem),Ba Vì,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD135,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ba Vì (can_bang),Ba Vì,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD136,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ba Vì (day_du),Ba Vì,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD137,Tự do nghỉ ngơi tại nơi ở - Ba Vì,Ba Vì,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD138,Động Phong Nha (đi thuyền),Quảng Bình (Phong Nha),tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",150000,150,07:00,16:00,,,tên thật,có
+HD139,Động Thiên Đường,Quảng Bình (Phong Nha),tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",250000,150,07:00,16:30,,,tên thật,có
+HD140,"Sông Chày - Hang Tối (zipline, tắm bùn)",Quảng Bình (Phong Nha),tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",450000,240,08:00,16:00,,100,tên thật,có
+HD141,Bãi biển Nhật Lệ,Quảng Bình (Phong Nha),tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,05:00,20:00,,,tên thật,có
+HD142,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quảng Bình (Phong Nha) (can_bang)",Quảng Bình (Phong Nha),team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD143,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quảng Bình (Phong Nha) (day_du)",Quảng Bình (Phong Nha),team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD144,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quảng Bình (Phong Nha) (can_bang)",Quảng Bình (Phong Nha),gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD145,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quảng Bình (Phong Nha) (day_du)",Quảng Bình (Phong Nha),gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD146,"Spa, massage thư giãn (tên dựng) - Quảng Bình (Phong Nha) (tiet_kiem)",Quảng Bình (Phong Nha),spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD147,"Spa, massage thư giãn (tên dựng) - Quảng Bình (Phong Nha) (can_bang)",Quảng Bình (Phong Nha),spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD148,"Spa, massage thư giãn (tên dựng) - Quảng Bình (Phong Nha) (day_du)",Quảng Bình (Phong Nha),spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD149,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quảng Bình (Phong Nha) (tiet_kiem),Quảng Bình (Phong Nha),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD150,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quảng Bình (Phong Nha) (can_bang),Quảng Bình (Phong Nha),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD151,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quảng Bình (Phong Nha) (day_du),Quảng Bình (Phong Nha),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD152,Tự do nghỉ ngơi tại nơi ở - Quảng Bình (Phong Nha),Quảng Bình (Phong Nha),tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD153,Đại Nội Huế,Huế,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",200000,180,07:00,17:30,,,tên thật,có
+HD154,Lăng Khải Định,Huế,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",150000,75,07:00,17:30,,,tên thật,có
+HD155,Lăng Tự Đức,Huế,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",150000,90,07:00,17:30,,,tên thật,có
+HD156,Chùa Thiên Mụ,Huế,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,60,06:00,18:00,,,tên thật,có
+HD157,Nghe ca Huế trên thuyền rồng sông Hương,Huế,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",150000,75,19:00,21:30,,80,tên thật,có
+HD158,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Huế (can_bang)",Huế,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD159,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Huế (day_du)",Huế,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD160,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Huế (can_bang)",Huế,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD161,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Huế (day_du)",Huế,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD162,"Spa, massage thư giãn (tên dựng) - Huế (tiet_kiem)",Huế,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD163,"Spa, massage thư giãn (tên dựng) - Huế (can_bang)",Huế,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD164,"Spa, massage thư giãn (tên dựng) - Huế (day_du)",Huế,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD165,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Huế (tiet_kiem),Huế,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD166,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Huế (can_bang),Huế,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD167,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Huế (day_du),Huế,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD168,Tự do nghỉ ngơi tại nơi ở - Huế,Huế,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD169,Sun World Bà Nà Hills,Đà Nẵng,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",950000,360,08:00,17:00,,,tên thật,có
+HD170,Ngũ Hành Sơn,Đà Nẵng,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",40000,90,07:00,17:30,,,tên thật,có
+HD171,Bán đảo Sơn Trà và chùa Linh Ứng,Đà Nẵng,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,06:00,18:00,,,tên thật,có
+HD172,Biển Mỹ Khê,Đà Nẵng,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,05:00,21:00,,,tên thật,có
+HD173,Bảo tàng Điêu khắc Chăm,Đà Nẵng,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",60000,75,08:00,17:00,,,tên thật,có
+HD174,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Nẵng (can_bang)",Đà Nẵng,team_building,gắn kết,can_bang,345000,180,07:00,17:30,,,có,có
+HD175,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Nẵng (day_du)",Đà Nẵng,team_building,gắn kết,day_du,630000,180,07:00,17:30,,,có,có
+HD176,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Nẵng (can_bang)",Đà Nẵng,gala_dinner,gắn kết,can_bang,515000,180,18:00,22:00,,,có,có
+HD177,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Nẵng (day_du)",Đà Nẵng,gala_dinner,gắn kết,day_du,975000,180,18:00,22:00,,,có,có
+HD178,"Spa, massage thư giãn (tên dựng) - Đà Nẵng (tiet_kiem)",Đà Nẵng,spa_thu_gian,nghỉ dưỡng,tiet_kiem,290000,90,09:00,21:00,,,có,có
+HD179,"Spa, massage thư giãn (tên dựng) - Đà Nẵng (can_bang)",Đà Nẵng,spa_thu_gian,nghỉ dưỡng,can_bang,515000,90,09:00,21:00,,,có,có
+HD180,"Spa, massage thư giãn (tên dựng) - Đà Nẵng (day_du)",Đà Nẵng,spa_thu_gian,nghỉ dưỡng,day_du,1035000,90,09:00,21:00,,,có,có
+HD181,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Nẵng (tiet_kiem),Đà Nẵng,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,290000,150,17:30,21:30,,,có,có
+HD182,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Nẵng (can_bang),Đà Nẵng,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,400000,150,17:30,21:30,,,có,có
+HD183,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Nẵng (day_du),Đà Nẵng,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,630000,150,17:30,21:30,,,có,có
+HD184,Tự do nghỉ ngơi tại nơi ở - Đà Nẵng,Đà Nẵng,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD185,Phố cổ Hội An,Hội An,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",120000,180,08:00,22:00,,,tên thật,có
+HD186,Rừng dừa Bảy Mẫu (thuyền thúng),Hội An,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",150000,90,07:00,17:00,,,tên thật,có
+HD187,"Cù Lao Chàm (cano, lặn ngắm san hô)",Hội An,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",650000,360,08:00,15:00,,100,tên thật,có
+HD188,VinWonders Nam Hội An,Hội An,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",600000,300,09:00,19:00,,,tên thật,có
+HD189,Biển An Bàng,Hội An,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,05:00,20:00,,,tên thật,có
+HD190,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hội An (can_bang)",Hội An,team_building,gắn kết,can_bang,345000,180,07:00,17:30,,,có,có
+HD191,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hội An (day_du)",Hội An,team_building,gắn kết,day_du,630000,180,07:00,17:30,,,có,có
+HD192,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hội An (can_bang)",Hội An,gala_dinner,gắn kết,can_bang,515000,180,18:00,22:00,,,có,có
+HD193,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hội An (day_du)",Hội An,gala_dinner,gắn kết,day_du,975000,180,18:00,22:00,,,có,có
+HD194,"Spa, massage thư giãn (tên dựng) - Hội An (tiet_kiem)",Hội An,spa_thu_gian,nghỉ dưỡng,tiet_kiem,290000,90,09:00,21:00,,,có,có
+HD195,"Spa, massage thư giãn (tên dựng) - Hội An (can_bang)",Hội An,spa_thu_gian,nghỉ dưỡng,can_bang,515000,90,09:00,21:00,,,có,có
+HD196,"Spa, massage thư giãn (tên dựng) - Hội An (day_du)",Hội An,spa_thu_gian,nghỉ dưỡng,day_du,1035000,90,09:00,21:00,,,có,có
+HD197,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hội An (tiet_kiem),Hội An,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,290000,150,17:30,21:30,,,có,có
+HD198,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hội An (can_bang),Hội An,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,400000,150,17:30,21:30,,,có,có
+HD199,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hội An (day_du),Hội An,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,630000,150,17:30,21:30,,,có,có
+HD200,Tự do nghỉ ngơi tại nơi ở - Hội An,Hội An,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD201,Kỳ Co - Eo Gió (cano),Quy Nhơn,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",550000,300,07:00,15:00,,100,tên thật,có
+HD202,Ghềnh Ráng Tiên Sa,Quy Nhơn,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,75,07:00,17:00,,,tên thật,có
+HD203,Tháp Đôi,Quy Nhơn,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,45,07:00,17:00,,,tên thật,có
+HD204,Biển Quy Nhơn,Quy Nhơn,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,05:00,21:00,,,tên thật,có
+HD205,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quy Nhơn (can_bang)",Quy Nhơn,team_building,gắn kết,can_bang,300000,180,07:00,17:30,,,có,có
+HD206,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quy Nhơn (day_du)",Quy Nhơn,team_building,gắn kết,day_du,550000,180,07:00,17:30,,,có,có
+HD207,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quy Nhơn (can_bang)",Quy Nhơn,gala_dinner,gắn kết,can_bang,450000,180,18:00,22:00,,,có,có
+HD208,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quy Nhơn (day_du)",Quy Nhơn,gala_dinner,gắn kết,day_du,850000,180,18:00,22:00,,,có,có
+HD209,"Spa, massage thư giãn (tên dựng) - Quy Nhơn (tiet_kiem)",Quy Nhơn,spa_thu_gian,nghỉ dưỡng,tiet_kiem,250000,90,09:00,21:00,,,có,có
+HD210,"Spa, massage thư giãn (tên dựng) - Quy Nhơn (can_bang)",Quy Nhơn,spa_thu_gian,nghỉ dưỡng,can_bang,450000,90,09:00,21:00,,,có,có
+HD211,"Spa, massage thư giãn (tên dựng) - Quy Nhơn (day_du)",Quy Nhơn,spa_thu_gian,nghỉ dưỡng,day_du,900000,90,09:00,21:00,,,có,có
+HD212,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quy Nhơn (tiet_kiem),Quy Nhơn,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,250000,150,17:30,21:30,,,có,có
+HD213,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quy Nhơn (can_bang),Quy Nhơn,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,350000,150,17:30,21:30,,,có,có
+HD214,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quy Nhơn (day_du),Quy Nhơn,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,550000,150,17:30,21:30,,,có,có
+HD215,Tự do nghỉ ngơi tại nơi ở - Quy Nhơn,Quy Nhơn,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD216,Gành Đá Đĩa,Phú Yên (Tuy Hoà),tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,75,07:00,17:00,,,tên thật,có
+HD217,Mũi Điện (hải đăng Đại Lãnh),Phú Yên (Tuy Hoà),tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",20000,120,05:00,17:00,,,tên thật,có
+HD218,Bãi Xép,Phú Yên (Tuy Hoà),tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,06:00,18:00,,,tên thật,có
+HD219,Tháp Nhạn,Phú Yên (Tuy Hoà),tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,45,07:00,17:00,,,tên thật,có
+HD220,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Yên (Tuy Hoà) (can_bang)",Phú Yên (Tuy Hoà),team_building,gắn kết,can_bang,300000,180,07:00,17:30,,,có,có
+HD221,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Yên (Tuy Hoà) (day_du)",Phú Yên (Tuy Hoà),team_building,gắn kết,day_du,550000,180,07:00,17:30,,,có,có
+HD222,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Yên (Tuy Hoà) (can_bang)",Phú Yên (Tuy Hoà),gala_dinner,gắn kết,can_bang,450000,180,18:00,22:00,,,có,có
+HD223,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Yên (Tuy Hoà) (day_du)",Phú Yên (Tuy Hoà),gala_dinner,gắn kết,day_du,850000,180,18:00,22:00,,,có,có
+HD224,"Spa, massage thư giãn (tên dựng) - Phú Yên (Tuy Hoà) (tiet_kiem)",Phú Yên (Tuy Hoà),spa_thu_gian,nghỉ dưỡng,tiet_kiem,250000,90,09:00,21:00,,,có,có
+HD225,"Spa, massage thư giãn (tên dựng) - Phú Yên (Tuy Hoà) (can_bang)",Phú Yên (Tuy Hoà),spa_thu_gian,nghỉ dưỡng,can_bang,450000,90,09:00,21:00,,,có,có
+HD226,"Spa, massage thư giãn (tên dựng) - Phú Yên (Tuy Hoà) (day_du)",Phú Yên (Tuy Hoà),spa_thu_gian,nghỉ dưỡng,day_du,900000,90,09:00,21:00,,,có,có
+HD227,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Yên (Tuy Hoà) (tiet_kiem),Phú Yên (Tuy Hoà),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,250000,150,17:30,21:30,,,có,có
+HD228,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Yên (Tuy Hoà) (can_bang),Phú Yên (Tuy Hoà),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,350000,150,17:30,21:30,,,có,có
+HD229,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Yên (Tuy Hoà) (day_du),Phú Yên (Tuy Hoà),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,550000,150,17:30,21:30,,,có,có
+HD230,Tự do nghỉ ngơi tại nơi ở - Phú Yên (Tuy Hoà),Phú Yên (Tuy Hoà),tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD231,VinWonders Nha Trang,Nha Trang,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",880000,360,08:30,20:00,,,tên thật,có
+HD232,"Tour 3 đảo bằng cano (Hòn Mun, Hòn Tằm)",Nha Trang,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",400000,300,08:00,15:30,,120,tên thật,có
+HD233,Tháp Bà Ponagar,Nha Trang,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",30000,60,06:00,17:30,,,tên thật,có
+HD234,Tắm bùn khoáng nóng,Nha Trang,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",300000,150,07:00,18:00,,150,tên thật,có
+HD235,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Nha Trang (can_bang)",Nha Trang,team_building,gắn kết,can_bang,345000,180,07:00,17:30,,,có,có
+HD236,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Nha Trang (day_du)",Nha Trang,team_building,gắn kết,day_du,630000,180,07:00,17:30,,,có,có
+HD237,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Nha Trang (can_bang)",Nha Trang,gala_dinner,gắn kết,can_bang,515000,180,18:00,22:00,,,có,có
+HD238,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Nha Trang (day_du)",Nha Trang,gala_dinner,gắn kết,day_du,975000,180,18:00,22:00,,,có,có
+HD239,"Spa, massage thư giãn (tên dựng) - Nha Trang (tiet_kiem)",Nha Trang,spa_thu_gian,nghỉ dưỡng,tiet_kiem,290000,90,09:00,21:00,,,có,có
+HD240,"Spa, massage thư giãn (tên dựng) - Nha Trang (can_bang)",Nha Trang,spa_thu_gian,nghỉ dưỡng,can_bang,515000,90,09:00,21:00,,,có,có
+HD241,"Spa, massage thư giãn (tên dựng) - Nha Trang (day_du)",Nha Trang,spa_thu_gian,nghỉ dưỡng,day_du,1035000,90,09:00,21:00,,,có,có
+HD242,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Nha Trang (tiet_kiem),Nha Trang,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,290000,150,17:30,21:30,,,có,có
+HD243,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Nha Trang (can_bang),Nha Trang,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,400000,150,17:30,21:30,,,có,có
+HD244,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Nha Trang (day_du),Nha Trang,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,630000,150,17:30,21:30,,,có,có
+HD245,Tự do nghỉ ngơi tại nơi ở - Nha Trang,Nha Trang,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD246,Hồ Xuân Hương và chợ Đà Lạt,Đà Lạt,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,05:00,22:00,,,tên thật,có
+HD247,Khu du lịch Langbiang (xe jeep lên đỉnh),Đà Lạt,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",250000,180,07:00,17:00,,,tên thật,có
+HD248,Thung lũng Tình Yêu,Đà Lạt,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",250000,120,07:00,17:00,,,tên thật,có
+HD249,Đồi chè Cầu Đất,Đà Lạt,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,07:00,17:00,,,tên thật,có
+HD250,Ga Đà Lạt (tàu cổ đi Trại Mát),Đà Lạt,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",150000,90,07:45,16:00,,80,tên thật,có
+HD251,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Lạt (can_bang)",Đà Lạt,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD252,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Lạt (day_du)",Đà Lạt,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD253,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Lạt (can_bang)",Đà Lạt,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD254,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Lạt (day_du)",Đà Lạt,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD255,"Spa, massage thư giãn (tên dựng) - Đà Lạt (tiet_kiem)",Đà Lạt,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD256,"Spa, massage thư giãn (tên dựng) - Đà Lạt (can_bang)",Đà Lạt,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD257,"Spa, massage thư giãn (tên dựng) - Đà Lạt (day_du)",Đà Lạt,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD258,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Lạt (tiet_kiem),Đà Lạt,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD259,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Lạt (can_bang),Đà Lạt,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD260,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Lạt (day_du),Đà Lạt,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD261,Tự do nghỉ ngơi tại nơi ở - Đà Lạt,Đà Lạt,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD262,Đồi cát bay Mũi Né (xe địa hình),Phan Thiết - Mũi Né,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",400000,120,05:00,18:00,,,tên thật,có
+HD263,Bàu Trắng,Phan Thiết - Mũi Né,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",20000,120,05:00,18:00,,,tên thật,có
+HD264,Suối Tiên,Phan Thiết - Mũi Né,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",15000,75,06:00,18:00,,,tên thật,có
+HD265,Làng chài Mũi Né,Phan Thiết - Mũi Né,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,60,05:00,09:00,,,tên thật,có
+HD266,Tháp Chăm Poshanư,Phan Thiết - Mũi Né,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,45,07:00,17:00,,,tên thật,có
+HD267,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phan Thiết - Mũi Né (can_bang)",Phan Thiết - Mũi Né,team_building,gắn kết,can_bang,300000,180,07:00,17:30,,,có,có
+HD268,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phan Thiết - Mũi Né (day_du)",Phan Thiết - Mũi Né,team_building,gắn kết,day_du,550000,180,07:00,17:30,,,có,có
+HD269,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phan Thiết - Mũi Né (can_bang)",Phan Thiết - Mũi Né,gala_dinner,gắn kết,can_bang,450000,180,18:00,22:00,,,có,có
+HD270,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phan Thiết - Mũi Né (day_du)",Phan Thiết - Mũi Né,gala_dinner,gắn kết,day_du,850000,180,18:00,22:00,,,có,có
+HD271,"Spa, massage thư giãn (tên dựng) - Phan Thiết - Mũi Né (tiet_kiem)",Phan Thiết - Mũi Né,spa_thu_gian,nghỉ dưỡng,tiet_kiem,250000,90,09:00,21:00,,,có,có
+HD272,"Spa, massage thư giãn (tên dựng) - Phan Thiết - Mũi Né (can_bang)",Phan Thiết - Mũi Né,spa_thu_gian,nghỉ dưỡng,can_bang,450000,90,09:00,21:00,,,có,có
+HD273,"Spa, massage thư giãn (tên dựng) - Phan Thiết - Mũi Né (day_du)",Phan Thiết - Mũi Né,spa_thu_gian,nghỉ dưỡng,day_du,900000,90,09:00,21:00,,,có,có
+HD274,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phan Thiết - Mũi Né (tiet_kiem),Phan Thiết - Mũi Né,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,250000,150,17:30,21:30,,,có,có
+HD275,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phan Thiết - Mũi Né (can_bang),Phan Thiết - Mũi Né,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,350000,150,17:30,21:30,,,có,có
+HD276,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phan Thiết - Mũi Né (day_du),Phan Thiết - Mũi Né,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,550000,150,17:30,21:30,,,có,có
+HD277,Tự do nghỉ ngơi tại nơi ở - Phan Thiết - Mũi Né,Phan Thiết - Mũi Né,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD278,Tượng Chúa Kitô Vua,Vũng Tàu,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",0,90,07:00,17:00,,,tên thật,có
+HD279,Hải đăng Vũng Tàu,Vũng Tàu,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",10000,60,07:00,17:00,,,tên thật,có
+HD280,Bãi Sau,Vũng Tàu,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,150,05:00,21:00,,,tên thật,có
+HD281,Hồ Mây Park (cáp treo),Vũng Tàu,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",400000,240,08:00,18:00,,,tên thật,có
+HD282,Bạch Dinh,Vũng Tàu,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",15000,60,07:00,17:00,,,tên thật,có
+HD283,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Vũng Tàu (can_bang)",Vũng Tàu,team_building,gắn kết,can_bang,300000,180,07:00,17:30,,,có,có
+HD284,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Vũng Tàu (day_du)",Vũng Tàu,team_building,gắn kết,day_du,550000,180,07:00,17:30,,,có,có
+HD285,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Vũng Tàu (can_bang)",Vũng Tàu,gala_dinner,gắn kết,can_bang,450000,180,18:00,22:00,,,có,có
+HD286,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Vũng Tàu (day_du)",Vũng Tàu,gala_dinner,gắn kết,day_du,850000,180,18:00,22:00,,,có,có
+HD287,"Spa, massage thư giãn (tên dựng) - Vũng Tàu (tiet_kiem)",Vũng Tàu,spa_thu_gian,nghỉ dưỡng,tiet_kiem,250000,90,09:00,21:00,,,có,có
+HD288,"Spa, massage thư giãn (tên dựng) - Vũng Tàu (can_bang)",Vũng Tàu,spa_thu_gian,nghỉ dưỡng,can_bang,450000,90,09:00,21:00,,,có,có
+HD289,"Spa, massage thư giãn (tên dựng) - Vũng Tàu (day_du)",Vũng Tàu,spa_thu_gian,nghỉ dưỡng,day_du,900000,90,09:00,21:00,,,có,có
+HD290,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Vũng Tàu (tiet_kiem),Vũng Tàu,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,250000,150,17:30,21:30,,,có,có
+HD291,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Vũng Tàu (can_bang),Vũng Tàu,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,350000,150,17:30,21:30,,,có,có
+HD292,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Vũng Tàu (day_du),Vũng Tàu,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,550000,150,17:30,21:30,,,có,có
+HD293,Tự do nghỉ ngơi tại nơi ở - Vũng Tàu,Vũng Tàu,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD294,Biển Hồ Tràm,Hồ Tràm - Long Hải,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,150,05:00,20:00,,,tên thật,có
+HD295,Suối nước nóng Bình Châu,Hồ Tràm - Long Hải,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",300000,180,07:00,21:00,,,tên thật,có
+HD296,Khu bảo tồn Bình Châu - Phước Bửu,Hồ Tràm - Long Hải,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",50000,120,07:00,17:00,,,tên thật,có
+HD297,Biển Long Hải,Hồ Tràm - Long Hải,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,05:00,20:00,,,tên thật,có
+HD298,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hồ Tràm - Long Hải (can_bang)",Hồ Tràm - Long Hải,team_building,gắn kết,can_bang,345000,180,07:00,17:30,,,có,có
+HD299,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hồ Tràm - Long Hải (day_du)",Hồ Tràm - Long Hải,team_building,gắn kết,day_du,630000,180,07:00,17:30,,,có,có
+HD300,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hồ Tràm - Long Hải (can_bang)",Hồ Tràm - Long Hải,gala_dinner,gắn kết,can_bang,515000,180,18:00,22:00,,,có,có
+HD301,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hồ Tràm - Long Hải (day_du)",Hồ Tràm - Long Hải,gala_dinner,gắn kết,day_du,975000,180,18:00,22:00,,,có,có
+HD302,"Spa, massage thư giãn (tên dựng) - Hồ Tràm - Long Hải (tiet_kiem)",Hồ Tràm - Long Hải,spa_thu_gian,nghỉ dưỡng,tiet_kiem,290000,90,09:00,21:00,,,có,có
+HD303,"Spa, massage thư giãn (tên dựng) - Hồ Tràm - Long Hải (can_bang)",Hồ Tràm - Long Hải,spa_thu_gian,nghỉ dưỡng,can_bang,515000,90,09:00,21:00,,,có,có
+HD304,"Spa, massage thư giãn (tên dựng) - Hồ Tràm - Long Hải (day_du)",Hồ Tràm - Long Hải,spa_thu_gian,nghỉ dưỡng,day_du,1035000,90,09:00,21:00,,,có,có
+HD305,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hồ Tràm - Long Hải (tiet_kiem),Hồ Tràm - Long Hải,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,290000,150,17:30,21:30,,,có,có
+HD306,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hồ Tràm - Long Hải (can_bang),Hồ Tràm - Long Hải,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,400000,150,17:30,21:30,,,có,có
+HD307,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hồ Tràm - Long Hải (day_du),Hồ Tràm - Long Hải,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,630000,150,17:30,21:30,,,có,có
+HD308,Tự do nghỉ ngơi tại nơi ở - Hồ Tràm - Long Hải,Hồ Tràm - Long Hải,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD309,VinWonders Phú Quốc,Phú Quốc,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",950000,360,09:00,19:00,,,tên thật,có
+HD310,Cáp treo Hòn Thơm và công viên nước,Phú Quốc,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",650000,300,09:00,17:00,,,tên thật,có
+HD311,Tour 4 đảo Nam Phú Quốc (cano),Phú Quốc,tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",650000,360,08:00,16:00,,100,tên thật,có
+HD312,Chợ đêm Phú Quốc,Phú Quốc,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,17:00,23:00,,,tên thật,có
+HD313,Grand World Phú Quốc,Phú Quốc,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,120,09:00,23:00,,,tên thật,có
+HD314,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Quốc (can_bang)",Phú Quốc,team_building,gắn kết,can_bang,345000,180,07:00,17:30,,,có,có
+HD315,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Quốc (day_du)",Phú Quốc,team_building,gắn kết,day_du,630000,180,07:00,17:30,,,có,có
+HD316,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Quốc (can_bang)",Phú Quốc,gala_dinner,gắn kết,can_bang,515000,180,18:00,22:00,,,có,có
+HD317,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Quốc (day_du)",Phú Quốc,gala_dinner,gắn kết,day_du,975000,180,18:00,22:00,,,có,có
+HD318,"Spa, massage thư giãn (tên dựng) - Phú Quốc (tiet_kiem)",Phú Quốc,spa_thu_gian,nghỉ dưỡng,tiet_kiem,290000,90,09:00,21:00,,,có,có
+HD319,"Spa, massage thư giãn (tên dựng) - Phú Quốc (can_bang)",Phú Quốc,spa_thu_gian,nghỉ dưỡng,can_bang,515000,90,09:00,21:00,,,có,có
+HD320,"Spa, massage thư giãn (tên dựng) - Phú Quốc (day_du)",Phú Quốc,spa_thu_gian,nghỉ dưỡng,day_du,1035000,90,09:00,21:00,,,có,có
+HD321,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Quốc (tiet_kiem),Phú Quốc,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,290000,150,17:30,21:30,,,có,có
+HD322,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Quốc (can_bang),Phú Quốc,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,400000,150,17:30,21:30,,,có,có
+HD323,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Quốc (day_du),Phú Quốc,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,630000,150,17:30,21:30,,,có,có
+HD324,Tự do nghỉ ngơi tại nơi ở - Phú Quốc,Phú Quốc,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD325,Di tích nhà tù Côn Đảo,Côn Đảo,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",40000,150,07:30,17:00,,,tên thật,có
+HD326,Nghĩa trang Hàng Dương (viếng đêm),Côn Đảo,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,06:00,23:00,,,tên thật,có
+HD327,Bãi Đầm Trầu,Côn Đảo,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,150,06:00,18:00,,,tên thật,có
+HD328,Lặn ngắm san hô Hòn Bảy Cạnh,Côn Đảo,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",700000,300,08:00,15:00,,40,tên thật,có
+HD329,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Côn Đảo (can_bang)",Côn Đảo,team_building,gắn kết,can_bang,345000,180,07:00,17:30,,,có,có
+HD330,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Côn Đảo (day_du)",Côn Đảo,team_building,gắn kết,day_du,630000,180,07:00,17:30,,,có,có
+HD331,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Côn Đảo (can_bang)",Côn Đảo,gala_dinner,gắn kết,can_bang,515000,180,18:00,22:00,,,có,có
+HD332,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Côn Đảo (day_du)",Côn Đảo,gala_dinner,gắn kết,day_du,975000,180,18:00,22:00,,,có,có
+HD333,"Spa, massage thư giãn (tên dựng) - Côn Đảo (tiet_kiem)",Côn Đảo,spa_thu_gian,nghỉ dưỡng,tiet_kiem,290000,90,09:00,21:00,,,có,có
+HD334,"Spa, massage thư giãn (tên dựng) - Côn Đảo (can_bang)",Côn Đảo,spa_thu_gian,nghỉ dưỡng,can_bang,515000,90,09:00,21:00,,,có,có
+HD335,"Spa, massage thư giãn (tên dựng) - Côn Đảo (day_du)",Côn Đảo,spa_thu_gian,nghỉ dưỡng,day_du,1035000,90,09:00,21:00,,,có,có
+HD336,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Côn Đảo (tiet_kiem),Côn Đảo,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,290000,150,17:30,21:30,,,có,có
+HD337,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Côn Đảo (can_bang),Côn Đảo,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,400000,150,17:30,21:30,,,có,có
+HD338,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Côn Đảo (day_du),Côn Đảo,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,630000,150,17:30,21:30,,,có,có
+HD339,Tự do nghỉ ngơi tại nơi ở - Côn Đảo,Côn Đảo,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD340,Chợ nổi Cái Răng (đi thuyền sớm),Cần Thơ,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",150000,150,05:00,09:00,,120,tên thật,có
+HD341,Bến Ninh Kiều và chợ đêm,Cần Thơ,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,90,17:00,22:00,,,tên thật,có
+HD342,Thiền viện Trúc Lâm Phương Nam,Cần Thơ,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,75,06:00,18:00,,,tên thật,có
+HD343,Vườn trái cây Mỹ Khánh (trò chơi dân gian),Cần Thơ,tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",60000,150,07:00,17:00,,,tên thật,có
+HD344,Nhà cổ Bình Thủy,Cần Thơ,tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",20000,45,08:00,17:00,,,tên thật,có
+HD345,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cần Thơ (can_bang)",Cần Thơ,team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD346,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cần Thơ (day_du)",Cần Thơ,team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD347,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cần Thơ (can_bang)",Cần Thơ,gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD348,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cần Thơ (day_du)",Cần Thơ,gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD349,"Spa, massage thư giãn (tên dựng) - Cần Thơ (tiet_kiem)",Cần Thơ,spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD350,"Spa, massage thư giãn (tên dựng) - Cần Thơ (can_bang)",Cần Thơ,spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD351,"Spa, massage thư giãn (tên dựng) - Cần Thơ (day_du)",Cần Thơ,spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD352,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cần Thơ (tiet_kiem),Cần Thơ,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD353,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cần Thơ (can_bang),Cần Thơ,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD354,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cần Thơ (day_du),Cần Thơ,bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD355,Tự do nghỉ ngơi tại nơi ở - Cần Thơ,Cần Thơ,tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,
+HD356,Sun World Núi Bà Đen (cáp treo),Tây Ninh (Núi Bà Đen),tham_quan,"nghỉ dưỡng, gắn kết","tiet_kiem, can_bang, day_du",450000,240,06:00,18:00,,,tên thật,có
+HD357,Toà Thánh Cao Đài,Tây Ninh (Núi Bà Đen),tham_quan,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,75,06:00,18:00,,,tên thật,có
+HD358,Hồ Dầu Tiếng,Tây Ninh (Núi Bà Đen),tham_quan,gắn kết,"tiet_kiem, can_bang, day_du",0,120,06:00,18:00,,,tên thật,có
+HD359,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang)",Tây Ninh (Núi Bà Đen),team_building,gắn kết,can_bang,285000,180,07:00,17:30,,,có,có
+HD360,"Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tây Ninh (Núi Bà Đen) (day_du)",Tây Ninh (Núi Bà Đen),team_building,gắn kết,day_du,520000,180,07:00,17:30,,,có,có
+HD361,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang)",Tây Ninh (Núi Bà Đen),gala_dinner,gắn kết,can_bang,430000,180,18:00,22:00,,,có,có
+HD362,"Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tây Ninh (Núi Bà Đen) (day_du)",Tây Ninh (Núi Bà Đen),gala_dinner,gắn kết,day_du,810000,180,18:00,22:00,,,có,có
+HD363,"Spa, massage thư giãn (tên dựng) - Tây Ninh (Núi Bà Đen) (tiet_kiem)",Tây Ninh (Núi Bà Đen),spa_thu_gian,nghỉ dưỡng,tiet_kiem,240000,90,09:00,21:00,,,có,có
+HD364,"Spa, massage thư giãn (tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang)",Tây Ninh (Núi Bà Đen),spa_thu_gian,nghỉ dưỡng,can_bang,430000,90,09:00,21:00,,,có,có
+HD365,"Spa, massage thư giãn (tên dựng) - Tây Ninh (Núi Bà Đen) (day_du)",Tây Ninh (Núi Bà Đen),spa_thu_gian,nghỉ dưỡng,day_du,855000,90,09:00,21:00,,,có,có
+HD366,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tây Ninh (Núi Bà Đen) (tiet_kiem),Tây Ninh (Núi Bà Đen),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",tiet_kiem,240000,150,17:30,21:30,,,có,có
+HD367,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang),Tây Ninh (Núi Bà Đen),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",can_bang,330000,150,17:30,21:30,,,có,có
+HD368,Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tây Ninh (Núi Bà Đen) (day_du),Tây Ninh (Núi Bà Đen),bbq_tiec_ngoai_troi,"nghỉ dưỡng, gắn kết",day_du,520000,150,17:30,21:30,,,có,có
+HD369,Tự do nghỉ ngơi tại nơi ở - Tây Ninh (Núi Bà Đen),Tây Ninh (Núi Bà Đen),tu_do,nghỉ dưỡng,"tiet_kiem, can_bang, day_du",0,180,07:00,22:00,,,tên thật,

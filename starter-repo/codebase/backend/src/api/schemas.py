@@ -1,5 +1,5 @@
 """Schema Pydantic của API, khớp codebase/web/src/api/types.ts (TripInput)."""
-from typing import Literal, Optional
+from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -19,6 +19,25 @@ class TripInput(BaseModel):
 
 class ApproveInput(BaseModel):
     destination: Optional[str] = None
-    package: Tier
+    package: str = "can_bang"
     headcount: Optional[int] = None
-    remove_items: list[Literal["gala", "team_building"]] = Field(default_factory=list)
+    remove_items: Optional[List[str]] = None
+
+
+class QuoteInput(BaseModel):
+    text: str
+
+
+class ChatInput(BaseModel):
+    messages: List[Dict[str, str]]
+
+
+class RecalcInput(BaseModel):
+    headcount: Optional[int] = None
+    days: Optional[int] = None
+    removed: Optional[List[str]] = None
+
+
+class TripQuoteInput(BaseModel):
+    text: str
+    tier: str = "can_bang"

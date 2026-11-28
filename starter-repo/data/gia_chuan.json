@@ -1,0 +1,94 @@
+{
+  "_mo_ta": "Giá chuẩn (VND) làm gốc cho data/sinh_du_lieu.py. Mỗi mục có nguồn + ngày xem + độ tin cậy. 'uoc_tinh': true = không tìm được nguồn đáng tin, nhóm tự ước tính từ các mốc có nguồn. Xem 27/11/2026.",
+  "ngay_xem": "2026-11-27",
+  "do_tin_cay": {
+    "cao": "trang chính thức của hãng / nền tảng đặt phòng, có ngày",
+    "vua": "bài tổng hợp, blog du lịch có ghi năm",
+    "thap": "báo giá mẫu, bài cũ không rõ năm, trang rao vặt",
+    "uoc_tinh": "không có nguồn đủ tốt, nhóm tự ước tính từ các mốc trên"
+  },
+
+  "ve_may_bay_mot_chieu_pho_thong": {
+    "_don_vi": "VND / người / một chiều, đã gồm thuế phí, giá cơ bản mùa thường",
+    "moc": [
+      {"chang": "HAN-PQC", "khoang": [1200000, 2000000], "cao_diem": [2500000, 3500000], "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa", "do_tin_cay": "vua"},
+      {"chang": "HAN-PQC", "tu": 1268181, "nguon": "https://www.vietnamairlines.com/vi-vn/vé-máy-bay-từ-hà-nội-đến-phú-quốc", "do_tin_cay": "cao", "ghi_chu": "giá 'từ' theo ngày, thay đổi liên tục"},
+      {"chang": "HAN-CXR", "khoang": [1000000, 1800000], "cao_diem": [2000000, 3000000], "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa", "do_tin_cay": "vua"},
+      {"chang": "SGN-HAN", "khoang": [1000000, 1700000], "nguon": "https://www.vietnamtourism.com/vi/gia-ve-may-bay-noi-ia-vietnam-airlines-2026-bang-gia-cach-sa", "do_tin_cay": "vua"},
+      {"chang": "SGN-PQC", "tu": 778181, "nguon": "https://www.vietnamairlines.com/vi-vn/vé-máy-bay-đến-phú-quốc", "do_tin_cay": "cao", "ghi_chu": "giá 'từ' theo ngày"}
+    ],
+    "cach_uoc_tinh_chang_khac": "Chặng không có mốc: 600.000đ + 900đ × km đường bay, làm tròn 10.000đ (khớp các mốc trên trong khoảng ±20%). Đánh dấu uoc_tinh.",
+    "phi_co_dinh": 600000,
+    "phi_moi_km": 900,
+    "uoc_tinh": true
+  },
+
+  "thue_xe_co_tai_xe": {
+    "_don_vi": "VND / xe / km (đã gồm xăng, tài xế, chưa gồm cầu đường)",
+    "moc": [
+      {"loai": "xe_45_cho", "mo_ta": "báo giá mẫu Hà Nội - Hạ Long 400 km = 4.500.000đ → ~11.250đ/km", "nguon": "https://docs.google.com/document/d/1_xlfp9HUVJY6zfFcdWeVdmYWfpN9MdsG/export?format=pdf", "do_tin_cay": "thap", "ghi_chu": "mẫu ghi năm '20xx'"},
+      {"loai": "xe_16_cho", "mo_ta": "16 chỗ, 200 km/ngày ~1.800.000đ → ~9.000đ/km (dịp lễ)", "nguon": "https://vnexpress.net/thue-xe-dat-gap-ruoi-ngay-thuong-2685545.html", "do_tin_cay": "thap", "ghi_chu": "bài cũ, không rõ năm"}
+    ],
+    "don_gia_km": {"xe_16_cho": 9000, "xe_29_cho": 10000, "xe_45_cho": 11500, "limousine_18_cho": 13000},
+    "phi_luu_dem_tai_xe": 500000,
+    "km_toi_thieu_moi_ngay": 100,
+    "uoc_tinh": true,
+    "ghi_chu": "29 chỗ và limousine nội suy từ hai mốc trên; tăng 2026 chưa phản ánh. Nên thay bằng báo giá thật khi có."
+  },
+
+  "phong_khach_san": {
+    "_don_vi": "VND / phòng 2 người / đêm, mùa thường",
+    "moc": [
+      {"noi": "Đà Lạt", "hang": "3 sao", "khoang": [261029, 756983], "nguon": "https://www.vn.kayak.com/Dalat-Hotels-Sammy-Dalat-Hotel.333101.len.ksp", "do_tin_cay": "vua", "ghi_chu": "giá niêm yết KAYAK, ngày không rõ"},
+      {"noi": "Đà Lạt", "hang": "4 sao", "tu": 968175, "nguon": "https://www.vn.kayak.com/Dalat-Hotels-Muong-Thanh-Holiday-Da-Lat-Hotel.321583.ksp", "do_tin_cay": "vua"},
+      {"noi": "Phú Quốc", "hang": "3/4/5 sao", "mo_ta": "3★ 450.000–3.100.000 · 4★ 700.000–4.200.000 · 5★ 2.600.000–10.000.000 đ/người/đêm", "nguon": "https://vinpearl.com/vi/tong-hop-khach-san-phu-quoc-tot-nhat-va-kinh-nghiem-dat-phong", "do_tin_cay": "thap", "ghi_chu": "bài của chuỗi khách sạn tự quảng bá, tính theo NGƯỜI, khoảng rất rộng"}
+    ],
+    "gia_goc_phong_doi_theo_nhom": {
+      "_mo_ta": "giá phòng 2 người/đêm dùng để sinh data, theo NHÓM GIÁ của điểm đến × hạng sao (nhóm gán trong sinh_du_lieu.py)",
+      "bien_cao_cap":  {"2": 450000, "3": 750000, "4": 1500000, "5": 3500000},
+      "bien_trung":    {"2": 400000, "3": 600000, "4": 1200000, "5": 2600000},
+      "bien_binh_dan": {"2": 350000, "3": 500000, "4": 950000,  "5": 2100000},
+      "nui_cao_nguyen":{"2": 350000, "3": 550000, "4": 1100000, "5": 2600000},
+      "di_san_thanh_pho": {"2": 350000, "3": 550000, "4": 1100000, "5": 2400000}
+    },
+    "he_so_phong": {"2": 1.0, "3": 1.35, "4": 1.6},
+    "uoc_tinh": true,
+    "ghi_chu": "nhóm núi - cao nguyên bám mốc KAYAK Đà Lạt (3★ 261.000–757.000đ, 4★ từ 968.000đ); nhóm khác ước tính tương đối (biển cao cấp như Phú Quốc, Côn Đảo đắt hơn; biển bình dân như Sầm Sơn, Cửa Lò rẻ hơn). Phòng 3, 4 người = giá phòng đôi × hệ số."
+  },
+
+  "an_uong": {
+    "_don_vi": "VND / người / bữa chính",
+    "moc": [
+      {"noi": "Nha Trang", "mo_ta": "nhà hàng hải sản tầm trung 200.000–300.000đ/người", "nguon": "https://mia.vn/cam-nang-du-lich/top-nha-hang-nha-trang-20010", "do_tin_cay": "vua"},
+      {"noi": "Nha Trang", "mo_ta": "set menu trưa khách sạn 5★ 350.000đ++/người", "nguon": "https://nhatrang.intercontinental.com/wp-content/uploads/sites/100/2026/01/Lunch-Set-Menu.pdf", "do_tin_cay": "cao"}
+    ],
+    "theo_muc": {"tiet_kiem": 200000, "can_bang": 280000, "day_du": 420000},
+    "bua_sang_tai_khach_san": "đã gồm trong giá phòng",
+    "uoc_tinh": true,
+    "ghi_chu": "tiết kiệm = cận dưới mốc tầm trung 200.000–300.000đ (bản đầu để 150.000đ, bảng kiểm cho thấy thấp hơn mốc có nguồn nên nâng lên); cân bằng = giữa mốc tầm trung; đầy đủ = mốc 5★ 350.000đ++ cộng 5% phí + VAT"
+  },
+
+  "hoat_dong": {
+    "_don_vi": "VND / người",
+    "moc": [
+      {"mo_ta": "tour team building + gala dinner 2N1Đ trọn gói, ví dụ 1.350.000–2.704.000đ (không rõ giá/người hay giá gốc/ưu đãi)", "nguon": "https://www.vietnambooking.com/du-lich/tour-teambuilding-gala-dinner.html", "do_tin_cay": "thap"}
+    ],
+    "team_building": {"tiet_kiem": 0, "can_bang": 300000, "day_du": 550000},
+    "gala_dinner": {"tiet_kiem": 0, "can_bang": 450000, "day_du": 850000},
+    "spa_thu_gian": {"tiet_kiem": 250000, "can_bang": 450000, "day_du": 900000},
+    "bbq_tiec_ngoai_troi": {"tiet_kiem": 250000, "can_bang": 350000, "day_du": 550000},
+    "phi_pha_nguoi": 50000,
+    "uoc_tinh": true,
+    "ghi_chu": "tiết kiệm: tự tổ chức, không gala. Không tìm được bảng giá theo người đáng tin, toàn bộ là ước tính."
+  },
+
+  "doi_chieu_tour_tron_goi": {
+    "_mo_ta": "Dùng để KIỂM data sinh ra có hợp lý không: gói tiết kiệm 3N2Đ nên gần giá tour ghép đoàn",
+    "moc": [
+      {"tuyen": "Hà Nội - Sầm Sơn 3N2Đ", "gia_nguoi": [2800000, 3250000], "ghi_chu": "khách lẻ ghép đoàn, phòng 3–4 người / phòng 2 người", "nguon": "https://docs.google.com/document/d/1xA4I4iPiuukm5WDpsL94eE9rVE1-DIe_/export?format=pdf", "do_tin_cay": "thap"},
+      {"tuyen": "Hạ Long 3N2Đ", "gia_nguoi": [3160000, 3160000], "ghi_chu": "chưa gồm vé máy bay", "nguon": "https://sunparadiseland.com/SunParadiseLandQuangNinh/tin-tuc/tour-du-lich-ha-long-3-ngay-2-dem-tu-tphcm-tron-goi-31524", "do_tin_cay": "thap"}
+    ]
+  },
+
+  "phat_sinh_ty_le": 0.05
+}

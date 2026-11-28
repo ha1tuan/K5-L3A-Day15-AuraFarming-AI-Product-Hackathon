@@ -8,6 +8,7 @@
 | Nguồn | Đạt ngưỡng? | File |
 |---|---|---|
 | Đào data — review công khai Google Play của 5 app du lịch VN (x/N, %, cách đếm ghi trước, script chạy lại được, ≥5 ví dụ) | ☑ | `evidence/data-mining.md` · `evidence/count_reviews.py` · `evidence/review-counts.json` · `evidence/review-labels.csv` |
+| Đào data 2 — 30 báo giá tour đoàn / team building công khai (vietnambooking.com) + 60 tour so sánh; mẫu, cách đếm, ngưỡng ghi trước | ☑ | `evidence/bao-gia.md` · `evidence/dem_bao_gia.py` · `evidence/bao-gia-counts.json` · `evidence/bao-gia-labels.csv` |
 | Phỏng vấn (≥3 người ngoài nhóm, đúng người dùng) | ☐ chưa làm | `evidence/interviews/` (mới có `TEMPLATE.md`) |
 | Khảo sát (≥20 người ngoài nhóm, đúng người dùng) | ☐ chưa làm | `evidence/survey/` |
 
@@ -19,6 +20,7 @@ Mẫu: 7.130 review mới nhất (Traveloka, Agoda, Booking.com, Mytour, Klook; 
 - **Giá / phí lúc trả khác lúc xem (P):** 104/1.880 (5,5%) khớp; nhãn tay đúng 41/50 → **≈85/1.880 (4,5%)**.
 - **P hoặc R** (hai vế "dự trù lệch" và "thiếu phòng khi đã đi"): 202/1.880 (10,7%) khớp từ khoá.
 - **Đặt cho đoàn / nhóm / nhiều phòng / hoá đơn công ty (G):** 19/1.880 (1,0%) khớp; nhãn tay đúng 15/19 → **15/1.880 (0,8%)**; 5 review trong số đó vừa đặt nhiều phòng vừa bị thiếu phòng / lệch giá.
+- **Báo giá tour đoàn (nguồn 2, N = 30):** 30/30 có mục "không bao gồm", 26/30 (87%) có ≥ 3 khoản; **25/30 (83%) để VAT / hoá đơn ngoài giá**, 0/30 ghi giá đã gồm VAT; 10/30 ghi "cần xuất hoá đơn thì phụ thu thêm 10%" *(đếm thêm sau)*. Ngưỡng ghi trước: **đạt**.
 - Phỏng vấn: 0/3 — chưa làm. Khảo sát: chưa làm.
 
 | | Vai | Gặp pain? | Số lần / 1 tháng qua | Lần gần nhất mất | Đang xoay xở bằng |
@@ -41,9 +43,15 @@ Nguồn: review công khai Google Play; mã = 10 ký tự đầu SHA-1 của n�
 
 Thêm 2 ví dụ ở `evidence/data-mining.md` §4.
 
+Từ báo giá tour đoàn công khai (nguồn 2, link ở `evidence/bao-gia-labels.csv`):
+
+8. "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour." — tour team building BCR, mục *không bao gồm*
+9. "Thuế VAT 8% (nếu quý khách có nhu cầu)." — tour khách đoàn miền Tây 2N1Đ, mục *không bao gồm*
+10. "Vé cáp treo VinWonders (880.000 vé/ khách cao trên 1m4)." · "Vé máy bay khứ hồi." — tour khách đoàn Nha Trang – Đà Lạt 4N3Đ, mục *không bao gồm*
+
 ## 4. Các nguồn có khớp nhau không
 
-Mới có **một nguồn** (đào data) — chưa có nguồn thứ hai để kiểm lại. Data nói: khi đặt qua app OTA, khoảng 1/10 review tiêu cực kể chuyện **giá cuối khác giá đã xem** hoặc **trả tiền rồi mà không có phòng** — đúng hai rủi ro làm hỏng một bản dự trù cho cả đoàn. Nhưng data **không** cho thấy nhiều người tổ chức đoàn dùng app OTA (G chỉ 0,8%). Hai cách hiểu, cần phỏng vấn để phân định: (a) người tổ chức đoàn công ty không dùng app OTA mà gọi công ty tour / khách sạn trực tiếp — pain dự trù nằm ở khâu so báo giá; (b) có dùng nhưng ít viết review.
+**Hai nguồn khớp nhau ở một điểm:** review (nguồn 1) có người kể "các phát sinh sẽ cao hơn rất nhiều với dự tính" (`a1d5f5869d`) và "không xuất được hóa đơn VAT để thanh toán công ty" (`6865cdd3ad`); báo giá tour đoàn (nguồn 2) cho thấy vì sao: 83% để VAT / hoá đơn và nhiều khoản (vé, tip, vé máy bay) ngoài giá — **giá báo không phải số công ty phải chi**. Trước đó: mới có một nguồn. Data nói: khi đặt qua app OTA, khoảng 1/10 review tiêu cực kể chuyện **giá cuối khác giá đã xem** hoặc **trả tiền rồi mà không có phòng** — đúng hai rủi ro làm hỏng một bản dự trù cho cả đoàn. Nhưng data **không** cho thấy nhiều người tổ chức đoàn dùng app OTA (G chỉ 0,8%). Hai cách hiểu, cần phỏng vấn để phân định: (a) người tổ chức đoàn công ty không dùng app OTA mà gọi công ty tour / khách sạn trực tiếp — pain dự trù nằm ở khâu so báo giá; (b) có dùng nhưng ít viết review.
 
 ## 5. Kết luận
 
@@ -51,6 +59,8 @@ Giả thuyết ở `evidence/hypothesis.md`: **phải đổi.**
 - Ngưỡng 1 — "≥10% review 1–2★ phàn nàn giá / phí lệch": **không đạt** — ≈4,5% (P riêng), dù P hoặc R gộp lại là 10,7% khớp từ khoá.
 - Ngưỡng 2 — "≥10 review kể chuyện đặt cho đoàn / nhóm / nhiều phòng gặp vấn đề": **đạt** — 15 review đúng sau nhãn tay (1–2★).
 - Đổi gì: pain "dự trù lệch" có thật nhưng nhỏ hơn mình nghĩ; vế **"đặt rồi mà thiếu phòng"** (≈5,5%) nặng ngang vế giá → giữ ràng buộc `xep_phong_dung` và cảnh báo "không khẳng định còn phòng" trong bản chạy thử.
+
+**Cập nhật 27/11 tối (sau nguồn 2):** bài toán đổi trọng tâm từ "tự lập dự trù" sang **"biết tổng chi thật của báo giá tour đoàn và chứng từ có hợp lệ không trước khi duyệt"** (`spec.md` §1). Lý do: nguồn 1 không cho thấy nhiều người tự đặt cho đoàn qua app (G 0,8%), nguồn 2 cho thấy báo giá tour đoàn — cách công ty thường làm — gần như luôn thiếu VAT và các khoản ngoài giá.
 
 **Điều vẫn chưa biết:** người tổ chức chuyến đi công ty 30–200 người mất bao lâu cho một bản dự trù, lệch bao nhiêu so với chi thật, có dùng app OTA hay không. Cần ≥3 phỏng vấn (giám đốc / HR / admin) — chưa làm.
 

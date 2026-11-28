@@ -4,6 +4,7 @@ import type { ApproveInput, Package, Tier, TripEcho } from '../api/types';
 import { formatVndShort, TIER_LABEL } from '../lib/format';
 import { BudgetBadge, btnPrimary, inputCls } from './ui';
 import { CostTable } from './CostTable';
+import { CostChart } from './CostChart';
 import { OverBudget } from './OverBudget';
 import { nightsText } from './TripEchoLine';
 import s from './PackageCompare.module.scss';
@@ -58,6 +59,7 @@ export function PackageCompare({ request, destination, packages, onApprove, onBa
         )}
       </div>
 
+      <div className="mb-5"><CostChart packages={packages} budget={request.budget} /></div>
       <div className="overflow-x-auto rounded-xl border border-line bg-card shadow-sm">
         <table className={s.table}>
           <caption className="sr-only">So sánh 3 gói</caption>

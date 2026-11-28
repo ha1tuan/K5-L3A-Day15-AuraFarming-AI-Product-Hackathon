@@ -6,3 +6,4 @@ langgraph
 langgraph-checkpoint-sqlite
 google-genai
 httpx
+openpyxl

@@ -42,8 +42,8 @@ export function Notice({ tone, title, children, action }: { tone: keyof typeof T
 }
 
 export const btnPrimary =
-  'inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-lg bg-accent px-6 font-semibold text-white transition hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-60';
+  'inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-full bg-sun px-6 font-semibold text-white shadow-lg shadow-sun/25 transition hover:-translate-y-0.5 hover:bg-sun-dark disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0';
 export const btnGhost =
-  'inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-lg border border-line bg-card px-4 text-sm font-medium transition hover:bg-soft';
+  'inline-flex h-11 cursor-pointer items-center justify-center gap-2 rounded-full border border-line bg-card px-5 text-sm font-medium transition hover:border-accent hover:text-accent';
 export const inputCls =
-  'h-11 w-full rounded-lg border border-line bg-card px-3 transition focus:border-accent aria-[invalid=true]:border-over aria-[invalid=true]:bg-over-bg';
+  'h-11 w-full rounded-xl border border-line bg-card px-3 transition focus:border-accent focus:ring-4 focus:ring-accent/10 aria-[invalid=true]:border-over aria-[invalid=true]:bg-over-bg';

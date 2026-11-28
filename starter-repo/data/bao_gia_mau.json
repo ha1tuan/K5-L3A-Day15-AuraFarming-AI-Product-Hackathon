@@ -1,0 +1,734 @@
+{
+ "_mo_ta": "Báo giá tour đoàn / team building công khai trên vietnambooking.com (lấy 27/11/2026 bằng evidence/dem_bao_gia.py). Chỉ trích giá / khách (JSON-LD của trang), mục 'bao gồm' và 'không bao gồm' — không lưu nguyên trang. Dùng làm câu thử data_that và kiểm chức năng soát báo giá.",
+ "ngay_lay": "2026-11-27",
+ "bao_gia": [
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-cam-trai-da-lat-3-ngay-2-dem-khong-luu-tru-cho-khach-doan.html",
+   "tieu_de": "Tour cắm trại Đà Lạt 3 Ngày 2 đêm không lưu trú cho khách đoàn",
+   "gia_moi_khach": 2390000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại... phòng 2 – 3 khách/phòng.",
+    "Các bữa ăn theo lịch trình",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình.",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày).",
+    "Quà tặng nón du lịch Vietnam Booking và quà tham gia trò chơi trên xe.",
+    "Hướng dẫn viên thuyết minh, phục vụ đoàn suốt tuyến."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT",
+    "Tip cho HDV và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-da-lat-cam-trai-3-ngay-2-dem-co-luu-tru-cho-khach-doan.html",
+   "tieu_de": "Tour Đà Lạt cắm trại 3 ngày 2 đêm có lưu trú cho khách đoàn: Cánh đồng hoa Cẩm Tú Cầu",
+   "gia_moi_khach": 2399000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại... phòng 2 – 3 khách/phòng.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt.",
+    "Khách ở tiêu chuẩn 2 sao ăn sáng tô/ly tại nhà hàng.",
+    "Khách ở tiêu chuẩn 3 sao ăn sáng Buffet tại nhà hàng khách sạn.",
+    "Ăn chính: 05 bữa gồm 04 thực đơn phong phú, thay đổi theo từng bữa ăn + 01 bữa cắm trại.",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình.",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày).",
+    "Quà tặng nón du lịch Vietnam Booking và quà tham gia trò chơi trên xe."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8%.",
+    "Vé cáp treo đồi Robin (80k/ khách).",
+    "Tip cho HDV và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-di-6-tinh-mien-tay-cho-khach-doan.html",
+   "tieu_de": "Tour đi 6 tỉnh miền tây cho khách đoàn 3 ngày 2 đêm giá rẻ hấp dẫn",
+   "gia_moi_khach": 2490000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại,... phòng 2 – 3 khách/phòng.",
+    "3 sao: Khách sạn quốc tế 3 sao, khách sạn Ánh Nguyệt 3 sao tại Cà Mau khách sạn Hậu Giang 3 sao ngay bến Ninh Kiều hoặc Sài Gòn Cần Thơ 3 sao,... hoặc tương đươ",
+    "4 sao: Khách sạn Phú Cường 4 sao, Khách sạn Ninh Kiều Riverside 4 sao gần bến Ninh Kiều, West Hotel 4 sao,… hoặc tương đương",
+    "5 sao: Khách sạn Mường Thanh Luxury Cà Mau, khách sạn Mường Thanh Luxury Cần Thơ,... hoặc tương đương",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, hủ tiếu, bánh mì ốp la,... giải khát trà, cà phê, nước ngọt",
+    "Khách ở tiêu chuẩn 3, 4 sao ăn sáng Buffet tại nhà hàng",
+    "Ăn chính: Trọn gói theo chương trình gồm 1 bữa ăn sáng tô/ly tại nhà hàng, 2 bữa ăn sáng buffet tại khách sạn, 5 bữa chính thực đơn phong phú theo đặc sản địa p",
+    "1 bữa cua Cà Mau"
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar, tắm nước ngọt, ghế dù,…).",
+    "Thuế VAT 8% (nếu quý khách có nhu cầu).",
+    "Tip cho HDV và tài xế.",
+    "Vé máy bay khứ hồi."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-doan-cam-trai-team-building-doi-cuu-zenna-pool-camp-1n.html",
+   "tieu_de": "Tour teambuilding Cắm Trại Zenna Pool Camp 1n1d Vietnam Booking",
+   "gia_moi_khach": null,
+   "bao_gom": [
+    "Vé tham quan theo chương trình",
+    "Ăn sáng nhẹ",
+    "Ăn cơm bữa chính",
+    "02 chai nước + 01 khăn lạnh/ngày.",
+    "Hướng dẫn viên xuốt tuyến",
+    "Quà tặng cho khách: nón Cánh Chim Việt",
+    "Quà tặng trò chơi trên xe.",
+    "Xe máy lạnh đòi mới",
+    "Bảo hiểm trọn tour với mức tối đa là 20.000.000vnđ/trường hợp."
+   ],
+   "khong_bao_gom": [
+    "Chi phí ăn uống ngoài chương trình, giặt ủi, những chi phí cá nhân khác.",
+    "Thuế VAT.",
+    "Chi phí chương trình \"Một ngày làm ngư dân\" 100.000VNĐ/khách"
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-khach-doan-nha-trang-da-lat-4-ngay-3-dem.html",
+   "tieu_de": "Tour khách đoàn Nha Trang Đà Lạt 4 ngày 3 đêm đi bằng máy bay giá rẻ",
+   "gia_moi_khach": 2490000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Dưới 14 khách đi xe 16 chỗ đời mới, tài xế lịch thiệp, chuyên nghiệp",
+    "Từ 15 đến 28 khách đi xe Hyundai Thaco 29 chỗ ngồi",
+    "Từ 29 khách du trở lên đi xe Universe 45 chỗ ngồi",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại... phòng 2 – 3 khách/phòng.",
+    "Tại Nha Trang",
+    "3 sao: Balcony, Venue,... hoặc tương đương",
+    "4 sao: Imperial, Melisa,... hoặc tương đương",
+    "5 sao: TTC, Emperal Bay,... hoặc tương đương",
+    "Tại Đà Lạt"
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8%.",
+    "Vé giao lưu Cồng Chiêng Tây Nguyên.",
+    "Vé xe Jeep tại Lang Biang.",
+    "Vé cáp treo đồi Robin (80k/ khách).",
+    "Vé lặn ngắm san hô, tàu đáy kính.",
+    "Vé cáp treo VinWonders (880.000 vé/ khách cao trên 1m4).",
+    "Tip cho HDV và tài xế.",
+    "Vé máy bay khứ hồi."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-long-hai-teambuilding-gala-dinner-2-ngay-1-dem.html",
+   "tieu_de": "Tour Long Hải teambuilding Gala Dinner 2 ngày 1 đêm siêu hấp dẫn",
+   "gia_moi_khach": 1590000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại,... phòng 2 – 4 khách/phòng.",
+    "2 sao: Khu nghỉ dưỡng 298 khu 3 + 7 tầng, Sea View, Goldstar,... hoặc tương đương",
+    "3 sao: Khu nghỉ dưỡng 298 khu 8 tầng hoặc tương đương",
+    "4 sao: Lan Rừng, Bella Vita,... hoặc tương đương",
+    "5 sao: Oceannami,... hoặc tương đương",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt.",
+    "Khách ở tiêu chuẩn 2 sao ăn sáng tô/ly tại nhà hàng.",
+    "Khách ở tiêu chuẩn 3, 4 sao ăn sáng Buffet tại khách sạn."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8%.",
+    "Tip cho HDV và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-mice-sai-gon.html",
+   "tieu_de": "Tour Mice Sài Gòn Sheraton | Hội Nghị Đẳng Cấp 4 Sao",
+   "gia_moi_khach": 2599000,
+   "bao_gom": [
+    "Phương tiện di chuyển",
+    "Xe ô tô đời mới có máy lạnh đưa đón/ tiễn quý khách tại sân bay và phục vụ xuyên suốt chương trình Tour",
+    "Hướng dẫn viên",
+    "HDV vui vẻ, nhiệt tình, nhiều kinh nghiệm theo suốt hành trình.",
+    "Ăn uống",
+    "Ăn phụ",
+    "03 bữa ăn trong đó: 01 bữa sáng buffet theo tiêu chuẩn khách sạn",
+    "02 bữa ăn Teabreak tại Khách sạn Sheraton Sài Gòn",
+    "Ăn chính",
+    "03 bữa ăn chính với thực đơn đa dạng phong phú, gồm các món địa phương.",
+    "Trong đó có 1 ăn tiệc trưa tại khách sạn Sheraton Sài Gòn",
+    "Tham quan"
+   ],
+   "khong_bao_gom": [
+    "Thuế VAT 10%",
+    ". Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour.",
+    "Vé máy bay, phương tiện đến điểm đón khách.",
+    "Tip cho tài xế và hướng dẫn viên.",
+    "Chi phí đồ uống trong các bữa ăn, chi phí cá nhân và chi phí khác không có trong chương trình.",
+    "Chi phí tham quan những điểm không có trong chương trình.",
+    "Lưu ý: Giá trẻ em chỉ áp dụng khi số lượng trẻ em không chiếm đến 10% số lượng cả đoàn khách"
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-mien-tay-2-ngay-1-dem-cho-khach-doan.html",
+   "tieu_de": "Tour du lịch Miền Tây 2 ngày 1 đêm cho khách đoàn Vietnam Booking",
+   "gia_moi_khach": 1390000,
+   "bao_gom": [
+    "Phương tiện di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt",
+    "tuyến",
+    "Lưu trú",
+    "Khách sạn trung tâm tiêu chuẩn 02 - 03 khách/ phòng.",
+    "3 sao:  Tây Đô, Anh Đào MeKong,... hoặc tương đương.",
+    "4 sao: Vạn Phát Riverside… hoặc tương đương.",
+    "5 sao : Mường Thanh,… hoặc tương đương.",
+    "Ăn uống",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt",
+    "Khách ở tiêu chuẩn ăn sáng Buffet tại Nhà hàng khách sạn",
+    "Ăn chính: 03 bữa thực đơn phong phú, thay đổi theo từng bữa ăn đặc sản địa phương."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8% (nếu quý khách có nhu cầu).",
+    "Tip cho tài xế và hướng dẫn viên nếu phục vụ tốt."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-mien-tay-phu-quoc-khach-doan-6n5d.html",
+   "tieu_de": "Tour miền Tây Phú Quốc 6N5Đ khách đoàn | Khám phá hết xứ miền Tây",
+   "gia_moi_khach": 4990000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại,... phòng 2 – 3 khách/phòng.",
+    "3 sao: Khách sạn Quốc tế, khách sạn Ánh Nguyệt Cà Mau, khách sạn Hậu Giang gần Bến Ninh Kiều, khách sạn Sài Gòn Cần Thơ,... hoặc tương đương.",
+    "4 sao: Khách sạn Phú Cường, khách sạn Ánh Nguyệt Cà Mau, khách sạn Ninh Kiều Riverside, West Hotel,… hoặc tương đương.",
+    "5 sao: Mường Thanh Luxury Cà Mau, Mường Thanh Luxury Cần Thơ,... hoặc tương đương.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, hủ tiếu, bánh mì ốp la,... giải khát trà, cà phê, nước ngọt.",
+    "Khách ở tiêu chuẩn 3, 4, 5 sao ăn sáng Buffet tại nhà hàng.",
+    "Ăn chính: 03 bữa thực đơn phong phú theo đặc sản địa phương hàng ngày. Trọn gói chương trình bao gồm 01 bữa điểm tâm sáng tô/ly tại nhà hàng + 05 bữa Buffet tại",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình (bao gồm thuyền máy tham quan cù lao, thưởng thức trái cây tại vườn, đò chèo Thới Sơn, tàu tham quan Ch"
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar,…).",
+    "Thuế VAT 8% (nếu quý khách có nhu cầu).",
+    "Tip cho HDV và tài xế.",
+    "Vé máy bay khứ hồi."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-mien-tay-phu-quoc-khach-doan-7n6d.html",
+   "tieu_de": "Tour Miền Tây - Phú Quốc khách đoàn 7N6Đ: Tiền Giang - Sóc Trăng - Cần Thơ - Phú Quốc",
+   "gia_moi_khach": 5790000,
+   "bao_gom": [
+    "Phương tiện di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt",
+    "tuyến",
+    "Lưu trú",
+    "Khách sạn trung tâm tiêu chuẩn 02 - 03 khách/ phòng.",
+    "3 sao: Ks Quốc Tế 3 Sao Hoặc Ks Ánh Nguyệt 3 Sao Cà Mau – Ks Hậu Giang 3 Sao Ngay Bến Ninh Kiều Hoặc Sài Gòn Cần Thơ 3 Sao – Ks Đông Nam Châu Đốc 2*+, ... hoặc ",
+    "4 sao: Ks Phú Cường 4 Sao Hoặc Ks Anh Nguyệt 4 Sao Cà Mau – Ks Ninh Kiều Riverside 4 Sao Ngay Bến Ninh Kiều Cần Thơ Hoặc West Hotel 4 Sao – Ks Đông Nam Châu Đốc",
+    "5 sao : Ks 5 Sao Mường Thanh Luxury Cà Mau – Ks 5 Sao Mường Thanh Luxury Cần Thơ – Ks Đông Nam Châu Đốc 2*+ … hoặc tương đương.",
+    "Ăn uống",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt",
+    "Khách ở tiêu chuẩn 3,4 sao ăn sáng Buffet tại Nhà hàng khách sạn",
+    "Ăn chính: trọn gói theo chương trình gồm 01 bữa sáng điểm tâm tô, ly tại nhà hàng + 06 bữa sáng BUFFET tại khách sạn + 12 bữa chính đặc sản địa phương tiêu chuẩ"
+   ],
+   "khong_bao_gom": [
+    "Chi phí cá nhân và chi phí khác không có trong chương trình;",
+    "Thuế VAT 8%.",
+    "Tip cho tài xế và hướng dẫn viên nếu phục vụ tốt."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-buiding-trai-nghiem-du-lich-sinh-thai-bo-cap-vang-1-ngay.html",
+   "tieu_de": "Tour Team Buiding 1 ngày Trải nghiệm KDL Bò Cạp Vàng",
+   "gia_moi_khach": 950000,
+   "bao_gom": [
+    "Xe vận chuyển tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi tour).",
+    "Bữa ăn",
+    "Ăn chính: 01 bữa ăn chính với tiêu chuẩn 120.000 VND/suất.",
+    "Vé thắng cảnh các điểm có trong chương trình.",
+    "Team building",
+    "Backdrop chào đón",
+    "MC hài hước, dí dỏm",
+    "Âm thanh, ánh sáng",
+    "Số lượng: 3- 4 trò chơi cơ bản",
+    "Dụng cụ hỗ trợ chơi team: áo đội, cờ, dụng cụ chơi",
+    "Quà tặng: số lượng bia và nước ngọt theo số đội chơi",
+    "Nhân sự hỗ trợ"
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Phí thuê sân bãi (nếu có)",
+    "Tiền típ cho hướng dẫn viên và tài xế.",
+    "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-cat-ba-3n2d.html",
+   "tieu_de": "Tour Team Buiding Cát Bà 3N2Đ Giá Rẻ | Vietnam Booking",
+   "gia_moi_khach": 2990000,
+   "bao_gom": [
+    "Phương tiện",
+    "Xe du lịch tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi đoàn).",
+    "Khách sạn",
+    "02 đêm ngủ tại khách sạn tiêu chuẩn 2*. Ngủ 02 đến 03 khách 01 phòng.",
+    "Bữa Ăn",
+    "01 bữa tối Gala Dinner ( tiêu chuẩn 1 suất theo yêu cầu)",
+    "Ăn sáng: 02 bữa ăn sáng ẩm thực địa phương",
+    "Ăn chính: 05 bữa ăn chính theo chương trình với thực đơn đa dạng",
+    "Vé thắng cảnh các điểm có trong chương trình (lần 1)",
+    "Phà Gót sang đảo Cát Bà và ngược lại",
+    "Vé thăm quan vịnh Lan Hạ 1 lượt",
+    "Thuyền thăm quan vịnh Lan Hạ"
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Thức uống trong các bữa ăn, phí cá nhân như: giặt là, điện thoại,...",
+    "Phí thuê sân bãi + Lửa trại (nếu có)"
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-choi-bat-tan-o-dao-ngoc-phu-quoc-3n2d.html",
+   "tieu_de": "Tour Team Building Phú Quốc giá rẻ 3N2Đ",
+   "gia_moi_khach": 2590000,
+   "bao_gom": [
+    "Xe vận chuyển tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi tour).",
+    "Khách sạn: 02 đêm ngủ tại khách sạn tiêu chuẩn 3",
+    "Tiêu chuẩn 2 người 1 phòng, trường hợp lẻ nam, nữ ngủ ghép phòng 3.",
+    "Trường hợp đi 1 người bắt buộc phụ thu phòng đơn",
+    "Bữa Ăn",
+    "Ăn sáng: 01 bữa ăn sáng tại trạm dừng chân, 01 bữa ăn sáng buffet tại nhà hàng.",
+    "Ăn chính: 02 bữa ăn chính với tiêu chuẩn 120.000 VND/suất.",
+    "01 bữa tối Gala Dinner.",
+    "Vé thắng cảnh các điểm có trong chương trình.",
+    "Team building",
+    "Backdrop chào đón",
+    "MC hài hước, dí dỏm"
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Phí thuê sân bãi (nếu có)",
+    "Tiền típ cho hướng dẫn viên và tài xế.",
+    "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-choi-het-minh-o-khu-du-lich-bcr.html",
+   "tieu_de": "Tour Team Building Sài Gòn ở khu du lịch BCR Q9",
+   "gia_moi_khach": 950000,
+   "bao_gom": [
+    "Xe vận chuyển tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi tour).",
+    "Bữa ăn",
+    "Ăn sáng: 01 bữa ăn sáng.",
+    "Ăn chính: 01 bữa ăn chính với tiêu chuẩn 200.000 VND/suất.",
+    "02 vé trò chơi trong khu du lịch.",
+    "Team building",
+    "Backdrop chào đón",
+    "MC hài hước, dí dỏm",
+    "Âm thanh, ánh sáng",
+    "Số lượng: 3- 4 trò chơi cơ bản",
+    "Dụng cụ hỗ trợ chơi team: áo đội, cờ, dụng cụ chơi",
+    "Quà tặng: số lượng bia và nước ngọt theo số đội chơi"
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Vé hồ bơi.",
+    "Tiền típ cho hướng dẫn viên và tài xế.",
+    "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-da-lat.html",
+   "tieu_de": "Tour team building Đà Lạt 3N3Đ giá rẻ từ TPHCM| VietnamBooking",
+   "gia_moi_khach": 2690000,
+   "bao_gom": [
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại... phòng 2–3-4 khách/phòng.",
+    "Ăn uống",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt",
+    "Khách ở khách sạn 3,4,5 sao ăn sáng buffet tại khách sạn.",
+    "Ăn chính: 05 bữa gồm 04 thực đơn phong phú, thay đổi theo từng bữa ăn + 01 bữa tại cắm trại.",
+    "Vé thắng cảnh các điểm có trong chương trình.",
+    "Thiết kế và tổ chức chương trình Game Teambuilding bao gồm",
+    "Âm thanh.",
+    "Băng rôn teambuilding.",
+    "Dụng cụ trò chơi.",
+    "MC chuyên nghiệp."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8% (nếu quý khách có nhu cầu).",
+    "Vé cáp treo đồi Robin: 80k/ khách.",
+    "Tiền tip cho hướng dẫn viên và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-flamingo-dai-lai-1-ngay.html",
+   "tieu_de": "Tour Team Building Flamingo Đại Lải 1 Ngày: Trải Nghiệm Gắn Kết Cùng Vui Chơi",
+   "gia_moi_khach": 1500000,
+   "bao_gom": [
+    "Phương tiện",
+    "Xe du lịch tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi đoàn).",
+    "Bữa Ăn",
+    "01 Bữa ăn trưa theo chương trình trị giá 350.000 VNĐ/ khách.",
+    "Vé vào cửa thăm quan Flamingo Đại Lải 01 lượt/ khách, gồm các dịch vụ.",
+    "Team building",
+    "Backdrop chào đón.",
+    "MC hài hước, dí dỏm.",
+    "Âm thanh sôi động.",
+    "Số lượng: 3- 4 trò chơi cơ bản.",
+    "Dụng cụ trò chơi.",
+    "Nhân sự hỗ trợ."
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Phí thuê sân bãi + Lửa trại (nếu có)."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-gala-dinner-2-ngay-1-dem-phan-thiet-ta-cu.html",
+   "tieu_de": "Tour team building gala dinner 2 ngày 1 đêm Phan Thiết Tà Cú",
+   "gia_moi_khach": 1350000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại,... phòng 2 – 4 khách/phòng.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt.",
+    "Khách ở tiêu chuẩn 2 sao ăn sáng tô/ly tại nhà hàng.",
+    "Khách ở tiêu chuẩn 3, 4 sao ăn sáng Buffet tại khách sạn.",
+    "Ăn chính: 03 bữa thực đơn phong phú, thay đổi theo từng bữa ăn.",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình.",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày).",
+    "Quà tặng nón du lịch Vietnam Booking và quà khi tham gia trò chơi trên xe."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8%.",
+    "Tip cho HDV và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-gala-dinner-3-ngay-2-dem.html",
+   "tieu_de": "Tour Team Building - Gala Dinner 3 ngày 2 đêm: Ninh Chữ - Vĩnh Hy",
+   "gia_moi_khach": 2590000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại... phòng 2 – 4 khách/phòng.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt.",
+    "Khách ở tiêu chuẩn 2 sao ăn sáng tô/ly tại nhà hàng.",
+    "Khách ở tiêu chuẩn 3, 4 sao ăn sáng Buffet tại nhà hàng khách sạn.",
+    "Ăn chính: 05 bữa thực đơn phong phú, thay đổi theo từng bữa ăn.",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình",
+    "Vé tàu + phí tham quan Vịnh Vĩnh Hy",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày)."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8%.",
+    "Tip cho HDV và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-gala-lunch-ho-tram.html",
+   "tieu_de": "Tour Team Building - Gala Lunch Hồ Tràm: 1 ngày khám phá biển Hồ Tràm",
+   "gia_moi_khach": 1190000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt...",
+    "Ăn chính: 01 bữa thực đơn phong phú.",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày).",
+    "Quà tặng nón du lịch Vietnam Booking và quà khi tham gia trò chơi trên xe.",
+    "Hướng dẫn viên thuyết minh, phục vụ đoàn suốt tuyến.",
+    "Bảo hiểm du lịch trọn gói theo quy định 20.000.000 vnđ/ trường hợp.​​",
+    "Thiết kế và tổ chức chương trình game Team building bao gồm",
+    "Âm thanh"
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8%.",
+    "Tip cho HDV và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-kham-pha-buu-long-1n.html",
+   "tieu_de": "Tour Team Building Khu du lịch Bửu Long 1 ngày giá rẻ",
+   "gia_moi_khach": 650000,
+   "bao_gom": [
+    "Xe vận chuyển tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi tour).",
+    "Bữa ăn",
+    "Ăn sáng: 01 bữa ăn tại nhà hàng.",
+    "Ăn chính: 01 bữa ăn chính với tiêu chuẩn 120.000 VND/suất.",
+    "Vé thắng cảnh các điểm có trong chương trình.",
+    "Team building",
+    "Backdrop chào đón",
+    "MC hài hước, dí dỏm",
+    "Âm thanh, ánh sáng",
+    "Số lượng: 3- 4 trò chơi cơ bản",
+    "Dụng cụ hỗ trợ chơi team: áo đội, cờ, dụng cụ chơi",
+    "Quà tặng: số lượng bia và nước ngọt theo số đội chơi"
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Tiền típ cho hướng dẫn viên và tài xế.",
+    "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-kham-pha-nui-rung-madagui.html",
+   "tieu_de": "Tour Team Building Madagui 2N1Đ siêu rẻ của Vietnam Booking",
+   "gia_moi_khach": 1900000,
+   "bao_gom": [
+    "Vận chuyển",
+    "Xe vận chuyển tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi tour).",
+    "Khách sạn",
+    "01 đêm ngủ tại khách sạn tiêu chuẩn 3",
+    "Tiêu chuẩn 2 người 1 phòng, trường hợp lẻ nam, nữ ngủ ghép phòng 3.",
+    "Trường hợp đi 1 người bắt buộc phụ thu phòng đơn",
+    "Bữa ăn",
+    "Ăn sáng: 01 bữa ăn sáng tại trạm dừng chân, 01 bữa ăn sáng buffet tại nhà hàng.",
+    "Ăn chính: 02 bữa ăn chính với tiêu chuẩn 120.000 VND/suất.",
+    "01 bữa tối Gala Dinner",
+    "Vé thắng cảnh các điểm có trong chương trình.",
+    "Team building"
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Phí thuê sân bãi (nếu có)",
+    "Tiền típ cho hướng dẫn viên và tài xế.",
+    "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-kham-pha-thac-giang-dien-1n.html",
+   "tieu_de": "Tour Team Building Khám phá thác Giang Điền 1 ngày",
+   "gia_moi_khach": 680000,
+   "bao_gom": [
+    "Xe vận chuyển tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi tour).",
+    "Khách sạn",
+    "01 lều chữ A (3m x 3m)",
+    "Bữa ăn",
+    "Ăn sáng: 01 bữa ăn sáng tại nhà hàng.",
+    "Ăn chính: 01 bữa ăn chính với tiêu chuẩn 130.000 VND/suất.",
+    "Vé thắng cảnh các điểm có trong chương trình.",
+    "Team building",
+    "Backdrop chào đón",
+    "MC hài hước, dí dỏm",
+    "Âm thanh, ánh sáng",
+    "Số lượng: 3- 4 trò chơi cơ bản"
+   ],
+   "khong_bao_gom": [
+    "Vui chơi giải trí cá nhân và các chi phí ăn uống ngoài chương trình.",
+    "Phí thuê sân bãi (nếu có)",
+    "Tiền típ cho hướng dẫn viên và tài xế.",
+    "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-kham-pha-vinh-hy-ninh-chu-3n2d.html",
+   "tieu_de": "Tour team building Ninh Chữ Vĩnh Hy 3N2Đ trọn gói| VietnamBooking",
+   "gia_moi_khach": 2090000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại... phòng 2 – 4 khách/phòng.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt.",
+    "Khách ở tiêu chuẩn 2 sao ăn sáng tô/ly tại nhà hàng.",
+    "Khách ở tiêu chuẩn 3, 4 sao ăn sáng Buffet tại nhà hàng khách sạn.",
+    "Ăn chính: 05 bữa thực đơn phong phú, thay đổi theo từng bữa ăn.",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình",
+    "Vé tàu + phí tham quan Vịnh Vĩnh Hy",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày)."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân khác ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar…).",
+    "Thuế VAT 8%.",
+    "Tip cho HDV và tài xế."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-mui-ne-phan-thiet-2n1d.html",
+   "tieu_de": "Tour Team Building Mũi Né Phan Thiết 2N1Đ siêu rẻ",
+   "gia_moi_khach": 1390000,
+   "bao_gom": [
+    "Vận chuyển: Xe du lịch đời mới, máy lạnh, ghế bật mềm, ti vi giải trí.",
+    "Lưu trú: Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại, phòng 2, 3, 4 khách/phòng.",
+    "Ăn uống",
+    "Khách ở khách sạn 2 sao ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la,... giải khát trà, cà phê, nước ngọt,...",
+    "Khách ở khách sạn 3,4,5 sao ăn uống tại khách sạn.",
+    "Ăn chính: 3 bữa thực đơn phong phú, thay đổi theo từng bữa ăn.",
+    "Vé tham quan các điểm có trong chương trình.",
+    "Hướng dẫn viên thuyết minh và phục vụ đoàn suốt tuyến.",
+    "Phục vụ: khăn lạnh (1 cái/ngày) + nước suối Aquafina (1 chai/ngày).",
+    "Bảo hiểm du lịch trọn gói tối đá 20.000.000 đồng/vụ.",
+    "Phần thưởng chiến thắng trò chơi trên xe và nón lưu niệm Vietnam Booking 1 cái/khách.",
+    "Thiết kế và tổ chức chương trình Game Team Building bao gồm"
+   ],
+   "khong_bao_gom": [
+    "Các chí phí cá nhân ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar,...)"
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-nha-trang-4n3d.html",
+   "tieu_de": "Tour Team Building Nha Trang 4N3Đ | VietnamBooking",
+   "gia_moi_khach": 7890000,
+   "bao_gom": [
+    "Phương tiện",
+    "Vé máy bay khứ hồi Hà Nội/ Sài Gòn - Cam Ranh - Hà Nội/ Sài Gòn",
+    "Xe du lịch tốt đời mới đón - tiễn và phục vụ theo chương trình (29, 35, 45 chỗ tùy theo số lượng khách của mỗi đoàn).",
+    "Khách sạn",
+    "03 đêm ngủ tại khách sạn tiêu chuẩn 3*. Ngủ 02 đến 04 khách 01 phòng.",
+    "Bữa Ăn",
+    "01 bữa tối Gala Dinner",
+    "Ăn sáng: các bữa ăn sáng buffet tại khách sạn / theo tiêu chuẩn ẩm thực địa phương",
+    "Ăn chính: các bữa ăn chính theo chương trình",
+    "Vé thắng cảnh các điểm có trong chương trình.",
+    "Team building",
+    "Backdrop chào đón"
+   ],
+   "khong_bao_gom": [
+    "Cc chi phí ăn uống, vui chơi ngoài chương trình; các phí cá nhân như giặt là, điện thoại, nước,...tại khách sạn",
+    "Vé tham quan Vinpearland, các chi phí trò chơi, các phí ghi tự túc",
+    "Phí thuê sân bãi + Lửa trại (nếu có)",
+    "Tiền tip cho hướng dẫn viên và tài xế.",
+    "Hóa đơn giá trị gia tăng (VAT). Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-o-thanh-pho-bien-vung-tau-2n1d.html",
+   "tieu_de": "Tour Team Building Vũng Tàu 2 ngày 1 đêm VietnamBooking Lửa trại",
+   "gia_moi_khach": 1950000,
+   "bao_gom": [
+    "Vận chuyển: Xe du lịch đời mới, máy lạnh, ghế bật mềm, ti vi giải trí.",
+    "Lưu trú: Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại, phòng 2, 3, 4 khách/phòng.",
+    "Ăn uống",
+    "Khách ở khách sạn 2 sao ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la,... giải khát trà, cà phê, nước ngọt,...",
+    "Khách ở khách sạn 3,4,5 sao ăn uống tại khách sạn.",
+    "Ăn chính: 3 bữa thực đơn phong phú, thay đổi theo từng bữa ăn.",
+    "Vé tham quan các điểm có trong chương trình.",
+    "Hướng dẫn viên thuyết minh và phục vụ đoàn suốt tuyến.",
+    "Phục vụ: khăn lạnh (1 cái/ngày) + nước suối Aquafina (1 chai/ngày).",
+    "Bảo hiểm du lịch trọn gói tối đá 20.000.000 đồng/vụ.",
+    "Phần thưởng chiến thắng trò chơi trên xe và nón lưu niệm Vietnam Booking 1 cái/khách.",
+    "Thiết kế và tổ chức chương trình Game Teambuilding gồm"
+   ],
+   "khong_bao_gom": [
+    "Các chí phí cá nhân ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar,...)"
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-team-building-tren-bai-bien-mui-ne-phan-thiet-3n2d.html",
+   "tieu_de": "Tour Team Building biển Mũi Né Phan Thiết 3N2Đ | VietnamBooking",
+   "gia_moi_khach": 2090000,
+   "bao_gom": [
+    "Vận chuyển: Xe du lịch đời mới, máy lạnh, ghế bật mềm, ti vi giải trí.",
+    "Lưu trú: Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại, phòng 2, 3, 4 khách/phòng.",
+    "2 sao: Hòn Rơm 2 Resort, Pacific Resort,... hoặc tương đương.",
+    "3 sao: Malibu Resort, Peace Resort,... hoặc tương đương.",
+    "4 sao: Ocean Place Muine Resort, Little Paris Resort, Le Viva Muine Resort,... hoặc tương đương.",
+    "Ăn uống",
+    "Khách ở khách sạn 2 sao ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la,... giải khát trà, cà phê, nước ngọt,...",
+    "Khách ở khách sạn 3,4,5 sao ăn sáng buffet tại khách sạn.",
+    "Ăn chính: 5 bữa thực đơn phong phú, thay đổi theo từng bữa ăn.",
+    "Vé tham quan các điểm có trong chương trình.",
+    "Hướng dẫn viên thuyết minh và phục vụ đoàn suốt tuyến.",
+    "Phục vụ: khăn lạnh (1 cái/ngày) + nước suối Aquafina (1 chai/ngày)."
+   ],
+   "khong_bao_gom": [
+    "Các chí phí cá nhân ngoài chương trình (giặt ủi, điện thoại, thức uống trong minibar,...)"
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-teambuilding-2-ngay-1-dem-ho-tram.html",
+   "tieu_de": "Tour Teambuilding Hồ Tràm 2N1Đ: Hành Trình Gắn Kết Yêu Thương",
+   "gia_moi_khach": 2090000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại,... phòng 2 – 3 – 4 khách/phòng.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: Bún, phở, bún mọc, hủ tiếu, bánh mì ốp la,... giải khát cafe, trà, nước ngọt.",
+    "Khách ở khách sạn 2 sao ăn sáng tô/ly.",
+    "Khách ở khách sạn 3, 4, 5 sao ăn sáng buffet tại khách sạn.",
+    "Ăn chính: 02 bữa thực đơn phong phú, thay đổi theo từng bữa ăn + 1 buổi tối Lửa Trại.",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình.",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày).",
+    "Quà tặng nón du lịch + Quà tham gia trò chơi trên xe."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân ngoài chương trình: điện thoại, giặt ủi, tham quan – ăn uống hải sản – vận chuyển ngoài chương trình.",
+    "Vé tắm bùn, tắm khoáng, tắm onsen trong nhà và ngoài trời kiểu Nhật, ngâm khoáng nóng tại cụm hồ khoáng lớn nhất Đông Nam Á, nhiệt trị liệu với phòng xông đá mu",
+    "Thuế VAT 8% (Nếu quý khách có nhu cầu)."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-teambuilding-gala-dinner.html",
+   "tieu_de": "Tour Teambuilding Gala Dinner: Kết Nối Đội Ngũ, Trải Nghiệm Đáng Nhớ",
+   "gia_moi_khach": 1690000,
+   "bao_gom": [
+    "Di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt tuyến.",
+    "Lưu trú",
+    "Phòng ở tiện nghi, máy nước nóng lạnh, tủ lạnh, điện thoại,... phòng 2 – 3 – 4 khách/phòng.",
+    "Bữa ăn",
+    "Ăn sáng ngày 1 tô/ly: Bún, phở, bún mọc, hủ tiếu, bánh mì ốp la,... giải khát cafe, trà, nước ngọt.",
+    "Khách ở khách sạn 2 sao ăn sáng tô/ly.",
+    "Khách ở khách sạn 3, 4, 5 sao ăn sáng buffet tại khách sạn.",
+    "Ăn chính: 02 bữa thực đơn phong phú, thay đổi theo từng bữa ăn + 1 buổi tối Gala Dinner.",
+    "Vé vào cổng tham quan các địa điểm có trong chương trình.",
+    "Khăn lạnh (01 cái/ngày) + Nước suối Aquafina 500ml (01 chai/khách/ngày).",
+    "Quà tặng nón du lịch + Quà tham gia trò chơi trên xe."
+   ],
+   "khong_bao_gom": [
+    "Các chi phí cá nhân ngoài chương trình: điện thoại, giặt ủi, tham quan – ăn uống hải sản – vận chuyển ngoài chương trình.",
+    "Vé lặn ngắm san hô.",
+    "Thuế VAT 8% (Nếu quý khách có nhu cầu)."
+   ]
+  },
+  {
+   "url": "https://www.vietnambooking.com/du-lich/tour-vinh-long-can-tho-2n1d-khach-doan.html",
+   "tieu_de": "Tour Vĩnh Long - Cần Thơ 2n1d khách đoàn: Chùa Phật Ngọc Xá Lợi, Căn Nhà Màu Tím, Chợ Nổi Cái Răng",
+   "gia_moi_khach": 1599000,
+   "bao_gom": [
+    "Phương tiện di chuyển",
+    "Xe du lịch đời mới, ghế bật mềm, tivi giải trí, máy lạnh tham quan suốt",
+    "tuyến",
+    "Lưu trú",
+    "Khách sạn trung tâm tiêu chuẩn 02 - 03 khách/ phòng.",
+    "3 sao:  Tây Đô, Anh Đào Mekong,... hoặc tương đương.",
+    "4 sao: Vạn Phát Riverside… hoặc tương đương.",
+    "5 sao : Mường Thanh,… hoặc tương đương.",
+    "Ăn uống",
+    "Ăn sáng ngày 1 tô/ly: bún, phở, bún mọc, hủ tiếu, bánh mì ốp la... giải khát cafe, trà, nước ngọt.",
+    "Khách ở tiêu chuẩn 3,4 sao ăn sáng Buffet tại Nhà hàng khách sạn.",
+    "Ăn chính: 03 bữa thực đơn phong phú, thay đổi theo từng bữa ăn đặc sản địa phương."
+   ],
+   "khong_bao_gom": [
+    "Chi phí cá nhân và chi phí khác không có trong chương trình;",
+    "Thuế VAT 8%.",
+    "Tip cho tài xế và hướng dẫn viên nếu phục vụ tốt."
+   ]
+  }
+ ]
+}

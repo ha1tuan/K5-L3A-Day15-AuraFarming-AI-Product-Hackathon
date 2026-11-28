@@ -101,6 +101,15 @@ def call_model(system: str, user: str) -> dict:
         r = call_openai(system, user)
         return {"text": r["text"], "model": MODEL_NAME,
                 "tokens_in": int(r["tokens_in"]), "tokens_out": int(r["tokens_out"])}
+    if MODEL_PROVIDER == "ollama":
+        # Model chạy trên máy qua Ollama (API kiểu OpenAI). OLLAMA_URL mặc định http://localhost:11434
+        base = (os.environ.get("OLLAMA_URL") or "http://localhost:11434").rstrip("/")
+        messages = ([{"role": "system", "content": system}] if system else []) + [{"role": "user", "content": user}]
+        data = post_json(base + "/v1/chat/completions", {}, {"model": MODEL_NAME or "qwen2.5:7b", "messages": messages,
+                                                             "temperature": 0}, timeout=300)
+        u = data.get("usage") or {}
+        return {"text": data["choices"][0]["message"]["content"] or "", "model": "ollama/" + (MODEL_NAME or "qwen2.5:7b"),
+                "tokens_in": int(u.get("prompt_tokens", 0)), "tokens_out": int(u.get("completion_tokens", 0))}
     raise NotImplementedError(
         "chưa viết phần gọi model thật cho MODEL_PROVIDER=%s trong codebase/ai.py — xem docs/connect-model.md"
         % MODEL_PROVIDER)

@@ -4,7 +4,7 @@
 export type Tier = 'tiet_kiem' | 'can_bang' | 'cao_cap';
 export type Purpose = 'gan_ket' | 'nghi_duong' | 'ca_hai';
 export type Status = 'choose_destination' | 'choose_package' | 'ok' | 'ask_back' | 'refused' | 'error';
-export type Field = 'headcount' | 'days' | 'origin' | 'purpose' | 'budget_or_destination';
+export type Field = 'headcount' | 'days' | 'start_date' | 'origin' | 'purpose' | 'budget_or_destination';
 
 export interface TripInput {
   headcount: number | null;
@@ -120,6 +120,18 @@ export interface Plan {
   over_budget: number | null;
   explanation?: Explanation;
   days: Day[];
+  /** Cảnh báo (về muộn, bỏ việc không đủ giờ…), thông tin thêm (cách đi, nơi ở, mùa đẹp) và video review đã kiểm link. */
+  notes?: string[];
+  info?: string[];
+  videos?: { title: string; url: string; channel: string; kind?: string }[];
+  extra?: {
+    travel: string;
+    lodging: string;
+    season: { months: string; in_season: boolean; month_now: number };
+    sights: string[];
+    price_note: string;
+    book?: { stay: BookBlock | null; eat: BookBlock; note: string; credit: string };
+  };
 }
 
 export interface TripView {
@@ -132,7 +144,20 @@ export interface TripView {
   destination?: string;
   packages?: Package[];
   plans?: Plan[];
+  /** Sửa ngay trên trang kế hoạch (POST /api/trips/{id}/recalc). */
+  customize?: { options: string[]; removed: string[]; headcount: number; days: number };
+  map?: { origin: MapPoint; dest: MapPoint; mode: 'bus' | 'plane'; routes?: Partial<Record<Tier, RouteLeg[]>> };
 }
+
+export interface MapPoint { name: string; lat: number; lon: number }
+
+/** Một chặng đi: đường bộ vẽ theo bản đồ thật (OSRM / OpenStreetMap), chặng bay vẽ cung. */
+export interface RouteLeg {
+  from: string; to: string; mode: 'road' | 'flight'; vehicle: string;
+  km: number | null; hours: number | null; path: [number, number][]; approx: boolean; ferry?: boolean;
+}
+
+export interface RecalcInput { headcount?: number; days?: number; removed?: string[] }
 
 export interface ApproveInput {
   destination?: string;
@@ -140,3 +165,36 @@ export interface ApproveInput {
   headcount?: number;
   remove_items?: ('gala' | 'team_building')[];
 }
+
+/** Soát báo giá tour đoàn (POST /api/quote-audit) — mọi số do máy chủ tính. */
+export interface QuoteLine { ten: string; so_luong: number; don_vi: string; don_gia: number; thanh_tien: number }
+export interface QuoteResult {
+  status: 'ok' | 'ask_back';
+  message?: string;
+  so_nguoi?: number;
+  dia_diem?: string | null;
+  gia_moi_khach?: number;
+  gia_bao?: number;
+  tong?: number;
+  moi_nguoi?: number;
+  ngan_sach?: number | null;
+  vuot?: number | null;
+  chenh_pct?: number;
+  dong?: QuoteLine[];
+  vi_sao_vuot?: string[];
+  tham_chieu?: string;
+  chung_tu?: string[];
+  ca_nhan?: string[];
+  cau_hoi?: string[];
+  to_trinh?: string;
+  markdown?: string;
+  doi_chieu?: QuoteCompare;
+}
+
+export interface QuoteCompare {
+  tier: Tier; ke_hoach: number; ke_hoach_moi_nguoi: number; bao_gia_that: number; chenh: number; chenh_pct: number; nhan_xet: string;
+}
+
+/** Gợi ý nơi ở / ăn thật: link tìm đúng hạng (giá thật do người dùng tự xem) + cơ sở thật từ OpenStreetMap. */
+export interface BookPlace { name: string; kind: string; km: number; maps: string; website?: string | null; phone?: string | null; osm: string }
+export interface BookBlock { title: string; links: { label: string; url: string }[]; places: BookPlace[] }

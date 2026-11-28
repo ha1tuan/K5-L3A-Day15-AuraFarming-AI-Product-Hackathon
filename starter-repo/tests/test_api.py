@@ -30,7 +30,16 @@ def test_post_missing_returns_ask_back(world):
     assert v["status"] == "ask_back" and v["missing_fields"] == ["origin", "purpose"] and v["trip_id"]
 
 
+def test_post_entry_a_suggests_destinations(world):
+    # 27/11 tối: cách A chạy trên đường dữ liệu (du_lieu_service) — trước đó trả "Bản hiện tại cần cả kinh phí và địa điểm."
+    r = client.post("/api/trips", json={**BODY, "destination": ""})
+    assert r.status_code == 200
+    assert r.json()["status"] == "choose_destination" and r.json()["destinations"]
+
+
 def test_post_entry_a_suggests_destinations_and_approves_a_package(world, monkeypatch):
+    # Nhánh vinh: Hà Nội → Hạ Long chạy đường dữ liệu; test này giữ cho đường graph (nơi ngoài dữ liệu, PR #13).
+    monkeypatch.setattr(trip_service.du_lieu_service, "handles", lambda req: False)
     monkeypatch.setattr(trip_service, "dinh_vi", lambda *args, **kwargs: None)
     r = client.post("/api/trips", json={**BODY, "destination": ""})
     assert r.status_code == 200
@@ -52,7 +61,9 @@ def test_post_entry_a_suggests_destinations_and_approves_a_package(world, monkey
     assert client.get(f"/api/trips/{view['trip_id']}").json() == plan
 
 
-def test_post_entry_b_estimates_without_budget_and_approves_a_package(world):
+def test_post_entry_b_estimates_without_budget_and_approves_a_package(world, monkeypatch):
+    # Nhánh vinh: Hà Nội → Hạ Long chạy đường dữ liệu; test này giữ cho đường graph (nơi ngoài dữ liệu, PR #13).
+    monkeypatch.setattr(trip_service.du_lieu_service, "handles", lambda req: False)
     view = client.post("/api/trips", json={**BODY, "budget": None}).json()
     assert view["status"] == "choose_package" and view["request"]["entry"] == "B"
     assert view["request"]["budget"] is None and len(view["packages"]) == 3
@@ -82,9 +93,11 @@ def test_get_trip_roundtrip(world):
 
 
 def test_store_evicts_oldest(world, monkeypatch):
+    # 28/11: bộ nhớ vẫn giới hạn MAX_TRIPS, nhưng chuyến bị đẩy ra vẫn đọc lại được từ SQLite (link chia sẻ bền)
     monkeypatch.setattr(trip_service, "MAX_TRIPS", 2)
     ids = [client.post("/api/trips", json={**BODY, "origin": ""}).json()["trip_id"] for _ in range(3)]
-    assert client.get("/api/trips/" + ids[0]).status_code == 404
+    assert ids[0] not in trip_service._store and len(trip_service._store) <= 2
+    assert client.get("/api/trips/" + ids[0]).status_code == 200
     assert client.get("/api/trips/" + ids[2]).status_code == 200
 
 

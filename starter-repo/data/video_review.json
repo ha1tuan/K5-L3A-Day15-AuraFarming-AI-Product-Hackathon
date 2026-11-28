@@ -1,0 +1,883 @@
+{
+ "ngay_kiem": "2026-11-27",
+ "cach_lay": "tìm YouTube 'review du lịch <nơi>' và 'team building <nơi>', kiểm từng link qua oEmbed, giữ video có tên nơi trong tiêu đề",
+ "video": {
+  "halong": [
+   {
+    "url": "https://www.youtube.com/watch?v=YvBiGxfhsJc",
+    "tieu_de": "Kinh nghiệm du lịch HẠ LONG - Lịch trình chi tiết 2N1Đ cùng top trải nghiệm đáng giá nhất",
+    "kenh": "Tripdi",
+    "loai": "review",
+    "cau_tim": "review du lịch Hạ Long"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=L3aRY4maQ6Q",
+    "tieu_de": "Du Lịch Hạ Long 3 Ngày 2 Đêm Tự Túc - Lịch Trình Chi Tiết",
+    "kenh": "Hải Phòng Trong Tôi",
+    "loai": "review",
+    "cau_tim": "review du lịch Hạ Long"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=odA0VIllQyw",
+    "tieu_de": "Kỷ niệm Chương trình Team Building Hạ Long 2026",
+    "kenh": "Dược Phẩm Trung Ương I - Pharbaco",
+    "loai": "team_building",
+    "cau_tim": "team building Hạ Long"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=wHxKoWaB9Vo",
+    "tieu_de": "TEAMBUILDING hạ long 2025",
+    "kenh": "team building quảng ninh ",
+    "loai": "team_building",
+    "cau_tim": "team building Hạ Long"
+   }
+  ],
+  "catba": [
+   {
+    "url": "https://www.youtube.com/watch?v=SOcyOUddAIM",
+    "tieu_de": "KINH NGHIỆM DU LỊCH CÁT BÀ TỰ TÚC CHI TIẾT TỪ A - Z",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Cát Bà"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=leOBCm1PFKw",
+    "tieu_de": "Trọn bộ kinh nghiệm du lịch Cát Bà: Ăn gì, chơi gì, ở đâu?",
+    "kenh": "Wiki Du lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Cát Bà"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=5pLXSTSw2pk",
+    "tieu_de": "Du Lịch Cát Bà 2026 | Review Toàn Bộ Thị Trấn Biển Đẹp Bậc Nhất Miền Bắc",
+    "kenh": "Hải Phòng Trong Tôi",
+    "loai": "review",
+    "cau_tim": "review du lịch Cát Bà"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=7x_8TP81p00",
+    "tieu_de": "CÁT BÀ ODYSSEY | YIC ONE TEAM BUILDING 2026",
+    "kenh": "YIC HIDDEN CHAMPION ",
+    "loai": "team_building",
+    "cau_tim": "team building Cát Bà"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=vpTjwGHm3fA",
+    "tieu_de": "TVL TEAM BUILDING CÁT BÀ 2026",
+    "kenh": "Inox Quốc Tế TVL",
+    "loai": "team_building",
+    "cau_tim": "team building Cát Bà"
+   }
+  ],
+  "samson": [
+   {
+    "url": "https://www.youtube.com/watch?v=Z7UKqKgy-bE",
+    "tieu_de": "KINH NGHIỆM DU LỊCH SẦM SƠN TỰ TÚC CHI TIẾT TỪ A - Z",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Sầm Sơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=28n7knh-uf8",
+    "tieu_de": "Du Lịch Biển Sầm Sơn Thanh Hóa 2025 | Hướng Dẫn Ăn Gì Chơi Gì Tại Sầm Sơn Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Sầm Sơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=8RiDq3FSXuQ",
+    "tieu_de": "Lịch trình du lịch Sầm Sơn 2 ngày 1 đêm & những lưu  ý \"xương máu\" để không bị chặt chém",
+    "kenh": "Wiki Du lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Sầm Sơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=-7sKPSlbhaQ",
+    "tieu_de": "[Team Building 2025] Nitto Việt Nam (11/07/2025) | Sầm Sơn - Thanh Hóa",
+    "kenh": "Sen Xanh Event & Teambuilding",
+    "loai": "team_building",
+    "cau_tim": "team building Sầm Sơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=so8-EsyXQwU",
+    "tieu_de": "Du lịch Sầm Sơn Team Building - Dệt May Minh Quân Mỹ Đức",
+    "kenh": "LET'S TOUR",
+    "loai": "team_building",
+    "cau_tim": "team building Sầm Sơn"
+   }
+  ],
+  "cualo": [
+   {
+    "url": "https://www.youtube.com/watch?v=z95Ym91fUfI",
+    "tieu_de": "Du lịch biển Cửa Lò Nghệ An cùng gia đình người đông như kiến",
+    "kenh": "Lúa miền Trung ",
+    "loai": "review",
+    "cau_tim": "review du lịch Cửa Lò"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=vvFuN-B89jM",
+    "tieu_de": "KINH NGHIỆM DU LỊCH CỬA LÒ TỰ TÚC CHI TIẾT TỪ A - Z | ĂN GÌ, CHƠI GÌ, Ở ĐÂU??",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Cửa Lò"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=iqJRhYi_tRI",
+    "tieu_de": "Du Lịch Đảo Lan Châu - Biển Cửa Lò Nghệ An 2026 | Ăn Gì Chơi Gì Ở Đâu Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Cửa Lò"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=S3dGmRLCu54",
+    "tieu_de": "Team Building Cửa Lò 2025 | Không Khí Nhiệt Huyết & Gắn Kết",
+    "kenh": "CỬA LÒ TRAVEL ",
+    "loai": "team_building",
+    "cau_tim": "team building Cửa Lò"
+   }
+  ],
+  "ninhbinh": [
+   {
+    "url": "https://www.youtube.com/watch?v=d3R-VcIB3d4",
+    "tieu_de": "3 ngày du lịch một mình Ninh Bình ᨒོ  solo trip vlog",
+    "kenh": "hà vy",
+    "loai": "review",
+    "cau_tim": "review du lịch Ninh Bình"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=YXCVMnr7SYs",
+    "tieu_de": "KINH NGHIỆM DU LỊCH NINH BÌNH TỰ TÚC CHI TIẾT",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Ninh Bình"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=7as0dl2aujg",
+    "tieu_de": "DU LỊCH NINH BÌNH. Review Thung Nham , Tam Cốc , Phố Cổ Hoa Lư, Chùa Bái Đính . Vietnam travel",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Ninh Bình"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ywM7PU6kxu8",
+    "tieu_de": "Những Khoảnh Khắc Ấn Tượng Team Building 2023 tại Ninh Bình | GreenYellow Vietnam Team Outing 2023",
+    "kenh": "GreenYellow Vietnam",
+    "loai": "team_building",
+    "cau_tim": "team building Ninh Bình"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=hZOm6pOph9I",
+    "tieu_de": "Amazing Race Ninh Binh [Amanotes Team Building 2022] - FULL | Exotic Vietnam",
+    "kenh": "Exotic Vietnam",
+    "loai": "team_building",
+    "cau_tim": "team building Ninh Bình"
+   }
+  ],
+  "sapa": [
+   {
+    "url": "https://www.youtube.com/watch?v=s8zeA6_y_IE",
+    "tieu_de": "Kinh Nghiệm Du Lịch Sa Pa Tự Túc Chi Tiết Nhất 2026",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Sa Pa"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=DUK1kWtZB8Y",
+    "tieu_de": "Review Best View Sa Pa: Địa điểm check-in săn mây đẹp nhất Sapa hiện nay?",
+    "kenh": "Hoàng Long",
+    "loai": "review",
+    "cau_tim": "review du lịch Sa Pa"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=E3qGiPSYxHk",
+    "tieu_de": "Chương trình Teambuilding Cuộc Đua Kỳ Thú VP Bank tại Sa Pa - Đoàn Kết Đổi Mới, Bứt Phá Vươn Xa",
+    "kenh": "Ruộng Bậc Thang Travel",
+    "loai": "team_building",
+    "cau_tim": "team building Sa Pa"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=kKUNAvAQ8wQ",
+    "tieu_de": "COMPANY TRIP 2025 KAROFI GROUP – ĐỢT I | Sa Pa – Bản Mây",
+    "kenh": "Sen Xanh Event & Teambuilding",
+    "loai": "team_building",
+    "cau_tim": "team building Sa Pa"
+   }
+  ],
+  "mocchau": [
+   {
+    "url": "https://www.youtube.com/watch?v=lM4o5pz1S6c",
+    "tieu_de": "Review du lịch Mộc Châu: đi mùa nào đẹp, ăn chơi tới bến chưa đến 2 triệu đồng",
+    "kenh": "Wiki Du lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Mộc Châu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=4Kas7VjrN_I",
+    "tieu_de": "Bí kíp du lịch Mộc Châu trong 2 ngày 1 đêm - Tối ưu hóa thời gian, tận hưởng trọn vẹn",
+    "kenh": "DU LỊCH MỘC CHÂU",
+    "loai": "review",
+    "cau_tim": "review du lịch Mộc Châu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=5lxi9-mXt_0",
+    "tieu_de": "Có Nên Đi Du Lịch Mộc Châu? Sự Thật Có Đẹp Như Lời Đồn? 😱",
+    "kenh": "Đi Để Cảm Nhận",
+    "loai": "review",
+    "cau_tim": "review du lịch Mộc Châu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=BuBcTOSsYpU",
+    "tieu_de": "Team Minh Hằng - TT Miền Đông- Mộc Châu-Sapa- Ninh Bình Hà Nội - Hành Trình Về Nguồn T12.2025",
+    "kenh": "Ghiền du lịch teambuilding",
+    "loai": "team_building",
+    "cau_tim": "team building Mộc Châu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=9IJ3VAUodNo",
+    "tieu_de": "VDG TeamBuilding Mộc Châu - Mai Châu 2026",
+    "kenh": "jsc VUA ĐÓNG GÓI",
+    "loai": "team_building",
+    "cau_tim": "team building Mộc Châu"
+   }
+  ],
+  "tamdao": [
+   {
+    "url": "https://www.youtube.com/watch?v=g2SpS9ag_w8",
+    "tieu_de": "Review du lịch Tam Đảo có phải cực kỳ đắt đỏ như lời đồn? Đi mùa nào đẹp nhất?",
+    "kenh": "Wiki Du lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Tam Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=9r9B4xHiUgE",
+    "tieu_de": "Du Lịch Tam Đảo 2026 | Ăn Gì Chơi Gì Ở Đâu Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Tam Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=rAhPNKLfLLA",
+    "tieu_de": "Kinh Nghiệm Du Lịch Tam Đảo Tự Túc Chi Tiết Mới Nhất",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Tam Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Q85OXoMkWB8",
+    "tieu_de": "Team building song ngữ KISCO tại sân golf Tam Đảo 2026",
+    "kenh": "Trần Vũ",
+    "loai": "team_building",
+    "cau_tim": "team building Tam Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=2lwWLvKawYc",
+    "tieu_de": "[TEAMBUILDING TAM ĐẢO] Khoảnh khắc BÙNG CHÁY!!! - Sinh nhật 7 tuổi FU Guitar Club",
+    "kenh": "FU Guitar Club",
+    "loai": "team_building",
+    "cau_tim": "team building Tam Đảo"
+   }
+  ],
+  "bavi": [
+   {
+    "url": "https://www.youtube.com/watch?v=hcXSbn8LHzM",
+    "tieu_de": "Du lịch Ba Vì trong 1 ngày: Đi đâu, chơi gì, ăn gì? | Hanoi Review",
+    "kenh": "HTV - Đài Hà Nội",
+    "loai": "review",
+    "cau_tim": "review du lịch Ba Vì"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=PuEjUyga6o4",
+    "tieu_de": "Du Lịch Ba Vì Hà Nội 2026 | Hướng Dẫn Ăn Gì Chơi Gì Ở Đâu Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Ba Vì"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=_bTbsOi_j00",
+    "tieu_de": "TOP 8 Địa điểm du lịch giá rẻ tại Bà Vì Hà Nội siêu đẹp không thể bỏ qua | TOPBAG.vn",
+    "kenh": "TOPBAG",
+    "loai": "review",
+    "cau_tim": "review du lịch Ba Vì"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=wRqDfTHb7SI",
+    "tieu_de": "Sân chơi team building ngoài trời lý tưởng tại Ba Vì #teambuilding #bavi #hoatdongngoaitroi",
+    "kenh": "Đông - Người ba vì",
+    "loai": "team_building",
+    "cau_tim": "team building Ba Vì"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=rPuR0oJ4frM",
+    "tieu_de": "Game Tháp Maslow tổ chức ở Ba Vì chạy bay tóc",
+    "kenh": "Thổ địa Ba Vì",
+    "loai": "team_building",
+    "cau_tim": "team building Ba Vì"
+   }
+  ],
+  "phongnha": [
+   {
+    "url": "https://www.youtube.com/watch?v=I1igL0nTMI0",
+    "tieu_de": "TOP các điểm du lịch đẹp nhất Quảng Bình 2025",
+    "kenh": "QUANGBINHGO- KINH NGHIỆM DU LỊCH QUẢNG BÌNH",
+    "loai": "review",
+    "cau_tim": "review du lịch Quảng Bình"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=x4xxs9JAZp0",
+    "tieu_de": "TOUR QUẢNG BÌNH 3 NGÀY 2 ĐÊM",
+    "kenh": "Netin Travel - Tour Du lịch Quảng Bình",
+    "loai": "review",
+    "cau_tim": "review du lịch Quảng Bình"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=O1r-qrVvicY",
+    "tieu_de": "Phần 1 - Review chuyến đi Quảng Bình 4 ngày 3 đêm #travel #trendingshorts #travelvlog #quangbinh",
+    "kenh": "Tien Pham",
+    "loai": "review",
+    "cau_tim": "review du lịch Quảng Bình"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=6RweMyEKX1o",
+    "tieu_de": "HTCONS - TEAMBUILDING QUẢNG BÌNH 2026 by UNTRA GROUP",
+    "kenh": "UNTRA GROUP - Du Lịch Độc Đáo",
+    "loai": "team_building",
+    "cau_tim": "team building Quảng Bình"
+   }
+  ],
+  "hue": [
+   {
+    "url": "https://www.youtube.com/watch?v=XIs0d5ORrGQ",
+    "tieu_de": "Huế 1 Ngày Lang Thang Cố Đô | Vlog Du Lịch Huế Chill Nhất",
+    "kenh": "Cuong Cowboy",
+    "loai": "review",
+    "cau_tim": "review du lịch Huế"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=yOKNunmKLwI",
+    "tieu_de": "Kinh Nghiệm Du Lịch Huế Từ A-Z - Tất Tần Tật Ăn Gì Chơi Gì?",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Huế"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=941sfYBOHow",
+    "tieu_de": "KINH NGHIỆM DU LỊCH HUẾ TỰ TÚC TIẾT KIỆM CHI PHÍ",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Huế"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=f2z84rw05gA",
+    "tieu_de": "Team building Aeon Huế đợt 3 ( quẩy hết mình)",
+    "kenh": "Nguyên Huy Thân",
+    "loai": "team_building",
+    "cau_tim": "team building Huế"
+   }
+  ],
+  "danang": [
+   {
+    "url": "https://www.youtube.com/watch?v=PSqscwxujno",
+    "tieu_de": "HƯỚNG DẪN DU LỊCH ĐÀ NẴNG TẤT TẦN TẬT . NAMAN RETREAT và MIKAZUKI . DA NANG VIET NAM TRAVEL GUIDE",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Đà Nẵng"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=R0WpONfPQT8",
+    "tieu_de": "KINH NGHIỆM DU LỊCH ĐÀ NẴNG TỰ TÚC GIÁ RẺ",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Đà Nẵng"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=eM1lU_h1ZY4",
+    "tieu_de": "HƯỚNG DẪN DU LỊCH ĐÀ NẴNG TỰ TÚC . KDL Núi Thần Tài, Vinpearl Nam Hội An , Quán ăn Ngon Đà Nẵng",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Đà Nẵng"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=GXBivOpVHjU",
+    "tieu_de": "IIG Teambuilding Đà Nẵng Kỷ Niệm 20 Năm",
+    "kenh": "Color Events Official",
+    "loai": "team_building",
+    "cau_tim": "team building Đà Nẵng"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=0fAzSyyE50A",
+    "tieu_de": "Trải nghiệm team building siêu hoạt náo tại biển Mỹ Khê Đà Nẵng 🥳🥳 #danang24 #dulich #travel",
+    "kenh": "Trùm Du Lịch",
+    "loai": "team_building",
+    "cau_tim": "team building Đà Nẵng"
+   }
+  ],
+  "hoian": [
+   {
+    "url": "https://www.youtube.com/watch?v=QCYJGIq2oaA",
+    "tieu_de": "Du Lịch Hội An 2N1Đ Mới Nhất 2026 | Hướng Dẫn Trọn Vẹn Đi Đâu Ăn Gì Chơi Gì Chi Tiết Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Hội An"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=gfeh3Q26E68",
+    "tieu_de": "Hội An 2026 Các Quán Ăn Bao Ngon, Các Điểm Chơi Cực Chất Bạn Nên Biết Khi Du Lịch Hội An",
+    "kenh": "Hải Du Lịch Bụi ",
+    "loai": "review",
+    "cau_tim": "review du lịch Hội An"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=x5Fa62DyL7Q",
+    "tieu_de": "KINH NGHIỆM DU LỊCH HỘI AN TỰ TÚC CHI TIẾT NHẤT",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Hội An"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=6995uyDqsag",
+    "tieu_de": "AMAZING RACE HỘI AN - KAFI | VIETTEAM GROUP Tổ chức sự kiện - Team Building",
+    "kenh": "Vietteam Group - Event & Team Building",
+    "loai": "team_building",
+    "cau_tim": "team building Hội An"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=OTOwgVOhNSk",
+    "tieu_de": "F88 TỔ CHỨC TEAMBUILDING & GALA DINNER TẠI HỘI AN | 05-06/6/2026 - Đất Việt Tour",
+    "kenh": "Đất Việt Tour",
+    "loai": "team_building",
+    "cau_tim": "team building Hội An"
+   }
+  ],
+  "quynhon": [
+   {
+    "url": "https://www.youtube.com/watch?v=2LY0wgSZAFc",
+    "tieu_de": "Review Du lịch Quy Nhơn 5 ngày 4 đêm | Quy nhơn 2024",
+    "kenh": "Dark Prince Traveler",
+    "loai": "review",
+    "cau_tim": "review du lịch Quy Nhơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=g5DUPG3kELA",
+    "tieu_de": "KINH NGHIỆM DU LỊCH QUY NHƠN TỰ TÚC CHI TIẾT MỚI NHẤT",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Quy Nhơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=xRCfEbFb6t0",
+    "tieu_de": "HƯỚNG DẪN DU LỊCH QUY NHƠN - BÌNH ĐỊNH. Quán ăn ngon tại Quy Nhơn . Ăn gì Chơi gì tại Quy Nhơn",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Quy Nhơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=g-YPpIeY-YA",
+    "tieu_de": "600 PAX SEPPLUS BÌNH ĐỊNH | TOUR TEAM BUILDING KỲ CO 1 NGÀY - QUY NHƠN TOURIST",
+    "kenh": "QUY NHƠN TOURIST",
+    "loai": "team_building",
+    "cau_tim": "team building Quy Nhơn"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=Zhnl5xNDg8A",
+    "tieu_de": "Teambuilding & Gala Dinner Maple Labs | Quy Nhơn 2025",
+    "kenh": "AKTeam Professional Teambuilding",
+    "loai": "team_building",
+    "cau_tim": "team building Quy Nhơn"
+   }
+  ],
+  "phuyen": [
+   {
+    "url": "https://www.youtube.com/watch?v=mX6A63VG7YM",
+    "tieu_de": "KINH NGHIỆM DU LỊCH PHÚ YÊN TỰ TÚC CHI TIẾT TỪ A - Z",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Phú Yên"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=edaIamAJb6E",
+    "tieu_de": "HƯỚNG DẪN DU LỊCH PHÚ YÊN , Ăn gì chơi gì tại PHÚ YÊN - QUY NHƠN",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Phú Yên"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=yVixd42cOAk",
+    "tieu_de": "Du lịch Phú Yên | Chợ hải sản sáng sớm và Món bánh xèo mực siêu rẻ ở Làng chài An Hải | #GauHamDi 47",
+    "kenh": "Gấu Ham Đi",
+    "loai": "review",
+    "cau_tim": "review du lịch Phú Yên"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=MiYHz08bTfc",
+    "tieu_de": "RECAP TEAM BUILDING PHÚ YÊN 2026",
+    "kenh": "Win Win Official",
+    "loai": "team_building",
+    "cau_tim": "team building Phú Yên"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=vvc8R_O2VaI",
+    "tieu_de": "Chương trình Team Building Phú Yên 2026 - Quý công ty TEDI SOUTH - 100 khách",
+    "kenh": "Alpha Travels",
+    "loai": "team_building",
+    "cau_tim": "team building Phú Yên"
+   }
+  ],
+  "nhatrang": [
+   {
+    "url": "https://www.youtube.com/watch?v=Q7Mmb7xlYQA",
+    "tieu_de": "HƯỚNG DẪN DU LỊCH NHA TRANG . Ăn gì chơi gì Tại Nha Trang. Review Đảo khỉ, resort đẹp Nha Trang",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Nha Trang"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=SYW7DZUKzfM",
+    "tieu_de": "solo trip đầu đời ở Nha Trang | ngan's diary 📓",
+    "kenh": "Con Ngan",
+    "loai": "review",
+    "cau_tim": "review du lịch Nha Trang"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=_CZyMkHXjKQ",
+    "tieu_de": "TOP 10 ĐIỂM THAM QUAN NHA TRANG HOT NHẤT 2025 | REVIEW KINH NGHIỆM DU LỊCH NHA TRANG MỚI NHẤT",
+    "kenh": "NL Channel",
+    "loai": "review",
+    "cau_tim": "review du lịch Nha Trang"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=y447JkiEYiU",
+    "tieu_de": "Team Building cùng IAN Solar ở Nha Trang p2 (23-24/11/2026)",
+    "kenh": "Tran Tinh",
+    "loai": "team_building",
+    "cau_tim": "team building Nha Trang"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=dtEPsMIdfcw",
+    "tieu_de": "Team Building cùng IAN Solar tại Nha Trang p1 (22/11/2026)",
+    "kenh": "Phi Tính Vlog",
+    "loai": "team_building",
+    "cau_tim": "team building Nha Trang"
+   }
+  ],
+  "dalat": [
+   {
+    "url": "https://www.youtube.com/watch?v=lNQwvC_P6-0",
+    "tieu_de": "Du Lịch ĐÀ LẠT 2026. Lịch Trình 3 Ngày 2 Đêm Ăn Gì Chơi Gì Tại Đà Lạt. Làng Cù Lần, Lạc Hư Cổ Trấn..",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Đà Lạt"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=OV1urvr4jos",
+    "tieu_de": "Đà Lạt lạnh teo, cải tạo hồ Xuân Hương, khai mạc Festival?",
+    "kenh": "ĐÀ LẠT STREET (NHÂN LA CÀ)",
+    "loai": "review",
+    "cau_tim": "review du lịch Đà Lạt"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ONNqtYuejvc",
+    "tieu_de": "Du Lịch Đà Lạt 4N3Đ Mới Nhất 2026 | Trọn Vẹn Ăn Gì Chơi Gì Đi Đâu Ngắm Cảnh Đẹp Siêu Chi Tiết",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Đà Lạt"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=BZGBf8WyGeg",
+    "tieu_de": "Hành trình Team Building 2025 tại Đà Lạt cùng công ty MAC USA ONE tiêu chuẩn 5 sao| BI Travel",
+    "kenh": "BI Travel Official",
+    "loai": "team_building",
+    "cau_tim": "team building Đà Lạt"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ey-pQ9MuJag",
+    "tieu_de": "TEAM BUILDING TẠI ĐÀ LẠT | TRÒ CHƠI HẤP DẪN | QUÀ TẶNG GIÁ TRỊ LÊN ĐẾN HÀNG TRIỆU ĐỒNG",
+    "kenh": "Bazan Travel",
+    "loai": "team_building",
+    "cau_tim": "team building Đà Lạt"
+   }
+  ],
+  "muine": [
+   {
+    "url": "https://www.youtube.com/watch?v=7vOeDlyrbug",
+    "tieu_de": "YDL #297: Phan Thiết - Mũi Né cảnh đẹp, nhiều món ngon: lẩu thả, bánh căn, trứng mực | Yêu Máy Bay",
+    "kenh": "Yêu Máy Bay",
+    "loai": "review",
+    "cau_tim": "review du lịch Phan Thiết - Mũi Né"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=QcCXgh-OXqc",
+    "tieu_de": "Đồ ăn Phan Thiết quá ngon! 2N1Đ khám phá Mũi Né, Bàu Trắng & food tour đặc sản 🇻🇳",
+    "kenh": "Leo Singto",
+    "loai": "review",
+    "cau_tim": "review du lịch Phan Thiết - Mũi Né"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=UPpky126WY4",
+    "tieu_de": "Du Lịch Mũi Né - Phan Thiết 2026 | Đi Đâu Chơi Gì Ăn Gì Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Phan Thiết - Mũi Né"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=B_qGXKvW0L4",
+    "tieu_de": "Hành trình du lịch Teambuilding 3 ngày tại Mũi Né - Phan Thiết | Chai lọ mỹ phẩm Salub Việt Nam",
+    "kenh": "Salub Viet Nam",
+    "loai": "team_building",
+    "cau_tim": "team building Phan Thiết - Mũi Né"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=6HanYGH9cbk",
+    "tieu_de": "TEAMBUILDING PHAN THIẾT - MŨI NÉ 2025",
+    "kenh": "VinaGreen Plus Official",
+    "loai": "team_building",
+    "cau_tim": "team building Phan Thiết - Mũi Né"
+   }
+  ],
+  "vungtau": [
+   {
+    "url": "https://www.youtube.com/watch?v=i-tjHeT79U8",
+    "tieu_de": "Du Lịch Vũng Tàu Mới Nhất 2026 | Hướng Dẫn Tất Tần Tật Đi Đâu Ăn Gì Chơi Gì Chi Tiết Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Vũng Tàu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=yXOjiRW3LwE",
+    "tieu_de": "Hướng Dẫn Du Lịch Vũng Tàu 2025 | Ăn Gì Chơi Gì Tại Vũng Tàu Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Vũng Tàu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=5qxx4UmrOnI",
+    "tieu_de": "Top 20 địa điểm du lịch Vũng Tàu nên đi nhất trong 2022",
+    "kenh": "Blog Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Vũng Tàu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=YJo5kfhMW3g",
+    "tieu_de": "TEAM BUILDING ALPLA VIỆT NAM | VŨNG TÀU 2026",
+    "kenh": "Du Lịch Ocean",
+    "loai": "team_building",
+    "cau_tim": "team building Vũng Tàu"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=PfnaTRExs0A",
+    "tieu_de": "Đi Team Building Có Gì Vui? Vũng Tàu 2 Ngày 1 Đêm",
+    "kenh": "Toàn Saigon",
+    "loai": "team_building",
+    "cau_tim": "team building Vũng Tàu"
+   }
+  ],
+  "hotram": [
+   {
+    "url": "https://www.youtube.com/watch?v=fYoPzHOhFvA",
+    "tieu_de": "Top 5 Khách sạn Đẹp Nhất Hồ Tràm - Long Hải - Phước Hải",
+    "kenh": "Review Du Lịch Việt Nam",
+    "loai": "review",
+    "cau_tim": "review du lịch Hồ Tràm - Long Hải"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=xhaJHVWC-BQ",
+    "tieu_de": "Khám Phá Hồ Tràm - Vũng Tàu 2025 | Hướng Dẫn Những Điểm Vui Chơi Tắm Biển Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Hồ Tràm - Long Hải"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=iK1kUH4hDw0",
+    "tieu_de": "Tour Du lịch Long Hải Hồ Tràm 1 Hướng Dẫn Viên Chuyên Nghiệp",
+    "kenh": "NẮNG MỚI ",
+    "loai": "review",
+    "cau_tim": "review du lịch Hồ Tràm - Long Hải"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ERHJ_lrqM-8",
+    "tieu_de": "[Official Recap] Team Building Hồ Tràm 2026 | Mừng HQG 16 Năm Thành Lập",
+    "kenh": "Công Nghệ HQG",
+    "loai": "team_building",
+    "cau_tim": "team building Hồ Tràm - Long Hải"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=k7AidVaaT5Y",
+    "tieu_de": "Mắt Kính TUYẾT HÀ Du Lịch Hồ Tràm Kết Hợp TEAMBUILDING SUMMER VACATION",
+    "kenh": "Công Ty TNHH Du Lịch INTOUR",
+    "loai": "team_building",
+    "cau_tim": "team building Hồ Tràm - Long Hải"
+   }
+  ],
+  "phuquoc": [
+   {
+    "url": "https://www.youtube.com/watch?v=SUFK6URuMmc",
+    "tieu_de": "REVIEW TOP NHỮNG ĐIỂM THAM QUAN DU LỊCH ĐẢO NGỌC - PHÚ QUỐC",
+    "kenh": "Bước Lang Thang Vlogs",
+    "loai": "review",
+    "cau_tim": "review du lịch Phú Quốc"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=RfbQ4PHS5cQ",
+    "tieu_de": "Kinh nghiệm Du lịch Phú Quốc Mới nhất Chi tiết nhất từ A - Z | Tico Travel",
+    "kenh": "Lalago",
+    "loai": "review",
+    "cau_tim": "review du lịch Phú Quốc"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=LjnaZdZAmKw",
+    "tieu_de": "Top 6 địa điểm du lịch Phú Quốc Đẹp Nhất | Đi rồi mới thấy xứng đáng!",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Phú Quốc"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=oUTav08ZoUk",
+    "tieu_de": "Team Building và Gala Dinner Phú Quốc 3N2Đ | Vietnam Booking",
+    "kenh": "Vietnam Booking",
+    "loai": "team_building",
+    "cau_tim": "team building Phú Quốc"
+   }
+  ],
+  "condao": [
+   {
+    "url": "https://www.youtube.com/watch?v=GkuAXFcBWhM",
+    "tieu_de": "Du Lịch Côn Đảo Mùa Đẹp Nhất 2026 | Hướng Dẫn Chi Tiết Và Mới Nhất",
+    "kenh": "Nhật Ký Du Lịch",
+    "loai": "review",
+    "cau_tim": "review du lịch Côn Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=60nVkAILOTU",
+    "tieu_de": "48 Giờ Khám Phá Côn Đảo: Ăn Gì - Chơi Gì? | Quan không gờ",
+    "kenh": "Quan không gờ",
+    "loai": "review",
+    "cau_tim": "review du lịch Côn Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=4OcDK5wkB9U",
+    "tieu_de": "Côn Đảo - Ký Sự 2 Ngày Đêm Reivew Du Lịch Và Khám Phá Vẽ Đẹp Tư Nhiên, Hùng Vỹ Đầy Linh Thiêng",
+    "kenh": "Phan Thành Luân BĐS ",
+    "loai": "review",
+    "cau_tim": "review du lịch Côn Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=XCNgvcqPhw4",
+    "tieu_de": "TEAM BUILDING CÔN ĐẢO 2026 | TIẾN PHÁT GROUP",
+    "kenh": "Tiến Phát Group",
+    "loai": "team_building",
+    "cau_tim": "team building Côn Đảo"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=hK6F1QT_7NE",
+    "tieu_de": "SGU Team building - vận động biển tại Côn Đảo Resort 2019",
+    "kenh": "Nguyễn Hoàng Tuấn",
+    "loai": "team_building",
+    "cau_tim": "team building Côn Đảo"
+   }
+  ],
+  "cantho": [
+   {
+    "url": "https://www.youtube.com/watch?v=1FNAr3OLyPM",
+    "tieu_de": "Kinh Nghiệm Du Lịch Cần Thơ Tự Túc Chi Tiết Từ A - Z",
+    "kenh": "Xẻo Travel",
+    "loai": "review",
+    "cau_tim": "review du lịch Cần Thơ"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=u-CvjUwEaJ8",
+    "tieu_de": "758. Du lịch Cần Thơ - Những điểm tham quan không thể bỏ qua khi về vùng Tây Đô gạo trắng nước trong",
+    "kenh": "CuongCanCook Official",
+    "loai": "review",
+    "cau_tim": "review du lịch Cần Thơ"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=HJ7imaVKu9Q",
+    "tieu_de": "Du lịch cần thơ trải nghiệm các trò chơi nước khu du lịch ông đề",
+    "kenh": "Cuộc Sống Vlog59",
+    "loai": "review",
+    "cau_tim": "review du lịch Cần Thơ"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=VAu6gRa1ZVY",
+    "tieu_de": "Team Building - Zingplay 2025 | Cần Thơ",
+    "kenh": "DeltaflyMedia",
+    "loai": "team_building",
+    "cau_tim": "team building Cần Thơ"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=wjoL-NUdReU",
+    "tieu_de": "Team Building Vietbank KV 6 \"Vươn tầm khát vọng\" tại Cần Thơ ngày 25–26/7/2026",
+    "kenh": "Vietbank Ngân hàng TMCP Việt Nam Thương Tín",
+    "loai": "team_building",
+    "cau_tim": "team building Cần Thơ"
+   }
+  ],
+  "tayninh": [
+   {
+    "url": "https://www.youtube.com/watch?v=tuWGDE5GfsA",
+    "tieu_de": "Kinh Nghiệm Du Lịch TÂY NINH TỰ TÚC 2N1Đ | PHẦN 1 Khám Phá SunWorld NÚI BÀ & Đặc Sản GÀ RẪY TÂY NINH",
+    "kenh": "Say Cooking & Sharing",
+    "loai": "review",
+    "cau_tim": "review du lịch Tây Ninh"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=ITDw2ih48Dg",
+    "tieu_de": "HƯỚNG DẪN DU LỊCH NÚI BÀ ĐEN - TÂY NINH. Ăn gì chơi gì ở TÂY NINH . Tay Ninh Ba Den mountain tourism",
+    "kenh": "Toro Pan",
+    "loai": "review",
+    "cau_tim": "review du lịch Tây Ninh"
+   },
+   {
+    "url": "https://www.youtube.com/watch?v=RjfjY719DSY",
+    "tieu_de": "NÚI BÀ ĐEN LÀ ĐIỂM DU LỊCH TÂM LINH NỔI TIẾNG",
+    "kenh": "Phạm Ký Nhất ",
+    "loai": "review",
+    "cau_tim": "review du lịch Tây Ninh"
+   }
+  ]
+ },
+ "da_loai_thu_cong": [
+  {
+   "diem_den": "halong",
+   "url": "https://www.youtube.com/watch?v=DNVNseT14Sk",
+   "tieu_de": "Kinh nghiệm du lịch HẠ LONG - Lịch trình chi tiết 2N1Đ cùng top trải nghiệm đáng giá nhất",
+   "ly_do": "trùng tiêu đề với video đã giữ (có thể là bản đăng lại / trùng lặp)"
+  },
+  {
+   "diem_den": "cualo",
+   "url": "https://www.youtube.com/watch?v=hYIOZQLJshg",
+   "tieu_de": "BIỂN CỬA LÒ: VIDEO NAM THANH NỮ TÚ CHƠI TEAM BUILDING VÔ CÙNG PHẢN CẢM",
+   "ly_do": "nội dung chê bai, câu view"
+  },
+  {
+   "diem_den": "phongnha",
+   "url": "https://www.youtube.com/watch?v=z6uUAq-B86o",
+   "tieu_de": "HTCons - TEAMBUILDING QUẢNG BÌNH 2026 by UNTRA GROUP",
+   "ly_do": "trùng tiêu đề với video đã giữ (có thể là bản đăng lại / trùng lặp)"
+  },
+  {
+   "diem_den": "hue",
+   "url": "https://www.youtube.com/watch?v=k-gFqWpBH3Y",
+   "tieu_de": "Vlog du lịch đầu tiên cùng Schannel: Huế ơi chạy đi!",
+   "ly_do": "không phải team building"
+  },
+  {
+   "diem_den": "phuquoc",
+   "url": "https://www.youtube.com/watch?v=bAU1UEGg0Ew",
+   "tieu_de": "#HưởngĐáVlog24 :Chuyến Đi Phú Quốc 6 ngày của Team Boy Phố,trải nghiệm đặc sản Bún Quậy( Phần1 )...",
+   "ly_do": "chuyến đi nhóm bạn, không phải team building công ty"
+  },
+  {
+   "diem_den": "tayninh",
+   "url": "https://www.youtube.com/watch?v=2ZscZtArSIE",
+   "tieu_de": "Vi Vu Cùng Mít Su Tây Ninh | Vlog #2 | Team Building Đà Lạt ",
+   "ly_do": "quay ở Đà Lạt; \"Tây Ninh\" chỉ là tên công ty"
+  },
+  {
+   "diem_den": "tayninh",
+   "url": "https://www.youtube.com/watch?v=zpgLn93u2BU",
+   "tieu_de": "IGC TÂY NINH |  WE RUN DA LAT 2026 | WE TEAM",
+   "ly_do": "quay ở Đà Lạt; \"Tây Ninh\" chỉ là tên công ty"
+  }
+ ],
+ "cach_loc": "bỏ video trùng tiêu đề; loại thủ công video không đúng nơi / không phải team building công ty / nội dung chê bai (lý do ở da_loai_thu_cong)"
+}

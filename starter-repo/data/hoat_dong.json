@@ -1,0 +1,7725 @@
+[
+ {
+  "id": "HD001",
+  "ten": "Du thuyền vịnh Hạ Long (hang Sửng Sốt, đảo Ti Tốp)",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD002",
+  "ten": "Sun World Hạ Long (cáp treo Nữ Hoàng)",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "09:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD003",
+  "ten": "Bãi Cháy và công viên ven biển",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD004",
+  "ten": "Chèo kayak vịnh Hạ Long",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 200000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "08:00",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 60,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD005",
+  "ten": "Bảo tàng Quảng Ninh",
+  "diem_den": "halong",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 40000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [
+   0
+  ],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD006",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hạ Long (can_bang)",
+  "diem_den": "halong",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD007",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hạ Long (day_du)",
+  "diem_den": "halong",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD008",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hạ Long (can_bang)",
+  "diem_den": "halong",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD009",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hạ Long (day_du)",
+  "diem_den": "halong",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 850000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD010",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hạ Long (tiet_kiem)",
+  "diem_den": "halong",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD011",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hạ Long (can_bang)",
+  "diem_den": "halong",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD012",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hạ Long (day_du)",
+  "diem_den": "halong",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 900000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD013",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hạ Long (tiet_kiem)",
+  "diem_den": "halong",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD014",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hạ Long (can_bang)",
+  "diem_den": "halong",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD015",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hạ Long (day_du)",
+  "diem_den": "halong",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD016",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Hạ Long",
+  "diem_den": "halong",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD017",
+  "ten": "Tour vịnh Lan Hạ và chèo kayak",
+  "diem_den": "catba",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "08:00",
+  "gio_dong": "16:30",
+  "ngay_dong_cua": [],
+  "suc_chua": 80,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD018",
+  "ten": "Vườn quốc gia Cát Bà (leo núi Ngự Lâm)",
+  "diem_den": "catba",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 80000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD019",
+  "ten": "Pháo đài Thần Công",
+  "diem_den": "catba",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 40000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD020",
+  "ten": "Bãi tắm Cát Cò",
+  "diem_den": "catba",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "06:00",
+  "gio_dong": "19:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD021",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cát Bà (can_bang)",
+  "diem_den": "catba",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD022",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cát Bà (day_du)",
+  "diem_den": "catba",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD023",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cát Bà (can_bang)",
+  "diem_den": "catba",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD024",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cát Bà (day_du)",
+  "diem_den": "catba",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 850000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD025",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cát Bà (tiet_kiem)",
+  "diem_den": "catba",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD026",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cát Bà (can_bang)",
+  "diem_den": "catba",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD027",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cát Bà (day_du)",
+  "diem_den": "catba",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 900000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD028",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cát Bà (tiet_kiem)",
+  "diem_den": "catba",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD029",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cát Bà (can_bang)",
+  "diem_den": "catba",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD030",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cát Bà (day_du)",
+  "diem_den": "catba",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD031",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Cát Bà",
+  "diem_den": "catba",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD032",
+  "ten": "Bãi biển Sầm Sơn",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 150,
+  "gio_mo": "05:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD033",
+  "ten": "Đền Độc Cước và Hòn Trống Mái",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD034",
+  "ten": "Quảng trường biển Sầm Sơn (buổi tối)",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "17:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD035",
+  "ten": "Chợ hải sản Sầm Sơn",
+  "diem_den": "samson",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 60,
+  "gio_mo": "05:00",
+  "gio_dong": "11:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD036",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sầm Sơn (can_bang)",
+  "diem_den": "samson",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 270000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD037",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sầm Sơn (day_du)",
+  "diem_den": "samson",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 495000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD038",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sầm Sơn (can_bang)",
+  "diem_den": "samson",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 405000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD039",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sầm Sơn (day_du)",
+  "diem_den": "samson",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 765000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD040",
+  "ten": "Spa, massage thư giãn (tên dựng) - Sầm Sơn (tiet_kiem)",
+  "diem_den": "samson",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 225000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD041",
+  "ten": "Spa, massage thư giãn (tên dựng) - Sầm Sơn (can_bang)",
+  "diem_den": "samson",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 405000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD042",
+  "ten": "Spa, massage thư giãn (tên dựng) - Sầm Sơn (day_du)",
+  "diem_den": "samson",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD043",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sầm Sơn (tiet_kiem)",
+  "diem_den": "samson",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 225000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD044",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sầm Sơn (can_bang)",
+  "diem_den": "samson",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 315000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD045",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sầm Sơn (day_du)",
+  "diem_den": "samson",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 495000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD046",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Sầm Sơn",
+  "diem_den": "samson",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD047",
+  "ten": "Bãi biển Cửa Lò",
+  "diem_den": "cualo",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 150,
+  "gio_mo": "05:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD048",
+  "ten": "Cano ra đảo Ngư",
+  "diem_den": "cualo",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:00",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 60,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD049",
+  "ten": "Khu di tích Kim Liên",
+  "diem_den": "cualo",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD050",
+  "ten": "Đảo Lan Châu",
+  "diem_den": "cualo",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 60,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD051",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cửa Lò (can_bang)",
+  "diem_den": "cualo",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 270000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD052",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cửa Lò (day_du)",
+  "diem_den": "cualo",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 495000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD053",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cửa Lò (can_bang)",
+  "diem_den": "cualo",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 405000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD054",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cửa Lò (day_du)",
+  "diem_den": "cualo",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 765000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD055",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cửa Lò (tiet_kiem)",
+  "diem_den": "cualo",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 225000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD056",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cửa Lò (can_bang)",
+  "diem_den": "cualo",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 405000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD057",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cửa Lò (day_du)",
+  "diem_den": "cualo",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD058",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cửa Lò (tiet_kiem)",
+  "diem_den": "cualo",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 225000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD059",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cửa Lò (can_bang)",
+  "diem_den": "cualo",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 315000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD060",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cửa Lò (day_du)",
+  "diem_den": "cualo",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 495000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD061",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Cửa Lò",
+  "diem_den": "cualo",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD062",
+  "ten": "Quần thể Tràng An (đi đò)",
+  "diem_den": "ninhbinh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "16:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD063",
+  "ten": "Chùa Bái Đính",
+  "diem_den": "ninhbinh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD064",
+  "ten": "Hang Múa (leo 500 bậc)",
+  "diem_den": "ninhbinh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 100000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "19:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD065",
+  "ten": "Tam Cốc - Bích Động",
+  "diem_den": "ninhbinh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD066",
+  "ten": "Cố đô Hoa Lư",
+  "diem_den": "ninhbinh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD067",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ninh Bình (can_bang)",
+  "diem_den": "ninhbinh",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD068",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ninh Bình (day_du)",
+  "diem_den": "ninhbinh",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD069",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ninh Bình (can_bang)",
+  "diem_den": "ninhbinh",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD070",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ninh Bình (day_du)",
+  "diem_den": "ninhbinh",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD071",
+  "ten": "Spa, massage thư giãn (tên dựng) - Ninh Bình (tiet_kiem)",
+  "diem_den": "ninhbinh",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD072",
+  "ten": "Spa, massage thư giãn (tên dựng) - Ninh Bình (can_bang)",
+  "diem_den": "ninhbinh",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD073",
+  "ten": "Spa, massage thư giãn (tên dựng) - Ninh Bình (day_du)",
+  "diem_den": "ninhbinh",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD074",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ninh Bình (tiet_kiem)",
+  "diem_den": "ninhbinh",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD075",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ninh Bình (can_bang)",
+  "diem_den": "ninhbinh",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD076",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ninh Bình (day_du)",
+  "diem_den": "ninhbinh",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD077",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Ninh Bình",
+  "diem_den": "ninhbinh",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD078",
+  "ten": "Fansipan Legend (cáp treo)",
+  "diem_den": "sapa",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 800000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "07:30",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD079",
+  "ten": "Bản Cát Cát",
+  "diem_den": "sapa",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 90000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "07:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD080",
+  "ten": "Núi Hàm Rồng",
+  "diem_den": "sapa",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 70000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD081",
+  "ten": "Thung lũng Mường Hoa (trekking)",
+  "diem_den": "sapa",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD082",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sa Pa (can_bang)",
+  "diem_den": "sapa",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD083",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Sa Pa (day_du)",
+  "diem_den": "sapa",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD084",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sa Pa (can_bang)",
+  "diem_den": "sapa",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD085",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Sa Pa (day_du)",
+  "diem_den": "sapa",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD086",
+  "ten": "Spa, massage thư giãn (tên dựng) - Sa Pa (tiet_kiem)",
+  "diem_den": "sapa",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD087",
+  "ten": "Spa, massage thư giãn (tên dựng) - Sa Pa (can_bang)",
+  "diem_den": "sapa",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD088",
+  "ten": "Spa, massage thư giãn (tên dựng) - Sa Pa (day_du)",
+  "diem_den": "sapa",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD089",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sa Pa (tiet_kiem)",
+  "diem_den": "sapa",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD090",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sa Pa (can_bang)",
+  "diem_den": "sapa",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD091",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Sa Pa (day_du)",
+  "diem_den": "sapa",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD092",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Sa Pa",
+  "diem_den": "sapa",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD093",
+  "ten": "Đồi chè trái tim",
+  "diem_den": "mocchau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD094",
+  "ten": "Thác Dải Yếm",
+  "diem_den": "mocchau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD095",
+  "ten": "Cầu kính Bạch Long",
+  "diem_den": "mocchau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "07:30",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD096",
+  "ten": "Rừng thông Bản Áng (cắm trại)",
+  "diem_den": "mocchau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "06:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD097",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Mộc Châu (can_bang)",
+  "diem_den": "mocchau",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD098",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Mộc Châu (day_du)",
+  "diem_den": "mocchau",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD099",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Mộc Châu (can_bang)",
+  "diem_den": "mocchau",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD100",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Mộc Châu (day_du)",
+  "diem_den": "mocchau",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD101",
+  "ten": "Spa, massage thư giãn (tên dựng) - Mộc Châu (tiet_kiem)",
+  "diem_den": "mocchau",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD102",
+  "ten": "Spa, massage thư giãn (tên dựng) - Mộc Châu (can_bang)",
+  "diem_den": "mocchau",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD103",
+  "ten": "Spa, massage thư giãn (tên dựng) - Mộc Châu (day_du)",
+  "diem_den": "mocchau",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD104",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Mộc Châu (tiet_kiem)",
+  "diem_den": "mocchau",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD105",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Mộc Châu (can_bang)",
+  "diem_den": "mocchau",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD106",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Mộc Châu (day_du)",
+  "diem_den": "mocchau",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD107",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Mộc Châu",
+  "diem_den": "mocchau",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD108",
+  "ten": "Thị trấn Tam Đảo và nhà thờ đá",
+  "diem_den": "tamdao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD109",
+  "ten": "Thác Bạc",
+  "diem_den": "tamdao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD110",
+  "ten": "Cổng trời Tam Đảo",
+  "diem_den": "tamdao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 60,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD111",
+  "ten": "Đền Bà Chúa Thượng Ngàn",
+  "diem_den": "tamdao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD112",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tam Đảo (can_bang)",
+  "diem_den": "tamdao",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD113",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tam Đảo (day_du)",
+  "diem_den": "tamdao",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD114",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tam Đảo (can_bang)",
+  "diem_den": "tamdao",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD115",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tam Đảo (day_du)",
+  "diem_den": "tamdao",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD116",
+  "ten": "Spa, massage thư giãn (tên dựng) - Tam Đảo (tiet_kiem)",
+  "diem_den": "tamdao",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD117",
+  "ten": "Spa, massage thư giãn (tên dựng) - Tam Đảo (can_bang)",
+  "diem_den": "tamdao",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD118",
+  "ten": "Spa, massage thư giãn (tên dựng) - Tam Đảo (day_du)",
+  "diem_den": "tamdao",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD119",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tam Đảo (tiet_kiem)",
+  "diem_den": "tamdao",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD120",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tam Đảo (can_bang)",
+  "diem_den": "tamdao",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD121",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tam Đảo (day_du)",
+  "diem_den": "tamdao",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD122",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Tam Đảo",
+  "diem_den": "tamdao",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD123",
+  "ten": "Vườn quốc gia Ba Vì (đền Thượng)",
+  "diem_den": "bavi",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 60000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD124",
+  "ten": "Khu du lịch Ao Vua (công viên nước)",
+  "diem_den": "bavi",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD125",
+  "ten": "Khu du lịch Thác Đa",
+  "diem_den": "bavi",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 120000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD126",
+  "ten": "Hồ Suối Hai",
+  "diem_den": "bavi",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD127",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ba Vì (can_bang)",
+  "diem_den": "bavi",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD128",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Ba Vì (day_du)",
+  "diem_den": "bavi",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD129",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ba Vì (can_bang)",
+  "diem_den": "bavi",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD130",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Ba Vì (day_du)",
+  "diem_den": "bavi",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD131",
+  "ten": "Spa, massage thư giãn (tên dựng) - Ba Vì (tiet_kiem)",
+  "diem_den": "bavi",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD132",
+  "ten": "Spa, massage thư giãn (tên dựng) - Ba Vì (can_bang)",
+  "diem_den": "bavi",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD133",
+  "ten": "Spa, massage thư giãn (tên dựng) - Ba Vì (day_du)",
+  "diem_den": "bavi",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD134",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ba Vì (tiet_kiem)",
+  "diem_den": "bavi",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD135",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ba Vì (can_bang)",
+  "diem_den": "bavi",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD136",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Ba Vì (day_du)",
+  "diem_den": "bavi",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD137",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Ba Vì",
+  "diem_den": "bavi",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD138",
+  "ten": "Động Phong Nha (đi thuyền)",
+  "diem_den": "phongnha",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:00",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD139",
+  "ten": "Động Thiên Đường",
+  "diem_den": "phongnha",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:00",
+  "gio_dong": "16:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD140",
+  "ten": "Sông Chày - Hang Tối (zipline, tắm bùn)",
+  "diem_den": "phongnha",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 240,
+  "gio_mo": "08:00",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 100,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD141",
+  "ten": "Bãi biển Nhật Lệ",
+  "diem_den": "phongnha",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "20:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD142",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quảng Bình (Phong Nha) (can_bang)",
+  "diem_den": "phongnha",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD143",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quảng Bình (Phong Nha) (day_du)",
+  "diem_den": "phongnha",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD144",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quảng Bình (Phong Nha) (can_bang)",
+  "diem_den": "phongnha",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD145",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quảng Bình (Phong Nha) (day_du)",
+  "diem_den": "phongnha",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD146",
+  "ten": "Spa, massage thư giãn (tên dựng) - Quảng Bình (Phong Nha) (tiet_kiem)",
+  "diem_den": "phongnha",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD147",
+  "ten": "Spa, massage thư giãn (tên dựng) - Quảng Bình (Phong Nha) (can_bang)",
+  "diem_den": "phongnha",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD148",
+  "ten": "Spa, massage thư giãn (tên dựng) - Quảng Bình (Phong Nha) (day_du)",
+  "diem_den": "phongnha",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD149",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quảng Bình (Phong Nha) (tiet_kiem)",
+  "diem_den": "phongnha",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD150",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quảng Bình (Phong Nha) (can_bang)",
+  "diem_den": "phongnha",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD151",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quảng Bình (Phong Nha) (day_du)",
+  "diem_den": "phongnha",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD152",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Quảng Bình (Phong Nha)",
+  "diem_den": "phongnha",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD153",
+  "ten": "Đại Nội Huế",
+  "diem_den": "hue",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 200000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD154",
+  "ten": "Lăng Khải Định",
+  "diem_den": "hue",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD155",
+  "ten": "Lăng Tự Đức",
+  "diem_den": "hue",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD156",
+  "ten": "Chùa Thiên Mụ",
+  "diem_den": "hue",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 60,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD157",
+  "ten": "Nghe ca Huế trên thuyền rồng sông Hương",
+  "diem_den": "hue",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "19:00",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": 80,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD158",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Huế (can_bang)",
+  "diem_den": "hue",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD159",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Huế (day_du)",
+  "diem_den": "hue",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD160",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Huế (can_bang)",
+  "diem_den": "hue",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD161",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Huế (day_du)",
+  "diem_den": "hue",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD162",
+  "ten": "Spa, massage thư giãn (tên dựng) - Huế (tiet_kiem)",
+  "diem_den": "hue",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD163",
+  "ten": "Spa, massage thư giãn (tên dựng) - Huế (can_bang)",
+  "diem_den": "hue",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD164",
+  "ten": "Spa, massage thư giãn (tên dựng) - Huế (day_du)",
+  "diem_den": "hue",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD165",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Huế (tiet_kiem)",
+  "diem_den": "hue",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD166",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Huế (can_bang)",
+  "diem_den": "hue",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD167",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Huế (day_du)",
+  "diem_den": "hue",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD168",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Huế",
+  "diem_den": "hue",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD169",
+  "ten": "Sun World Bà Nà Hills",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 950000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD170",
+  "ten": "Ngũ Hành Sơn",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 40000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD171",
+  "ten": "Bán đảo Sơn Trà và chùa Linh Ứng",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD172",
+  "ten": "Biển Mỹ Khê",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD173",
+  "ten": "Bảo tàng Điêu khắc Chăm",
+  "diem_den": "danang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 60000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD174",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Nẵng (can_bang)",
+  "diem_den": "danang",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 345000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD175",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Nẵng (day_du)",
+  "diem_den": "danang",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD176",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Nẵng (can_bang)",
+  "diem_den": "danang",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD177",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Nẵng (day_du)",
+  "diem_den": "danang",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 975000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD178",
+  "ten": "Spa, massage thư giãn (tên dựng) - Đà Nẵng (tiet_kiem)",
+  "diem_den": "danang",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD179",
+  "ten": "Spa, massage thư giãn (tên dựng) - Đà Nẵng (can_bang)",
+  "diem_den": "danang",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD180",
+  "ten": "Spa, massage thư giãn (tên dựng) - Đà Nẵng (day_du)",
+  "diem_den": "danang",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 1035000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD181",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Nẵng (tiet_kiem)",
+  "diem_den": "danang",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD182",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Nẵng (can_bang)",
+  "diem_den": "danang",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD183",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Nẵng (day_du)",
+  "diem_den": "danang",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD184",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Đà Nẵng",
+  "diem_den": "danang",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD185",
+  "ten": "Phố cổ Hội An",
+  "diem_den": "hoian",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 120000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "08:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD186",
+  "ten": "Rừng dừa Bảy Mẫu (thuyền thúng)",
+  "diem_den": "hoian",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD187",
+  "ten": "Cù Lao Chàm (cano, lặn ngắm san hô)",
+  "diem_den": "hoian",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 650000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "08:00",
+  "gio_dong": "15:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 100,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD188",
+  "ten": "VinWonders Nam Hội An",
+  "diem_den": "hoian",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 600000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "09:00",
+  "gio_dong": "19:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD189",
+  "ten": "Biển An Bàng",
+  "diem_den": "hoian",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "20:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD190",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hội An (can_bang)",
+  "diem_den": "hoian",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 345000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD191",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hội An (day_du)",
+  "diem_den": "hoian",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD192",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hội An (can_bang)",
+  "diem_den": "hoian",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD193",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hội An (day_du)",
+  "diem_den": "hoian",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 975000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD194",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hội An (tiet_kiem)",
+  "diem_den": "hoian",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD195",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hội An (can_bang)",
+  "diem_den": "hoian",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD196",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hội An (day_du)",
+  "diem_den": "hoian",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 1035000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD197",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hội An (tiet_kiem)",
+  "diem_den": "hoian",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD198",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hội An (can_bang)",
+  "diem_den": "hoian",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD199",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hội An (day_du)",
+  "diem_den": "hoian",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD200",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Hội An",
+  "diem_den": "hoian",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD201",
+  "ten": "Kỳ Co - Eo Gió (cano)",
+  "diem_den": "quynhon",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "07:00",
+  "gio_dong": "15:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 100,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD202",
+  "ten": "Ghềnh Ráng Tiên Sa",
+  "diem_den": "quynhon",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD203",
+  "ten": "Tháp Đôi",
+  "diem_den": "quynhon",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 45,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD204",
+  "ten": "Biển Quy Nhơn",
+  "diem_den": "quynhon",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD205",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quy Nhơn (can_bang)",
+  "diem_den": "quynhon",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD206",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Quy Nhơn (day_du)",
+  "diem_den": "quynhon",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD207",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quy Nhơn (can_bang)",
+  "diem_den": "quynhon",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD208",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Quy Nhơn (day_du)",
+  "diem_den": "quynhon",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 850000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD209",
+  "ten": "Spa, massage thư giãn (tên dựng) - Quy Nhơn (tiet_kiem)",
+  "diem_den": "quynhon",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD210",
+  "ten": "Spa, massage thư giãn (tên dựng) - Quy Nhơn (can_bang)",
+  "diem_den": "quynhon",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD211",
+  "ten": "Spa, massage thư giãn (tên dựng) - Quy Nhơn (day_du)",
+  "diem_den": "quynhon",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 900000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD212",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quy Nhơn (tiet_kiem)",
+  "diem_den": "quynhon",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD213",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quy Nhơn (can_bang)",
+  "diem_den": "quynhon",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD214",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Quy Nhơn (day_du)",
+  "diem_den": "quynhon",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD215",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Quy Nhơn",
+  "diem_den": "quynhon",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD216",
+  "ten": "Gành Đá Đĩa",
+  "diem_den": "phuyen",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD217",
+  "ten": "Mũi Điện (hải đăng Đại Lãnh)",
+  "diem_den": "phuyen",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD218",
+  "ten": "Bãi Xép",
+  "diem_den": "phuyen",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD219",
+  "ten": "Tháp Nhạn",
+  "diem_den": "phuyen",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 45,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD220",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Yên (Tuy Hoà) (can_bang)",
+  "diem_den": "phuyen",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD221",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Yên (Tuy Hoà) (day_du)",
+  "diem_den": "phuyen",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD222",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Yên (Tuy Hoà) (can_bang)",
+  "diem_den": "phuyen",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD223",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Yên (Tuy Hoà) (day_du)",
+  "diem_den": "phuyen",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 850000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD224",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phú Yên (Tuy Hoà) (tiet_kiem)",
+  "diem_den": "phuyen",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD225",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phú Yên (Tuy Hoà) (can_bang)",
+  "diem_den": "phuyen",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD226",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phú Yên (Tuy Hoà) (day_du)",
+  "diem_den": "phuyen",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 900000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD227",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Yên (Tuy Hoà) (tiet_kiem)",
+  "diem_den": "phuyen",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD228",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Yên (Tuy Hoà) (can_bang)",
+  "diem_den": "phuyen",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD229",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Yên (Tuy Hoà) (day_du)",
+  "diem_den": "phuyen",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD230",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Phú Yên (Tuy Hoà)",
+  "diem_den": "phuyen",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD231",
+  "ten": "VinWonders Nha Trang",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 880000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "08:30",
+  "gio_dong": "20:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD232",
+  "ten": "Tour 3 đảo bằng cano (Hòn Mun, Hòn Tằm)",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "08:00",
+  "gio_dong": "15:30",
+  "ngay_dong_cua": [],
+  "suc_chua": 120,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD233",
+  "ten": "Tháp Bà Ponagar",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 30000,
+  "thoi_luong_phut": 60,
+  "gio_mo": "06:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD234",
+  "ten": "Tắm bùn khoáng nóng",
+  "diem_den": "nhatrang",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 150,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD235",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Nha Trang (can_bang)",
+  "diem_den": "nhatrang",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 345000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD236",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Nha Trang (day_du)",
+  "diem_den": "nhatrang",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD237",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Nha Trang (can_bang)",
+  "diem_den": "nhatrang",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD238",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Nha Trang (day_du)",
+  "diem_den": "nhatrang",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 975000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD239",
+  "ten": "Spa, massage thư giãn (tên dựng) - Nha Trang (tiet_kiem)",
+  "diem_den": "nhatrang",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD240",
+  "ten": "Spa, massage thư giãn (tên dựng) - Nha Trang (can_bang)",
+  "diem_den": "nhatrang",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD241",
+  "ten": "Spa, massage thư giãn (tên dựng) - Nha Trang (day_du)",
+  "diem_den": "nhatrang",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 1035000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD242",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Nha Trang (tiet_kiem)",
+  "diem_den": "nhatrang",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD243",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Nha Trang (can_bang)",
+  "diem_den": "nhatrang",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD244",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Nha Trang (day_du)",
+  "diem_den": "nhatrang",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD245",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Nha Trang",
+  "diem_den": "nhatrang",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD246",
+  "ten": "Hồ Xuân Hương và chợ Đà Lạt",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "05:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD247",
+  "ten": "Khu du lịch Langbiang (xe jeep lên đỉnh)",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD248",
+  "ten": "Thung lũng Tình Yêu",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD249",
+  "ten": "Đồi chè Cầu Đất",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD250",
+  "ten": "Ga Đà Lạt (tàu cổ đi Trại Mát)",
+  "diem_den": "dalat",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:45",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 80,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD251",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Lạt (can_bang)",
+  "diem_den": "dalat",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD252",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Đà Lạt (day_du)",
+  "diem_den": "dalat",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD253",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Lạt (can_bang)",
+  "diem_den": "dalat",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD254",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Đà Lạt (day_du)",
+  "diem_den": "dalat",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD255",
+  "ten": "Spa, massage thư giãn (tên dựng) - Đà Lạt (tiet_kiem)",
+  "diem_den": "dalat",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD256",
+  "ten": "Spa, massage thư giãn (tên dựng) - Đà Lạt (can_bang)",
+  "diem_den": "dalat",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD257",
+  "ten": "Spa, massage thư giãn (tên dựng) - Đà Lạt (day_du)",
+  "diem_den": "dalat",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD258",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Lạt (tiet_kiem)",
+  "diem_den": "dalat",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD259",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Lạt (can_bang)",
+  "diem_den": "dalat",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD260",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Đà Lạt (day_du)",
+  "diem_den": "dalat",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD261",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Đà Lạt",
+  "diem_den": "dalat",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD262",
+  "ten": "Đồi cát bay Mũi Né (xe địa hình)",
+  "diem_den": "muine",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD263",
+  "ten": "Bàu Trắng",
+  "diem_den": "muine",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD264",
+  "ten": "Suối Tiên",
+  "diem_den": "muine",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 15000,
+  "thoi_luong_phut": 75,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD265",
+  "ten": "Làng chài Mũi Né",
+  "diem_den": "muine",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 60,
+  "gio_mo": "05:00",
+  "gio_dong": "09:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD266",
+  "ten": "Tháp Chăm Poshanư",
+  "diem_den": "muine",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 45,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD267",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phan Thiết - Mũi Né (can_bang)",
+  "diem_den": "muine",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD268",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phan Thiết - Mũi Né (day_du)",
+  "diem_den": "muine",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD269",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phan Thiết - Mũi Né (can_bang)",
+  "diem_den": "muine",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD270",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phan Thiết - Mũi Né (day_du)",
+  "diem_den": "muine",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 850000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD271",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phan Thiết - Mũi Né (tiet_kiem)",
+  "diem_den": "muine",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD272",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phan Thiết - Mũi Né (can_bang)",
+  "diem_den": "muine",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD273",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phan Thiết - Mũi Né (day_du)",
+  "diem_den": "muine",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 900000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD274",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phan Thiết - Mũi Né (tiet_kiem)",
+  "diem_den": "muine",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD275",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phan Thiết - Mũi Né (can_bang)",
+  "diem_den": "muine",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD276",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phan Thiết - Mũi Né (day_du)",
+  "diem_den": "muine",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD277",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Phan Thiết - Mũi Né",
+  "diem_den": "muine",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD278",
+  "ten": "Tượng Chúa Kitô Vua",
+  "diem_den": "vungtau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD279",
+  "ten": "Hải đăng Vũng Tàu",
+  "diem_den": "vungtau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 10000,
+  "thoi_luong_phut": 60,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD280",
+  "ten": "Bãi Sau",
+  "diem_den": "vungtau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 150,
+  "gio_mo": "05:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD281",
+  "ten": "Hồ Mây Park (cáp treo)",
+  "diem_den": "vungtau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 240,
+  "gio_mo": "08:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD282",
+  "ten": "Bạch Dinh",
+  "diem_den": "vungtau",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 15000,
+  "thoi_luong_phut": 60,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD283",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Vũng Tàu (can_bang)",
+  "diem_den": "vungtau",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD284",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Vũng Tàu (day_du)",
+  "diem_den": "vungtau",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD285",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Vũng Tàu (can_bang)",
+  "diem_den": "vungtau",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD286",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Vũng Tàu (day_du)",
+  "diem_den": "vungtau",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 850000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD287",
+  "ten": "Spa, massage thư giãn (tên dựng) - Vũng Tàu (tiet_kiem)",
+  "diem_den": "vungtau",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD288",
+  "ten": "Spa, massage thư giãn (tên dựng) - Vũng Tàu (can_bang)",
+  "diem_den": "vungtau",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD289",
+  "ten": "Spa, massage thư giãn (tên dựng) - Vũng Tàu (day_du)",
+  "diem_den": "vungtau",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 900000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD290",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Vũng Tàu (tiet_kiem)",
+  "diem_den": "vungtau",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 250000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD291",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Vũng Tàu (can_bang)",
+  "diem_den": "vungtau",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 350000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD292",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Vũng Tàu (day_du)",
+  "diem_den": "vungtau",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 550000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD293",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Vũng Tàu",
+  "diem_den": "vungtau",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD294",
+  "ten": "Biển Hồ Tràm",
+  "diem_den": "hotram",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 150,
+  "gio_mo": "05:00",
+  "gio_dong": "20:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD295",
+  "ten": "Suối nước nóng Bình Châu",
+  "diem_den": "hotram",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 300000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD296",
+  "ten": "Khu bảo tồn Bình Châu - Phước Bửu",
+  "diem_den": "hotram",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 50000,
+  "thoi_luong_phut": 120,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD297",
+  "ten": "Biển Long Hải",
+  "diem_den": "hotram",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "05:00",
+  "gio_dong": "20:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD298",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hồ Tràm - Long Hải (can_bang)",
+  "diem_den": "hotram",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 345000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD299",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Hồ Tràm - Long Hải (day_du)",
+  "diem_den": "hotram",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD300",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hồ Tràm - Long Hải (can_bang)",
+  "diem_den": "hotram",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD301",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Hồ Tràm - Long Hải (day_du)",
+  "diem_den": "hotram",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 975000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD302",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hồ Tràm - Long Hải (tiet_kiem)",
+  "diem_den": "hotram",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD303",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hồ Tràm - Long Hải (can_bang)",
+  "diem_den": "hotram",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD304",
+  "ten": "Spa, massage thư giãn (tên dựng) - Hồ Tràm - Long Hải (day_du)",
+  "diem_den": "hotram",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 1035000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD305",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hồ Tràm - Long Hải (tiet_kiem)",
+  "diem_den": "hotram",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD306",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hồ Tràm - Long Hải (can_bang)",
+  "diem_den": "hotram",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD307",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Hồ Tràm - Long Hải (day_du)",
+  "diem_den": "hotram",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD308",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Hồ Tràm - Long Hải",
+  "diem_den": "hotram",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD309",
+  "ten": "VinWonders Phú Quốc",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 950000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "09:00",
+  "gio_dong": "19:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD310",
+  "ten": "Cáp treo Hòn Thơm và công viên nước",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 650000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "09:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD311",
+  "ten": "Tour 4 đảo Nam Phú Quốc (cano)",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 650000,
+  "thoi_luong_phut": 360,
+  "gio_mo": "08:00",
+  "gio_dong": "16:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 100,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD312",
+  "ten": "Chợ đêm Phú Quốc",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "17:00",
+  "gio_dong": "23:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD313",
+  "ten": "Grand World Phú Quốc",
+  "diem_den": "phuquoc",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "09:00",
+  "gio_dong": "23:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD314",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Quốc (can_bang)",
+  "diem_den": "phuquoc",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 345000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD315",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Phú Quốc (day_du)",
+  "diem_den": "phuquoc",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD316",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Quốc (can_bang)",
+  "diem_den": "phuquoc",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD317",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Phú Quốc (day_du)",
+  "diem_den": "phuquoc",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 975000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD318",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phú Quốc (tiet_kiem)",
+  "diem_den": "phuquoc",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD319",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phú Quốc (can_bang)",
+  "diem_den": "phuquoc",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD320",
+  "ten": "Spa, massage thư giãn (tên dựng) - Phú Quốc (day_du)",
+  "diem_den": "phuquoc",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 1035000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD321",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Quốc (tiet_kiem)",
+  "diem_den": "phuquoc",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD322",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Quốc (can_bang)",
+  "diem_den": "phuquoc",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD323",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Phú Quốc (day_du)",
+  "diem_den": "phuquoc",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD324",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Phú Quốc",
+  "diem_den": "phuquoc",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD325",
+  "ten": "Di tích nhà tù Côn Đảo",
+  "diem_den": "condao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 40000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:30",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD326",
+  "ten": "Nghĩa trang Hàng Dương (viếng đêm)",
+  "diem_den": "condao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "06:00",
+  "gio_dong": "23:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD327",
+  "ten": "Bãi Đầm Trầu",
+  "diem_den": "condao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 150,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD328",
+  "ten": "Lặn ngắm san hô Hòn Bảy Cạnh",
+  "diem_den": "condao",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 700000,
+  "thoi_luong_phut": 300,
+  "gio_mo": "08:00",
+  "gio_dong": "15:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 40,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD329",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Côn Đảo (can_bang)",
+  "diem_den": "condao",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 345000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD330",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Côn Đảo (day_du)",
+  "diem_den": "condao",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD331",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Côn Đảo (can_bang)",
+  "diem_den": "condao",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD332",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Côn Đảo (day_du)",
+  "diem_den": "condao",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 975000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD333",
+  "ten": "Spa, massage thư giãn (tên dựng) - Côn Đảo (tiet_kiem)",
+  "diem_den": "condao",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD334",
+  "ten": "Spa, massage thư giãn (tên dựng) - Côn Đảo (can_bang)",
+  "diem_den": "condao",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 515000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD335",
+  "ten": "Spa, massage thư giãn (tên dựng) - Côn Đảo (day_du)",
+  "diem_den": "condao",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 1035000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD336",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Côn Đảo (tiet_kiem)",
+  "diem_den": "condao",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 290000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD337",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Côn Đảo (can_bang)",
+  "diem_den": "condao",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 400000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD338",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Côn Đảo (day_du)",
+  "diem_den": "condao",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 630000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD339",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Côn Đảo",
+  "diem_den": "condao",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD340",
+  "ten": "Chợ nổi Cái Răng (đi thuyền sớm)",
+  "diem_den": "cantho",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 150000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "05:00",
+  "gio_dong": "09:00",
+  "ngay_dong_cua": [],
+  "suc_chua": 120,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD341",
+  "ten": "Bến Ninh Kiều và chợ đêm",
+  "diem_den": "cantho",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 90,
+  "gio_mo": "17:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD342",
+  "ten": "Thiền viện Trúc Lâm Phương Nam",
+  "diem_den": "cantho",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 75,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD343",
+  "ten": "Vườn trái cây Mỹ Khánh (trò chơi dân gian)",
+  "diem_den": "cantho",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 60000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "07:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD344",
+  "ten": "Nhà cổ Bình Thủy",
+  "diem_den": "cantho",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 20000,
+  "thoi_luong_phut": 45,
+  "gio_mo": "08:00",
+  "gio_dong": "17:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD345",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cần Thơ (can_bang)",
+  "diem_den": "cantho",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD346",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Cần Thơ (day_du)",
+  "diem_den": "cantho",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD347",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cần Thơ (can_bang)",
+  "diem_den": "cantho",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD348",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Cần Thơ (day_du)",
+  "diem_den": "cantho",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD349",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cần Thơ (tiet_kiem)",
+  "diem_den": "cantho",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD350",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cần Thơ (can_bang)",
+  "diem_den": "cantho",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD351",
+  "ten": "Spa, massage thư giãn (tên dựng) - Cần Thơ (day_du)",
+  "diem_den": "cantho",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD352",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cần Thơ (tiet_kiem)",
+  "diem_den": "cantho",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD353",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cần Thơ (can_bang)",
+  "diem_den": "cantho",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD354",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Cần Thơ (day_du)",
+  "diem_den": "cantho",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD355",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Cần Thơ",
+  "diem_den": "cantho",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ },
+ {
+  "id": "HD356",
+  "ten": "Sun World Núi Bà Đen (cáp treo)",
+  "diem_den": "tayninh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 450000,
+  "thoi_luong_phut": 240,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD357",
+  "ten": "Toà Thánh Cao Đài",
+  "diem_den": "tayninh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 75,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD358",
+  "ten": "Hồ Dầu Tiếng",
+  "diem_den": "tayninh",
+  "loai": "tham_quan",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 120,
+  "gio_mo": "06:00",
+  "gio_dong": "18:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": false
+ },
+ {
+  "id": "HD359",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang)",
+  "diem_den": "tayninh",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 285000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD360",
+  "ten": "Team building ngoài trời (đơn vị tổ chức, tên dựng) - Tây Ninh (Núi Bà Đen) (day_du)",
+  "diem_den": "tayninh",
+  "loai": "team_building",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "17:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD361",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang)",
+  "diem_den": "tayninh",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD362",
+  "ten": "Gala dinner có sân khấu, âm thanh, MC (tên dựng) - Tây Ninh (Núi Bà Đen) (day_du)",
+  "diem_den": "tayninh",
+  "loai": "gala_dinner",
+  "muc_dich": [
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 810000,
+  "thoi_luong_phut": 180,
+  "gio_mo": "18:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD363",
+  "ten": "Spa, massage thư giãn (tên dựng) - Tây Ninh (Núi Bà Đen) (tiet_kiem)",
+  "diem_den": "tayninh",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD364",
+  "ten": "Spa, massage thư giãn (tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang)",
+  "diem_den": "tayninh",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 430000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD365",
+  "ten": "Spa, massage thư giãn (tên dựng) - Tây Ninh (Núi Bà Đen) (day_du)",
+  "diem_den": "tayninh",
+  "loai": "spa_thu_gian",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 855000,
+  "thoi_luong_phut": 90,
+  "gio_mo": "09:00",
+  "gio_dong": "21:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD366",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tây Ninh (Núi Bà Đen) (tiet_kiem)",
+  "diem_den": "tayninh",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "tiet_kiem"
+  ],
+  "gia_nguoi": 240000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD367",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tây Ninh (Núi Bà Đen) (can_bang)",
+  "diem_den": "tayninh",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "can_bang"
+  ],
+  "gia_nguoi": 330000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD368",
+  "ten": "Tiệc BBQ ngoài trời cho đoàn (tên dựng) - Tây Ninh (Núi Bà Đen) (day_du)",
+  "diem_den": "tayninh",
+  "loai": "bbq_tiec_ngoai_troi",
+  "muc_dich": [
+   "nghi_duong",
+   "gan_ket"
+  ],
+  "muc": [
+   "day_du"
+  ],
+  "gia_nguoi": 520000,
+  "thoi_luong_phut": 150,
+  "gio_mo": "17:30",
+  "gio_dong": "21:30",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": true,
+  "ten_dung": true
+ },
+ {
+  "id": "HD369",
+  "ten": "Tự do nghỉ ngơi tại nơi ở - Tây Ninh (Núi Bà Đen)",
+  "diem_den": "tayninh",
+  "loai": "tu_do",
+  "muc_dich": [
+   "nghi_duong"
+  ],
+  "muc": [
+   "tiet_kiem",
+   "can_bang",
+   "day_du"
+  ],
+  "gia_nguoi": 0,
+  "thoi_luong_phut": 180,
+  "gio_mo": "07:00",
+  "gio_dong": "22:00",
+  "ngay_dong_cua": [],
+  "suc_chua": null,
+  "uoc_tinh": false,
+  "ten_dung": false
+ }
+]

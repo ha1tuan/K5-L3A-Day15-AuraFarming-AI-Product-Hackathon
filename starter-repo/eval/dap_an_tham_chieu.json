@@ -1,0 +1,801 @@
+{
+ "_mo_ta": "Đáp án tham chiếu do data/tinh_thu.py tính bằng code (seed dữ liệu 42). Dùng cho chấm code, ±25% cho tổng tiền.",
+ "cau": {
+  "B01": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "halong",
+    "nguoi": 40,
+    "ngay": 3,
+    "md": "gan_ket",
+    "ns": 150000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "halong",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 109922400,
+      "moi_nguoi": 2748060,
+      "di_chuyen": "xe xe_45_cho đường bộ 166 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 173082000,
+      "moi_nguoi": 4327050,
+      "di_chuyen": "xe xe_29_cho đường bộ 166 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 299006400,
+      "moi_nguoi": 7475160,
+      "di_chuyen": "xe limousine_18_cho đường bộ 166 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "B02": {
+   "tham_so": {
+    "tu": "SGN",
+    "den": "vungtau",
+    "nguoi": 30,
+    "ngay": 2,
+    "md": "nghi_duong",
+    "ns": null
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "vungtau",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 27781950,
+      "moi_nguoi": 926065,
+      "di_chuyen": "xe xe_45_cho đường bộ 83 km",
+      "trong_ngan_sach": null,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 59577000,
+      "moi_nguoi": 1985900,
+      "di_chuyen": "xe xe_29_cho đường bộ 83 km",
+      "trong_ngan_sach": null,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 128578800,
+      "moi_nguoi": 4285960,
+      "di_chuyen": "xe limousine_18_cho đường bộ 83 km",
+      "trong_ngan_sach": null,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "B03": {
+   "tham_so": {
+    "tu": "DAD",
+    "den": "hoian",
+    "nguoi": 25,
+    "ngay": 2,
+    "md": "ca_hai",
+    "ns": 60000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "hoian",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 40981500,
+      "moi_nguoi": 1639260,
+      "di_chuyen": "xe xe_45_cho đường bộ 31 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 73731000,
+      "moi_nguoi": 2949240,
+      "di_chuyen": "xe xe_29_cho đường bộ 31 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 178794000,
+      "moi_nguoi": 7151760,
+      "di_chuyen": "xe limousine_18_cho đường bộ 31 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "B04": {
+   "tham_so": {
+    "tu": "HPH",
+    "den": "catba",
+    "nguoi": 35,
+    "ngay": 2,
+    "md": "gan_ket",
+    "ns": 70000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "catba",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 59609550,
+      "moi_nguoi": 1703130,
+      "di_chuyen": "xe xe_45_cho đường bộ 52 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 99272250,
+      "moi_nguoi": 2836350,
+      "di_chuyen": "xe xe_29_cho đường bộ 52 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 152062050,
+      "moi_nguoi": 4344630,
+      "di_chuyen": "xe limousine_18_cho đường bộ 52 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "B05": {
+   "tham_so": {
+    "tu": "VCA",
+    "den": "phuquoc",
+    "nguoi": 20,
+    "ngay": 4,
+    "md": "nghi_duong",
+    "ns": 150000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "phuquoc",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 101115000,
+      "moi_nguoi": 5055750,
+      "di_chuyen": "máy bay VCA-PQC + xe xe_45_cho",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 146160000,
+      "moi_nguoi": 7308000,
+      "di_chuyen": "máy bay VCA-PQC + xe xe_29_cho",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 242025000,
+      "moi_nguoi": 12101250,
+      "di_chuyen": "máy bay VCA-PQC + xe limousine_18_cho",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "B06": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "sapa",
+    "nguoi": 45,
+    "ngay": 3,
+    "md": "nghi_duong",
+    "ns": 180000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "sapa",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 128619750,
+      "moi_nguoi": 2858217,
+      "di_chuyen": "xe xe_45_cho đường bộ 330 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 182516250,
+      "moi_nguoi": 4055917,
+      "di_chuyen": "xe xe_29_cho đường bộ 330 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 340499250,
+      "moi_nguoi": 7566650,
+      "di_chuyen": "xe limousine_18_cho đường bộ 330 km",
+      "trong_ngan_sach": false,
+      "canh_bao": [
+       "DUONG_BO_DAI: 7.6 giờ một chiều, không có chặng bay trong dữ liệu"
+      ]
+     }
+    ]
+   }
+  },
+  "B07": {
+   "tham_so": {
+    "tu": "SGN",
+    "den": "dalat",
+    "nguoi": 80,
+    "ngay": 3,
+    "md": "ca_hai",
+    "ns": 320000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "dalat",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 169707300,
+      "moi_nguoi": 2121341,
+      "di_chuyen": "xe xe_45_cho đường bộ 301 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 295323000,
+      "moi_nguoi": 3691538,
+      "di_chuyen": "xe xe_29_cho đường bộ 301 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 614281500,
+      "moi_nguoi": 7678519,
+      "di_chuyen": "xe limousine_18_cho đường bộ 301 km",
+      "trong_ngan_sach": false,
+      "canh_bao": [
+       "DUONG_BO_DAI: 7.0 giờ một chiều, không có chặng bay trong dữ liệu"
+      ]
+     }
+    ]
+   }
+  },
+  "B08": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "ninhbinh",
+    "nguoi": 50,
+    "ngay": 1,
+    "md": "gan_ket",
+    "ns": 40000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "ninhbinh",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 33992700,
+      "moi_nguoi": 679854,
+      "di_chuyen": "xe xe_45_cho đường bộ 114 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 38860500,
+      "moi_nguoi": 777210,
+      "di_chuyen": "xe xe_29_cho đường bộ 114 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 62456100,
+      "moi_nguoi": 1249122,
+      "di_chuyen": "xe limousine_18_cho đường bộ 114 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "B09": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "hue",
+    "nguoi": 40,
+    "ngay": 3,
+    "md": "nghi_duong",
+    "ns": 250000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "hue",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 166162500,
+      "moi_nguoi": 4154062,
+      "di_chuyen": "máy bay HAN-HUI + xe xe_45_cho",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 221130000,
+      "moi_nguoi": 5528250,
+      "di_chuyen": "máy bay HAN-HUI + xe xe_29_cho",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 346605000,
+      "moi_nguoi": 8665125,
+      "di_chuyen": "máy bay HAN-HUI + xe limousine_18_cho",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "B10": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": null,
+    "nguoi": 60,
+    "ngay": 3,
+    "md": "gan_ket",
+    "ns": 180000000.0
+   },
+   "tham_chieu": {
+    "che_do": "kinh_phi",
+    "vua_ngan_sach": [
+     "bavi",
+     "halong",
+     "samson",
+     "catba",
+     "phongnha",
+     "ninhbinh",
+     "mocchau",
+     "cualo",
+     "sapa",
+     "tamdao"
+    ],
+    "top3": [
+     "Ba Vì",
+     "Hạ Long",
+     "Sầm Sơn"
+    ]
+   }
+  },
+  "B11": {
+   "tham_so": {
+    "tu": "SGN",
+    "den": null,
+    "nguoi": 50,
+    "ngay": 3,
+    "md": "nghi_duong",
+    "ns": 200000000.0
+   },
+   "tham_chieu": {
+    "che_do": "kinh_phi",
+    "vua_ngan_sach": [
+     "muine",
+     "hotram",
+     "condao",
+     "dalat",
+     "quynhon",
+     "nhatrang",
+     "vungtau",
+     "phuyen",
+     "tayninh",
+     "cantho"
+    ],
+    "top3": [
+     "Phan Thiết - Mũi Né",
+     "Hồ Tràm - Long Hải",
+     "Côn Đảo"
+    ]
+   }
+  },
+  "B12": {
+   "tham_so": {
+    "tu": "DAD",
+    "den": null,
+    "nguoi": 30,
+    "ngay": 3,
+    "md": "ca_hai",
+    "ns": 120000000.0
+   },
+   "tham_chieu": {
+    "che_do": "kinh_phi",
+    "vua_ngan_sach": [
+     "danang",
+     "quynhon",
+     "hoian",
+     "samson",
+     "hue",
+     "phongnha",
+     "phuyen",
+     "cualo"
+    ],
+    "top3": [
+     "Đà Nẵng",
+     "Quy Nhơn",
+     "Hội An"
+    ]
+   }
+  },
+  "K01": {
+   "tham_so": null,
+   "tham_chieu": null
+  },
+  "K02": {
+   "tham_so": null,
+   "tham_chieu": null
+  },
+  "K03": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "samson",
+    "nguoi": 50,
+    "ngay": 3,
+    "md": "gan_ket",
+    "ns": 3000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "samson",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 83697600,
+      "moi_nguoi": 1673952,
+      "di_chuyen": "xe xe_45_cho đường bộ 187 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 147231000,
+      "moi_nguoi": 2944620,
+      "di_chuyen": "xe xe_29_cho đường bộ 187 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 225798300,
+      "moi_nguoi": 4515966,
+      "di_chuyen": "xe limousine_18_cho đường bộ 187 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "K04": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": null,
+    "nguoi": 50,
+    "ngay": 3,
+    "md": "gan_ket",
+    "ns": 20000000.0
+   },
+   "tham_chieu": {
+    "che_do": "kinh_phi",
+    "vua_ngan_sach": [],
+    "ngan_sach_toi_thieu": 83697600,
+    "noi_re_nhat": "Sầm Sơn"
+   }
+  },
+  "K05": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "samson",
+    "nguoi": 250,
+    "ngay": 3,
+    "md": "gan_ket",
+    "ns": 700000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "samson",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 439662300,
+      "moi_nguoi": 1758649,
+      "di_chuyen": "xe xe_45_cho đường bộ 187 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 736218000,
+      "moi_nguoi": 2944872,
+      "di_chuyen": "xe xe_29_cho đường bộ 187 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 1127143500,
+      "moi_nguoi": 4508574,
+      "di_chuyen": "xe limousine_18_cho đường bộ 187 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "K06": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "cualo",
+    "nguoi": 500,
+    "ngay": 3,
+    "md": "ca_hai",
+    "ns": null
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "cualo",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 875448000,
+      "moi_nguoi": 1750896,
+      "di_chuyen": "xe xe_45_cho đường bộ 320 km",
+      "trong_ngan_sach": null,
+      "canh_bao": [
+       "BO_DIEM_SUC_CHUA: Cano ra đảo Ngư (tối đa 60 khách/lượt)"
+      ]
+     },
+     {
+      "goi": "can_bang",
+      "tong": 1677564000,
+      "moi_nguoi": 3355128,
+      "di_chuyen": "xe xe_29_cho đường bộ 320 km",
+      "trong_ngan_sach": null,
+      "canh_bao": [
+       "CHIA_QUAN: không quán nào đủ 500 chỗ, chia đoàn 2 quán",
+       "BO_DIEM_SUC_CHUA: Cano ra đảo Ngư (tối đa 60 khách/lượt)"
+      ]
+     },
+     {
+      "goi": "day_du",
+      "tong": 3519626250,
+      "moi_nguoi": 7039252,
+      "di_chuyen": "máy bay HAN-VII + xe limousine_18_cho",
+      "trong_ngan_sach": null,
+      "canh_bao": [
+       "CHIA_2_KHACH_SAN: không khách sạn nào mức này đủ chỗ cho cả đoàn",
+       "CHIA_QUAN: không quán nào đủ 500 chỗ, chia đoàn 4 quán",
+       "THIEU_SUC_CHUA_AN: tổng sức chứa các quán không đủ",
+       "BO_DIEM_SUC_CHUA: Cano ra đảo Ngư (tối đa 60 khách/lượt)"
+      ]
+     }
+    ]
+   }
+  },
+  "K07": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "phuquoc",
+    "nguoi": 47,
+    "ngay": 3,
+    "md": "gan_ket",
+    "ns": 300000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "phuquoc",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 364344750,
+      "moi_nguoi": 7752016,
+      "di_chuyen": "máy bay HAN-PQC + xe xe_45_cho",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 456466500,
+      "moi_nguoi": 9712053,
+      "di_chuyen": "máy bay HAN-PQC + xe xe_29_cho",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 618712500,
+      "moi_nguoi": 13164096,
+      "di_chuyen": "máy bay HAN-PQC + xe limousine_18_cho",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "K08": {
+   "tham_so": {
+    "tu": "SGN",
+    "den": "condao",
+    "nguoi": 60,
+    "ngay": 3,
+    "md": "gan_ket",
+    "ns": 400000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "condao",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 216930000,
+      "moi_nguoi": 3615500,
+      "di_chuyen": "máy bay SGN-VCS + xe xe_45_cho",
+      "trong_ngan_sach": true,
+      "canh_bao": [
+       "BO_DIEM_SUC_CHUA: Lặn ngắm san hô Hòn Bảy Cạnh (tối đa 40 khách/lượt)"
+      ]
+     },
+     {
+      "goi": "can_bang",
+      "tong": 337680000,
+      "moi_nguoi": 5628000,
+      "di_chuyen": "máy bay SGN-VCS + xe xe_29_cho",
+      "trong_ngan_sach": true,
+      "canh_bao": [
+       "BO_DIEM_SUC_CHUA: Lặn ngắm san hô Hòn Bảy Cạnh (tối đa 40 khách/lượt)"
+      ]
+     },
+     {
+      "goi": "day_du",
+      "tong": 522375000,
+      "moi_nguoi": 8706250,
+      "di_chuyen": "máy bay SGN-VCS + xe limousine_18_cho",
+      "trong_ngan_sach": false,
+      "canh_bao": [
+       "BO_DIEM_SUC_CHUA: Lặn ngắm san hô Hòn Bảy Cạnh (tối đa 40 khách/lượt)"
+      ]
+     }
+    ]
+   }
+  },
+  "K09": {
+   "tham_so": {
+    "tu": "DAD",
+    "den": "danang",
+    "nguoi": 20,
+    "ngay": 1,
+    "md": "gan_ket",
+    "ns": 40000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "danang",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 31552500,
+      "moi_nguoi": 1577625,
+      "di_chuyen": "xe xe_45_cho di chuyển nội vùng (điểm đi trùng điểm đến)",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 34020000,
+      "moi_nguoi": 1701000,
+      "di_chuyen": "xe xe_29_cho di chuyển nội vùng (điểm đi trùng điểm đến)",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 45150000,
+      "moi_nguoi": 2257500,
+      "di_chuyen": "xe limousine_18_cho di chuyển nội vùng (điểm đi trùng điểm đến)",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "K10": {
+   "tham_so": null,
+   "tham_chieu": null
+  },
+  "K11": {
+   "tham_so": {
+    "tu": "HAN",
+    "den": "halong",
+    "nguoi": 47,
+    "ngay": 2,
+    "md": "nghi_duong",
+    "ns": 120000000.0
+   },
+   "tham_chieu": {
+    "che_do": "dia_diem",
+    "den": "halong",
+    "goi": [
+     {
+      "goi": "tiet_kiem",
+      "tong": 47686800,
+      "moi_nguoi": 1014613,
+      "di_chuyen": "xe xe_45_cho đường bộ 166 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "can_bang",
+      "tong": 118655250,
+      "moi_nguoi": 2524580,
+      "di_chuyen": "xe xe_29_cho đường bộ 166 km",
+      "trong_ngan_sach": true,
+      "canh_bao": []
+     },
+     {
+      "goi": "day_du",
+      "tong": 227784900,
+      "moi_nguoi": 4846487,
+      "di_chuyen": "xe limousine_18_cho đường bộ 166 km",
+      "trong_ngan_sach": false,
+      "canh_bao": []
+     }
+    ]
+   }
+  },
+  "T01": {
+   "tham_so": null,
+   "tham_chieu": null
+  },
+  "T02": {
+   "tham_so": null,
+   "tham_chieu": null
+  },
+  "T03": {
+   "tham_so": null,
+   "tham_chieu": null
+  },
+  "T04": {
+   "tham_so": null,
+   "tham_chieu": null
+  },
+  "T05": {
+   "tham_so": null,
+   "tham_chieu": null
+  }
+ }
+}

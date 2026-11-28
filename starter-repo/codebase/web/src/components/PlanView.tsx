@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { Printer, CircleCheck, TriangleAlert, SkipForward } from 'lucide-react';
-import type { Plan, TripEcho } from '../api/types';
+import { InlineMd } from './InlineMd';
+import { TripExtras } from './TripExtras';
+import { RouteMapCard } from './RouteMapCard';
+import type { Plan, TripEcho, TripView } from '../api/types';
 import { formatVndShort, PURPOSE_LABEL, TIER_LABEL } from '../lib/format';
 import { btnGhost } from './ui';
 import { OverBudget } from './OverBudget';
@@ -11,7 +14,7 @@ function dateRange(e: TripEcho) {
   return e.days === 1 ? `${f(e.start_date)}/${e.start_date.slice(0, 4)}` : `${f(e.start_date)}–${f(e.end_date)}/${e.end_date.slice(0, 4)}`;
 }
 
-function OnePlan({ plan, request }: { plan: Plan; request: TripEcho }) {
+function OnePlan({ plan, request, map }: { plan: Plan; request: TripEcho; map?: TripView['map'] }) {
   const over = plan.over_budget !== null && plan.over_budget > 0;
   return (
     <>
@@ -53,17 +56,31 @@ function OnePlan({ plan, request }: { plan: Plan; request: TripEcho }) {
         <div className="mb-6"><OverBudget tier={plan.tier} ex={plan.explanation} budget={request.budget} /></div>
       )}
 
-      <div className="max-w-3xl"><DayTimeline days={plan.days} /></div>
+      {plan.notes && plan.notes.length > 0 && (
+        <ul className="mb-6 grid gap-1 rounded-xl border border-est bg-est-bg p-4 text-sm">
+          {plan.notes.map((n, i) => <li key={i} className="flex gap-2"><TriangleAlert className="mt-0.5 size-4 shrink-0 text-est" aria-hidden /><InlineMd text={n} /></li>)}
+        </ul>
+      )}
+
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+        <div>
+          <DayTimeline days={plan.days} />
+          {map && <RouteMapCard map={map} tier={plan.tier} />}
+        </div>
+        <TripExtras plan={plan} />
+      </div>
     </>
   );
 }
 
-export function PlanView({ plans, request }: { plans: Plan[]; request: TripEcho }) {
+export function PlanView({ plans, request, activeTier, map }: { plans: Plan[]; request: TripEcho; activeTier?: Plan['tier']; map?: TripView['map'] }) {
   const [active, setActive] = useState(() => {
     const within = plans.map((p, i) => [p, i] as const).filter(([p]) => p.over_budget === null || p.over_budget <= 0);
     return within.length ? within[within.length - 1][1] : 0;
   });
-  if (plans.length === 1) return <OnePlan plan={plans[0]} request={request} />;
+  if (plans.length === 1) return <OnePlan plan={plans[0]} request={request} map={map} />;
+  const chosen = activeTier ? plans.find(p => p.tier === activeTier) : undefined;   // gói do thanh tóm tắt chọn (PlanWorkspace)
+  if (chosen) return <OnePlan key={chosen.tier} plan={chosen} request={request} map={map} />;
   return (
     <>
       <p className="no-print mb-3 flex items-center gap-2 text-sm text-muted">
@@ -82,7 +99,7 @@ export function PlanView({ plans, request }: { plans: Plan[]; request: TripEcho 
           );
         })}
       </div>
-      <OnePlan key={plans[active].tier} plan={plans[active]} request={request} />
+      <OnePlan key={plans[active].tier} plan={plans[active]} request={request} map={map} />
     </>
   );
 }

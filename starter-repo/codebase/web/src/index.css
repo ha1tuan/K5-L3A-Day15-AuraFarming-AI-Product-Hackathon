@@ -7,6 +7,10 @@
   --color-accent: var(--c-accent);
   --color-accent-dark: var(--c-accent-dark);
   --color-accent-soft: var(--c-accent-soft);
+  --color-sun: var(--c-sun);
+  --color-sun-dark: var(--c-sun-dark);
+  --color-sun-soft: var(--c-sun-soft);
+  --color-ocean: var(--c-ocean);
   --color-bg: var(--c-bg);
   --color-card: var(--c-card);
   --color-muted: var(--c-muted);

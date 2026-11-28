@@ -1,0 +1,25 @@
+﻿Mã,Điểm đến,Tỉnh,Miền,Loại cảnh,Sân bay gần,Đảo (chỉ bay),Có phà,Nhóm giá,Có KS 5 sao,Hợp nghỉ dưỡng (0-3),Hợp gắn kết (0-3),Mùa đẹp (tháng),Mô tả,Số video
+halong,Hạ Long,Quảng Ninh,Bắc,"bien, vinh",VDO,,,bien_trung,có,3,3,4–10,"vịnh di sản, du thuyền, khu vui chơi, resort nhận đoàn lớn",4
+catba,Cát Bà,Hải Phòng,Bắc,"bien, dao, rung",HPH,,có,bien_trung,không,2,3,5–9,"đảo có phà, vịnh Lan Hạ, kayak, rừng quốc gia",5
+samson,Sầm Sơn,Thanh Hoá,Bắc,bien,THD,,,bien_binh_dan,không,2,3,5–8,"biển giá mềm, hải sản, nhiều nhà hàng nhận đoàn đông",5
+cualo,Cửa Lò,Nghệ An,Bắc,bien,VII,,,bien_binh_dan,không,2,2,5–8,"biển bình dân, gần quê Bác, đảo Ngư",4
+ninhbinh,Ninh Bình,Ninh Bình,Bắc,"di_san, nui",HAN,,,di_san_thanh_pho,có,2,2,1–6,"Tràng An, Tam Cốc, Bái Đính; gần Hà Nội, hợp đi 1–2 ngày",5
+sapa,Sa Pa,Lào Cai,Bắc,nui,HAN,,,nui_cao_nguyen,có,3,2,9–5,"núi, Fansipan, bản làng; đường cao tốc từ Hà Nội",4
+mocchau,Mộc Châu,Sơn La,Bắc,"nui, dong_co",HAN,,,nui_cao_nguyen,không,2,2,11–4,"cao nguyên, đồi chè, mùa hoa, cắm trại",5
+tamdao,Tam Đảo,Vĩnh Phúc,Bắc,nui,HAN,,,nui_cao_nguyen,không,2,1,5–9,"thị trấn trên núi gần Hà Nội, mát mùa hè, ít khách sạn lớn",5
+bavi,Ba Vì,Hà Nội,Bắc,"nui, rung",HAN,,,nui_cao_nguyen,không,2,3,quanh năm,"resort sinh thái, sân team building lớn, đi về trong ngày",5
+phongnha,Quảng Bình (Phong Nha),Quảng Bình,Trung,"hang_dong, bien",VDH,,,di_san_thanh_pho,không,1,3,3–8,"hang động, zipline, mạo hiểm; biển Nhật Lệ",4
+hue,Huế,Thừa Thiên Huế,Trung,"di_san, thanh_pho",HUI,,,di_san_thanh_pho,có,2,2,1–8,"cố đô, lăng tẩm, ca Huế trên sông Hương",4
+danang,Đà Nẵng,Đà Nẵng,Trung,"bien, thanh_pho, nui",DAD,,,bien_cao_cap,có,3,3,2–8,"biển, Bà Nà, nhiều resort và hội trường cho đoàn lớn",5
+hoian,Hội An,Quảng Nam,Trung,"di_san, bien",DAD,,,bien_cao_cap,có,3,2,2–8,"phố cổ, rừng dừa, Cù Lao Chàm, resort ven biển",5
+quynhon,Quy Nhơn,Bình Định,Trung,bien,UIH,,,bien_trung,có,3,3,3–9,"biển, Kỳ Co - Eo Gió, resort mới",5
+phuyen,Phú Yên (Tuy Hoà),Phú Yên,Trung,bien,TBB,,,bien_trung,không,2,2,3–8,"biển hoang sơ, Gành Đá Đĩa, ít đông khách",5
+nhatrang,Nha Trang,Khánh Hoà,Trung,"bien, dao",CXR,,,bien_cao_cap,có,3,3,1–8,"biển, tour đảo, khu vui chơi, nhiều resort lớn",5
+dalat,Đà Lạt,Lâm Đồng,Trung,"nui, thanh_pho",DLI,,,nui_cao_nguyen,có,3,3,11–4,"cao nguyên mát, đồi thông, không có biển; đường đèo",5
+muine,Phan Thiết - Mũi Né,Bình Thuận,Nam,"bien, doi_cat",SGN,,,bien_trung,có,3,3,11–4,"đồi cát, resort biển, cao tốc từ TP.HCM",5
+vungtau,Vũng Tàu,Bà Rịa - Vũng Tàu,Nam,"bien, thanh_pho",SGN,,,bien_trung,có,2,3,11–4,"biển gần TP.HCM, đi 2 ngày 1 đêm phổ biến",5
+hotram,Hồ Tràm - Long Hải,Bà Rịa - Vũng Tàu,Nam,"bien, rung",SGN,,,bien_cao_cap,có,3,3,11–4,"resort biển cao cấp, sân team building trên cát",5
+phuquoc,Phú Quốc,Kiên Giang,Nam,"bien, dao",PQC,có,,bien_cao_cap,có,3,3,11–4,đảo; chỉ tính đường bay cho đoàn,4
+condao,Côn Đảo,Bà Rịa - Vũng Tàu,Nam,"bien, dao, di_tich",VCS,có,,bien_cao_cap,có,3,1,3–9,"đảo, di tích nhà tù, lặn biển; chuyến bay ít ghế, khó cho đoàn lớn",5
+cantho,Cần Thơ,Cần Thơ,Nam,"song_nuoc, thanh_pho",VCA,,,di_san_thanh_pho,không,1,2,quanh năm,"chợ nổi, vườn trái cây, sông nước miền Tây",5
+tayninh,Tây Ninh (Núi Bà Đen),Tây Ninh,Nam,"nui, tam_linh",SGN,,,di_san_thanh_pho,không,1,2,quanh năm,"núi Bà Đen cáp treo, tâm linh; đi về trong ngày từ TP.HCM",3
