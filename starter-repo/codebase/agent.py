@@ -331,6 +331,16 @@ def none_fit_note(req, dest):
     return ""
 
 
+def tu_dat(ten):
+    """Hệ thống không đặt chỗ — đưa link tìm kiếm (Google Maps) để công ty tự tìm & đặt cơ sở thật ở điểm đến."""
+    from urllib.parse import quote_plus
+    q = lambda x: "https://www.google.com/maps/search/" + quote_plus(x)  # noqa: E731
+    return ("**Để công ty tự đặt** (hệ thống không đặt thay): tìm cơ sở thật cùng hạng trong kế hoạch rồi liên hệ trực tiếp, "
+            "xin báo giá đoàn và xác nhận đủ phòng trước khi chuyển khoản —\n"
+            "- [Khách sạn / resort ở %s](%s)\n- [Nhà hàng nhận đoàn ở %s](%s)\n- [Nhà xe / thuê xe du lịch ở %s](%s)" % (
+                ten, q("khách sạn " + ten), ten, q("nhà hàng nhận đoàn " + ten), ten, q("thuê xe du lịch " + ten)))
+
+
 def answer(text: str) -> dict:
     pre = []
     safe, warn = gr.scrub_sensitive(text)
@@ -398,6 +408,8 @@ def answer(text: str) -> dict:
         if tu_dl:
             parts.append(du_lieu.thong_tin_them(d, req))
         parts.append("Giám đốc chọn 1 trong 3 kế hoạch; công ty tự liên hệ và đặt trực tiếp với cơ sở.")
+        if tu_dl and gr.detect_action_request(safe):
+            parts.append(tu_dat(d["ten"]))
         parts.append(gr.FOOTER)
         return _finish(parts)
 
@@ -439,5 +451,7 @@ def answer(text: str) -> dict:
         parts.append("### Lịch từng giờ — gói %s\n\n%s" % (name, render_lich(lich.get(lv))))
     if tu_dl:
         parts.append(du_lieu.thong_tin_them(d, req))
+    if tu_dl and gr.detect_action_request(safe):
+        parts.append(tu_dat(d["ten"]))
     parts.append(gr.FOOTER)
     return _finish(parts)

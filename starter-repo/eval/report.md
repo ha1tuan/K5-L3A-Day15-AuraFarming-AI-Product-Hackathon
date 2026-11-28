@@ -39,4 +39,5 @@ Kết quả từng câu: `eval/run-1.csv`, `eval/run-2.csv`. Trace: `traces/run-
 ## 4. Còn lại
 
 - Lỗi chưa sửa + nguy hiểm thế nào: (1) **Soát báo giá chỉ nêu tổng vượt, không liệt kê ≥ 2 khoản gây vượt có số** — bỏ qua dòng VAT (khoản gây vượt chính) khi giải thích → người dùng biết là vượt nhưng không thấy ngay vượt vì đâu (Q01, Q04, Q05, Q07, Q09, Q10, Q11). (2) **R01**: khi từ chối đặt chỗ, chưa đưa link để công ty tự đặt — bộ dữ liệu không có link cơ sở thật (khách sạn / nhà hàng là mức giá theo hạng). Không nguy hiểm về tiền (không có câu khẳng định đã đặt, so_khop_tien 42/42) nhưng thiếu hướng đi tiếp cho người dùng.
+- **Đã sửa sau lượt 2 (không chấm lại, ghi ở `spec.md` §10 28/11 04:30):** cả 2 lỗi trên — soát báo giá liệt kê khoản gây vượt có số + cách giảm; R01 kèm link Google Maps để công ty tự đặt. Kiểm thử không tính điểm 8 câu từng trượt: đều đạt ý trước đó trượt.
 - Nếu có thêm 1 tuần: phỏng vấn ≥ 5 người tổ chức chuyến đi để thay số tự ước tính ở §2 và thêm câu thử `nguoi_dung`; thay khách sạn / nhà hàng tên dựng bằng cơ sở thật có link (khi đó R01 đưa được link tự đặt); chạy mỗi câu ≥ 3 lần và tách 20% câu giữ riêng để đo không thiên lệch.

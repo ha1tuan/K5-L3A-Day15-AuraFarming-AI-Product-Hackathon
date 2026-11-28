@@ -184,15 +184,26 @@ def soat(text, ket_qua=False):
              "| **Mỗi người** (%d người) | | | **%s** |" % (n, planner.fmt_vnd(planner.round_k(tong / n)))]
     out.append("\n".join(bang))
     if ns and tong > ns:
-        thua = [(r[0].split(" — ")[0].split(" (")[0], r[4]) for r in rows[1:] if not r[0].startswith("Thuế VAT")]
+        ten_ngan = lambda r: r[0].split(" — ")[0].split(" (")[0].replace(" để công ty có hoá đơn", "")  # noqa: E731
+        ngoai = sorted(rows[1:], key=lambda r: -r[4])                    # mọi khoản ngoài giá tour, lớn trước
         goi_y = ["- **Vượt ngân sách %s (%.1f%%)**: tổng chi thật %s − ngân sách %s." % (
             planner.fmt_vnd(tong - ns), 100.0 * (tong - ns) / ns, planner.fmt_vnd(tong), planner.fmt_vnd(ns))]
+        # khoản gây vượt — có số tiền khớp bảng trên (giá tour + từng khoản ngoài giá)
+        kh = ["giá tour %s (%.0f%% ngân sách)" % (planner.fmt_vnd(bao), 100.0 * bao / ns)]
+        kh += ["%s +%s" % (ten_ngan(r), planner.fmt_vnd(r[4])) for r in ngoai]
+        goi_y.append("- Khoản gây vượt: " + "; ".join(kh) + ".")
         if bao <= ns:
             goi_y.append("- Giá báo (%s) **nằm trong** ngân sách nhưng tổng chi thật thì **vượt** — chính các khoản "
-                         "\"không bao gồm\" làm vượt." % planner.fmt_vnd(bao))
-        for ten, tt in sorted(thua, key=lambda x: -x[1])[:2]:
-            goi_y.append("- Thương lượng đưa vào giá tour / bỏ \"%s\": tiết kiệm %s → tổng còn %s." % (
-                ten, planner.fmt_vnd(tt), planner.fmt_vnd(tong - tt)))
+                         "\"không bao gồm\" (%s) làm vượt." % (planner.fmt_vnd(bao), planner.fmt_vnd(tong - bao)))
+        cat = []
+        for r in ngoai[:2]:
+            cat.append(("Thương lượng giá tour **đã gồm** \"%s\"" if r[0].startswith("Thuế VAT") else
+                        "Thương lượng đưa vào giá tour / bỏ \"%s\"") % ten_ngan(r) + ": tiết kiệm %s → tổng còn %s%s." % (
+                planner.fmt_vnd(r[4]), planner.fmt_vnd(tong - r[4]), " (trong ngân sách)" if tong - r[4] <= ns else ""))
+        tran = (ns - (tong - bao)) // n // 1000 * 1000                   # giá / khách tối đa để vừa ngân sách
+        if tran > 0:
+            cat.append("Xin giá tour ≤ **%s/khách** (giữ nguyên các khoản ngoài giá) thì vừa ngân sách." % planner.fmt_vnd(tran))
+        goi_y += ["- Cách giảm: " + cat[0]] + ["  - " + c for c in cat[1:]] if cat else []
         goi_y.append("- Ngân sách tối thiểu cho báo giá này: **%s**." % planner.fmt_vnd(tong))
         out.append("**Vì sao vượt:**\n" + "\n".join(goi_y))
     ref = _tham_chieu(b)

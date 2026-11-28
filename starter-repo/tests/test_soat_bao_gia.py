@@ -59,3 +59,11 @@ def test_tran_phuc_loi(monkeypatch):
 
 def test_cau_cu_khong_vao_nhanh_bao_gia():
     assert not S.la_bao_gia("Công ty mình 60 người, xuất phát từ Hà Nội, muốn đi Hạ Long 3 ngày 2 đêm, ngân sách 150 triệu.")
+
+
+def test_vi_sao_vuot_neu_du_khoan_co_so(monkeypatch):
+    # sau lượt 2: giải thích vượt phải nêu ≥ 2 khoản gây vượt có số (gồm VAT) + cách giảm có số
+    out = _run(_input("tour-team-building-mui-ne-phan-thiet-2n1d.html", 30, 45), monkeypatch)
+    sec = out[out.index("**Vì sao vượt:**"):]
+    assert "Khoản gây vượt: giá tour 41.700.000đ" in sec and "Thuế VAT 10% +4.170.000đ" in sec
+    assert "tiết kiệm 4.170.000đ" in sec and "1.361.000đ/khách" in sec

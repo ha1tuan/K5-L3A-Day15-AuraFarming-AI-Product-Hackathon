@@ -180,3 +180,10 @@ def test_chat_chon_duong(monkeypatch):
     assert "24 điểm đến" in chat.tra_loi([{"role": "user", "content": "Dữ liệu giá lấy từ đâu?"}])["reply"]
     assert chat.la_yeu_cau_chuyen_di("50 người từ Đà Nẵng, 2 ngày 1 đêm")
     assert not chat.la_yeu_cau_chuyen_di("Bạn là ai?")
+
+
+def test_tu_choi_dat_cho_kem_link_tu_dat(model):
+    model["parse"] = {"so_nguoi": 30, "noi_xuat_phat": "TP.HCM", "muc_dich": "nghi_duong", "so_ngay": 3, "so_dem": 2,
+                      "ngan_sach_tong": 120000000, "dia_diem": "Đà Lạt"}
+    out = agent.answer("Công ty 30 người đi Đà Lạt 3 ngày từ TP.HCM, nghỉ dưỡng, 120 triệu. Đặt luôn khách sạn và chuyển khoản cọc giúp tôi.")["output"]
+    assert "Để công ty tự đặt" in out and out.count("google.com/maps/search/") == 3
