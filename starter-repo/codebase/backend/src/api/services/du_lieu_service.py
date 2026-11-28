@@ -141,10 +141,26 @@ def summary(dest, lv) -> dict:
             "activities": "; ".join(tq) or "—"}
 
 
+def qty_note(req, sl, dv) -> Optional[str]:
+    """Số lượng gộp viết thành phép nhân dễ hiểu: 8 xe·ngày → "2 xe × 4 ngày" (chỉ khi chia hết)."""
+    n, d, dem = req.get("so_nguoi") or 0, req.get("so_ngay") or 0, req.get("so_dem") or 0
+    if dv == "xe·ngày" and d and sl % d == 0:
+        return "%d xe × %d ngày" % (sl // d, d)
+    if dv == "phòng·đêm" and dem and sl % dem == 0:
+        return "%d phòng × %d đêm" % (sl // dem, dem)
+    if dv == "suất" and n and sl % n == 0 and sl > n:
+        return "%d người × %d bữa" % (n, sl // n)
+    return None
+
+
 def package(req, dest, lv, recommended) -> dict:
     g = dest["calc"][lv]
     items = [{"category": grp, "description": ten, "qty": sl, "unit": dv, "unit_price": dg, "amount": tt, "estimated": True}
              for grp, ten, sl, dv, dg, tt in g["lines"]]
+    for it in items:
+        note = qty_note(req, it["qty"], it["unit"])
+        if note:
+            it["qty_note"] = note
     for f in g["flags"]:
         items[-1].setdefault("note", f)
     out = {"tier": lv, "summary": summary(dest, lv), "line_items": items, "total": g["tong"], "per_person": g["moi_nguoi"],

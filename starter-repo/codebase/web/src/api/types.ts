@@ -40,6 +40,8 @@ export interface LineItem {
   estimated: boolean;
   source_url?: string;
   note?: string;
+  /** Số lượng gộp viết thành phép nhân, vd "2 xe × 4 ngày" (8 xe·ngày). */
+  qty_note?: string;
 }
 
 export interface Explanation {

@@ -189,19 +189,11 @@ def test_tu_choi_dat_cho_kem_link_tu_dat(model):
     assert "Để công ty tự đặt" in out and out.count("google.com/maps/search/") == 3
 
 
-def test_cost_lines_explain_quantity():
-    """Số lượng gộp (xe·ngày, phòng·đêm, suất) ghi kèm phép nhân trong mô tả; tiền không đổi."""
-    import planner
-    req = {"so_nguoi": 50, "so_ngay": 4, "so_dem": 3, "khong_muon": []}
-    goi = {"di_chuyen": {"kieu": "ve", "don_gia": 1740000},
-           "xe_tai_cho": {"loai": "Thuê xe", "suc_chua": 28, "don_gia_xe_ngay": 1375000},
-           "luu_tru": {"mo_ta": "Resort", "loai_phong": [{"ten": "Phòng 4 người", "suc_chua": 4, "gia_dem": 2320000},
-                                                        {"ten": "Phòng 2 người", "suc_chua": 2, "gia_dem": 1450000}]},
-           "an_uong": {"mo_ta": "Nhà hàng", "don_gia_bua": 320000}, "hoat_dong": []}
-    lines = planner.tinh_goi(req, "can_bang", goi)["lines"]
-    xe = next(l for l in lines if l[3] == "xe·ngày")
-    assert "2 xe × 4 ngày" in xe[1] and xe[2] == 8 and xe[5] == 8 * 1375000
-    phong = [l for l in lines if l[3] == "phòng·đêm"]
-    assert all(" phòng × 3 đêm" in l[1] for l in phong) and sum(l[2] for l in phong) == 13 * 3
-    an = next(l for l in lines if l[3] == "suất")
-    assert "50 người × 8 bữa" in an[1] and an[2] == 400
+def test_qty_note_explains_grouped_quantity():
+    """Web hiện số lượng gộp thành phép nhân: 8 xe·ngày → "2 xe × 4 ngày"; không chia hết thì không ghi."""
+    from src.api.services.du_lieu_service import qty_note
+    req = {"so_nguoi": 50, "so_ngay": 4, "so_dem": 3}
+    assert qty_note(req, 8, "xe·ngày") == "2 xe × 4 ngày"
+    assert qty_note(req, 36, "phòng·đêm") == "12 phòng × 3 đêm"
+    assert qty_note(req, 400, "suất") == "50 người × 8 bữa"
+    assert qty_note(req, 50, "vé") is None and qty_note(req, 7, "xe·ngày") is None

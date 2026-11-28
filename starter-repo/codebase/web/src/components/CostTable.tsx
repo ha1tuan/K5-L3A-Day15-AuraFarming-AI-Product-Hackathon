@@ -17,9 +17,13 @@ export function CostTable({ pkg, headcount, budget }: { pkg: Package; headcount:
         <tbody className="[&_td]:py-2 [&_td]:pr-3 [&_tr]:border-b [&_tr]:border-line">
           {pkg.line_items.map((r, i) => (
             <tr key={i}>
-              <td>{r.category}</td>
+              <td className="whitespace-nowrap">{r.category}</td>
               <td>{r.description}</td>
-              <td className="text-right">{r.qty ? `${r.qty} ${r.unit}` : <span className="text-muted">{r.unit}</span>}</td>
+              <td className="whitespace-nowrap text-right">
+                {!r.qty ? <span className="text-muted">{r.unit}</span>
+                  : r.qty_note ? <>{r.qty_note}<span className="block text-xs text-muted">= {r.qty} {r.unit}</span></>
+                  : `${r.qty} ${r.unit}`}
+              </td>
               <td className="text-right">
                 {r.qty ? <span className={r.estimated ? 'est-value' : ''}>{formatVnd(r.unit_price)}</span> : '—'}
                 {r.estimated && r.qty > 0 && <> <Flag kind="estimate" /></>}
