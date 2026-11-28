@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Bus, BedDouble, Sun, MapPin, Info, Play, X, ExternalLink, CloudRain } from 'lucide-react';
-import type { Plan } from '../api/types';
+import { Bus, BedDouble, Sun, MapPin, Info, Play, X, ExternalLink, CloudRain, UtensilsCrossed, Globe, Phone, Search } from 'lucide-react';
+import type { BookBlock, Plan } from '../api/types';
 
 const ytId = (url: string) => /[?&]v=([\w-]{11})/.exec(url)?.[1] ?? '';
 
@@ -12,6 +12,40 @@ function Row({ icon: Icon, label, children }: { icon: typeof Bus; label: string;
         <p className="text-xs font-semibold uppercase tracking-wide text-muted">{label}</p>
         <div className="mt-0.5 text-sm">{children}</div>
       </div>
+    </div>
+  );
+}
+
+function Book({ icon: Icon, block, label }: { icon: typeof Bus; block: BookBlock; label: string }) {
+  return (
+    <div className="grid gap-2.5">
+      <p className="flex items-center gap-2 text-sm font-bold"><Icon className="size-4 text-accent" aria-hidden />{label}</p>
+      <p className="text-xs text-muted">{block.title}</p>
+      <div className="grid gap-2">
+        {block.links.map((l, i) => (
+          <a key={l.url} href={l.url} target="_blank" rel="noreferrer"
+            className={`inline-flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold transition ${i === 0 ? 'bg-ocean text-white hover:bg-accent-dark' : 'bg-soft text-primary hover:bg-accent-soft'}`}>
+            <Search className="size-4 shrink-0" aria-hidden /><span className="min-w-0 flex-1">{l.label}</span><ExternalLink className="size-3.5 shrink-0 opacity-70" aria-hidden />
+          </a>
+        ))}
+      </div>
+      {block.places.length > 0 && (
+        <details className="group rounded-xl ring-1 ring-line">
+          <summary className="cursor-pointer list-none px-3 py-2 text-xs font-semibold text-accent">Cơ sở thật gần trung tâm ({block.places.length}) — bấm để xem</summary>
+          <ul className="grid gap-1 px-2 pb-2">
+            {block.places.map(p => (
+              <li key={p.osm} className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm hover:bg-soft">
+                <a href={p.maps} target="_blank" rel="noreferrer" className="min-w-0 flex-1">
+                  <span className="block truncate font-medium hover:text-accent">{p.name}</span>
+                  <span className="text-[11px] text-muted">{p.kind} · cách trung tâm {String(p.km).replace('.', ',')} km · chưa rõ hạng</span>
+                </a>
+                {p.website && <a href={p.website} target="_blank" rel="noreferrer" aria-label={`Website ${p.name}`} className="text-muted hover:text-accent"><Globe className="size-4" /></a>}
+                {p.phone && <a href={`tel:${p.phone.replace(/\s/g, '')}`} aria-label={`Gọi ${p.name}`} className="text-muted hover:text-accent"><Phone className="size-4" /></a>}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
     </div>
   );
 }
@@ -53,6 +87,14 @@ export function TripExtras({ plan }: { plan: Plan }) {
               </Row>
             )}
           </div>
+          {x.book && (
+            <div className="mt-5 grid gap-5 border-t border-line pt-5">
+              <p className="-mb-2 text-base font-bold">Ở đâu, ăn đâu — tìm & hỏi giá thật</p>
+              {x.book.stay && <Book icon={BedDouble} block={x.book.stay} label="Nơi ở" />}
+              <Book icon={UtensilsCrossed} block={x.book.eat} label="Ăn uống" />
+              <p className="text-[11px] leading-relaxed text-muted">{x.book.note} <span className="whitespace-nowrap">{x.book.credit}</span></p>
+            </div>
+          )}
           <div className="mt-5 flex gap-2.5 rounded-2xl bg-sun-soft p-3.5 text-xs leading-relaxed text-primary">
             <Info className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden />
             <p><b>Về giá:</b> {x.price_note}</p>

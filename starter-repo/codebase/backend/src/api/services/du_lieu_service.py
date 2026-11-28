@@ -22,6 +22,7 @@ import du_lieu  # noqa: E402
 import planner  # noqa: E402
 
 TIERS = [lv for lv, _ in planner.PACKAGES]
+D_SAO = {"tiet_kiem": [2, 3], "can_bang": [4], "cao_cap": [5]}       # hạng sao theo gói (data/muc_goi.json)
 KIND = {"di_chuyen": "travel", "an": "meal", "team_building": "activity", "tu_do": "rest", "nghi": "hotel", "tham_quan": "sight"}
 NOT_SUPPORTED = None
 
@@ -199,6 +200,65 @@ def _gio(h):
     return ("%.1f" % h).rstrip("0").rstrip(".").replace(".", ",")
 
 
+_OSM = None
+
+
+def _co_so_osm(den_id):
+    """Khách sạn / nhà hàng tên thật quanh điểm đến (data/co_so_osm.json, © OpenStreetMap ODbL)."""
+    global _OSM
+    f = os.path.join(du_lieu.DATA, "co_so_osm.json")
+    if os.path.exists(f) and (_OSM is None or _OSM[0] != os.path.getmtime(f)):    # nạp lại khi file đổi / mới có
+        import json
+        _OSM = (os.path.getmtime(f), json.load(open(f, encoding="utf-8"))["diem_den"])
+    return (_OSM[1] if _OSM else {}).get(den_id) or {"khach_san": [], "nha_hang": []}
+
+
+def _maps(q):
+    from urllib.parse import quote_plus
+    return "https://www.google.com/maps/search/" + quote_plus(q)
+
+
+def where_to_book(req, dest, lv) -> dict:
+    """Gợi ý nơi ở / ăn THẬT: link tìm đúng hạng sao kèm ngày đi + số phòng (giá thật do người dùng tự xem), và cơ sở thật
+    gần trung tâm từ OpenStreetMap (chưa rõ hạng, chưa kiểm giá / phòng / sức chứa — ghi rõ)."""
+    from urllib.parse import urlencode
+    den = dest["den"]
+    g = dest["calc"][lv]
+    sao = D_SAO[lv]
+    m = re.search(r"(\d)★", dest["raw"][lv].get("_luu_tru_chi_tiet") or "")
+    if m and lv != "tiet_kiem":
+        sao = [int(m.group(1))]                          # nơi không có 5★: gói cao cấp dùng 4★ tốt nhất (data/DATA_CARD.md)
+    d0 = start_date(req)
+    d1 = d0 + timedelta(days=max(1, req["so_dem"]))
+    phong = sum(k for _, k in (g.get("phong") or {}).get("co_cau", [])) or max(1, -(-req["so_nguoi"] // 2))
+    ten = den["ten"].split(" (")[0]
+    booking = "https://www.booking.com/searchresults.vi.html?" + urlencode({
+        "ss": ten + ", Việt Nam", "checkin": d0.isoformat(), "checkout": d1.isoformat(), "group_adults": req["so_nguoi"],
+        "no_rooms": phong, "group_children": 0, "nflt": ";".join("class=%d" % x for x in sao)})
+    sao_txt = "–".join(str(x) for x in (sao[0], sao[-1])) if len(sao) > 1 else str(sao[0])
+    osm = _co_so_osm(den["id"])
+    ks = [{"name": x["ten"], "kind": "Resort" if x["loai"] == "resort" else "Khách sạn", "km": x["cach_trung_tam_km"],
+           "maps": _maps("%s %s" % (x["ten"], ten)), "website": x.get("website"), "phone": x.get("dien_thoai"), "osm": x["osm"]}
+          for x in osm["khach_san"][:6]]
+    nh = [{"name": x["ten"], "kind": "Nhà hàng", "km": x["cach_trung_tam_km"], "maps": _maps("%s %s" % (x["ten"], ten)),
+           "website": x.get("website"), "phone": x.get("dien_thoai"), "osm": x["osm"]} for x in osm["nha_hang"][:5]]
+    au = dest["raw"][lv].get("an_uong") or {}
+    if req["so_dem"] == 0:
+        stay = None
+    else:
+        stay = {"title": "Khách sạn %s★ cho %d người · %d phòng · %s → %s" % (sao_txt, req["so_nguoi"], phong, d0.strftime("%d/%m"), d1.strftime("%d/%m")),
+                "links": [{"label": "Xem giá thật trên Booking (lọc %s★, đúng ngày, %d phòng)" % (sao_txt, phong), "url": booking},
+                          {"label": "Tìm khách sạn %s sao trên Google Maps" % sao_txt, "url": _maps("khách sạn %s sao %s" % (sao_txt, ten))}],
+                "places": ks}
+    eat = {"title": "Nhà hàng nhận đoàn %d người · dự trù ~%s/suất" % (req["so_nguoi"], planner.fmt_vnd(au.get("don_gia_bua", 0))),
+           "links": [{"label": "Tìm nhà hàng nhận đoàn trên Google Maps", "url": _maps("nhà hàng nhận đoàn %s" % ten)}],
+           "places": nh}
+    return {"stay": stay, "eat": eat,
+            "note": "Danh sách cơ sở lấy từ OpenStreetMap (bản đồ mở) — chưa rõ hạng sao, chưa kiểm giá, số phòng, sức chứa đoàn. "
+                    "Bấm từng nơi để xem ảnh, đánh giá, điện thoại; giá thật xem qua nút Booking theo đúng ngày đi.",
+            "credit": "© OpenStreetMap contributors (ODbL)"}
+
+
 def extra(req, dest, lv) -> dict:
     """Thông tin thêm cho người dùng (web) — câu chữ thường, không tên file / thuật ngữ kỹ thuật."""
     raw, den = dest["raw"][lv], dest["den"]
@@ -213,6 +273,7 @@ def extra(req, dest, lv) -> dict:
     return {"travel": di, "lodging": raw.get("_luu_tru_chi_tiet") or "Không lưu trú (đi về trong ngày)",
             "season": {"months": den["mua_dep_thang"], "in_season": trong_mua, "month_now": thang},
             "sights": sights,
+            "book": where_to_book(req, dest, lv),
             "price_note": "Giá trong kế hoạch là giá tham khảo theo hạng khách sạn, nhà hàng và giá thị trường có nguồn — "
                           "chưa phải báo giá của một cơ sở cụ thể. Trước khi đặt, công ty chọn khách sạn / nhà hàng thật "
                           "cùng hạng, xin báo giá và xác nhận đủ số phòng cho cả đoàn."}

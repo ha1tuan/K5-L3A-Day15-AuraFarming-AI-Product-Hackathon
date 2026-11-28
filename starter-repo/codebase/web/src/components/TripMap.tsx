@@ -24,12 +24,14 @@ const num = (n: number, color: string) => L.divIcon({
 });
 
 /** Bản đồ lộ trình theo gói: từng chặng (đường bộ theo bản đồ thật, chặng bay vẽ cung) + danh sách chặng có phương tiện, km, giờ. */
-export function TripMap({ map, tier }: { map: NonNullable<TripView['map']>; tier: Tier }) {
+export function TripMap({ map, tier, compact = false }: { map: NonNullable<TripView['map']>; tier: Tier; compact?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const legs = map.routes?.[tier] ?? [];
   useEffect(() => {
     if (!ref.current) return;
-    const m = L.map(ref.current, { scrollWheelZoom: false });
+    const m = L.map(ref.current, compact
+      ? { scrollWheelZoom: false, dragging: false, zoomControl: false, doubleClickZoom: false, boxZoom: false, keyboard: false, touchZoom: false }
+      : { scrollWheelZoom: true });
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · đường: OSRM',
     }).addTo(m);
@@ -37,7 +39,7 @@ export function TripMap({ map, tier }: { map: NonNullable<TripView['map']>; tier
     legs.forEach((l, i) => {
       const c = legColor(l);
       const line = L.polyline(l.path, { color: c, weight: l.mode === 'flight' ? 3 : 5, opacity: .9, dashArray: l.mode === 'flight' ? '8 10' : undefined }).addTo(m);
-      line.bindTooltip(`${i + 1}. ${l.from} → ${l.to}<br>${l.vehicle}${l.km ? ` · ${l.km} km` : ''}${gio(l.hours)}`, { sticky: true });
+      if (!compact) line.bindTooltip(`${i + 1}. ${l.from} → ${l.to}<br>${l.vehicle}${l.km ? ` · ${l.km} km` : ''}${gio(l.hours)}`, { sticky: true });
       const mid = l.path[Math.floor(l.path.length / 2)];
       L.marker(mid, { icon: num(i + 1, c), interactive: false }).addTo(m);
       if (i > 0 && i < legs.length) L.marker(l.path[0], { icon: pin(c === COLOR.self ? COLOR.flight : c, l.from, true) }).addTo(m);
@@ -49,13 +51,14 @@ export function TripMap({ map, tier }: { map: NonNullable<TripView['map']>; tier
     if (pts.length) m.fitBounds(L.latLngBounds(pts), { padding: [50, 50] });
     else m.setView(B, 11);
     return () => { m.remove(); };
-  }, [map, tier, legs]);
+  }, [map, tier, legs, compact]);
 
   return (
     <div className="grid gap-4">
-      <figure className="overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-black/5">
-        <div ref={ref} className="h-80 w-full sm:h-[26rem]" role="img" aria-label={`Bản đồ lộ trình ${map.origin.name} → ${map.dest.name}`} />
+      <figure className="isolate overflow-hidden rounded-3xl bg-card shadow-sm ring-1 ring-black/5">
+        <div ref={ref} className={compact ? 'h-72 w-full' : 'h-[55vh] min-h-80 w-full'} role="img" aria-label={`Bản đồ lộ trình ${map.origin.name} → ${map.dest.name}`} />
       </figure>
+      {!compact && (<>
       <div className="rounded-3xl bg-card p-4 ring-1 ring-black/5">
         <p className="mb-3 text-sm font-bold">Các chặng đi — gói {TIER_LABEL[tier]}</p>
         {legs.length === 0 ? <p className="text-sm text-muted">Đi lại trong thành phố — không có chặng đi xa.</p> : (
@@ -78,6 +81,7 @@ export function TripMap({ map, tier }: { map: NonNullable<TripView['map']>; tier
         )}
         <p className="mt-3 text-[11px] leading-relaxed text-muted">Đường bộ vẽ theo bản đồ thật (OSRM, dữ liệu OpenStreetMap); km chặng bộ theo bản đồ. Giờ đi dự trù theo tốc độ xe đoàn có nghỉ giữa chặng — chậm hơn xe con.</p>
       </div>
+      </>)}
     </div>
   );
 }

@@ -130,6 +130,7 @@ export interface Plan {
     season: { months: string; in_season: boolean; month_now: number };
     sights: string[];
     price_note: string;
+    book?: { stay: BookBlock | null; eat: BookBlock; note: string; credit: string };
   };
 }
 
@@ -193,3 +194,7 @@ export interface QuoteResult {
 export interface QuoteCompare {
   tier: Tier; ke_hoach: number; ke_hoach_moi_nguoi: number; bao_gia_that: number; chenh: number; chenh_pct: number; nhan_xet: string;
 }
+
+/** Gợi ý nơi ở / ăn thật: link tìm đúng hạng (giá thật do người dùng tự xem) + cơ sở thật từ OpenStreetMap. */
+export interface BookPlace { name: string; kind: string; km: number; maps: string; website?: string | null; phone?: string | null; osm: string }
+export interface BookBlock { title: string; links: { label: string; url: string }[]; places: BookPlace[] }

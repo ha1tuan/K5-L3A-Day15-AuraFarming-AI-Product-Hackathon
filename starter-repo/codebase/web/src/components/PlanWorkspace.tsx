@@ -235,7 +235,7 @@ export function PlanWorkspace({ view, onView }: { view: TripView; onView: (v: Tr
         </Drawer>
       )}
 
-      <PlanView plans={plans} request={req} activeTier={plans.length > 1 ? active : undefined} />
+      <PlanView plans={plans} request={req} activeTier={plans.length > 1 ? active : undefined} map={view.map} />
     </div>
   );
 }
