@@ -145,10 +145,16 @@ export interface TripView {
   plans?: Plan[];
   /** Sửa ngay trên trang kế hoạch (POST /api/trips/{id}/recalc). */
   customize?: { options: string[]; removed: string[]; headcount: number; days: number };
-  map?: { origin: MapPoint; dest: MapPoint; mode: 'bus' | 'plane' };
+  map?: { origin: MapPoint; dest: MapPoint; mode: 'bus' | 'plane'; routes?: Partial<Record<Tier, RouteLeg[]>> };
 }
 
 export interface MapPoint { name: string; lat: number; lon: number }
+
+/** Một chặng đi: đường bộ vẽ theo bản đồ thật (OSRM / OpenStreetMap), chặng bay vẽ cung. */
+export interface RouteLeg {
+  from: string; to: string; mode: 'road' | 'flight'; vehicle: string;
+  km: number | null; hours: number | null; path: [number, number][]; approx: boolean; ferry?: boolean;
+}
 
 export interface RecalcInput { headcount?: number; days?: number; removed?: string[] }
 

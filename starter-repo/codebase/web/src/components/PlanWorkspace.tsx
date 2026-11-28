@@ -231,7 +231,7 @@ export function PlanWorkspace({ view, onView }: { view: TripView; onView: (v: Tr
         </section>
       )}
 
-      {panel === 'map' && view.map && <Suspense fallback={<div className="h-80 animate-pulse rounded-3xl bg-soft" />}><TripMap map={view.map} /></Suspense>}
+      {panel === 'map' && view.map && <Suspense fallback={<div className="h-80 animate-pulse rounded-3xl bg-soft" />}><TripMap map={view.map} tier={active} /></Suspense>}
         </Drawer>
       )}
 

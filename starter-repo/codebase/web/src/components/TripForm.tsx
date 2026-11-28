@@ -37,10 +37,10 @@ const PURPOSE_EFFECT: Record<Purpose, string> = {
   ca_hai: 'kết hợp: vừa team building / gala vừa giờ tự do, spa; chọn nơi ở có cả sân team building lẫn tiện ích nghỉ dưỡng.',
 };
 
-const PRESETS: { label: string; f: Partial<FormState> }[] = [
-  { label: '40 người · Hà Nội → Hạ Long · 3N2Đ · gắn kết · 150 triệu', f: { headcount: '40', days: 3, origin: 'Hà Nội', destination: 'Hạ Long', purpose: 'gan_ket', budget: '150.000.000', budget_per_person: false } },
-  { label: '50 người · Đà Nẵng · 2N1Đ · gắn kết · 200 triệu — gợi ý nơi đi', f: { headcount: '50', days: 2, origin: 'Đà Nẵng', destination: '', purpose: 'gan_ket', budget: '200.000.000', budget_per_person: false } },
-  { label: '30 người · TP.HCM → Phú Quốc · 4N3Đ · nghỉ dưỡng — dự trù', f: { headcount: '30', days: 4, origin: 'TP.HCM', destination: 'Phú Quốc', purpose: 'nghi_duong', budget: '', budget_per_person: false } },
+const PRESETS: { label: string; short: string; f: Partial<FormState> }[] = [
+  { label: '40 người · Hà Nội → Hạ Long · 3N2Đ · gắn kết · 150 triệu', short: 'Hà Nội → Hạ Long', f: { headcount: '40', days: 3, origin: 'Hà Nội', destination: 'Hạ Long', purpose: 'gan_ket', budget: '150.000.000', budget_per_person: false } },
+  { label: '50 người · Đà Nẵng · 2N1Đ · gắn kết · 200 triệu — gợi ý nơi đi', short: 'Gợi ý nơi đi từ Đà Nẵng', f: { headcount: '50', days: 2, origin: 'Đà Nẵng', destination: '', purpose: 'gan_ket', budget: '200.000.000', budget_per_person: false } },
+  { label: '30 người · TP.HCM → Phú Quốc · 4N3Đ · nghỉ dưỡng — dự trù', short: 'Dự trù Phú Quốc', f: { headcount: '30', days: 4, origin: 'TP.HCM', destination: 'Phú Quốc', purpose: 'nghi_duong', budget: '', budget_per_person: false } },
 ];
 
 /** Lỗi phía trình duyệt; máy chủ vẫn kiểm lại. */
@@ -96,8 +96,19 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
     <div>
-      <h2 className="mb-1 text-xl font-bold">Thông tin chuyến đi</h2>
-      <p className="mb-6 text-muted">Điền thông tin cơ bản. Có kinh phí, có địa điểm, hoặc cả hai đều được.</p>
+      <div className="mb-4 flex flex-wrap items-end gap-x-4 gap-y-2">
+        <div>
+          <h2 className="text-xl font-bold">Thông tin chuyến đi</h2>
+          <p className="text-sm text-muted">Có kinh phí, có địa điểm, hoặc cả hai đều được.</p>
+        </div>
+        <div className="flex flex-wrap items-center gap-1.5 lg:ml-auto">
+          <span className="text-xs font-semibold text-muted">Thử nhanh:</span>
+          {PRESETS.map(p => (
+            <button key={p.label} type="button" onClick={() => onChange({ ...value, ...p.f })} title={p.label}
+              className="cursor-pointer rounded-full bg-card px-3 py-1.5 text-xs font-medium ring-1 ring-line transition hover:bg-accent-soft hover:text-accent-dark hover:ring-accent/30">{p.short}</button>
+          ))}
+        </div>
+      </div>
       {askBack && errors.length > 0 && (
         <div className="mb-6">
           <Notice tone="ask" title="Cần thêm thông tin trước khi lập kế hoạch">
@@ -107,7 +118,7 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
       )}
       <form
         noValidate
-        className="grid gap-5 rounded-3xl border border-line bg-card p-6 shadow-xl sm:p-8"
+        className="grid gap-5 rounded-3xl border border-line bg-card p-5 shadow-xl sm:p-7"
         onSubmit={e => { e.preventDefault(); onSubmit(); }}
       >
         <div className="grid gap-4 sm:grid-cols-3">
@@ -132,52 +143,51 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
           </div>
         </div>
 
-        <div>
-          <label htmlFor={`${id}-origin`} className={label}>Xuất phát từ <span className="text-over">*</span></label>
-          <input id={`${id}-origin`} className={inputCls} placeholder="vd: Hà Nội" list="dl-origin" value={value.origin} onChange={e => set('origin', e.target.value)}
-            aria-invalid={has('origin')} aria-describedby={has('origin') ? `${id}-origin-err` : undefined} />
-          {err('origin')}
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label htmlFor={`${id}-origin`} className={label}>Xuất phát từ <span className="text-over">*</span></label>
+            <input id={`${id}-origin`} className={inputCls} placeholder="vd: Hà Nội" list="dl-origin" value={value.origin} onChange={e => set('origin', e.target.value)}
+              aria-invalid={has('origin')} aria-describedby={has('origin') ? `${id}-origin-err` : undefined} />
+            {err('origin')}
+          </div>
+          <div>
+            <label htmlFor={`${id}-dest`} className={label}>Địa điểm <span className="font-normal text-muted">(để trống nếu muốn được gợi ý)</span></label>
+            <input id={`${id}-dest`} className={inputCls} placeholder="vd: Hạ Long" list="dl-dest" value={value.destination}
+              onChange={e => set('destination', e.target.value)} aria-invalid={has('budget_or_destination')} />
+          </div>
         </div>
 
-        <fieldset aria-invalid={has('purpose')}>
-          <legend className="mb-2 text-sm font-medium">Mục đích chính <span className="text-over">*</span></legend>
-          <div className="flex flex-wrap gap-2">
-            {PURPOSES.map(({ v, label: l, Icon }) => (
-              <label key={v} className="cursor-pointer">
-                <input type="radio" name={`${id}-purpose`} className="peer sr-only" checked={value.purpose === v} onChange={() => set('purpose', v)} />
-                <span className={`inline-flex h-11 items-center gap-2 rounded-lg border px-4 transition peer-checked:border-accent peer-checked:bg-accent-soft peer-checked:text-accent peer-focus-visible:outline-3 peer-focus-visible:outline-accent ${has('purpose') ? 'border-over' : 'border-line'}`}>
-                  <Icon className="size-4" aria-hidden />{l}
-                </span>
-              </label>
-            ))}
-          </div>
-          {err('purpose')}
-        </fieldset>
-
-        <div className="border-t border-line pt-5">
-          <p className="mb-3 text-sm font-semibold">Bạn đã có gì? <span className="font-normal text-muted">(ít nhất một)</span></p>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label htmlFor={`${id}-budget`} className={label}>Kinh phí dự trù</label>
-              <div className="flex">
-                <input id={`${id}-budget`} inputMode="numeric" className={`${inputCls} rounded-r-none`} placeholder="vd: 150.000.000"
-                  value={value.budget} onChange={e => set('budget', groupDigits(e.target.value))} aria-invalid={has('budget_or_destination')} />
-                <span className="grid h-11 place-items-center rounded-r-lg border border-l-0 border-line bg-soft px-3">đ</span>
-              </div>
-              <div className="mt-2 flex gap-4 text-sm" role="radiogroup" aria-label="Kinh phí tính cho">
-                <label className="flex items-center gap-1.5"><input type="radio" checked={!value.budget_per_person} onChange={() => set('budget_per_person', false)} /> tổng đoàn</label>
-                <label className="flex items-center gap-1.5"><input type="radio" checked={value.budget_per_person} onChange={() => set('budget_per_person', true)} /> mỗi người</label>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <fieldset aria-invalid={has('purpose')}>
+            <legend className={label}>Mục đích chính <span className="text-over">*</span></legend>
+            <div className="grid grid-cols-3 gap-2">
+              {PURPOSES.map(({ v, label: l, Icon }) => (
+                <label key={v} className="cursor-pointer">
+                  <input type="radio" name={`${id}-purpose`} className="peer sr-only" checked={value.purpose === v} onChange={() => set('purpose', v)} />
+                  <span className={`flex h-11 items-center justify-center gap-1.5 rounded-xl border px-2 text-sm transition peer-checked:border-accent peer-checked:bg-accent-soft peer-checked:font-semibold peer-checked:text-accent peer-focus-visible:outline-3 peer-focus-visible:outline-accent ${has('purpose') ? 'border-over' : 'border-line'}`}>
+                    <Icon className="size-4 shrink-0" aria-hidden /><span className="truncate">{l}</span>
+                  </span>
+                </label>
+              ))}
+            </div>
+            {err('purpose')}
+          </fieldset>
+          <div>
+            <label htmlFor={`${id}-budget`} className={label}>Kinh phí dự trù</label>
+            <div className="flex">
+              <input id={`${id}-budget`} inputMode="numeric" className={`${inputCls} rounded-r-none`} placeholder="vd: 150.000.000"
+                value={value.budget} onChange={e => set('budget', groupDigits(e.target.value))} aria-invalid={has('budget_or_destination')} />
+              <div className="flex shrink-0 overflow-hidden rounded-r-xl border border-l-0 border-line text-xs" role="radiogroup" aria-label="Kinh phí tính cho">
+                {([[false, 'tổng đoàn'], [true, '/người']] as const).map(([pp, t]) => (
+                  <button key={t} type="button" role="radio" aria-checked={value.budget_per_person === pp} onClick={() => set('budget_per_person', pp)}
+                    className={`cursor-pointer px-2.5 font-medium ${value.budget_per_person === pp ? 'bg-ocean text-white' : 'bg-soft text-muted hover:text-primary'}`}>{t}</button>
+                ))}
               </div>
             </div>
-            <div>
-              <label htmlFor={`${id}-dest`} className={label}>Địa điểm</label>
-              <input id={`${id}-dest`} className={inputCls} placeholder="vd: Hạ Long" list="dl-dest" value={value.destination}
-                onChange={e => set('destination', e.target.value)} aria-invalid={has('budget_or_destination')} />
-              <p className="mt-2 text-xs text-muted">Để trống nếu muốn được gợi ý.</p>
-            </div>
           </div>
-          {err('budget_or_destination')}
         </div>
+        {has('budget_or_destination') ? err('budget_or_destination')
+          : <p className="-mt-2 text-xs text-muted">Có <b>kinh phí</b>, có <b>địa điểm</b>, hoặc cả hai đều được — ít nhất một.</p>}
 
         <div className="flex justify-end">
           <button type="submit" className={btnPrimary}>Lập kế hoạch <ArrowRight className="size-4" aria-hidden /></button>
@@ -207,26 +217,12 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
         ) : <p className="mt-2 text-sm text-muted">Nhập <b>số người</b>, <b>nơi xuất phát</b> và <b>địa điểm</b> để thấy ngay giá tham khảo 3 gói.</p>}
       </div>
 
-      <div className={`flex gap-3 rounded-3xl p-4 text-sm ring-1 ${hint.ok ? 'bg-card ring-accent/20' : 'bg-over-bg text-over ring-over/30'}`} aria-live="polite">
-        <Route className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
-        <span><b>Hệ thống sẽ:</b> {hint.text}</span>
-      </div>
-
-      {value.purpose && (
-        <div className="flex gap-3 rounded-3xl bg-card p-4 text-sm ring-1 ring-black/5">
-          <Sparkles className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden />
-          <span><b>Mục đích "{PURPOSES.find(p => p.v === value.purpose)?.label}":</b> {PURPOSE_EFFECT[value.purpose]}</span>
-        </div>
-      )}
-
-      <div className="rounded-3xl bg-card p-4 ring-1 ring-black/5">
-        <p className="mb-2 text-sm font-bold">Thử nhanh với ví dụ</p>
-        <div className="grid gap-2">
-          {PRESETS.map(p => (
-            <button key={p.label} type="button" onClick={() => onChange({ ...value, ...p.f })}
-              className="cursor-pointer rounded-xl bg-soft px-3 py-2 text-left text-sm transition hover:bg-accent-soft hover:text-accent-dark">{p.label}</button>
-          ))}
-        </div>
+      <div className="grid gap-3 rounded-3xl bg-card p-4 text-sm ring-1 ring-black/5" aria-live="polite">
+        <p className={`flex gap-2.5 ${hint.ok ? '' : 'text-over'}`}><Route className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden /><span><b>Hệ thống sẽ:</b> {hint.text}</span></p>
+        {value.purpose && (
+          <p className="flex gap-2.5 border-t border-line pt-3"><Sparkles className="mt-0.5 size-4 shrink-0 text-sun" aria-hidden />
+            <span><b>{PURPOSES.find(p => p.v === value.purpose)?.label}:</b> {PURPOSE_EFFECT[value.purpose]}</span></p>
+        )}
       </div>
     </aside>
     </div>

@@ -267,12 +267,100 @@ def customize(req) -> dict:
     return {"options": opts, "removed": list(req.get("_bo") or []), "headcount": req["so_nguoi"], "days": req["so_ngay"]}
 
 
+SAN_BAY_TEN = {"HAN": "Sân bay Nội Bài", "HPH": "Sân bay Cát Bi", "DAD": "Sân bay Đà Nẵng", "SGN": "Sân bay Tân Sơn Nhất",
+               "VCA": "Sân bay Cần Thơ", "VDO": "Sân bay Vân Đồn", "THD": "Sân bay Thọ Xuân", "VII": "Sân bay Vinh",
+               "VDH": "Sân bay Đồng Hới", "HUI": "Sân bay Phú Bài", "UIH": "Sân bay Phù Cát", "TBB": "Sân bay Tuy Hòa",
+               "CXR": "Sân bay Cam Ranh", "DLI": "Sân bay Liên Khương", "PQC": "Sân bay Phú Quốc", "VCS": "Sân bay Côn Đảo"}
+_OSRM_CACHE: dict = {}
+_OSRM_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))), "var", "osrm_cache.json")
+
+
+def _duong_bo(a, b):
+    """Đường bộ thật giữa 2 điểm (OSRM công khai, dữ liệu OpenStreetMap) — [[lat, lon], ...], km. Lỗi mạng → đường thẳng, approx."""
+    import json
+    import urllib.request
+    if os.environ.get("NO_OSRM"):                         # test / chạy không mạng
+        return {"path": [list(a), list(b)], "km": None, "approx": True}
+    key = "%.4f,%.4f;%.4f,%.4f" % (a[0], a[1], b[0], b[1])
+    if not _OSRM_CACHE and os.path.exists(_OSRM_FILE):
+        try:
+            _OSRM_CACHE.update(json.load(open(_OSRM_FILE, encoding="utf-8")))
+        except Exception:  # noqa: BLE001
+            pass
+    if key in _OSRM_CACHE:
+        return _OSRM_CACHE[key]
+    url = ("https://router.project-osrm.org/route/v1/driving/%.5f,%.5f;%.5f,%.5f?overview=simplified&geometries=geojson"
+           % (a[1], a[0], b[1], b[0]))
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "AuraFarming-hackathon"}), timeout=8) as r:
+            x = json.loads(r.read())["routes"][0]
+        out = {"path": [[round(lat, 5), round(lon, 5)] for lon, lat in x["geometry"]["coordinates"]],
+               "km": round(x["distance"] / 1000), "approx": False}
+    except Exception:  # noqa: BLE001
+        return {"path": [list(a), list(b)], "km": None, "approx": True}
+    _OSRM_CACHE[key] = out
+    try:
+        os.makedirs(os.path.dirname(_OSRM_FILE), exist_ok=True)
+        json.dump(_OSRM_CACHE, open(_OSRM_FILE, "w", encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        pass
+    return out
+
+
+def _cung_bay(a, b, n=24):
+    """Cung cong cho chặng bay (chỉ để vẽ)."""
+    (la1, lo1), (la2, lo2) = a, b
+    mla, mlo = (la1 + la2) / 2, (lo1 + lo2) / 2
+    dla, dlo = la2 - la1, lo2 - lo1
+    cla, clo = mla - dlo * 0.18, mlo + dla * 0.18            # điểm điều khiển lệch vuông góc
+    pts = []
+    for i in range(n + 1):
+        t = i / n
+        pts.append([round((1 - t) ** 2 * la1 + 2 * (1 - t) * t * cla + t * t * la2, 5),
+                    round((1 - t) ** 2 * lo1 + 2 * (1 - t) * t * clo + t * t * lo2, 5)])
+    return pts
+
+
+def routes(req, dest) -> dict:
+    """Các chặng đi theo từng gói: từ đâu → đến đâu, phương tiện, km, giờ, đường vẽ (đường bộ thật / cung bay)."""
+    tu, den = dest["tu"], dest["den"]
+    A, B = (tu["lat"], tu["lon"]), (den["lat"], den["lon"])
+    out = {}
+    for lv in TIERS:
+        c = dest["raw"][lv]["_chang"]
+        t = c["tuyen"]
+        xe = c["mo_ta"].split(" đường bộ")[0].split(" đi lại")[0]
+        if c["kieu"] == "ve":
+            b = t["duong_bay"]
+            sa, sb = b["chang"].split("-")
+            PA, PB = du_lieu.SAN_BAY[sa], du_lieu.SAN_BAY[sb]
+            r1, r3 = _duong_bo(A, PA), _duong_bo(PB, B)
+            xe_dich = c["mo_ta"].split("+ ")[-1].replace(" tại chỗ", "")
+            legs = [
+                {"from": tu["ten"], "to": SAN_BAY_TEN.get(sa, sa), "mode": "road", "vehicle": "Tự đến sân bay (chưa tính trong gói)",
+                 "km": r1["km"], "hours": None, "path": r1["path"], "approx": r1["approx"]},
+                {"from": SAN_BAY_TEN.get(sa, sa), "to": SAN_BAY_TEN.get(sb, sb), "mode": "flight", "vehicle": "Máy bay %s (vé khứ hồi trong gói)" % b["chang"],
+                 "km": b["km"], "hours": round(b["gio_bay"], 1), "path": _cung_bay(PA, PB), "approx": False},
+                {"from": SAN_BAY_TEN.get(sb, sb), "to": den["ten"], "mode": "road", "vehicle": xe_dich[0].upper() + xe_dich[1:] + " (trong gói)",
+                 "km": r3["km"] or b["km_san_bay_toi_diem_den"], "hours": round(b["km_san_bay_toi_diem_den"] / 50, 1), "path": r3["path"], "approx": r3["approx"]},
+            ]
+        elif t["duong_bo_km"]:
+            r = _duong_bo(A, B)
+            legs = [{"from": tu["ten"], "to": den["ten"], "mode": "road", "vehicle": xe[0].upper() + xe[1:] + " (trong gói)",
+                     "km": r["km"] or t["duong_bo_km"], "hours": t["duong_bo_gio"], "path": r["path"], "approx": r["approx"],
+                     "ferry": bool(t.get("co_pha"))}]
+        else:
+            legs = []
+        out[lv] = legs
+    return out
+
+
 def map_info(req, dest) -> dict:
     tu, den = dest["tu"], dest["den"]
     c = dest["raw"]["tiet_kiem"]["_chang"]
     return {"origin": {"name": tu["ten"], "lat": tu["lat"], "lon": tu["lon"]},
             "dest": {"name": den["ten"], "lat": den["lat"], "lon": den["lon"]},
-            "mode": "plane" if c["kieu"] == "ve" else "bus"}
+            "mode": "plane" if c["kieu"] == "ve" else "bus", "routes": routes(req, dest)}
 
 
 def view_for(req) -> dict:
