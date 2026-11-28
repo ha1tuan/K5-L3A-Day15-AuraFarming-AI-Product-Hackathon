@@ -72,7 +72,7 @@ export function ChatWidget() {
             <div className="-my-4 -ml-1"><Robot className="size-16" talking={busy} /></div>
             <div className="leading-tight">
               <p className="font-extrabold">Aura <span className="font-normal text-white/70">· trợ lý AuraFarming</span></p>
-              <p className="flex items-center gap-1.5 text-xs text-white/80"><span className="size-2 rounded-full bg-emerald-400" />{busy ? 'Đang tính…' : 'Sẵn sàng · số tiền do code tính'}</p>
+              <p className="flex items-center gap-1.5 text-xs text-white/80"><span className="size-2 rounded-full bg-emerald-400" />{busy ? 'Đang tính…' : 'Sẵn sàng · tiền được tính từng dòng, không đoán'}</p>
             </div>
             <button type="button" onClick={() => setMsgs([HELLO])} className="ml-auto grid size-8 cursor-pointer place-items-center rounded-full hover:bg-white/15" aria-label="Cuộc trò chuyện mới" title="Cuộc trò chuyện mới"><RotateCcw className="size-4" /></button>
             <button type="button" onClick={() => setOpen(false)} className="grid size-8 cursor-pointer place-items-center rounded-full hover:bg-white/15" aria-label="Đóng"><X className="size-5" /></button>

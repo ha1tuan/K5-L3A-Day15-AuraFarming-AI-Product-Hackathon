@@ -26,7 +26,7 @@ FAQ = [
     (r"du lieu|nguon|lay o dau|chinh xac|tin cay",
      "Số liệu đến từ bộ dữ liệu của nhóm: **24 điểm đến**, 120 tuyến từ 5 thành phố, giá gốc có link nguồn (vé máy bay, thuê xe, "
      "phòng, ăn) và **112 video review đã kiểm link**. Khách sạn / nhà hàng là **mức giá theo hạng**, không phải cơ sở cụ thể — "
-     "mọi phép tính (phòng, xe, 5% phát sinh, vượt ngân sách) do **code** làm, AI không tự nhẩm tiền."),
+     "mọi phép tính (phòng, xe, 5% dự phòng, vượt ngân sách) được hệ thống cộng từng dòng như **bảng tính kế toán** — AI không tự đoán tiền."),
     (r"\bvat\b|hoa don|chung tu|ke toan|thue|chuyen khoan|phuc loi",
      "Khi soát báo giá, mình kiểm: **hoá đơn VAT** (25/30 báo giá tour đoàn công khai để VAT ngoài giá), **chuyển khoản** cho "
      "hoá đơn ≥ 5 triệu (từ 01/07/2025), hoá đơn ghi **theo đoàn** (không danh sách tên) và **trần phúc lợi** 1 tháng lương "

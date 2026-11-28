@@ -168,7 +168,7 @@ export default function App() {
           <h1 className="mt-1 text-3xl font-extrabold sm:text-4xl">{tab === 'quote' ? 'Soát báo giá tour đoàn' : 'Lập kế hoạch chuyến đi công ty'}</h1>
           <p className="mt-2 max-w-2xl text-white/80">{tab === 'quote'
             ? 'Biết tổng chi thật (VAT, vé, tip, vé máy bay ngoài giá) và chứng từ cần có — trong vài giây.'
-            : '3 gói Tiết kiệm · Cân bằng · Cao cấp với bảng chi phí, cơ cấu phòng, số xe và lịch từng giờ — mọi con số do code tính.'}</p>
+            : '3 gói Tiết kiệm · Cân bằng · Cao cấp với bảng chi phí, cách xếp phòng, số xe và lịch từng giờ — tiền được tính từng dòng như bảng tính kế toán.'}</p>
         </div>
       </section>
       {tab === 'quote' ? (

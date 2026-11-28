@@ -66,7 +66,7 @@ function VideoModal({ d, onClose, onPlan }: { d: Featured; onClose: () => void; 
             <div className="rounded-xl bg-sun-soft p-3"><p className="text-xs text-muted">Gói tiết kiệm từ</p><p className="text-lg font-bold text-sun-dark">{formatVndShort(d.price_from)}<span className="text-xs font-normal text-muted">/người</span></p></div>
             <div className="rounded-xl bg-accent-soft p-3"><p className="text-xs text-muted">Mùa đẹp</p><p className="text-lg font-bold text-accent-dark">Tháng {d.season}</p></div>
           </div>
-          <p className="text-xs text-muted">Giá tham khảo tính bằng code: 30 người, 3N2Đ, từ {d.from} ({d.travel}{d.hours ? `, ~${d.hours} giờ` : ''}).</p>
+          <p className="text-xs text-muted">Giá tham khảo do hệ thống tự tính: 30 người, 3N2Đ, từ {d.from} ({d.travel}{d.hours ? `, ~${d.hours} giờ` : ''}).</p>
           <div>
             <p className="mb-2 text-sm font-semibold">Video khác ({d.videos.length})</p>
             <div className="grid grid-cols-2 gap-2">
@@ -243,8 +243,9 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
               VAT, vé tham quan, tip, có khi cả vé máy bay nằm trong mục "không bao gồm". Duyệt xong mới phát sinh — hoặc kế toán không thanh toán được vì thiếu hoá đơn.
             </p></Reveal>
             <Reveal delay={240}><p className="mt-4 text-lg leading-relaxed text-muted">
-              <b className="text-primary">AuraFarming</b> gom việc đó lại: AI hiểu yêu cầu bằng tiếng Việt, còn <b className="text-primary">mọi con số do code tính</b> từ dữ liệu có nguồn —
-              để người tổ chức trình sếp một bản dự trù đúng ngay lần đầu.
+              <b className="text-primary">AuraFarming</b> gom việc đó lại: bạn nhắn yêu cầu bằng tiếng Việt như nói chuyện, AI hiểu ý bạn; còn
+              <b className="text-primary"> mọi con số được tính như một bảng tính kế toán</b> — cộng từng dòng theo công thức cố định, trên giá thị trường có nguồn,
+              không để AI tự đoán. Nhờ vậy bản dự trù trình sếp đúng ngay từ lần đầu.
             </p></Reveal>
           </div>
           <Reveal variant="right" className="relative">
@@ -274,7 +275,7 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
           <Reveal delay={80}><h2 className="mt-3 max-w-3xl text-4xl font-extrabold leading-tight sm:text-5xl">Nhóm đã đếm trên dữ liệu công khai trước khi xây sản phẩm.</h2></Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { n: <CountUp to={83} suffix="%" />, t: 'báo giá tour đoàn để VAT / hoá đơn ngoài giá', s: '25/30 báo giá công khai, đếm bằng script, ngưỡng ghi trước' },
+              { n: <CountUp to={83} suffix="%" />, t: 'báo giá tour đoàn để VAT / hoá đơn ngoài giá', s: '25/30 báo giá công khai, đếm tự động từng trang' },
               { n: <CountUp to={167} prefix="+" suffix="%" />, t: 'tổng chi thật so với giá báo — ca nặng nhất', s: 'tour "giá rẻ" để vé máy bay ở mục "không bao gồm"' },
               { n: <CountUp to={5.5} decimals={1} prefix="≈" suffix="%" />, t: 'review 1–2★ kể đặt rồi mà thiếu phòng', s: '7.130 review Google Play của 5 app du lịch' },
               { n: <CountUp to={nVideo} />, t: 'video review & team building đã kiểm link', s: `${FEATURED.length} điểm đến · 120 tuyến · giá gốc có nguồn` },
@@ -301,7 +302,7 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
           {[
             { I: MessageSquareText, t: 'Nhắn như nói chuyện', d: '"50 người từ Đà Nẵng, 2 ngày 1 đêm, gắn kết, 200 triệu" — hoặc điền form, hoặc dán báo giá.' },
             { I: Bot, t: 'AI hiểu yêu cầu', d: 'Bóc số người, ngày, nơi đi, mục đích, ngân sách. Thiếu thì hỏi lại, không tự đoán.' },
-            { I: Calculator, t: 'Code tính mọi con số', d: 'Chặng đi, xếp phòng rẻ nhất, số xe, ăn, hoạt động, 5% phát sinh, VAT — từ dữ liệu có nguồn.' },
+            { I: Calculator, t: 'Tính tiền như kế toán', d: 'Tiền xe, phòng, ăn, hoạt động, 5% dự phòng, VAT được cộng từng dòng theo công thức cố định — không phải AI đoán.' },
             { I: FileText, t: 'Ra quyết định', d: '3 gói + lịch từng giờ, giải thích khi vượt ngân sách, câu cần hỏi công ty tour, tờ trình nháp.' },
           ].map(({ I, t, d }, k) => (
             <Reveal as="li" key={t} delay={k * 140} className="relative rounded-3xl bg-card p-6 shadow-sm ring-1 ring-black/5">
@@ -389,8 +390,8 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
           <div>
             <Reveal><Eyebrow>Vì sao tin được</Eyebrow></Reveal>
-            <Reveal delay={80}><h2 className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl">AI hiểu — code tính — người quyết.</h2></Reveal>
-            <Reveal delay={160}><p className="mt-5 text-lg text-muted">Sai một con số cho cả đoàn là sai cả bản dự trù. Vì vậy AuraFarming tách rõ việc của AI và việc của code.</p></Reveal>
+            <Reveal delay={80}><h2 className="mt-3 text-4xl font-extrabold leading-tight sm:text-5xl">AI hiểu ý — hệ thống tính tiền — bạn quyết định.</h2></Reveal>
+            <Reveal delay={160}><p className="mt-5 text-lg text-muted">Sai một con số cho cả đoàn là sai cả bản dự trù. Vì vậy AuraFarming chia rõ: AI chỉ đọc hiểu yêu cầu, còn tiền bạc được tính như bảng tính kế toán — ai cũng kiểm lại được.</p></Reveal>
             <Reveal delay={240} className="mt-8 flex gap-3 rounded-3xl bg-sun-soft p-5">
               <Quote className="size-6 shrink-0 text-sun" aria-hidden />
               <p className="text-sm italic text-primary">"Nếu quý khách có nhu cầu xuất hóa đơn, công ty du lịch sẽ phụ thu thêm 10% trên giá tour." <span className="not-italic text-muted">— trích mục "không bao gồm" của một báo giá tour đoàn công khai</span></p>
@@ -398,9 +399,9 @@ export function Landing({ onStart, onQuote }: { onStart: (destination?: string) 
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {[
-              { I: Bot, t: 'AI chỉ hiểu yêu cầu', d: 'Model bóc thông tin từ câu nhắn; số người, ngân sách được code kiểm lại với chữ người dùng viết.' },
-              { I: Calculator, t: 'Code tính mọi con số', d: 'Tiền, phòng (quy hoạch động), số xe, giờ đi, VAT, phát sinh 5% — kiểm lại được từng dòng.' },
-              { I: Database, t: 'Dữ liệu có nguồn', d: 'Giá gốc có link + ngày xem; số không có nguồn luôn ghi nhãn "ước tính".' },
+              { I: Bot, t: 'AI chỉ đọc hiểu yêu cầu', d: 'AI đọc câu nhắn để lấy số người, ngày đi, nơi đi, ngân sách; hệ thống đối chiếu lại với đúng chữ bạn viết để không hiểu nhầm.' },
+              { I: Calculator, t: 'Tính tiền như kế toán', d: 'Số lượng × đơn giá = thành tiền cho từng dòng; tự chọn cách xếp phòng, số xe rẻ nhất mà vẫn đủ chỗ cả đoàn.' },
+              { I: Database, t: 'Giá có nguồn rõ ràng', d: 'Giá gốc lấy từ nguồn công khai, ghi ngày xem; khoản nào chưa có nguồn luôn ghi rõ "ước tính".' },
               { I: Ban, t: 'Không đặt, không thanh toán', d: 'Chỉ đề xuất; từ chối lệnh "bỏ qua ngân sách", che số thẻ / SĐT, không khẳng định còn phòng.' },
               { I: ListChecks, t: 'Đo bằng bộ câu thử', d: '42 câu thử (14 từ dữ liệu thật, 12 trong đó là báo giá tour), chuẩn "đạt" chốt trước; lượt 1: 27/30.' },
               { I: ShieldCheck, t: 'Soát chứng từ', d: 'Hoá đơn VAT, chuyển khoản ≥ 5 triệu, trần phúc lợi — kèm link nguồn, kế toán đối chiếu.' },
