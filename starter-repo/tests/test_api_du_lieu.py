@@ -130,3 +130,21 @@ def test_lich_co_chi_tiet_thuc_don_chuong_trinh_va_nguon(c):
     tb = [s for s in slots if "gắn kết" in s["title"] or s["kind"] == "gala"]
     assert tb and all(s["program"]["steps"] and s["program"]["steps"][0]["start"] == s["start"] for s in tb)
     assert all(x["url"].startswith("https://") for s in slots for x in s.get("sources", []))
+
+
+def test_dia_diem_sai_bao_khong_ton_tai(c, monkeypatch):
+    """Địa điểm gõ sai → hỏi lại kèm gợi ý; không có trên bản đồ VN → báo không tồn tại; nước ngoài → từ chối;
+    nơi có thật ngoài dữ liệu vẫn cho qua."""
+    from src.api.services import du_lieu_service as ds
+    co_that = {"Quy Nhơn": True}
+    monkeypatch.setattr(ds, "_co_o_viet_nam", lambda ten: co_that.get(ten, False))
+    post = lambda **kw: c.post("/api/trips", json={**BASE, "origin": "Hà Nội", **kw}).json()
+    v = post(destination="Đà Lạtt")
+    assert v["status"] == "ask_back" and v["missing_fields"] == ["destination"] and "Đà Lạt" in v["suggestions"]
+    v = post(destination="abcxyz")
+    assert v["status"] == "ask_back" and v["suggestions"] == [] and "không tồn tại" in v["message"]
+    assert post(destination="Paris")["status"] == "refused"
+    v = post(origin="Xyzabc", destination="Hạ Long")
+    assert v["status"] == "ask_back" and v["missing_fields"] == ["origin"]
+    assert post(destination="Hạ Long")["status"] == "ok"
+    assert ds.check_places({"noi_xuat_phat": "Hà Nội", "dia_diem": "Quy Nhơn"}) is None

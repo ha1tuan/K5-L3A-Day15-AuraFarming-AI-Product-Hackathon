@@ -19,7 +19,7 @@ import { Notice, btnGhost } from './components/ui';
 const EMPTY: FormState = { headcount: '', days: 3, start_date: '', origin: '', purpose: null, budget: '', budget_per_person: false, destination: '' };
 
 type Screen =
-  | { kind: 'form'; errors: Field[]; askBack: boolean }
+  | { kind: 'form'; errors: Field[]; askBack: boolean; message?: string; suggestions?: string[] }
   | { kind: 'loading'; steps: string[] }
   | { kind: 'view'; view: TripView; chosenDest?: string };
 
@@ -71,7 +71,7 @@ export default function App() {
       const v = await call(ctl.signal);
       if (v.status === 'ask_back') {
         setTripInUrl(null);
-        setScreen({ kind: 'form', errors: v.missing_fields ?? [], askBack: true });
+        setScreen({ kind: 'form', errors: v.missing_fields ?? [], askBack: true, message: v.message, suggestions: v.suggestions });
       } else {
         setTripInUrl(v.trip_id);
         setScreen({ kind: 'view', view: v });
@@ -110,7 +110,8 @@ export default function App() {
 
   let step: 1 | 2 | 3 = 1, skipped = false, body: React.ReactNode = null;
   if (screen.kind === 'form') {
-    body = <TripForm value={form} onChange={setForm} onSubmit={submit} errors={screen.errors} askBack={screen.askBack} />;
+    body = <TripForm value={form} onChange={setForm} onSubmit={submit} errors={screen.errors} askBack={screen.askBack}
+      message={screen.message} suggestions={screen.suggestions} />;
   } else if (screen.kind === 'loading') {
     body = <LoadingSteps steps={screen.steps} onCancel={() => abort.current?.abort()} />;
   } else {

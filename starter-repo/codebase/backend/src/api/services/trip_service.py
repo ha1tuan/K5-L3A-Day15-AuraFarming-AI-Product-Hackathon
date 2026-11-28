@@ -132,7 +132,7 @@ def _save_graph(view: dict, raw: dict, choices: dict) -> dict:
     return _save(view)
 
 
-FIELD_VI = {"headcount": "số người đi", "days": "số ngày", "start_date": "ngày đi", "origin": "nơi xuất phát", "purpose": "mục đích",
+FIELD_VI = {"headcount": "số người đi", "days": "số ngày", "start_date": "ngày đi", "origin": "nơi xuất phát", "destination": "địa điểm", "purpose": "mục đích",
             "budget_or_destination": "kinh phí hoặc địa điểm"}
 
 
@@ -149,6 +149,12 @@ def create_trip(inp: TripInput) -> dict:
     if not 5 <= req["so_nguoi"] <= 500 or not 1 <= req["so_ngay"] <= 7:
         return _save({"trip_id": uuid.uuid4().hex, "status": "refused",
                       "message": "Hệ thống hỗ trợ đoàn 5–500 người, chuyến 1–7 ngày. Đoàn lớn hơn: chia đợt và lập kế hoạch từng đợt."})
+    bad = du_lieu_service.check_places(req)
+    if bad:
+        out = {"trip_id": uuid.uuid4().hex, "status": bad["status"], "message": bad["message"]}
+        if bad["status"] == "ask_back":
+            out.update(missing_fields=[bad["field"]], suggestions=bad["suggestions"])
+        return _save(out)
     if du_lieu_service.handles(req):
         view = du_lieu_service.create(req)
         view["trip_id"] = uuid.uuid4().hex

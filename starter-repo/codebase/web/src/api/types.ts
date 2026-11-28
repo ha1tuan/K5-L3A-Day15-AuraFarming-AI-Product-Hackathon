@@ -4,7 +4,7 @@
 export type Tier = 'tiet_kiem' | 'can_bang' | 'cao_cap';
 export type Purpose = 'gan_ket' | 'nghi_duong' | 'ca_hai';
 export type Status = 'choose_destination' | 'choose_package' | 'ok' | 'ask_back' | 'refused' | 'error';
-export type Field = 'headcount' | 'days' | 'start_date' | 'origin' | 'purpose' | 'budget_or_destination';
+export type Field = 'headcount' | 'days' | 'start_date' | 'origin' | 'destination' | 'purpose' | 'budget_or_destination';
 
 export interface TripInput {
   headcount: number | null;
@@ -146,6 +146,8 @@ export interface TripView {
   message: string;
   request?: TripEcho;
   missing_fields?: Field[];
+  /** Địa điểm gõ sai: tên gần giống có dữ liệu ("Có phải bạn muốn…"). */
+  suggestions?: string[];
   destinations?: DestinationOption[];
   /** Cách A: các nơi đã gợi ý (kể cả lần trước) và còn nơi khác để gợi ý không. */
   seen?: string[];

@@ -391,6 +391,56 @@ def destination_option(req, dest, recommended) -> dict:
 
 
 # --- vào ---------------------------------------------------------------------------------------
+def _goi_y_ten(ten, n=3):
+    """Tên gần giống trong danh sách điểm đi / điểm đến (gõ sai chính tả: "Hạ Longg" → "Hạ Long")."""
+    import difflib
+    ten_hien = {}
+    for x in du_lieu.D("diem_den")["diem_di"] + du_lieu.D("diem_den")["diem_den"]:
+        hien = x["ten"].split(" (")[0]
+        for k in [x["ten"], hien] + du_lieu.BI_DANH.get(x["id"], []):
+            ten_hien.setdefault(du_lieu.khong_dau(k), hien)
+    gan = difflib.get_close_matches(du_lieu.khong_dau(ten), list(ten_hien), n=n * 2, cutoff=0.6)
+    return list(dict.fromkeys(ten_hien[g] for g in gan))[:n]
+
+
+def _co_o_viet_nam(ten):
+    """True / False theo bản đồ (chỉ tìm trong nước); None nếu không tra được (mất mạng) — khi đó không chặn."""
+    from tools import geocode, CacheMiss, SearchUnavailable
+    try:
+        return geocode(ten, None, domestic=True) is not None
+    except (SearchUnavailable, CacheMiss):
+        return None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def check_places(req):
+    """Bắt địa điểm sai trước khi lập kế hoạch. Trả None nếu ổn, hoặc {"status", "field", "message", "suggestions"}:
+    nước ngoài → refused; gõ gần giống tên có dữ liệu → hỏi lại kèm gợi ý; không có trên bản đồ Việt Nam → báo không tồn tại.
+    Nơi có thật ngoài bộ dữ liệu (vd Quy Nhơn) vẫn cho qua (đường graph lập ước tính)."""
+    import guardrails as gr
+    for field, key, tim, nhan in (("origin", "noi_xuat_phat", du_lieu.tim_diem_di, "Nơi xuất phát"),
+                                  ("destination", "dia_diem", du_lieu.tim_diem_den, "Địa điểm")):
+        ten = (req.get(key) or "").strip()
+        if not ten or tim(ten):
+            continue
+        ngoai = gr.foreign_destination(ten)
+        if ngoai and field == "destination":
+            return {"status": "refused", "field": field, "message": gr.refuse_foreign(ten).replace("**", ""), "suggestions": []}
+        if ngoai:
+            return {"status": "ask_back", "field": field, "suggestions": [],
+                    "message": "%s \"%s\" ở nước ngoài — hệ thống chỉ lập kế hoạch cho đoàn xuất phát trong nước." % (nhan, ten)}
+        co = _co_o_viet_nam(ten)
+        if co is not False:
+            continue
+        goi_y = _goi_y_ten(ten)
+        msg = ("%s \"%s\" không tìm thấy. Có phải bạn muốn: %s?" % (nhan, ten, ", ".join(goi_y)) if goi_y else
+               "%s \"%s\" không tồn tại hoặc không tìm thấy ở Việt Nam — kiểm tra lại chính tả, hoặc chọn trong danh sách gợi ý."
+               % (nhan, ten))
+        return {"status": "ask_back", "field": field, "message": msg, "suggestions": goi_y}
+    return None
+
+
 def handles(req) -> bool:
     if not du_lieu.co_du_lieu() or not du_lieu.tim_diem_di(req["noi_xuat_phat"]):
         return False

@@ -63,16 +63,19 @@ const ERR: Record<Field, string> = {
   days: 'Chọn số ngày',
   start_date: 'Ngày đi phải từ hôm nay trở đi (tối đa 1 năm tới)',
   origin: 'Nhập nơi xuất phát',
+  destination: 'Địa điểm không tìm thấy — kiểm tra lại chính tả',
   purpose: 'Chọn mục đích chuyến đi',
   budget_or_destination: 'Nhập kinh phí hoặc địa điểm',
 };
 
-export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
+export function TripForm({ value, onChange, onSubmit, errors, askBack, message, suggestions = [] }: {
   value: FormState;
   onChange: (f: FormState) => void;
   onSubmit: () => void;
   errors: Field[];
   askBack: boolean;
+  /** Lời báo của máy chủ (vd địa điểm không tồn tại) và tên gợi ý để bấm chọn. */
+  message?: string; suggestions?: string[];
 }) {
   const id = useId();
   const set = <K extends keyof FormState>(k: K, v: FormState[K]) => onChange({ ...value, [k]: v });
@@ -90,7 +93,9 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
     }, 450);
     return () => { clearTimeout(t); ctl.abort(); };
   }, [value.origin, value.destination, value.headcount, value.days, value.purpose]);
-  const err = (f: Field) => has(f) && <p id={`${id}-${f}-err`} className="mt-1 text-xs text-over">{ERR[f]}</p>;
+  const placeErr = askBack && !!message && (has('origin') || has('destination'));
+  const pick = (name: string) => set(has('origin') && placeErr ? 'origin' : 'destination', name);
+  const err = (f: Field) => has(f) && <p id={`${id}-${f}-err`} className="mt-1 text-xs text-over">{placeErr && (f === 'origin' || f === 'destination') ? message : ERR[f]}</p>;
   const label = 'mb-1 block text-sm font-medium';
 
   return (
@@ -111,9 +116,25 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
       </div>
       {askBack && errors.length > 0 && (
         <div className="mb-6">
+          {placeErr ? (
+            <Notice tone="ask" title="Không tìm thấy địa điểm">
+              {message}
+              {suggestions.length > 0 && (
+                <span className="mt-2 flex flex-wrap gap-2">
+                  {suggestions.map(n => (
+                    <button key={n} type="button" onClick={() => pick(n)}
+                      className="cursor-pointer rounded-full bg-card px-3 py-1 text-xs font-semibold text-accent ring-1 ring-accent/30 hover:bg-accent-soft">
+                      Dùng “{n}”
+                    </button>
+                  ))}
+                </span>
+              )}
+            </Notice>
+          ) : (
           <Notice tone="ask" title="Cần thêm thông tin trước khi lập kế hoạch">
             Cho mình biết: {errors.map(f => ERR[f].replace(/^Nhập |^Chọn /, '').toLowerCase()).join(', ')}. Các ô cần điền đã được đánh dấu.
           </Notice>
+          )}
         </div>
       )}
       <form
@@ -153,7 +174,9 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
           <div>
             <label htmlFor={`${id}-dest`} className={label}>Địa điểm <span className="font-normal text-muted">(để trống nếu muốn được gợi ý)</span></label>
             <input id={`${id}-dest`} className={inputCls} placeholder="vd: Hạ Long" list="dl-dest" value={value.destination}
-              onChange={e => set('destination', e.target.value)} aria-invalid={has('budget_or_destination')} />
+              onChange={e => set('destination', e.target.value)} aria-invalid={has('budget_or_destination') || has('destination')}
+              aria-describedby={has('destination') ? `${id}-destination-err` : undefined} />
+            {err('destination')}
           </div>
         </div>
 
