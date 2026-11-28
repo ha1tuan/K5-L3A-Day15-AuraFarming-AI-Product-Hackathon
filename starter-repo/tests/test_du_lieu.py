@@ -197,3 +197,13 @@ def test_qty_note_explains_grouped_quantity():
     assert qty_note(req, 36, "phòng·đêm") == "12 phòng × 3 đêm"
     assert qty_note(req, 400, "suất") == "50 người × 8 bữa"
     assert qty_note(req, 50, "vé") is None and qty_note(req, 7, "xe·ngày") is None
+
+
+def test_ly_do_theo_noi_xuat_phat():
+    """"Vì sao hợp" không mang câu chỉ đúng với nơi khác (Ba Vì "đi về trong ngày" khi bay từ Đà Nẵng)."""
+    import du_lieu as d
+    ba_vi = next(x for x in d.D("diem_den")["diem_den"] if x["ten"] == "Ba Vì")
+    tu_dn, tu_hn = d.tim_diem_di("Đà Nẵng"), d.tim_diem_di("Hà Nội")
+    assert "trong ngày" not in d.ly_do(ba_vi, "gan_ket", tu_dn)
+    assert "gần Hà Nội" in d.ly_do(ba_vi, "gan_ket", tu_hn) and "đi về trong ngày" in d.ly_do(ba_vi, "gan_ket", tu_hn)
+    assert d.mo_ta_chung("thị trấn trên núi gần Hà Nội, mát mùa hè") == "thị trấn trên núi, mát mùa hè"

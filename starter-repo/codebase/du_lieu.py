@@ -240,11 +240,49 @@ def goi_tu_du_lieu(req, tu, den, lv):
 
 
 # --- Ghép thành "dest" agent dùng ---------------------------------------------------------------
-def ly_do(den, md):
+# Ý trong mô tả điểm đến chỉ đúng với một nơi xuất phát (vd "gần Hà Nội", "đi về trong ngày") — bỏ ra, thay bằng câu tính từ tuyến thật.
+_Y_THEO_NOI_DI = re.compile(r"Hà Nội|TP\.?\s?HCM|Sài Gòn|trong ngày|đi \d+[–-]?\d* ngày|ngày \d+ đêm", re.I)
+
+
+_GAN_THANH_PHO = re.compile(r"\s*(?:đường\s+)?(?:cao tốc\s+)?(?:gần|cách|từ)\s+(?:Hà Nội|TP\.?\s?HCM|Sài Gòn)", re.I)
+
+
+def mo_ta_chung(mo_ta):
+    """Bỏ các ý phụ thuộc nơi xuất phát khỏi mô tả: cắt cụm "gần / cách / từ + thành phố", rồi bỏ ý còn dính
+    nơi đi hoặc số ngày (tách theo ';' rồi ',')."""
+    giu = []
+    for cum in mo_ta.split(";"):
+        y = [x for x in (_GAN_THANH_PHO.sub("", x).strip() for x in cum.split(",")) if x and not _Y_THEO_NOI_DI.search(x)]
+        if y:
+            giu.append(", ".join(y))
+    return "; ".join(giu) or mo_ta
+
+
+def cach_noi_di(tu, den):
+    """Câu về đường đi tính theo nơi xuất phát thật; None nếu xa (thẻ đã ghi giờ bay / giờ xe)."""
+    if not tu:
+        return None
+    t = tuyen(tu, den)
+    gio = t.get("duong_bo_gio")
+    if not t.get("duong_bo_km") or gio is None:
+        return None
+    g = ("%g" % gio).replace(".", ",")
+    if gio <= 2.5:
+        return "gần %s (~%s giờ xe), đi về trong ngày được" % (tu["ten"], g)
+    if gio <= 4:
+        return "cách %s ~%s giờ xe, hợp đi 2 ngày 1 đêm trở lên" % (tu["ten"], g)
+    return None
+
+
+def ly_do(den, md, tu=None):
     ph = den["phu_hop"]
     muc = {"nghi_duong": "nghỉ dưỡng %d/3" % ph["nghi_duong"], "gan_ket": "gắn kết %d/3" % ph["gan_ket"],
            "ca_hai": "nghỉ dưỡng %d/3, gắn kết %d/3" % (ph["nghi_duong"], ph["gan_ket"])}[md]
-    return "%s; độ hợp %s *(nhóm tự ước tính)*; mùa đẹp tháng %s." % (den["mo_ta"][:1].upper() + den["mo_ta"][1:], muc, den["mua_dep_thang"])
+    mt = mo_ta_chung(den["mo_ta"]) if tu else den["mo_ta"]
+    di = cach_noi_di(tu, den)
+    if di:
+        mt = "%s; %s" % (mt, di)
+    return "%s; độ hợp %s *(nhóm tự ước tính)*; mùa đẹp tháng %s." % (mt[:1].upper() + mt[1:], muc, den["mua_dep_thang"])
 
 
 def dung_diem_den(req, tu, den):
@@ -271,7 +309,7 @@ def dung_diem_den(req, tu, den):
              "gio_xe": t["duong_bo_gio"] if t["duong_bo_km"] else None,
              "gio_bay": round(b["gio_bay"] + b["gio_thu_tuc"], 1) if b else None,
              "ghi_chu": "; ".join("gói %s: %s" % (name.lower(), raw[lv]["_chang"]["mo_ta"]) for lv, name in planner.PACKAGES)}
-    dest.update({"ten": den["ten"], "id": den["id"], "ly_do": ly_do(den, req["muc_dich"]), "chang": chang,
+    dest.update({"ten": den["ten"], "id": den["id"], "ly_do": ly_do(den, req["muc_dich"], tu), "chang": chang,
                  "calc": calc, "nguon": "du_lieu", "lich": lich})
     return dest
 
