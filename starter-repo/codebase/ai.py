@@ -101,6 +101,17 @@ def call_model(system: str, user: str) -> dict:
         r = call_openai(system, user)
         return {"text": r["text"], "model": MODEL_NAME,
                 "tokens_in": int(r["tokens_in"]), "tokens_out": int(r["tokens_out"])}
+
+    if MODEL_PROVIDER == "gemini":
+        from google.genai import types
+
+        resp = _gemini_client().models.generate_content(
+            model=MODEL_NAME, contents=user, config=types.GenerateContentConfig(system_instruction=system or None))
+        usage = resp.usage_metadata
+        return {"text": resp.text or "", "model": MODEL_NAME,
+                "tokens_in": getattr(usage, "prompt_token_count", None) or 0,
+                "tokens_out": (getattr(usage, "candidates_token_count", None) or 0)
+                + (getattr(usage, "thoughts_token_count", None) or 0)}
     raise NotImplementedError(
         "chưa viết phần gọi model thật cho MODEL_PROVIDER=%s trong codebase/ai.py — xem docs/connect-model.md"
         % MODEL_PROVIDER)
