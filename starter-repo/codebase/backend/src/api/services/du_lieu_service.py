@@ -399,19 +399,43 @@ def _goi_y_ten(ten, n=3):
         hien = x["ten"].split(" (")[0]
         for k in [x["ten"], hien] + du_lieu.BI_DANH.get(x["id"], []):
             ten_hien.setdefault(du_lieu.khong_dau(k), hien)
-    gan = difflib.get_close_matches(du_lieu.khong_dau(ten), list(ten_hien), n=n * 2, cutoff=0.6)
+    gan = difflib.get_close_matches(du_lieu.khong_dau(ten), list(ten_hien), n=n * 2, cutoff=0.8)
     return list(dict.fromkeys(ten_hien[g] for g in gan))[:n]
 
 
+# Chỉ nhận ĐỊA DANH (tỉnh, thành phố, thị trấn, xã, đảo, vịnh, khu du lịch) — không nhận quán, khách sạn, đường, nghĩa trang:
+# Nominatim khớp gần đúng ("Mặt Trăng" → "Khách sạn Trăng Mật") nên còn đòi tên trên bản đồ chứa đúng tên đã gõ.
+_DIA_DANH = {"place": {"city", "town", "village", "municipality", "province", "state", "region", "county", "district",
+                       "island", "archipelago", "suburb", "quarter"},
+             "boundary": {"administrative", "historic", "national_park", "protected_area"},
+             "natural": {"bay", "beach", "peak", "mountain_range", "island", "cape", "valley"},
+             "tourism": {"attraction", "theme_park"}}
+# Bến xe / bến phà / sân bay / ga mang ĐÚNG tên đã gõ cũng cho thấy địa danh có thật (vd "Cát Bà" chỉ ra bến xe Cát Bà).
+_DAU_MOI = {"amenity": {"bus_station", "ferry_terminal"}, "aeroway": {"aerodrome"}, "railway": {"station"}}
+
+
 def _co_o_viet_nam(ten):
-    """True / False theo bản đồ (chỉ tìm trong nước); None nếu không tra được (mất mạng) — khi đó không chặn."""
-    from tools import geocode, CacheMiss, SearchUnavailable
+    """True nếu bản đồ (OpenStreetMap, chỉ trong nước) có ĐỊA DANH tên này; False nếu không; None nếu không tra được
+    (mất mạng) — khi đó không chặn."""
+    import httpx
+    from src.core.sources.cache import cached_call
+    from src.core.sources import geo
+    params = {"q": ten, "format": "jsonv2", "countrycodes": "vn", "limit": 5}
+
+    def fetch():
+        geo._throttle()
+        r = httpx.get(geo.NOMINATIM_URL, params=params, headers={"User-Agent": geo.USER_AGENT}, timeout=15)
+        r.raise_for_status()
+        return [{"category": x.get("category"), "type": x.get("type"), "name": x.get("name") or x["display_name"].split(",")[0]}
+                for x in r.json()]
     try:
-        return geocode(ten, None, domestic=True) is not None
-    except (SearchUnavailable, CacheMiss):
+        rows = cached_call("geo_place", params, fetch)
+    except Exception:  # noqa: BLE001 — mất mạng / cache miss / lỗi máy chủ bản đồ: không chặn
         return None
-    except Exception:  # noqa: BLE001
-        return None
+    k = du_lieu.khong_dau(ten)
+    return any((x["type"] in _DIA_DANH.get(x["category"], ()) and " %s " % k in " %s " % du_lieu.khong_dau(x["name"]))
+               or (x["type"] in _DAU_MOI.get(x["category"], ()) and du_lieu.khong_dau(x["name"]).endswith(k))
+               for x in rows)
 
 
 def check_places(req):

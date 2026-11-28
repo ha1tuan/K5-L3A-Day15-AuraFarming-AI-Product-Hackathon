@@ -148,3 +148,22 @@ def test_dia_diem_sai_bao_khong_ton_tai(c, monkeypatch):
     assert v["status"] == "ask_back" and v["missing_fields"] == ["origin"]
     assert post(destination="Hạ Long")["status"] == "ok"
     assert ds.check_places({"noi_xuat_phat": "Hà Nội", "dia_diem": "Quy Nhơn"}) is None
+
+
+def test_ban_do_chi_nhan_dia_danh(monkeypatch):
+    """Bản đồ khớp gần đúng ("Mặt Trăng" → khách sạn Trăng Mật): chỉ nhận địa danh mang đúng tên, hoặc bến xe / bến phà đúng tên."""
+    from src.api.services import du_lieu_service as ds
+    from src.core.sources import cache
+    tra = {"Mặt Trăng": [{"category": "tourism", "type": "hotel", "name": "Khách Sạn Trăng Mật"},
+                         {"category": "landuse", "type": "cemetery", "name": "Nghĩa trang Lệ Mật"}],
+           "Quy Nhơn": [{"category": "place", "type": "city", "name": "Quy Nhơn"}],
+           "Cát Bà": [{"category": "amenity", "type": "bus_station", "name": "Cát Bà"}],
+           "Sao Hỏa": [{"category": "highway", "type": "bus_stop", "name": "Nhà văn hóa thôn Sảo Thượng"}]}
+    monkeypatch.setattr(cache, "cached_call", lambda ns, params, fetch: tra[params["q"]])
+    assert ds._co_o_viet_nam("Mặt Trăng") is False and ds._co_o_viet_nam("Sao Hỏa") is False
+    assert ds._co_o_viet_nam("Quy Nhơn") is True and ds._co_o_viet_nam("Cát Bà") is True
+
+    def mat_mang(ns, params, fetch):
+        raise cache.CacheMiss(ns, params) if hasattr(cache, "CacheMiss") else RuntimeError("offline")
+    monkeypatch.setattr(cache, "cached_call", mat_mang)
+    assert ds._co_o_viet_nam("Quy Nhơn") is None
