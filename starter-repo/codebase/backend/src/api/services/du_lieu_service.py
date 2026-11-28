@@ -158,10 +158,13 @@ def package(req, dest, lv, recommended) -> dict:
     g = dest["calc"][lv]
     items = [{"category": grp, "description": ten, "qty": sl, "unit": dv, "unit_price": dg, "amount": tt, "estimated": True}
              for grp, ten, sl, dv, dg, tt in g["lines"]]
+    ten_den = dest["den"]["ten"].split(" (")[0] if dest.get("den") else ""
     for it in items:
         note = qty_note(req, it["qty"], it["unit"])
         if note:
             it["qty_note"] = note
+        if not it.get("source_url") and it["category"] != "Phát sinh":       # chưa có nguồn → link tự tìm giá
+            it["search_url"] = _gg("%s %s giá" % (it["description"].split(" (")[0], ten_den))
     for f in g["flags"]:
         items[-1].setdefault("note", f)
     out = {"tier": lv, "summary": summary(dest, lv), "line_items": items, "total": g["tong"], "per_person": g["moi_nguoi"],
@@ -202,22 +205,38 @@ def _chuong_trinh(p, bat_dau):
                        "text": st["text"]} for st in p.get("steps", [])]}
 
 
-def _moc(muc, ten_den=None):
-    """Link mốc giá có nguồn trong gia_chuan.json: ưu tiên mốc đúng điểm đến, không có thì mốc nơi khác (ghi rõ nơi)."""
-    ds = [m for m in muc.get("moc", []) if m.get("nguon")]
-    dung = [m for m in ds if ten_den and m.get("noi") and m["noi"] in ten_den]
+def _gg(q):
+    return "https://www.google.com/search?q=" + quote_plus(q)
+
+
+def _moc(muc, ten_den):
+    """Link NGUỒN TRÍCH DẪN trong gia_chuan.json cho điểm đến này: mốc đúng nơi; mốc chung (không gắn nơi) ghi rõ là nguồn chung.
+    Mốc của nơi khác (vd Nha Trang khi đi Hội An) không tính là nguồn cho nơi này."""
     tin = {"cao": "tin cậy cao", "vua": "tin cậy vừa", "thap": "tin cậy thấp"}
-    return [{"label": "Mốc giá tham khảo%s: %s (%s)" % ((" ở " + m["noi"]) if m.get("noi") else "", m["mo_ta"], tin.get(m.get("do_tin_cay"), "")),
-             "url": m["nguon"]} for m in (dung or ds)[:2]]
+    out = []
+    for m in muc.get("moc", []):
+        if not m.get("nguon"):
+            continue
+        if m.get("noi") and m["noi"] not in ten_den:
+            continue
+        pham_vi = "ở %s" % m["noi"] if m.get("noi") else "nguồn chung, không riêng %s" % ten_den
+        out.append({"label": "%s (%s, %s)" % (m["mo_ta"], pham_vi, tin.get(m.get("do_tin_cay"), "chưa rõ độ tin cậy")),
+                    "url": m["nguon"]})
+    return out[:2]
+
+
+def _tu_tim(note, links):
+    return {"note": note, "links": [{"label": l, "url": u} for l, u in links]}
 
 
 def slot_detail(slot, req, dest, lv, ctx) -> dict:
     """Chi tiết cho một khối lịch (web bấm mở): thực đơn + giá/suất, chương trình team building / gala từng bước, giá vé
-    tham quan, link mốc giá có nguồn và quán thật gần trung tâm (OpenStreetMap) để tự hỏi set menu. Không bịa tên quán + món."""
+    tham quan. citations = link nguồn trích dẫn thật; self_search = phần CHƯA có nguồn → báo rõ "tự tìm" kèm link tìm kiếm.
+    Không bịa tên quán + món + giá."""
     raw, den = dest["raw"][lv], dest["den"]
     ten_den = den["ten"].split(" (")[0]
     t, kind, out = slot["title"], slot["kind"], {}
-    gm, gg = _GOI_DATA.get(lv, "can_bang"), _GOI_GIA.get(lv, "can_bang")
+    gm = _GOI_DATA.get(lv, "can_bang")
     menus, gia = ctx["menus"].get(gm, []), ctx["gia"]
 
     def menu(role, price):
@@ -232,34 +251,47 @@ def slot_detail(slot, req, dest, lv, ctx) -> dict:
         out["program"] = _chuong_trinh(ctx["programs"]["gala"], slot["start"])
         out["menu"] = menu("gala", (raw.get("gala") or {}).get("don_gia_nguoi"))
         out["details"] = "Tiệc tối có sân khấu, MC, âm thanh ánh sáng. " + _GHI_MAU
-        out["sources"] = _moc(gia["hoat_dong"])
+        out["citations"] = _moc(gia["hoat_dong"], ten_den)
+        out["self_search"] = _tu_tim(
+            "Chưa có link nguồn cho thực đơn tiệc gala và báo giá gala riêng ở %s — bạn tự tìm:" % ten_den,
+            [("Báo giá tổ chức gala dinner ở %s" % ten_den, _gg("tổ chức gala dinner %s báo giá" % ten_den)),
+             ("Thực đơn tiệc gala / set menu tiệc ở %s" % ten_den, _gg("set menu tiệc gala %s giá" % ten_den))])
         out["places"] = ctx["places"]
     elif kind == "meal" and ("trưa" in t or "tối" in t):
         out["menu"] = menu("bua_trua" if "trưa" in t else "bua_toi", (raw.get("an_uong") or {}).get("don_gia_bua"))
         out["details"] = "Ăn theo bàn %s người tại nhà hàng nhận đoàn. %s" % ((out["menu"] or {}).get("table_size") or 10, _GHI_MAU)
-        out["sources"] = [{"label": "Tìm nhà hàng nhận đoàn %d người ở %s (Google Maps)" % (req["so_nguoi"], ten_den),
-                           "url": _maps("nhà hàng nhận đoàn %s" % ten_den)}] + _moc(gia["an_uong"], ten_den)
+        out["citations"] = _moc(gia["an_uong"], ten_den)
+        thieu = "thực đơn" + ("" if out["citations"] else " và giá/suất")
+        out["self_search"] = _tu_tim(
+            "Chưa có link nguồn cho %s của nhà hàng ở %s — bạn tự tìm:" % (thieu, ten_den),
+            [("Set menu đoàn ở %s kèm giá" % ten_den, _gg("set menu đoàn nhà hàng %s giá" % ten_den)),
+             ("Nhà hàng nhận đoàn %d người ở %s (Google Maps)" % (req["so_nguoi"], ten_den), _maps("nhà hàng nhận đoàn %s" % ten_den))])
         out["places"] = ctx["places"]
     elif t in hd and hd[t].get("team_building") or t == du_lieu.TEN_DICH_VU["team_building"]:
         p = ctx["programs"]["team_building"].get(gm) or ctx["programs"]["team_building"]["can_bang"]
         out["program"] = _chuong_trinh(p, slot["start"])
         gia_ng = (hd.get(t) or {}).get("don_gia_nguoi")
         out["details"] = ("Giá dự trù %s/người (thuê đơn vị tổ chức). " % planner.fmt_vnd(gia_ng) if gia_ng else "") + _GHI_MAU
-        out["sources"] = _moc(gia["hoat_dong"]) + [
-            {"label": "Tìm đơn vị tổ chức team building ở %s để xin báo giá" % ten_den,
-             "url": "https://www.google.com/search?q=" + quote_plus("đơn vị tổ chức team building %s báo giá" % ten_den)}]
+        out["citations"] = _moc(gia["hoat_dong"], ten_den)
+        out["self_search"] = _tu_tim(
+            "Chưa có link nguồn cho chương trình và báo giá team building riêng ở %s — bạn tự tìm:" % ten_den,
+            [("Đơn vị tổ chức team building ở %s — xin báo giá" % ten_den, _gg("đơn vị tổ chức team building %s báo giá" % ten_den)),
+             ("Kịch bản / chương trình team building cho đoàn %d người" % req["so_nguoi"], _gg("kịch bản team building %d người" % req["so_nguoi"]))])
     else:
         h = next((x for n, x in hd.items() if n.split(" (")[0] in t), None)
         goc = ctx["sights"].get((den["id"], (h or {}).get("ten")))
         if h:
+            ten = h["ten"].split(" (")[0]
             parts = ["Giá dự trù %s/người (ước tính)" % planner.fmt_vnd(h["don_gia_nguoi"])] if h.get("don_gia_nguoi") else []
             if goc:
                 parts.append("thời lượng ~%s giờ" % _gio(goc["thoi_luong_phut"] / 60))
                 if goc.get("gio_mo") and goc.get("gio_dong"):
                     parts.append("mở cửa %s–%s" % (goc["gio_mo"], goc["gio_dong"]))
-            out["details"] = "; ".join(parts) + ". Giá vé, giờ mở cửa là ước tính — kiểm lại trên trang chính thức trước khi đi."
-            out["sources"] = [{"label": "Tra giá vé / giờ mở cửa chính thức: %s" % h["ten"].split(" (")[0],
-                               "url": "https://www.google.com/search?q=" + quote_plus("giá vé %s %d" % (h["ten"].split(" (")[0], start_date(req).year))}]
+            out["details"] = "; ".join(parts) + "."
+            out["self_search"] = _tu_tim(
+                "Chưa có link nguồn cho giá vé và giờ mở cửa của %s — bạn tự tìm:" % ten,
+                [("Giá vé %s %d" % (ten, start_date(req).year), _gg("giá vé %s %d" % (ten, start_date(req).year))),
+                 ("%s trên Google Maps (giờ mở cửa, đánh giá)" % ten, _maps("%s %s" % (ten, ten_den)))])
     return {k: v for k, v in out.items() if v}
 
 

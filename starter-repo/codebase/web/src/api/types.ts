@@ -39,6 +39,8 @@ export interface LineItem {
   amount: number;
   estimated: boolean;
   source_url?: string;
+  /** Chưa có nguồn: link tự tìm giá. */
+  search_url?: string;
   note?: string;
   /** Số lượng gộp viết thành phép nhân, vd "2 xe × 4 ngày" (8 xe·ngày). */
   qty_note?: string;
@@ -108,8 +110,10 @@ export interface Slot {
   menu?: Menu;
   program?: { title?: string; steps: ProgramStep[]; includes?: string; fallback?: string };
   details?: string;
-  /** Link nguồn / tra cứu cho khối này (mốc giá có nguồn, tra giá vé chính thức, tìm đơn vị tổ chức). */
-  sources?: { label: string; url: string }[];
+  /** Link nguồn trích dẫn thật cho thông tin / giá của khối này. */
+  citations?: { label: string; url: string }[];
+  /** Phần chưa có nguồn: lời báo "tự tìm" + link tìm kiếm. */
+  self_search?: { note: string; links: { label: string; url: string }[] };
   /** Quán thật gần trung tâm (OpenStreetMap) — chưa kiểm thực đơn, giá, sức chứa đoàn. */
   places?: { name: string; url: string; km?: number }[];
 }

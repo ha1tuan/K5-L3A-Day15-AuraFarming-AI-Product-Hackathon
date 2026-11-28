@@ -126,10 +126,15 @@ def test_lich_co_chi_tiet_thuc_don_chuong_trinh_va_nguon(c):
     slots = [s for d in p["days"] for s in d["slots"]]
     an = [s for s in slots if s["kind"] == "meal" and ("trưa" in s["title"] or "tối" in s["title"])]
     gia_bua = next(li["unit_price"] for pk in v["packages"] if pk["tier"] == "can_bang" for li in pk["line_items"] if li["unit"] == "suất")
-    assert an and all(s["menu"]["dishes"] and s["menu"]["price_per_pax"] == gia_bua and s["sources"] for s in an)
+    assert an and all(s["menu"]["dishes"] and s["menu"]["price_per_pax"] == gia_bua and s["self_search"]["links"] for s in an)
     tb = [s for s in slots if "gắn kết" in s["title"] or s["kind"] == "gala"]
     assert tb and all(s["program"]["steps"] and s["program"]["steps"][0]["start"] == s["start"] for s in tb)
-    assert all(x["url"].startswith("https://") for s in slots for x in s.get("sources", []))
+    assert all(x["url"].startswith("https://") for s in slots for x in s.get("citations", []) + (s.get("self_search") or {}).get("links", []))
+    # mốc giá của nơi khác (Nha Trang) không được trích làm nguồn cho Hội An
+    assert not any("Nha Trang" in x["label"] for s in an for x in s.get("citations", []))
+    # bảng chi phí: dòng chưa có nguồn có link tự tìm (trừ dòng phát sinh tự tính)
+    lis = next(pk for pk in v["packages"] if pk["tier"] == "can_bang")["line_items"]
+    assert all(li.get("source_url") or li.get("search_url") or li["category"] == "Phát sinh" for li in lis)
 
 
 def test_dia_diem_sai_bao_khong_ton_tai(c, monkeypatch):

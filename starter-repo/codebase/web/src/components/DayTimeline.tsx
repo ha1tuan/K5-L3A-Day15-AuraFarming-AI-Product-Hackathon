@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { viDate } from '../lib/format';
 const THU = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'];
 const weekday = (iso: string) => { const d = new Date(iso + 'T00:00:00'); return isNaN(d.getTime()) ? '' : THU[d.getDay()]; };
-import { Bus, BedDouble, Utensils, Users, Sparkles, Camera, Moon, ExternalLink } from 'lucide-react';
+import { Bus, BedDouble, Utensils, Users, Sparkles, Camera, Moon, ExternalLink, Search, Quote } from 'lucide-react';
 import type { Day, Menu, Slot, SlotKind } from '../api/types';
 import { formatVnd } from '../lib/format';
 import { Flag } from './ui';
@@ -33,7 +33,7 @@ function MenuBlock({ m }: { m: Menu }) {
 }
 
 function SlotDetail({ slot }: { slot: Slot }) {
-  const hasDetail = slot.menu || slot.program || slot.details || slot.sources?.length;
+  const hasDetail = slot.menu || slot.program || slot.details || slot.citations?.length || slot.self_search;
   if (!hasDetail) return null;
   return (
     <details className="mt-2 text-sm" data-print-open>
@@ -65,13 +65,25 @@ function SlotDetail({ slot }: { slot: Slot }) {
             <p className="mt-1 text-xs text-muted">Từ bản đồ mở OpenStreetMap — chưa kiểm thực đơn, giá, có nhận đoàn không.</p>
           </div>
         )}
-        {!!slot.sources?.length && (
+        {!!slot.citations?.length && (
           <div>
-            <p className="mb-1 font-medium">Nguồn & tra cứu</p>
+            <p className="mb-1 flex items-center gap-1.5 font-medium"><Quote className="size-3.5 text-accent" aria-hidden />Nguồn trích dẫn</p>
             <ul className="grid gap-1">
-              {slot.sources.map(x => (
+              {slot.citations.map(x => (
                 <li key={x.url}><a href={x.url} target="_blank" rel="noreferrer" className="inline-flex items-start gap-1 text-accent hover:underline">
                   <ExternalLink className="mt-0.5 size-3.5 shrink-0" aria-hidden /><span>{x.label}</span></a></li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {slot.self_search && (
+          <div className="rounded-lg bg-est-bg p-3">
+            <p className="mb-1 font-medium text-est">Chưa có nguồn — tự tìm</p>
+            <p className="mb-1.5 text-xs text-est">{slot.self_search.note}</p>
+            <ul className="grid gap-1">
+              {slot.self_search.links.map(x => (
+                <li key={x.url}><a href={x.url} target="_blank" rel="noreferrer" className="inline-flex items-start gap-1 text-primary hover:text-accent hover:underline">
+                  <Search className="mt-0.5 size-3.5 shrink-0" aria-hidden /><span>{x.label}</span></a></li>
               ))}
             </ul>
           </div>

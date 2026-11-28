@@ -32,7 +32,10 @@ export function CostTable({ pkg, headcount, budget }: { pkg: Package; headcount:
               <td>
                 {r.source_url
                   ? <a href={r.source_url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-accent hover:underline">bài viết<ExternalLink className="size-3" aria-hidden /></a>
-                  : <span className="text-muted">—</span>}
+                  : r.search_url
+                    ? <a href={r.search_url} target="_blank" rel="noreferrer" title="Chưa có link nguồn cho giá này — bấm để tự tìm"
+                        className="inline-flex items-center gap-1 whitespace-nowrap text-est hover:underline">Tự tìm<ExternalLink className="size-3" aria-hidden /></a>
+                    : <span className="text-muted" title="Khoản tự tính (5% các khoản trên)">tự tính</span>}
               </td>
             </tr>
           ))}
@@ -51,7 +54,7 @@ export function CostTable({ pkg, headcount, budget }: { pkg: Package; headcount:
         </tfoot>
       </table>
       <p className="mt-2 text-xs text-muted">
-        Giá tham khảo. Hệ thống không đặt chỗ — <b>cần xác nhận số phòng còn trống</b> và sức chứa nhà hàng trực tiếp.
+        Giá tham khảo. Cột Nguồn: <b>“Tự tìm”</b> = chưa có link nguồn cho giá này, bấm để tự tra. Hệ thống không đặt chỗ — <b>cần xác nhận số phòng còn trống</b> và sức chứa nhà hàng trực tiếp.
       </p>
     </div>
   );
