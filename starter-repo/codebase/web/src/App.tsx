@@ -172,7 +172,7 @@ export default function App() {
         </div>
       </section>
       {tab === 'quote' ? (
-        <main id="main" className="relative mx-auto -mt-8 max-w-6xl px-4 pb-16"><div className="rounded-3xl bg-card p-5 shadow-xl ring-1 ring-black/5 sm:p-8"><QuoteAudit /></div></main>
+        <main id="main" className="relative mx-auto -mt-8 max-w-7xl px-4 pb-16 sm:px-6"><div className="rounded-3xl bg-bg p-4 shadow-xl ring-1 ring-black/5 sm:p-6"><QuoteAudit /></div></main>
       ) : (<>
       <div className="relative mx-auto -mt-8 max-w-6xl px-4"><div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5"><StepBar step={step} skipped={skipped} /></div></div>
       <main id="main" className="mx-auto max-w-6xl px-4 pb-16 pt-8">

@@ -69,12 +69,14 @@ function OnePlan({ plan, request }: { plan: Plan; request: TripEcho }) {
   );
 }
 
-export function PlanView({ plans, request }: { plans: Plan[]; request: TripEcho }) {
+export function PlanView({ plans, request, activeTier }: { plans: Plan[]; request: TripEcho; activeTier?: Plan['tier'] }) {
   const [active, setActive] = useState(() => {
     const within = plans.map((p, i) => [p, i] as const).filter(([p]) => p.over_budget === null || p.over_budget <= 0);
     return within.length ? within[within.length - 1][1] : 0;
   });
   if (plans.length === 1) return <OnePlan plan={plans[0]} request={request} />;
+  const chosen = activeTier ? plans.find(p => p.tier === activeTier) : undefined;   // gói do thanh tóm tắt chọn (PlanWorkspace)
+  if (chosen) return <OnePlan key={chosen.tier} plan={chosen} request={request} />;
   return (
     <>
       <p className="no-print mb-3 flex items-center gap-2 text-sm text-muted">

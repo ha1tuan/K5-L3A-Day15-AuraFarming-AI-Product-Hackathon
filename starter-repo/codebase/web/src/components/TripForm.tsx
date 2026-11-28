@@ -1,6 +1,6 @@
 import { DESTINATIONS, ORIGINS } from '../lib/places';
 import { useEffect, useId, useState } from 'react';
-import { ArrowRight, Users, Palmtree, Sparkles, Route } from 'lucide-react';
+import { ArrowRight, Users, Palmtree, Sparkles, Route, Calculator } from 'lucide-react';
 import type { Field, Purpose } from '../api/types';
 import { formatVndShort, groupDigits, startDateRange, viDate, TIER_LABEL } from '../lib/format';
 import { estimate, type Estimate } from '../api/client';
@@ -30,6 +30,18 @@ export function entryHint(f: FormState): { ok: boolean; text: string } {
   if (d) return { ok: true, text: 'Chỉ có địa điểm → dự trù kinh phí 3 gói; bạn chọn gói rồi mới lập kế hoạch.' };
   return { ok: false, text: 'Cần nhập kinh phí hoặc địa điểm (ít nhất một).' };
 }
+
+const PURPOSE_EFFECT: Record<Purpose, string> = {
+  gan_ket: 'thêm chương trình team building và gala tối (gói tiết kiệm: BBQ giao lưu); ưu tiên hoạt động theo nhóm và resort có sân rộng, hội trường.',
+  nghi_duong: 'thêm spa, mỗi ngày có giờ tự do; ưu tiên cảnh đẹp nhẹ nhàng và resort có hồ bơi, bãi biển, spa.',
+  ca_hai: 'kết hợp: vừa team building / gala vừa giờ tự do, spa; chọn nơi ở có cả sân team building lẫn tiện ích nghỉ dưỡng.',
+};
+
+const PRESETS: { label: string; f: Partial<FormState> }[] = [
+  { label: '40 người · Hà Nội → Hạ Long · 3N2Đ · gắn kết · 150 triệu', f: { headcount: '40', days: 3, origin: 'Hà Nội', destination: 'Hạ Long', purpose: 'gan_ket', budget: '150.000.000', budget_per_person: false } },
+  { label: '50 người · Đà Nẵng · 2N1Đ · gắn kết · 200 triệu — gợi ý nơi đi', f: { headcount: '50', days: 2, origin: 'Đà Nẵng', destination: '', purpose: 'gan_ket', budget: '200.000.000', budget_per_person: false } },
+  { label: '30 người · TP.HCM → Phú Quốc · 4N3Đ · nghỉ dưỡng — dự trù', f: { headcount: '30', days: 4, origin: 'TP.HCM', destination: 'Phú Quốc', purpose: 'nghi_duong', budget: '', budget_per_person: false } },
+];
 
 /** Lỗi phía trình duyệt; máy chủ vẫn kiểm lại. */
 export function validate(f: FormState): Field[] {
@@ -82,7 +94,8 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
   const label = 'mb-1 block text-sm font-medium';
 
   return (
-    <div className="max-w-3xl">
+    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
+    <div>
       <h2 className="mb-1 text-xl font-bold">Thông tin chuyến đi</h2>
       <p className="mb-6 text-muted">Điền thông tin cơ bản. Có kinh phí, có địa điểm, hoặc cả hai đều được.</p>
       {askBack && errors.length > 0 && (
@@ -166,33 +179,56 @@ export function TripForm({ value, onChange, onSubmit, errors, askBack }: {
           {err('budget_or_destination')}
         </div>
 
-        {est?.tiers && (
-          <div className="fade-up rounded-2xl bg-gradient-to-r from-accent-soft to-sun-soft p-4 ring-1 ring-accent/15" aria-live="polite">
-            <p className="text-sm font-semibold">Ước tính nhanh · {est.origin} → {est.destination} · {value.headcount} người · {value.days} ngày</p>
-            <div className="mt-2 grid grid-cols-3 gap-2">
-              {est.tiers.map(t => (
-                <div key={t.tier} className="rounded-xl bg-card px-3 py-2 text-center shadow-sm">
-                  <p className="text-xs text-muted">{TIER_LABEL[t.tier]}</p>
-                  <p className="font-extrabold">{formatVndShort(t.per_person)}<span className="text-xs font-normal text-muted">/người</span></p>
-                  <p className="text-[11px] text-muted">{formatVndShort(t.total)} cả đoàn</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-2 text-[11px] text-muted">Tham khảo trước khi lập kế hoạch — bấm "Lập kế hoạch" để có bảng chi phí và lịch chi tiết.</p>
-          </div>
-        )}
-
-        <div className={`flex gap-2 rounded-lg border p-3 text-sm ${hint.ok ? 'border-accent/30 bg-accent-soft' : 'border-over/40 bg-over-bg text-over'}`} aria-live="polite">
-          <Route className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden />
-          <span>Hệ thống sẽ: {hint.text}</span>
-        </div>
-
         <div className="flex justify-end">
           <button type="submit" className={btnPrimary}>Lập kế hoạch <ArrowRight className="size-4" aria-hidden /></button>
         </div>
       <datalist id="dl-origin">{ORIGINS.map(x => <option key={x} value={x} />)}</datalist>
       <datalist id="dl-dest">{DESTINATIONS.map(x => <option key={x} value={x} />)}</datalist>
     </form>
+    </div>
+
+    {/* Cột phải đứng yên: ước tính nhanh, hệ thống sẽ làm gì, mục đích ảnh hưởng gì, điền mẫu */}
+    <aside className="grid gap-4 lg:sticky lg:top-24">
+      <div className="rounded-3xl bg-gradient-to-br from-accent-soft to-sun-soft p-5 ring-1 ring-accent/15" aria-live="polite">
+        <p className="flex items-center gap-2 text-sm font-bold"><Calculator className="size-4 text-accent" aria-hidden />Ước tính nhanh</p>
+        {est?.tiers ? (
+          <>
+            <p className="mt-1 text-xs text-muted">{est.origin} → {est.destination} · {value.headcount} người · {value.days} ngày</p>
+            <div className="mt-3 grid gap-2">
+              {est.tiers.map(t => (
+                <div key={t.tier} className="flex items-baseline justify-between rounded-xl bg-card px-3 py-2 shadow-sm">
+                  <span className="text-sm text-muted">{TIER_LABEL[t.tier]}</span>
+                  <span className="text-right"><b className="text-lg">{formatVndShort(t.per_person)}</b><span className="text-xs text-muted">/người</span>
+                    <span className="block text-[11px] text-muted">{formatVndShort(t.total)} cả đoàn</span></span>
+                </div>
+              ))}
+            </div>
+          </>
+        ) : <p className="mt-2 text-sm text-muted">Nhập <b>số người</b>, <b>nơi xuất phát</b> và <b>địa điểm</b> để thấy ngay giá tham khảo 3 gói.</p>}
+      </div>
+
+      <div className={`flex gap-3 rounded-3xl p-4 text-sm ring-1 ${hint.ok ? 'bg-card ring-accent/20' : 'bg-over-bg text-over ring-over/30'}`} aria-live="polite">
+        <Route className="mt-0.5 size-5 shrink-0 text-accent" aria-hidden />
+        <span><b>Hệ thống sẽ:</b> {hint.text}</span>
+      </div>
+
+      {value.purpose && (
+        <div className="flex gap-3 rounded-3xl bg-card p-4 text-sm ring-1 ring-black/5">
+          <Sparkles className="mt-0.5 size-5 shrink-0 text-sun" aria-hidden />
+          <span><b>Mục đích "{PURPOSES.find(p => p.v === value.purpose)?.label}":</b> {PURPOSE_EFFECT[value.purpose]}</span>
+        </div>
+      )}
+
+      <div className="rounded-3xl bg-card p-4 ring-1 ring-black/5">
+        <p className="mb-2 text-sm font-bold">Thử nhanh với ví dụ</p>
+        <div className="grid gap-2">
+          {PRESETS.map(p => (
+            <button key={p.label} type="button" onClick={() => onChange({ ...value, ...p.f })}
+              className="cursor-pointer rounded-xl bg-soft px-3 py-2 text-left text-sm transition hover:bg-accent-soft hover:text-accent-dark">{p.label}</button>
+          ))}
+        </div>
+      </div>
+    </aside>
     </div>
   );
 }
