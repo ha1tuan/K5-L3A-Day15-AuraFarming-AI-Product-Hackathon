@@ -10,7 +10,8 @@ import s from './DayTimeline.module.scss';
 
 const ICON: Record<SlotKind, typeof Bus> = { travel: Bus, hotel: BedDouble, meal: Utensils, activity: Users, gala: Sparkles, sight: Camera, rest: Moon };
 const DETAIL_LABEL: Partial<Record<SlotKind, string>> = {
-  meal: 'Xem thực đơn', gala: 'Xem chương trình gala & thực đơn', activity: 'Xem chi tiết hoạt động',
+  meal: 'Xem thực đơn & giá / suất', gala: 'Xem chương trình gala & thực đơn', activity: 'Xem chương trình & giá',
+  sight: 'Xem giá vé & giờ mở cửa',
 };
 
 function MenuBlock({ m }: { m: Menu }) {
@@ -32,7 +33,7 @@ function MenuBlock({ m }: { m: Menu }) {
 }
 
 function SlotDetail({ slot }: { slot: Slot }) {
-  const hasDetail = slot.menu || slot.program || slot.details;
+  const hasDetail = slot.menu || slot.program || slot.details || slot.sources?.length;
   if (!hasDetail) return null;
   return (
     <details className="mt-2 text-sm" data-print-open>
@@ -42,7 +43,7 @@ function SlotDetail({ slot }: { slot: Slot }) {
         {slot.program && (
           <div>
             {slot.program.title && <p className="mb-1 font-medium">{slot.program.title}</p>}
-            {slot.kind === 'gala' && <p className="mb-1 font-medium">Chương trình</p>}
+            {slot.kind === 'gala' && !slot.program.title && <p className="mb-1 font-medium">Chương trình</p>}
             <ol className={s.program}>
               {slot.program.steps.map(st => <li key={st.start}><time>{st.start}–{st.end}</time><span>{st.text}</span></li>)}
             </ol>
@@ -51,6 +52,30 @@ function SlotDetail({ slot }: { slot: Slot }) {
           </div>
         )}
         {slot.menu && <MenuBlock m={slot.menu} />}
+        {!!slot.places?.length && (
+          <div>
+            <p className="mb-1 font-medium">Quán thật gần trung tâm để hỏi set menu đoàn</p>
+            <ul className="flex flex-wrap gap-1.5">
+              {slot.places.map(p => (
+                <li key={p.url}><a href={p.url} target="_blank" rel="noreferrer"
+                  className="inline-flex items-center gap-1 rounded-full bg-soft px-2.5 py-1 text-xs hover:bg-accent-soft hover:text-accent">
+                  {p.name}{p.km != null && <span className="text-muted">· {String(p.km).replace('.', ',')} km</span>}<ExternalLink className="size-3" aria-hidden /></a></li>
+              ))}
+            </ul>
+            <p className="mt-1 text-xs text-muted">Từ bản đồ mở OpenStreetMap — chưa kiểm thực đơn, giá, có nhận đoàn không.</p>
+          </div>
+        )}
+        {!!slot.sources?.length && (
+          <div>
+            <p className="mb-1 font-medium">Nguồn & tra cứu</p>
+            <ul className="grid gap-1">
+              {slot.sources.map(x => (
+                <li key={x.url}><a href={x.url} target="_blank" rel="noreferrer" className="inline-flex items-start gap-1 text-accent hover:underline">
+                  <ExternalLink className="mt-0.5 size-3.5 shrink-0" aria-hidden /><span>{x.label}</span></a></li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </details>
   );

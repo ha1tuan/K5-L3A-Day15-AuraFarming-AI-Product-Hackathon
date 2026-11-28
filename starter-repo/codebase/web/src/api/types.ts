@@ -108,6 +108,10 @@ export interface Slot {
   menu?: Menu;
   program?: { title?: string; steps: ProgramStep[]; includes?: string; fallback?: string };
   details?: string;
+  /** Link nguồn / tra cứu cho khối này (mốc giá có nguồn, tra giá vé chính thức, tìm đơn vị tổ chức). */
+  sources?: { label: string; url: string }[];
+  /** Quán thật gần trung tâm (OpenStreetMap) — chưa kiểm thực đơn, giá, sức chứa đoàn. */
+  places?: { name: string; url: string; km?: number }[];
 }
 
 export interface Day { label: string; date: string; slots: Slot[] }

@@ -8,6 +8,7 @@ Cùng lõi với lối chấm answer() (codebase/agent.py): đơn giá, xếp ph
 Nơi đi / điểm đến ngoài dữ liệu → trả None để trip_service dùng graph cũ.
 """
 import copy
+from urllib.parse import quote_plus
 import os
 import re
 import sys
@@ -184,18 +185,102 @@ def packages(req, dest) -> list:
     return [package(req, dest, lv, lv == rec) for lv in TIERS]
 
 
+_GOI_DATA = {"tiet_kiem": "tiet_kiem", "can_bang": "can_bang", "cao_cap": "cao_cap", "day_du": "cao_cap"}
+_GOI_GIA = {"tiet_kiem": "tiet_kiem", "can_bang": "can_bang", "cao_cap": "day_du", "day_du": "day_du"}
+_GHI_MAU = "Món / chương trình là mẫu theo mức gói (nhóm tự ước tính) — giá là giá đã tính trong dự trù, cần chốt với cơ sở thật."
+
+
+def _cong_gio(hhmm, phut):
+    h, m = (int(x) for x in hhmm.split(":"))
+    t = h * 60 + m + phut
+    return "%02d:%02d" % (t // 60 % 24, t % 60)
+
+
+def _chuong_trinh(p, bat_dau):
+    return {"title": p.get("title"), "includes": p.get("includes"), "fallback": p.get("fallback"),
+            "steps": [{"start": _cong_gio(bat_dau, st["offset"]), "end": _cong_gio(bat_dau, st["offset"] + st["minutes"]),
+                       "text": st["text"]} for st in p.get("steps", [])]}
+
+
+def _moc(muc, ten_den=None):
+    """Link mốc giá có nguồn trong gia_chuan.json: ưu tiên mốc đúng điểm đến, không có thì mốc nơi khác (ghi rõ nơi)."""
+    ds = [m for m in muc.get("moc", []) if m.get("nguon")]
+    dung = [m for m in ds if ten_den and m.get("noi") and m["noi"] in ten_den]
+    tin = {"cao": "tin cậy cao", "vua": "tin cậy vừa", "thap": "tin cậy thấp"}
+    return [{"label": "Mốc giá tham khảo%s: %s (%s)" % ((" ở " + m["noi"]) if m.get("noi") else "", m["mo_ta"], tin.get(m.get("do_tin_cay"), "")),
+             "url": m["nguon"]} for m in (dung or ds)[:2]]
+
+
+def slot_detail(slot, req, dest, lv, ctx) -> dict:
+    """Chi tiết cho một khối lịch (web bấm mở): thực đơn + giá/suất, chương trình team building / gala từng bước, giá vé
+    tham quan, link mốc giá có nguồn và quán thật gần trung tâm (OpenStreetMap) để tự hỏi set menu. Không bịa tên quán + món."""
+    raw, den = dest["raw"][lv], dest["den"]
+    ten_den = den["ten"].split(" (")[0]
+    t, kind, out = slot["title"], slot["kind"], {}
+    gm, gg = _GOI_DATA.get(lv, "can_bang"), _GOI_GIA.get(lv, "can_bang")
+    menus, gia = ctx["menus"].get(gm, []), ctx["gia"]
+
+    def menu(role, price):
+        m = next((x for x in menus if x["role"] == role), None)
+        if not m:
+            return None
+        return {"name": m["name"], "price_per_pax": int(price or m["price_per_pax"]), "table_size": m.get("table_size"),
+                "dishes": m["dishes"], "drinks_note": m.get("drinks_note"), "estimated": True}
+
+    hd = {h["ten"]: h for h in raw.get("hoat_dong") or []}
+    if kind == "gala":
+        out["program"] = _chuong_trinh(ctx["programs"]["gala"], slot["start"])
+        out["menu"] = menu("gala", (raw.get("gala") or {}).get("don_gia_nguoi"))
+        out["details"] = "Tiệc tối có sân khấu, MC, âm thanh ánh sáng. " + _GHI_MAU
+        out["sources"] = _moc(gia["hoat_dong"])
+        out["places"] = ctx["places"]
+    elif kind == "meal" and ("trưa" in t or "tối" in t):
+        out["menu"] = menu("bua_trua" if "trưa" in t else "bua_toi", (raw.get("an_uong") or {}).get("don_gia_bua"))
+        out["details"] = "Ăn theo bàn %s người tại nhà hàng nhận đoàn. %s" % ((out["menu"] or {}).get("table_size") or 10, _GHI_MAU)
+        out["sources"] = [{"label": "Tìm nhà hàng nhận đoàn %d người ở %s (Google Maps)" % (req["so_nguoi"], ten_den),
+                           "url": _maps("nhà hàng nhận đoàn %s" % ten_den)}] + _moc(gia["an_uong"], ten_den)
+        out["places"] = ctx["places"]
+    elif t in hd and hd[t].get("team_building") or t == du_lieu.TEN_DICH_VU["team_building"]:
+        p = ctx["programs"]["team_building"].get(gm) or ctx["programs"]["team_building"]["can_bang"]
+        out["program"] = _chuong_trinh(p, slot["start"])
+        gia_ng = (hd.get(t) or {}).get("don_gia_nguoi")
+        out["details"] = ("Giá dự trù %s/người (thuê đơn vị tổ chức). " % planner.fmt_vnd(gia_ng) if gia_ng else "") + _GHI_MAU
+        out["sources"] = _moc(gia["hoat_dong"]) + [
+            {"label": "Tìm đơn vị tổ chức team building ở %s để xin báo giá" % ten_den,
+             "url": "https://www.google.com/search?q=" + quote_plus("đơn vị tổ chức team building %s báo giá" % ten_den)}]
+    else:
+        h = next((x for n, x in hd.items() if n.split(" (")[0] in t), None)
+        goc = ctx["sights"].get((den["id"], (h or {}).get("ten")))
+        if h:
+            parts = ["Giá dự trù %s/người (ước tính)" % planner.fmt_vnd(h["don_gia_nguoi"])] if h.get("don_gia_nguoi") else []
+            if goc:
+                parts.append("thời lượng ~%s giờ" % _gio(goc["thoi_luong_phut"] / 60))
+                if goc.get("gio_mo") and goc.get("gio_dong"):
+                    parts.append("mở cửa %s–%s" % (goc["gio_mo"], goc["gio_dong"]))
+            out["details"] = "; ".join(parts) + ". Giá vé, giờ mở cửa là ước tính — kiểm lại trên trang chính thức trước khi đi."
+            out["sources"] = [{"label": "Tra giá vé / giờ mở cửa chính thức: %s" % h["ten"].split(" (")[0],
+                               "url": "https://www.google.com/search?q=" + quote_plus("giá vé %s %d" % (h["ten"].split(" (")[0], start_date(req).year))}]
+    return {k: v for k, v in out.items() if v}
+
+
 def plan(req, dest, lv) -> dict:
     d0 = start_date(req)
     g = dest["calc"][lv]
     days = []
+    ex_book = where_to_book(req, dest, lv)
+    ctx = {"menus": du_lieu.D("menus"), "programs": du_lieu.D("programs"), "gia": du_lieu.D("gia_chuan"),
+           "sights": {(x["diem_den"], x["ten"]): x for x in du_lieu.D("hoat_dong")},
+           "places": [{"name": p["name"], "url": p["maps"], "km": p["km"]} for p in ex_book["eat"]["places"][:3]]}
     for day in dest["lich"][lv]:
         slots = []
         for k in day["khoi"]:
             kind = KIND.get(k["loai"], "activity")
             if "Gala" in k["viec"]:
                 kind = "gala"
-            slots.append({"start": k["gio"].split("–")[0][:5], "kind": kind, "title": k["viec"],
-                          "note": "đến %s" % k["gio"].split("–")[1]})
+            sl = {"start": k["gio"].split("–")[0][:5], "kind": kind, "title": k["viec"],
+                  "note": "đến %s" % k["gio"].split("–")[1]}
+            sl.update(slot_detail(sl, req, dest, lv, ctx))
+            slots.append(sl)
         days.append({"label": "Ngày %d" % day["ngay"], "date": (d0 + timedelta(days=day["ngay"] - 1)).isoformat(), "slots": slots})
     vids = du_lieu.video(dest["id"], 2, 1)
     out = {"tier": lv, "destination": dest["ten"], "total": g["tong"], "per_person": g["moi_nguoi"], "estimate_total": g["tong"],

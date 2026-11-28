@@ -117,3 +117,16 @@ def test_more_destinations_excludes_seen_and_can_reset(c):
     v3 = c.post(f"/api/trips/{v['trip_id']}/more-destinations", json={"exclude": []}).json()
     assert [d["name"] for d in v3["destinations"]] == first
     assert c.post("/api/trips/khong-co/more-destinations", json={"exclude": []}).status_code == 404
+
+
+def test_lich_co_chi_tiet_thuc_don_chuong_trinh_va_nguon(c):
+    """Bữa ăn có thực đơn + giá/suất đúng giá đã tính; team building / gala có chương trình từng bước; có link nguồn / tra cứu."""
+    v = c.post("/api/trips", json={**BASE, "origin": "Đà Nẵng", "destination": "Hội An", "days": 2}).json()
+    p = next(x for x in v["plans"] if x["tier"] == "can_bang")
+    slots = [s for d in p["days"] for s in d["slots"]]
+    an = [s for s in slots if s["kind"] == "meal" and ("trưa" in s["title"] or "tối" in s["title"])]
+    gia_bua = next(li["unit_price"] for pk in v["packages"] if pk["tier"] == "can_bang" for li in pk["line_items"] if li["unit"] == "suất")
+    assert an and all(s["menu"]["dishes"] and s["menu"]["price_per_pax"] == gia_bua and s["sources"] for s in an)
+    tb = [s for s in slots if "gắn kết" in s["title"] or s["kind"] == "gala"]
+    assert tb and all(s["program"]["steps"] and s["program"]["steps"][0]["start"] == s["start"] for s in tb)
+    assert all(x["url"].startswith("https://") for s in slots for x in s.get("sources", []))
